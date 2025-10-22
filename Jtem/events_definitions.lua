@@ -4911,9 +4911,6 @@ local hpot_event_get_random_combat_reward = function(domain, seed)
 		{ sparkle = 75000, },
 		{ crypto = 2, },
 	}
-	for k, v in ipairs(G.localization.misc.EncounterEventRewards.generic) do
-		if encounter_rewards[k] then encounter_rewards[k].text = v end
-	end
 
 	local _handname, _played = 'High Card', -1
 	for hand_key, hand in pairs(G.GAME.hands) do
