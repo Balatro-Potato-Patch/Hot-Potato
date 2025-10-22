@@ -4893,9 +4893,6 @@ local hpot_event_get_random_combat_reward = function(domain, seed)
 		{ sparkle = 35000, },
 		{ crypto = 0.5, },
 	}
-	for k, v in ipairs(G.localization.misc.CombatEvents.generic) do
-		if combat_rewards[k] then combat_rewards[k].text = v end
-	end
 
 	local encounter_rewards = {
 		{ jokers = { { rarity = "Uncommon" } }, },
