@@ -14,6 +14,7 @@ SMODS.ConsumableType {
     shop_rate = 0.5,
     default = "c_hpot_imag_stars",
     text_colour = HEX("333333"),
+    select_card = 'consumeables'
 }
 
 SMODS.Consumable {

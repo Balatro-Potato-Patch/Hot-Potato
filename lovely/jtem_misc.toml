@@ -282,3 +282,47 @@ else
 end
 '''
 match_indent = true
+
+#Imaginary Card UI patches
+    # Prevent "BUY AND USE" button on Imaginaries in shop
+[[patches]]
+[patches.pattern]
+target = "functions/UI_definitions.lua"
+pattern = '''return base_background'''
+position = "before"
+payload = '''
+if card.area == G.shop_jokers and G.shop_jokers then
+  if card.ability.consumeable and card.ability.set == "imaginary" then
+    base_attach.children.buy_and_use = nil
+  end
+  base_attach.children.buy = G.UIDEF.card_focus_button{
+    card = card, parent = base_attach, type = 'buy',
+    func = 'can_buy', button = 'buy_from_shop', card_width = card_width, buy_and_use = buy_and_use
+  }
+end
+'''
+match_indent = true
+
+
+    # Prevent "USE" button on Imaginaries in deck
+[[patches]]
+[patches.pattern]
+target = "functions/UI_definitions.lua"
+pattern = '''
+end
+if card.ability.consumeable then
+'''
+position = "after"
+payload = '''
+    if card.ability.set == "imaginary" then
+        return {
+        n=G.UIT.ROOT, config = {padding = 0, colour = G.C.CLEAR}, nodes={
+            {n=G.UIT.C, config={padding = 0.15, align = 'cl'}, nodes={
+            {n=G.UIT.R, config={align = 'cl'}, nodes={
+                sell
+            }},
+            }},
+        }}
+    end
+'''
+match_indent = true
