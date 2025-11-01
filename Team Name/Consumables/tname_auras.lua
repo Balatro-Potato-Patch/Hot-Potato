@@ -386,6 +386,7 @@ SMODS.Consumable({
 			maximum = 7
 		},
 	},
+	hidden = true,
 	loc_vars = function(self, info_queue, card)
 		local key
 		local fucking = G.GAME.seeded and "_budget" or ""

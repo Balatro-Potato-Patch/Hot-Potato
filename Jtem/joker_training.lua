@@ -1051,6 +1051,8 @@ SMODS.Consumable {
 SMODS.Consumable {
 	key = 'training_inspiration',
 	set = 'Spectral',
+    soul_set = 'Tarot',
+	hidden = true,
 	atlas = 'jtem_training_spectrals',
 	pos = { x = 0, y = 0 },
 	config = { max_highlighted = 1, hpot_train_increase = { speed = 24, stamina = 24, power = 24, guts = 24, wits = 24 }, hpot_energy_change = -30, hpot_skip_fail_check = true },
