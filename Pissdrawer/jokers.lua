@@ -185,7 +185,8 @@ SMODS.Joker {
             credit_gain = 0.1,
             social_credit = 0,
             social_credit_max = 1,
-            conversion_rate = 2000
+            conversion_rate = 2000,
+            has_been_added = false
         }
     },
     hotpot_credits = {
@@ -216,9 +217,12 @@ SMODS.Joker {
         }
     end,
     add_to_deck = function(self, card, from_debuff)
-        card.ability.china = (HotPotato and HotPotato.allcalcs[math.floor(pseudorandom('china', 1, #HotPotato.allcalcs))]) or
-            'piss'
-        card:add_sticker('perishable', true)
+        if not card.ability.extra.has_been_added then
+            card.ability.extra.has_been_added = true
+            card.ability.china = (HotPotato and HotPotato.allcalcs[math.floor(pseudorandom('china', 1, #HotPotato.allcalcs))]) or
+                'piss'
+            card:add_sticker('perishable', true)
+        end
     end,
     calculate = function(self, card, context)
         if context.game_over then
