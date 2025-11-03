@@ -32,7 +32,7 @@ SMODS.Joker {
                     }
                 end
             end
-        end 
+        end
         return nil, true
     end,
 }
@@ -257,16 +257,20 @@ SMODS.Joker {
             }
         end
         if context.post_trigger and context.other_card == card and card.ability.trig == true then
-            if to_number(hpt.social_credit) < 0 then
-                card.children.center:set_sprite_pos({ x = 3, y = 0 })
-            else
-                card.children.center:set_sprite_pos({ x = 2, y = 0 })
-            end
             card.ability.trig = false
         end
     end,
     in_pool = function(self, args)
         return true, { allow_duplicates = true }
+    end,
+    draw = function(self, card, layer)
+        if (layer == 'card' or layer == 'both') then
+            if to_number(card.ability.extra.social_credit) < 0 then
+                card.children.center:set_sprite_pos({ x = 3, y = 0 })
+            else
+                card.children.center:set_sprite_pos({ x = 2, y = 0 })
+            end
+        end
     end
 }
 
@@ -326,15 +330,20 @@ SMODS.Joker {
     calculate = function(self, card, context)
         if context.reforging and not context.free and not context.blueprint then
             if context.currency == "DOLLAR" then
-                ease_dollars(math.floor((G.GAME.cost_dollars - context.card.ability.reforge_dollars) * card.ability.extra))
+                ease_dollars(math.floor((G.GAME.cost_dollars - context.card.ability.reforge_dollars) * card.ability
+                    .extra))
             elseif context.currency == "CREDIT" then
-                HPTN.ease_credits(math.floor((G.GAME.cost_credits - context.card.ability.reforge_credits) * card.ability.extra))
+                HPTN.ease_credits(math.floor((G.GAME.cost_credits - context.card.ability.reforge_credits) *
+                    card.ability.extra))
             elseif context.currency == "SPARKLE" then
-                ease_spark_points(math.floor((G.GAME.cost_sparks - context.card.ability.reforge_sparks) * card.ability.extra))
+                ease_spark_points(math.floor((G.GAME.cost_sparks - context.card.ability.reforge_sparks) *
+                    card.ability.extra))
             elseif context.currency == "PLINCOIN" then
-                ease_plincoins(math.floor((G.GAME.cost_plincoins - context.card.ability.reforge_plincoins) * card.ability.extra))
+                ease_plincoins(math.floor((G.GAME.cost_plincoins - context.card.ability.reforge_plincoins) *
+                    card.ability.extra))
             elseif context.currency == "CRYPTOCURRENCY" then
-                ease_cryptocurrency(math.floor((G.GAME.cost_cryptocurrency - context.card.ability.reforge_cryptocurrency) * card.ability.extra))
+                ease_cryptocurrency(math.floor((G.GAME.cost_cryptocurrency - context.card.ability.reforge_cryptocurrency) *
+                    card.ability.extra))
             end
             card:juice_up()
         end
@@ -411,16 +420,17 @@ function Card:add_to_deck(from_debuff)
 
     -- Finally we return the original return.
     -- (`ret` can be modified by your code if necessary)
-    
+
     -- This is where we deviate from the example to add the achievement
     if self.config.center_key == "j_hpot_vremade_joker" then
-        check_for_unlock({type = 'candyland_tobu'})
+        check_for_unlock({ type = 'candyland_tobu' })
     end
 
     -- Now back to the example
 
     return ret
 end
+
 SMODS.Joker {
     key = "smods",
     hotpot_credits = {
@@ -467,7 +477,7 @@ SMODS.Joker {
                         (math.floor(#G.playing_cards / card.ability.extra.cards_req)))
                     if discards > 0 then
                         if G.GAME.selected_back.name == 'Red Deck' then
-                            check_for_unlock({type = 'deck_joker', conditions = #G.playing_cards})
+                            check_for_unlock({ type = 'deck_joker', conditions = #G.playing_cards })
                         end
                         ease_discard(discards, nil, true)
                     end
@@ -505,7 +515,7 @@ SMODS.Joker {
                         (math.floor(#G.playing_cards / card.ability.extra.cards_req)))
                     if hands > 0 then
                         if G.GAME.selected_back.name == 'Blue Deck' then
-                            check_for_unlock({type = 'deck_joker', conditions = #G.playing_cards})
+                            check_for_unlock({ type = 'deck_joker', conditions = #G.playing_cards })
                         end
                         ease_hands_played(hands)
                     end
@@ -543,9 +553,9 @@ SMODS.Joker {
                         (math.floor(#G.playing_cards / card.ability.extra.cards_req)))
                     if dollars > 0 then
                         if G.GAME.selected_back.name == 'Yellow Deck' then
-                            check_for_unlock({type = 'deck_joker', conditions = #G.playing_cards})
+                            check_for_unlock({ type = 'deck_joker', conditions = #G.playing_cards })
                         end
-                        SMODS.calculate_effect{
+                        SMODS.calculate_effect {
                             card = card,
                             dollars = dollars
                         }
