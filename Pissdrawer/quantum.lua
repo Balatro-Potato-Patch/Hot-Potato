@@ -65,7 +65,7 @@ end
 
 local cest = card_eval_status_text
 function card_eval_status_text(card, eval_type, amt, percent, dir, extra)
-    if card.quantum then card = card.quantum end
+    if card and card.quantum then card = card.quantum end
     cest(card, eval_type, amt, percent, dir, extra)
 end
 
