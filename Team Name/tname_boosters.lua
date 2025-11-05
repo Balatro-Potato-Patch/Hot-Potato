@@ -6,14 +6,14 @@ SMODS.Booster({
 	group_key = "k_hpot_hanafuda_packs",
 	cost = 4,
 	weight = 0.6,
-    draw_hand = true,
+	draw_hand = true,
 	create_card = function(self, card, i)
 		return SMODS.create_card({
 			set = "Hanafuda",
 			skip_materialize = true,
 		})
 	end,
-    hotpot_credits = {
+	hotpot_credits = {
 		art = { "GoldenLeaf" },
 		idea = { "GoldenLeaf" },
 		code = { "Revo" },
@@ -29,14 +29,14 @@ SMODS.Booster({
 	group_key = "k_hpot_hanafuda_packs",
 	cost = 4,
 	weight = 0.6,
-    draw_hand = true,
+	draw_hand = true,
 	create_card = function(self, card, i)
 		return SMODS.create_card({
 			set = "Hanafuda",
 			skip_materialize = true,
 		})
 	end,
-        hotpot_credits = {
+	hotpot_credits = {
 		art = { "GoldenLeaf" },
 		idea = { "GoldenLeaf" },
 		code = { "Revo" },
@@ -52,14 +52,14 @@ SMODS.Booster({
 	group_key = "k_hpot_hanafuda_packs",
 	cost = 6,
 	weight = 0.3,
-    draw_hand = true,
+	draw_hand = true,
 	create_card = function(self, card, i)
 		return SMODS.create_card({
 			set = "Hanafuda",
 			skip_materialize = true,
 		})
 	end,
-        hotpot_credits = {
+	hotpot_credits = {
 		art = { "GoldenLeaf" },
 		idea = { "GoldenLeaf" },
 		code = { "Revo" },
@@ -75,14 +75,14 @@ SMODS.Booster({
 	group_key = "k_hpot_hanafuda_packs",
 	cost = 7,
 	weight = 0.11,
-    draw_hand = true,
+	draw_hand = true,
 	create_card = function(self, card, i)
 		return SMODS.create_card({
 			set = "Hanafuda",
 			skip_materialize = true,
 		})
 	end,
-        hotpot_credits = {
+	hotpot_credits = {
 		art = { "GoldenLeaf" },
 		idea = { "GoldenLeaf" },
 		code = { "Revo" },
@@ -98,14 +98,13 @@ SMODS.Booster({
 	pos = { x = 4, y = 0 },
 	config = { extra = 7, choose = 3 },
 	group_key = "k_hpot_hanafuda_packs",
-    draw_hand = true,
+	draw_hand = true,
 	create_card = function(self, card)
-		return 
+		return
 			SMODS.create_card({
 				set = "Hanafuda",
 				skip_materialize = true,
 			})
-		
 	end,
 	hotpot_credits = {
 		art = { "GoldenLeaf" },
@@ -125,14 +124,14 @@ SMODS.Booster({
 	group_key = "k_hpot_auras_packs",
 	cost = 4,
 	weight = 0.6,
-    kind = "hpot_aura",
+	kind = "hpot_aura",
 	create_card = function(self, card, i)
 		return SMODS.create_card({
 			set = "Aura",
 			skip_materialize = true,
 		})
 	end,
-        hotpot_credits = {
+	hotpot_credits = {
 		art = { "GoldenLeaf" },
 		idea = { "GoldenLeaf" },
 		code = { "Revo" },
@@ -148,14 +147,14 @@ SMODS.Booster({
 	group_key = "k_hpot_auras_packs",
 	cost = 4,
 	weight = 0.6,
-    kind = "hpot_aura",
+	kind = "hpot_aura",
 	create_card = function(self, card, i)
 		return SMODS.create_card({
 			set = "Aura",
 			skip_materialize = true,
 		})
 	end,
-        hotpot_credits = {
+	hotpot_credits = {
 		art = { "GoldenLeaf" },
 		idea = { "GoldenLeaf" },
 		code = { "Revo" },
@@ -171,14 +170,14 @@ SMODS.Booster({
 	group_key = "k_hpot_auras_packs",
 	cost = 6,
 	weight = 0.3,
-    kind = "hpot_aura",
+	kind = "hpot_aura",
 	create_card = function(self, card, i)
 		return SMODS.create_card({
 			set = "Aura",
 			skip_materialize = true,
 		})
 	end,
-        hotpot_credits = {
+	hotpot_credits = {
 		art = { "GoldenLeaf" },
 		idea = { "GoldenLeaf" },
 		code = { "Revo" },
@@ -194,14 +193,14 @@ SMODS.Booster({
 	group_key = "k_hpot_auras_packs",
 	cost = 7,
 	weight = 0.11,
-    kind = "hpot_aura",
+	kind = "hpot_aura",
 	create_card = function(self, card, i)
 		return SMODS.create_card({
 			set = "Aura",
 			skip_materialize = true,
 		})
 	end,
-        hotpot_credits = {
+	hotpot_credits = {
 		art = { "GoldenLeaf" },
 		idea = { "GoldenLeaf" },
 		code = { "Revo" },
@@ -218,14 +217,13 @@ SMODS.Booster({
 	pos = { x = 4, y = 1 },
 	config = { extra = 7, choose = 3 },
 	group_key = "k_hpot_auras_packs",
-    kind = "hpot_aura",
+	kind = "hpot_aura",
 	create_card = function(self, card)
-		return 
+		return
 			SMODS.create_card({
 				set = "Aura",
 				skip_materialize = true,
 			})
-		
 	end,
 	hotpot_credits = {
 		art = { "GoldenLeaf" },
@@ -241,6 +239,7 @@ SMODS.Booster({
 	key = "ultra_arcana",
 	weight = 0.025,
 	kind = "Arcana",
+	name = "Ultra Arcana Pack",
 	cost = 0,
 	credits = 100,
 	atlas = "tname_boosters",
@@ -256,15 +255,6 @@ SMODS.Booster({
 			},
 		}
 	end,
-	create_card = function(self, card)
-		return 
-			SMODS.create_card({
-				set = "Tarot",
-				skip_materialize = true,
-				soulable = true,
-			})
-		
-	end,
 	hotpot_credits = {
 		art = { "GoldenLeaf" },
 		idea = { "Revo" },
@@ -276,6 +266,7 @@ SMODS.Booster({
 	key = "ultra_celestial",
 	weight = 0.025,
 	kind = "Celestial",
+    name = "Ultra Celestial Pack",
 	cost = 0,
 	credits = 100,
 	atlas = "tname_boosters",
@@ -290,15 +281,6 @@ SMODS.Booster({
 			},
 		}
 	end,
-	create_card = function(self, card)
-		return 
-			SMODS.create_card({
-				set = "Planet",
-				skip_materialize = true,
-				soulable = true,
-			})
-		
-	end,
 	hotpot_credits = {
 		art = { "GoldenLeaf" },
 		idea = { "Revo" },
@@ -310,6 +292,7 @@ SMODS.Booster({
 	key = "ultra_standard",
 	weight = 0.025,
 	kind = "Standard",
+    name = "Ultra Standard Pack",
 	cost = 0,
 	credits = 100,
 	atlas = "tname_boosters",
@@ -324,18 +307,6 @@ SMODS.Booster({
 			},
 		}
 	end,
-	create_card = function(self, card)
-		local ultra_card_edition, ultra_card_seal,ultra_card_enhancement = poll_edition(), SMODS.poll_seal(), SMODS.poll_enhancement()
-        return 
-			SMODS.create_card({
-			    set = "Playing Card",
-			    skip_materialize = true,
-			    edition = ultra_card_edition,
-			    seal = ultra_card_seal,
-                enhancement = ultra_card_enhancement
-			})
-		
-	end,
 	hotpot_credits = {
 		art = { "GoldenLeaf" },
 		idea = { "Revo" },
@@ -348,6 +319,7 @@ SMODS.Booster({
 	key = "ultra_spectral",
 	weight = 0.025,
 	kind = "Spectral",
+	name = "Ultra Spectral Pack",
 	cost = 0,
 	credits = 100,
 	atlas = "tname_boosters",
@@ -363,15 +335,6 @@ SMODS.Booster({
 			},
 		}
 	end,
-	create_card = function(self, card)
-		return 
-			SMODS.create_card({
-				set = "Spectral",
-				skip_materialize = true,
-				soulable = true,
-			})
-		
-	end,
 	hotpot_credits = {
 		art = { "GoldenLeaf" },
 		idea = { "Revo" },
@@ -384,6 +347,7 @@ SMODS.Booster({
 	key = "ultra_buffoon",
 	weight = 0.025,
 	kind = "Buffoon",
+	name = "Ultra Buffoon Pack",
 	cost = 0,
 	credits = 100,
 	atlas = "tname_boosters",
@@ -398,15 +362,6 @@ SMODS.Booster({
 			},
 		}
 	end,
-	create_card = function(self, card)
-		return 
-			SMODS.create_card({
-				set = "Joker",
-				skip_materialize = true,
-				soulable = true,
-			})
-		
-	end,
 	hotpot_credits = {
 		art = { "GoldenLeaf" },
 		idea = { "Revo" },
@@ -414,6 +369,3 @@ SMODS.Booster({
 		team = { "Team Name" },
 	},
 })
-
-
-
