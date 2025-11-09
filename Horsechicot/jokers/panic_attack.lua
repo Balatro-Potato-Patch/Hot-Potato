@@ -44,7 +44,8 @@ SMODS.Joker {
         return {
             vars = {
                 card.ability.extra.xmult,
-                card.ability.extra.xmult_mod
+                card.ability.extra.xmult_mod,
+                card.ability.extra.xmult_base
             }
         }
     end

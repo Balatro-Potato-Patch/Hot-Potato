@@ -1897,8 +1897,8 @@ return {
                 name = "Panic Attack",
                 text = {
                     "{X:mult,C:white}X#1#{} Mult",
-                    "Decreases by {X:mult,C:white}#2#{} every second",
-                    "Resets at the end of the ante"
+                    "Decreases by {X:mult,C:white}X#2#{} every second while scoring",
+                    "Resets to {X:mult,C:white}X#3#{} Mult at the end of the ante"
                 }
             },
             j_hpot_cloverpit = {
