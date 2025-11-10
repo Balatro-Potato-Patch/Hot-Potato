@@ -1249,7 +1249,8 @@ HotPotato.EventStep({
 					event.start_step("hpot_sticker_success")
 				end,
 				func = function()
-					return sticker_check(G.jokers.cards) > 0 and to_big(G.GAME.plincoins) >= to_big(self.config.extra.cost)
+					return sticker_check(G.jokers.cards) > 0 and
+						to_big(G.GAME.plincoins) >= to_big(self.config.extra.cost)
 				end,
 			},
 			{
@@ -4700,15 +4701,23 @@ HotPotato.CombatEvents.generic = {
 		end
 
 		if reward.playing_cards then
+			local added_cards = {}
 			for _, pcard in ipairs(reward.playing_cards) do
 				for i = 1, (pcard.amount or 1) do
 					-- TODO: account for modded ranks I guess
 					local rank = pcard.rank or
 						(pcard.face and pseudorandom_element({ "King", "Queen", "Jack" }, "hpot_event_combat_reward")) or
 						(pcard.numbered and tostring(pseudorandom("hpot_event_combat_reward", 2, 10)))
-					SMODS.add_card { set = (pcard.enhanced and "Enhanced") or (pcard.base and "Base") or "Playing Card", edition = pcard.edition, stickers = pcard.stickers, enhancement = pcard.enhancement, key_append = pcard.key_append or "hpot_combat_reward", rank = rank, suit = pcard.suit, seal = pcard.seal, area = G.deck }
+					local added_card = SMODS.add_card { set = (pcard.enhanced and "Enhanced") or (pcard.base and "Base") or "Playing Card", edition = pcard.edition, stickers = pcard.stickers, enhancement = pcard.enhancement, key_append = pcard.key_append or "hpot_combat_reward", rank = rank, suit = pcard.suit, seal = pcard.seal, area = G.deck }
+					added_cards[#added_cards + 1] = added_card
 				end
 			end
+			G.E_MANAGER:add_event(Event({
+				func = function()
+					SMODS.calculate_context({ playing_card_added = true, cards = added_cards })
+					return true
+				end
+			}))
 		end
 
 		if reward.enhance_deck then
