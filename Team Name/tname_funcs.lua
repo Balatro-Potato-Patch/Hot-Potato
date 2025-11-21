@@ -628,7 +628,7 @@ function add_round_eval_credits(config) --taken straight from plincoin.lua (yet 
             local left_text = {}
             if config.name == 'credits' then
                 table.insert(left_text,
-                    { n = G.UIT.T, config = { text = config.credits, font = config.font, scale = 0.8 * scale, colour = G.GAME.seeded and G.C.ORANGE or G.C.PURPLE, shadow = true, juice = true } })
+                    { n = G.UIT.T, config = { text = number_format(config.credits), font = config.font, scale = 0.8 * scale, colour = G.GAME.seeded and G.C.ORANGE or G.C.PURPLE, shadow = true, juice = true } })
                 if G.GAME.modifiers.hands_to_credits then
                     table.insert(left_text,
                         { n = G.UIT.O, config = { object = DynaText({ string = { " " .. localize { type = 'variable', key = G.GAME.seeded and 'hotpot_budget_cashout2' or 'hotpot_credits_cashout2', vars = { (G.GAME.credits_cashout or 0), (G.GAME.credits_cashout2 or 0) } } }, colours = { G.C.UI.TEXT_LIGHT }, shadow = true, pop_in = 0, scale = 0.4 * scale, silent = true }) } })
