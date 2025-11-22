@@ -4559,6 +4559,412 @@ return {
                     "Who do you ask for help?"
                 }
             },
+            hpot_tech_support_ask_n = {
+                text = {
+                    "After some rounds N' gets tired and makes your Joker for you",
+                    "(Check deliveries)"
+                }
+            },
+            hpot_tech_support_ask_eremel = {
+                text = {
+                    "Eremel asks you to check the latest SMODS release",
+                    "(Check deliveries)"
+                }
+            },
+            hpot_tech_support_ask_sdm_0_win = {
+                text = {
+                    "SDM_0 is too busy playing Plinko.",
+                    "",
+                    "He throws some plincoins at you",
+                    "to play more Plinko"
+                }
+            },
+            hpot_tech_support_ask_sdm_0_lose = {
+                text = {
+                    "SDM_0 is too busy playing Plinko",
+                    "",
+                    "He runs away with your plincoins",
+                    "to play more Plinko"
+                }
+            },
+            hpot_tech_support_ask_bepis_n = {
+                text = {
+                    "Bepis is too busy with UI",
+                    "and tells you to ask N'",
+                }
+            },
+            hpot_tech_support_ask_bepis_eremel = {
+                text = {
+                    "Bepis is too busy with UI",
+                    "and tells you to ask Eremel'",
+                }
+            },
+            hpot_tech_support_ask_deadbeet = {
+                text = {
+                    "You ask Deadbeet how to-",
+                    "",
+                    "Hey where is she going?",
+                    "",
+                    "Where did your wallet go?"
+                }
+            },
+            hpot_tech_support_ask_fey = {
+                text = {
+                    "She's sleeping... wait! No!",
+                    "Stop stealing her code!"
+                }
+            },
+            hpot_tech_support_ask_tacashumi = {
+                text = {
+                    "Tacashumi is too busy at work to answer you",
+                    "",
+                    "Have a random joker instead (if you got room that is)"
+                }
+            },
+            hpot_business_venture_1_start = {
+                text = {
+                    "A stange guy approaches you on the street.",
+                    " ",
+                    "\"Hey, would you like to invest in my business idea?\"",
+                },
+            },
+            hpot_business_venture_1_finish = {
+                text = {
+                    "\"Hehe, I will make it worth your time.\" *wink* *wink*",
+                    " ",
+                    "You have a bad feeling about this."
+                }
+            },
+            hpot_business_venture_2_start = {
+                text = {
+                    "\"It's you! Long time no see, pal!",
+                    "Thanks to your help I'm a millionaire now!",
+                    "It's in credits so it's actually not that impressive",
+                    "but at least I can afford some nice Kings and Queens,",
+                    "if you know what I mean!\" *wink* *wink*",
+                    " ",
+                    "You take the money and decide to wash your hands repeatedly",
+                    "as soon as you get home."
+                }
+            },
+            hpot_business_venture_3_start = {
+                text = {
+                    "A stange guy approaches you on the street.",
+                    " ",
+                    "\"Hey, would you like to invest in-",
+                    " ",
+                    "Oh, you seem to be in serious debt I see.",
+                    "Tell you what, I'll bail you out. But not for free of course.",
+                    "You will need to give me something valuable in return,",
+                    "if you know what I mean!\" *wink* *wink*",
+                    " ",
+                    "You have a bad feeling about this."
+                },
+            },
+            hpot_business_venture_3_finish = {
+                text = {
+                    "\"Hehe, pleasure doing business with you.\" *wink* *wink*",
+                }
+            },
+
+            hpot_buzzfeed_quiz_start = {
+                text = {
+                    "You accidentally clicked one of the ads on the screen. The page reads:",
+                    " ",
+                    "{s:1.2}\"Which {s:1.2,C:attention}Balatro{s:1.2} Joker are you?\"",
+                    " ",
+                    "No harm in trying it out, right?"
+                },
+            },
+            hpot_buzzfeed_quiz_1 = {
+                text = {
+                    "\"Where would you like to go on a first date?\"",
+                },
+            },
+            hpot_buzzfeed_quiz_park = {
+                text = {
+                    "You would like to go on a nice handholding date",
+                    "to the local park, you thought."
+                },
+            },
+            hpot_buzzfeed_quiz_carnival = {
+                text = {
+                    "You would like to enjoy the attractions",
+                    "together at the local town fair, you thought."
+                },
+            },
+            hpot_buzzfeed_quiz_casino = {
+                text = {
+                    "They are not going out with me if they can't",
+                    "enjoy a little Plinko gambling, you thought."
+                },
+            },
+            hpot_buzzfeed_quiz_no_date = {
+                text = {
+                    "Dates? Those are woke nonsense.",
+                    "I'm going to be by my lonesome, you thought."
+                },
+            },
+            hpot_buzzfeed_quiz_3 = {
+                text = {
+                    "\"Your roommate owes you 500 credits.",
+                    "They say they can pay you back if you just give them a",
+                    "little bit more time.",
+                    " ",
+                    "What do you do?\""
+                },
+            },
+            hpot_buzzfeed_quiz_wait = {
+                text = {
+                    "I'm patient. I can wait for them, you thought.",
+                    " ",
+                    "You may be betrayed by those words some day."
+                },
+            },
+            hpot_buzzfeed_quiz_forgive = {
+                text = {
+                    "No relationship should be shackled to such things as",
+                    "money, you thought.",
+                    " ",
+                    "Maybe you're too forgiving."
+                },
+            },
+            hpot_buzzfeed_quiz_move = {
+                text = {
+                    "I can't be living with a leech! You thought.",
+                    " ",
+                    "Are credits this important to you?"
+                },
+            },
+            hpot_buzzfeed_quiz_sell = {
+                text = {
+                    "Hey, at least I can make some of it back, you thought.",
+                    " ",
+                    "Maybe you should stop and think about what you would do after that."
+                },
+            },
+            hpot_buzzfeed_quiz_finish = {
+                text = {
+                    "{s:1.2}\"This is who you are!\"",
+                    " ",
+                    "A picture of yourself appears on the screen.",
+                    " ",
+                    "...",
+                    "I thought this was about Balatro? Boring."
+                },
+            },
+
+            hpot_dreamkeeper_1_start = {
+                text = {
+                    "\"Can you take care of these for a bit?",
+                    "It would help out a lot!\""
+                },
+            },
+            hpot_dreamkeeper_1_finish = {
+                text = {
+                    "\"Thank you so much. You're a life saver.\"",
+                },
+            },
+
+            hpot_dreamkeeper_2_start = {
+                text = {
+                    "\"Hey, have you got my dreams?\""
+                },
+            },
+            hpot_dreamkeeper_2_finish = {
+                text = {
+                    "\"How could you do this to me!? Those are valuable...",
+                    " ",
+                    "I hope you're ready to pay for them.\""
+                },
+            },
+            hpot_dreamkeeper_2_give = {
+                text = {
+                    "\"I don't know what I would have done without you.",
+                    " ",
+                    "Take this. You deserve it.\""
+                },
+            },
+
+            hpot_interest_1_start = {
+                text = {
+                    "\"Hey, I'm bored of these. You can play with them if you want",
+                    "but give them back, will you?\""
+                },
+            },
+            hpot_interest_1_finish = {
+                text = {
+                    "\"I'm just going back to my Switch 2.\"",
+                },
+            },
+
+            hpot_interest_2_start = {
+                text = {
+                    "\"I take it back. I want to play with them again,",
+                    "can you give them back?\""
+                },
+            },
+            hpot_interest_2_finish = {
+                text = {
+                    "\"What? But... I didn't look like I needed them?",
+                    "How dare you?",
+                    " ",
+                    "I hope you're ready to pay for them.\""
+                },
+            },
+            hpot_interest_2_give = {
+                text = {
+                    "\"Hahaha, I don't know how I ever go bored of these.",
+                    " ",
+                    "Thanks, have this.\""
+                },
+            },
+
+            hpot_cool_gal_start = {
+                text = {
+                    "A young lady riding a motocycle approaches you.",
+                    "\"Hey, take this!\"",
+                    " ",
+                    "And then she drove away into the sunset.",
+                    " ",
+                    "What a cool gal."
+                },
+            },
+
+            hpot_gambling_start = {
+                text = {
+                    "You encounter a slot machine.",
+                    " ",
+                    "How much will you bet?"
+                }
+            },
+            hpot_gambling_success = {
+                text = {
+                    "I can't stop winning!",
+                    " ",
+                    "How much will you bet next?"
+                },
+            },
+            hpot_gambling_fail = {
+                text = {
+                    "Aw dang it!",
+                    " ",
+                    "How much will you bet next?"
+                },
+            },
+            hpot_gambling_finish_pos = {
+                text = {
+                    "Maybe stop while you're ahead..."
+                },
+            },
+            hpot_gambling_finish_neg = {
+                text = {
+                    "You want to keep going by your brain knows better..."
+                },
+            },
+
+            hpot_pba_10_start = {
+                text = {
+                    "\"Dude, you gotta check this out. This is crazy!",
+                    "My Trading Card got rated a PBA 10! This is gonna sell for thousands!\"",
+                    " ",
+                    "\"What? Playing? Of course I'm not playing! This is an investment!\"",
+                    " ",
+                    "\"Here, take some of my packs. They will give you the rush.",
+                    "Oh, and don't worry I already weighted them."
+                },
+            },
+
+            hpot_small_seed_start = {
+                text = {
+                    "On your way to the next blind you see a small sapling.",
+                    " ",
+                    "What do you do?"
+                },
+            },
+            hpot_small_seed_water = {
+                text = {
+                    "Changing the world one nice act at the time.",
+                    " ",
+                    "You feel a change in your deck."
+                },
+            },
+            hpot_small_seed_ignore = {
+                text = {
+                    "So that's the kind of person you are, huh?",
+                    " ",
+                    "You feel a change in your deck."
+                },
+            },
+
+            hpot_cursed_womb_start = {
+                text = {
+                    "A grueling scent floods your nose,",
+                    "you whip around looking for any hint",
+                    "towards the vile stench.",
+                    " ",
+                    "\"IS THAT A HUMAN FINGER!? Why is it so... shrivelled?",
+                    "No, it looks like it should have decomposed by now...\"",
+                    " ",
+                    "A sudden feeling comes over you, wait no!",
+                    "You want to eat the finger... no, don't!"
+                },
+            },
+
+            hpot_ruan_mei_start = {
+                text = {
+                    "You catch a whiff of the aroma of warm pastries.",
+                    "As you lift your feet from the ground and float",
+                    "towards them in a cartoonis fashion, a dark-haired lady",
+                    "addresses you.",
+                    " ",
+                    "\"This is the simulated lab, my miniature petri dish.",
+                    "I nurtured this miniature slice by myself and embedded it into the code of te game.\"",
+                    " ",
+                    "\"I'll give you some things,\" she says, ",
+                    "good things. But they don't come for free.\""
+                }
+            },
+
+            hpot_the_tavern_start = {
+                text = {
+                    "\"This person over here thinks they're so tough.\"",
+                    " ",
+                    "\"Really? Let's see you beat this.\"",
+                    " ",
+                    "Face {C:attention}#1#{} #2#",
+                    "{C:money}Reward:{} #3#",
+                    "{C:inactive}(Regular Blind rewards are also obtained){}"
+                },
+            },
+
+            hpot_bj_in = {
+                text = {
+                    "You see a shady figure with a set of cards",
+                    "infront of him, a 'normal' 52 card deck.",
+                    '',
+                    "\"Up for a game of Black Jack, pal?\" He sounds",
+                    "like he's straight out of the 'slammer'..."
+                },
+            },
+            hpot_bj_final = {
+                text = {
+                    "Looks like you #1#, cash in for {C:money}$#2#{}!"
+                }
+            },
+
+            hpot_egg_room_start = {
+                text = {
+                    "Well, there is a man here."
+                },
+            },
+
+            hpot_big_bonus_start = {
+                text = {
+                    " "
+                },
+            },
+
             hpot_business_venture_1_start_budget = {
                 text = {
                     "A strange guy approaches you on the street.",
@@ -4705,6 +5111,128 @@ return {
                 name = "Tech Support",
                 text = {
                     "How do I mod Balatro?"
+                }
+            },
+            hpot_business_venture_1 = {
+                name = "Triboulet's Business Venture (Part I)",
+                text = {
+                    "To the moon!"
+                }
+            },
+            hpot_business_venture_2 = {
+                name = "Triboulet's Business Venture (Part II)",
+                text = {
+                    "Stonks."
+                }
+            },
+            hpot_business_venture_3 = {
+                name = "Triboulet's Pity",
+                text = {
+                    "Oh, you can't afford it?"
+                }
+            },
+            hpot_buzzfeed_quiz = {
+                name = "Personality Quiz",
+                text = {
+                    "Click here and find out which Joker you are!"
+                }
+            },
+            hpot_dreamkeeper_1 = {
+                name = "Dreamkeeper (Part I)",
+                text = {
+                    "Sweet dreams are made of this"
+                }
+            },
+            hpot_dreamkeeper_2 = {
+                name = "Dreamkeeper (Part II)",
+                text = {
+                    "Who am I to disagree?"
+                }
+            },
+            hpot_interest_1 = {
+                name = "I Hope This Holds Your Interest (Part I)",
+                text = {
+                    "I think it's in your best interest",
+                    "to hold on to these"
+                }
+            },
+            hpot_interest_2 = {
+                name = "I Hope This Holds Your Interest (Part II)",
+                text = {
+                    "Being nice doesn't make you interesting, you know?"
+                }
+            },
+            hpot_cool_gal = {
+                name = "Cool Gal",
+                text = {
+                    "And everyone clapped."
+                }
+            },
+            hpot_gambling = {
+                name = "Let's Go Gambling!",
+                text = {
+                    "Aw dang it."
+                }
+            },
+            hpot_pba_10 = {
+                name = "PBA 10",
+                text = {
+                    "Sometimes the hobby is to ruin the hobby"
+                }
+            },
+            hpot_small_seed = {
+                name = "Small Seed",
+                text = {
+                    "All you need to change the future"
+                }
+            },
+            hpot_cursed_womb = {
+                name = "Cursed Womb",
+                text = {
+                    "Fey not again..."
+                }
+            },
+            hpot_ruan_mei = {
+                name = "Ruan Mei",
+                text = {
+                    "Don't tell Herta and Screwllum about this."
+                }
+            },
+            hpot_the_tavern = {
+                name = "The Tavern",
+                text = {
+                    "You think you can be in this part of town",
+                    "looking all cool? Yes, you can."
+                }
+            },
+            hpot_bj = {
+                name = "Blackjack",
+                text = {
+                    "What's 9+10?"
+                }
+            },
+            hpot_postlatro = {
+                name = "Postlatro Express",
+                text = {
+                    "Where everything is 0% off!"
+                }
+            },
+            hpot_black_market_alley = {
+                name = "Black Market Dealer",
+                text = {
+                    "Where you are 0% off."
+                }
+            },
+            hpot_man_ogg = {
+                name = "The Room Between",
+                text = {
+                    "Well, there is a man here."
+                }
+            },
+            hpot_swoon = {
+                name = "Big Bonus!",
+                text = {
+                    " "
                 }
             }
         },
@@ -6597,33 +7125,88 @@ return {
             hpot_tech_support_ask_bepis = "Ask Bepis",
             hpot_tech_support_ask_deadbeet = "Ask Deadbeet",
             hpot_tech_support_ask_fey = "Ask Fey",
-            hpot_tech_support_ask_tacashumi = "Ask Tacashumi", -- revo do your shenanigans
-            --[[hpot_business_venture_1_start_budget_invest_100 = "Invest {C:attention}e.100",
-            hpot_business_venture_1_start_budget_invest_500 = "Invest {C:attention}e.500",
-            hpot_business_venture_1_start_budget_invest_1000 = "Invest {C:attention}e.1000",
-            hpot_postlatro_start_budgetcredits = "{C:money}$10{} > {C:attention}e.100",
-            hpot_postlatro_start_budget_invest_500 = "Invest {C:attention}e.500",
-            hpot_postlatro_start_budget_invest_1000 = "Invest {C:attention}e.1000",
-        }
-            hpot_postlatro_start_budget = {
-		text = {
-			"A stange guy approaches you on the street.",
-			" ",
-			"\"Hey, would you like to invest in my business idea?\"",
-		},
+            hpot_tech_support_ask_tacashumi = "Ask Tacashumi",
 
-		choices = {
-			spark = "{C:money}$1{} > {C:blue,f:hpot_plincoin}͸5k",
-			plincoins = "{C:money}$10{} > {C:hpot_plincoin,f:hpot_plincoin}$1",
-			credits = "{C:money}$10{} > {C:purple}c.100",
-			crypto = "{C:money}$20{} > {C:hpot_advert,f:hpot_plincoin}£1",
-			from_spark = "{C:blue,f:hpot_plincoin}͸10k{} > {C:money}$1{}",
-			from_plincoins = "{C:hpot_plincoin,f:hpot_plincoin}$1{} > {C:money}$5{}",
-			from_credits = "{C:purple}c.100{} > {C:money}$5{}",
-			from_crypto = "{C:hpot_advert,f:hpot_plincoin}£1{} > {C:money}$10{}",
-			trade_dreams = "Sell Dreams for {C:hpot_plincoin,f:hpot_plincoin}$10",
-			trade_interests = "Sell Interests for {C:blue,f:hpot_plincoin}͸100k{}"
-		}]]
+            hpot_invest_100 = "Invest {C:purple}c.100",
+            hpot_invest_500 = "Invest {C:purple}c.500",
+            hpot_invest_1000 = "Invest {C:purpe}c.1000",
+
+            hpot_business_dollars = "Pay {C:money}$",
+            hpot_business_plincoins = "Pay {C:hpot_plincoin,f:hpot_plincoin}$",
+            hpot_business_crypto = "Pay {C:hpot_advert,f:hpot_plincoin}£",
+            hpot_business_spark = "Pay {C:blue,f:hpot_plincoin}͸",
+
+            hpot_take_quiz = "Take the quiz",
+            hpot_park = "To the park",
+            hpot_carnival = "To the town fair",
+            hpot_casino = "To the casino",
+            hpot_no_date = "Nowhere, because nothing ever happens",
+            hpot_quiz_next = "Read the next question",
+            hpot_quiz_wait = "Wait patiently",
+            hpot_quiz_forgive = "Forgive the debt",
+            hpot_quiz_move = "Move out",
+            hpot_quiz_sell = "Sell their possessions on the Black Market",
+            hpot_quiz_results = "See results",
+
+            hpot_take_dreams = "Take dreams",
+            hpot_give_dreams = "Give dreams",
+
+            hpot_take_interests = "Take interests",
+            hpot_give_interests = "Give interests",
+
+            hpot_gambling_bet5 = "Bet {C:money}$5{}",
+            hpot_gambling_bet10 = "Bet {C:money}$10{}",
+            hpot_gambling_bet20 = "Bet {C:money}$20{}",
+            hpot_gambling_bet40 = "Bet {C:money}$40{}",
+            hpot_gambling_ignore = "Ignore",
+
+            hpot_pba_take = "Take packs",
+
+            hpot_seed_water = "Water it",
+            hpot_seed_ignore = "Ignore it",
+
+            hpot_womb_eat_finger = "Hell yeahh!",
+            hpot_womb_ignore_finger = "Ah hell no!",
+
+            hpot_ruan_mei = "You are... Ruan Mei?",
+            hpot_aeons = "Worship Aeons",
+            hpot_money = "Want lots of money",
+
+            hpot_tavern_fight = "Fight!",
+
+            hpot_bj_start = "I'm all in!",
+            hpot_bj_stop = "On second thought, maybe not...",
+            hpot_bj_hit = "Lady Luck gimme a kiss! (Hit)",
+            hpot_bj_stand = "Wee hee hee! (Stand)",
+            hpot_bj_cashin = 'Cash in!',
+
+            hpot_market_dollars = "{C:hpot_advert,f:hpot_plincoin}£1{} > {C:money}$20{}",
+            hpot_market_spark = "{C:hpot_advert,f:hpot_plincoin}£1{} > {C:blue,f:hpot_plincoin}͸100k",
+            hpot_market_plincoins = "{C:hpot_advert,f:hpot_plincoin}£1{} > {C:hpot_plincoin,f:hpot_plincoin}$6",
+            hpot_market_credits = "{C:hpot_advert,f:hpot_plincoin}£1{} > {C:purple}c.90",
+            hpot_market_from_dollars = "{C:money}$30{} > {C:hpot_advert,f:hpot_plincoin}£1{}",
+            hpot_market_from_spark = "{C:blue,f:hpot_plincoin}͸300k{} > {C:hpot_advert,f:hpot_plincoin}£1{}",
+            hpot_market_from_plincoins = "{C:hpot_plincoin,f:hpot_plincoin}$8{} > {C:hpot_advert,f:hpot_plincoin}£1{}",
+            hpot_market_from_credits = "{C:purple}c.185{} > {C:hpot_advert,f:hpot_plincoin}£1{}",
+            hpot_market_trade_questions = "Sell Questions for {C:hpot_advert,f:hpot_plincoin}£10{}",
+            hpot_market_trade_emotions = "Sell Emotions for {C:hpot_advert,f:hpot_plincoin}£10{}",
+
+            hpot_postlatro_spark = "{C:money}$1{} > {C:blue,f:hpot_plincoin}͸5k",
+            hpot_postlatro_plincoins = "{C:money}$10{} > {C:hpot_plincoin,f:hpot_plincoin}$1",
+            hpot_postlatro_credits = "{C:money}$10{} > {C:purple}c.45",
+            hpot_postlatro_crypto = "{C:money}$20{} > {C:hpot_advert,f:hpot_plincoin}£1",
+            hpot_postlatro_from_spark = "{C:blue,f:hpot_plincoin}͸10k{} > {C:money}$1{}",
+            hpot_postlatro_from_plincoins = "{C:hpot_plincoin,f:hpot_plincoin}$1{} > {C:money}$5{}",
+            hpot_postlatro_from_credits = "{C:purple}c.50{} > {C:money}$5{}",
+            hpot_postlatro_from_crypto = "{C:hpot_advert,f:hpot_plincoin}£1{} > {C:money}$10{}",
+            hpot_postlatro_trade_dreams = "Sell Dreams for {C:hpot_plincoin,f:hpot_plincoin}$10",
+            hpot_postlatro_trade_interests = "Sell Interests for {C:blue,f:hpot_plincoin}͸100k{}",
+
+
+            hpot_egg = "Yes",
+            hpot_eggnt = "No",
+
+            hpot_proceed = "Proceed."
         },
         CombatEventRewards = {
             generic = {

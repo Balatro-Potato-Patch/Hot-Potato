@@ -2393,12 +2393,6 @@ HotPotato.EventStep {
 HotPotato.EventStep {
 	key = "hpot_tech_support_ask_n",
 	hide_hand = true,
-	loc_txt = {
-		text = {
-			"After some rounds N' gets tired and makes your Joker for you",
-			"(Check deliveries)"
-		}
-	},
 	get_choices = function()
 		return {
 			moveon()
@@ -2441,12 +2435,6 @@ HotPotato.EventStep {
 HotPotato.EventStep {
 	key = "hpot_tech_support_ask_eremel",
 	hide_hand = true,
-	loc_txt = {
-		text = {
-			"Eremel asks you to check the latest SMODS release",
-			"(Check deliveries)"
-		}
-	},
 	get_choices = function()
 		return {
 			moveon()
@@ -2478,14 +2466,6 @@ HotPotato.EventStep {
 HotPotato.EventStep {
 	key = "hpot_tech_support_ask_sdm_0_win",
 	hide_hand = true,
-	loc_txt = {
-		text = {
-			"SDM_0 is too busy playing Plinko.",
-			"",
-			"He throws some plincoins at you",
-			"to play more Plinko"
-		}
-	},
 	get_choices = function()
 		return {
 			moveon()
@@ -2501,14 +2481,6 @@ HotPotato.EventStep {
 HotPotato.EventStep {
 	key = "hpot_tech_support_ask_sdm_0_lose",
 	hide_hand = true,
-	loc_txt = {
-		text = {
-			"SDM_0 is too busy playing Plinko",
-			"",
-			"He runs away with your plincoins",
-			"to play more Plinko"
-		}
-	},
 	get_choices = function()
 		return {
 			moveon()
@@ -2525,12 +2497,6 @@ HotPotato.EventStep {
 HotPotato.EventStep {
 	key = "hpot_tech_support_ask_bepis_n",
 	hide_hand = true,
-	loc_txt = {
-		text = {
-			"Bepis is too busy with UI",
-			"and tells you to ask N'",
-		}
-	},
 	get_choices = function(self, event)
 		return {
 			{
@@ -2552,12 +2518,6 @@ HotPotato.EventStep {
 HotPotato.EventStep {
 	key = "hpot_tech_support_ask_bepis_eremel",
 	hide_hand = true,
-	loc_txt = {
-		text = {
-			"Bepis is too busy with UI",
-			"and tells you to ask Eremel",
-		}
-	},
 	get_choices = function(self, event)
 		return {
 			{
@@ -2579,15 +2539,6 @@ HotPotato.EventStep {
 HotPotato.EventStep {
 	key = "hpot_tech_support_ask_deadbeet",
 	hide_hand = true,
-	loc_txt = {
-		text = {
-			"You ask Deadbeet how to-",
-			"",
-			"Hey where is she going?",
-			"",
-			"Where did your wallet go?"
-		}
-	},
 	get_choices = function()
 		return {
 			moveon()
@@ -2606,12 +2557,6 @@ HotPotato.EventStep {
 
 HotPotato.EventStep {
 	key = "hpot_tech_support_ask_fey",
-	loc_txt = {
-		text = {
-			"She's sleeping... wait! No!",
-			"Stop stealing her code!"
-		}
-	},
 	hide_hand = true,
 	get_choices = function()
 		return {
@@ -2637,13 +2582,6 @@ HotPotato.EventStep {
 HotPotato.EventStep {
 	key = "hpot_tech_support_ask_tacashumi",
 	hide_hand = true,
-	loc_txt = {
-		text = {
-			"Tacashumi is too busy at work to answer you",
-			"",
-			"Have a random joker instead (if you got room that is)"
-		}
-	},
 	get_choices = function()
 		return {
 			moveon()
@@ -2660,7 +2598,6 @@ HotPotato.EventStep {
 
 
 --- Post-Overhaul Events :P
--- TODO: change these to not use loc_txt. i cant be bothered rn
 -- Sorry if these are bad but there isn't much I can do in a week
 
 --- Occurence
@@ -2669,12 +2606,6 @@ HotPotato.EventStep {
 
 HotPotato.EventScenario {
 	key = "business_venture_1",
-	loc_txt = {
-		name = "Triboulet's Business Venture (Part I)",
-		text = {
-			"To the moon!"
-		}
-	},
 	domains = { occurence = true },
 	starting_step_key = "hpot_business_venture_1_start",
 	hotpot_credits = {
@@ -2690,22 +2621,11 @@ HotPotato.EventScenario {
 HotPotato.EventStep {
 	key = "business_venture_1_start",
 	hide_hand = true,
-	loc_txt = {
-		text = {
-			"A stange guy approaches you on the street.",
-			" ",
-			"\"Hey, would you like to invest in my business idea?\"",
-		},
-		choices = {
-			invest_100 = "Invest {C:purple}c.100",
-			invest_500 = "Invest {C:purple}c.500",
-			invest_1000 = "Invest {C:purple}c.1000",
-		}
-	},
 	get_choices = function(self, event)
 		return {
 			{
-				key = "invest_100",
+				key = "hpot_invest_100",
+				no_prefix = true,
 				button = function()
 					G.PROFILES[G.SETTINGS.profile].hpot_event_triboulet_invested = 100
 					G.GAME.hpot_event_triboulet_invested = true
@@ -2717,7 +2637,8 @@ HotPotato.EventStep {
 				end
 			},
 			{
-				key = "invest_500",
+				key = "hpot_invest_500",
+				no_prefix = true,
 				button = function()
 					G.PROFILES[G.SETTINGS.profile].hpot_event_triboulet_invested = 500
 					G.GAME.hpot_event_triboulet_invested = true
@@ -2729,7 +2650,8 @@ HotPotato.EventStep {
 				end
 			},
 			{
-				key = "invest_1000",
+				key = "hpot_invest_1000",
+				no_prefix = true,
 				button = function()
 					G.PROFILES[G.SETTINGS.profile].hpot_event_triboulet_invested = 1000
 					G.GAME.hpot_event_triboulet_invested = true
@@ -2762,13 +2684,6 @@ HotPotato.EventStep {
 HotPotato.EventStep {
 	key = "business_venture_1_finish",
 	hide_hand = true,
-	loc_txt = {
-		text = {
-			"\"Hehe, I will make it worth your time.\" *wink* *wink*",
-			" ",
-			"You have a bad feeling about this."
-		},
-	},
 	get_choices = function(self, event)
 		return {
 			moveon()
@@ -2778,12 +2693,6 @@ HotPotato.EventStep {
 
 HotPotato.EventScenario {
 	key = "business_venture_2",
-	loc_txt = {
-		name = "Triboulet's Business Venture (Part II)",
-		text = {
-			"Stonks."
-		}
-	},
 	domains = { occurence = true },
 	starting_step_key = "hpot_business_venture_2_start",
 	hotpot_credits = {
@@ -2799,18 +2708,6 @@ HotPotato.EventScenario {
 HotPotato.EventStep {
 	key = "business_venture_2_start",
 	hide_hand = true,
-	loc_txt = {
-		text = {
-			"\"It's you! Long time no see, pal!",
-			"Thanks to your help I'm a millionaire now!",
-			"It's in credits so it's actually not that impressive",
-			"but at least I can afford some nice Kings and Queens,",
-			"if you know what I mean!\" *wink* *wink*",
-			" ",
-			"You take the money and decide to wash your hands repeatedly",
-			"as soon as you get home."
-		},
-	},
 	get_choices = function(self, event)
 		return {
 			moveon()
@@ -2839,12 +2736,6 @@ HotPotato.EventStep {
 
 HotPotato.EventScenario {
 	key = "business_venture_3",
-	loc_txt = {
-		name = "Triboulet's Pity",
-		text = {
-			"Oh, you can't afford it?"
-		}
-	},
 	domains = { occurence = true },
 	starting_step_key = "hpot_business_venture_3_start",
 	hotpot_credits = {
@@ -2860,30 +2751,11 @@ HotPotato.EventScenario {
 HotPotato.EventStep {
 	key = "business_venture_3_start",
 	hide_hand = true,
-	loc_txt = {
-		text = {
-			"A stange guy approaches you on the street.",
-			" ",
-			"\"Hey, would you like to invest in-",
-			" ",
-			"Oh, you seem to be in serious debt I see.",
-			"Tell you what, I'll bail you out. But not for free of course.",
-			"You will need to give me something valuable in return,",
-			"if you know what I mean!\" *wink* *wink*",
-			" ",
-			"You have a bad feeling about this."
-		},
-		choices = {
-			dollars = "Pay {C:money}$",
-			plincoins = "Pay {C:hpot_plincoin,f:hpot_plincoin}$",
-			crypto = "Pay {C:hpot_advert,f:hpot_plincoin}£",
-			spark = "Pay {C:blue,f:hpot_plincoin}͸",
-		}
-	},
 	get_choices = function(self, event)
 		return {
 			{
-				key = "dollars",
+				key = "hpot_business_dollars",
+				no_prefix = true,
 				button = function()
 					G.GAME.hpot_event_triboulet_invested = true
 					ease_dollars(G.GAME.credits_text)
@@ -2892,7 +2764,8 @@ HotPotato.EventStep {
 				end,
 			},
 			{
-				key = "plincoins",
+				key = "hpot_business_plincoins",
+				no_prefix = true,
 				button = function()
 					G.GAME.hpot_event_triboulet_invested = true
 					ease_plincoins(G.GAME.credits_text)
@@ -2901,7 +2774,8 @@ HotPotato.EventStep {
 				end,
 			},
 			{
-				key = "crypto",
+				key = "hpot_business_crypto",
+				no_prefix = true,
 				button = function()
 					G.GAME.hpot_event_triboulet_invested = true
 					ease_cryptocurrency(G.GAME.credits_text)
@@ -2910,7 +2784,8 @@ HotPotato.EventStep {
 				end,
 			},
 			{
-				key = "spark",
+				key = "hpot_business_spark",
+				no_prefix = true,
 				button = function()
 					G.GAME.hpot_event_triboulet_invested = true
 					ease_spark_points(G.GAME.credits_text)
@@ -2940,11 +2815,6 @@ HotPotato.EventStep {
 HotPotato.EventStep {
 	key = "business_venture_3_finish",
 	hide_hand = true,
-	loc_txt = {
-		text = {
-			"\"Hehe, pleasure doing business with you.\" *wink* *wink*",
-		},
-	},
 	get_choices = function(self, event)
 		return {
 			moveon()
@@ -2960,12 +2830,6 @@ HotPotato.EventStep {
 
 HotPotato.EventScenario {
 	key = "buzzfeed_quiz",
-	loc_txt = {
-		name = "Personality Quiz",
-		text = {
-			"Click here and find out which Joker you are!"
-		}
-	},
 	domains = { reward = true },
 	starting_step_key = "hpot_buzzfeed_quiz_start",
 	hotpot_credits = {
@@ -2980,22 +2844,11 @@ HotPotato.EventScenario {
 HotPotato.EventStep {
 	key = "buzzfeed_quiz_start",
 	hide_hand = true,
-	loc_txt = {
-		text = {
-			"You accidentally clicked one of the ads on the screen. The page reads:",
-			" ",
-			"{s:1.2}\"Which {s:1.2,C:attention}Balatro{s:1.2} Joker are you?\"",
-			" ",
-			"No harm in trying it out, right?"
-		},
-		choices = {
-			take_quiz = "Take the quiz"
-		}
-	},
 	get_choices = function(self, event)
 		return {
 			{
-				key = "take_quiz",
+				key = "hpot_take_quiz",
+				no_prefix = true,
 				button = function()
 					G.GAME.hotpot_diy = G.GAME.hotpot_diy or {}
 					event.start_step("hpot_buzzfeed_quiz_1")
@@ -3023,42 +2876,35 @@ HotPotato.EventStep {
 HotPotato.EventStep {
 	key = "buzzfeed_quiz_1",
 	hide_hand = true,
-	loc_txt = {
-		text = {
-			"\"Where would you like to go on a first date?\"",
-		},
-		choices = {
-			park = "To the park",
-			carnival = "To the town fair",
-			casino = "To the casino",
-			no_date = "Nowhere, because nothing ever happens"
-		}
-	},
 	get_choices = function(self, event)
 		return {
 			{
-				key = "park",
+				key = "hpot_park",
+				no_prefix = true,
 				button = function()
 					G.GAME.hotpot_diy.trigger = 1
 					event.start_step("hpot_buzzfeed_quiz_park")
 				end
 			},
 			{
-				key = "carnival",
+				key = "hpot_carnival",
+				no_prefix = true,
 				button = function()
 					G.GAME.hotpot_diy.trigger = 2
 					event.start_step("hpot_buzzfeed_quiz_carnival")
 				end
 			},
 			{
-				key = "casino",
+				key = "hpot_casino",
+				no_prefix = true,
 				button = function()
 					G.GAME.hotpot_diy.trigger = 3
 					event.start_step("hpot_buzzfeed_quiz_casino")
 				end
 			},
 			{
-				key = "no_date",
+				key = "hpot_no_date",
+				no_prefix = true,
 				button = function()
 					G.GAME.hotpot_diy.trigger = 4
 					event.start_step("hpot_buzzfeed_quiz_no_date")
@@ -3071,19 +2917,11 @@ HotPotato.EventStep {
 HotPotato.EventStep {
 	key = "buzzfeed_quiz_park",
 	hide_hand = true,
-	loc_txt = {
-		text = {
-			"You would like to go on a nice handholding date",
-			"to the local park, you thought."
-		},
-		choices = {
-			continue = "Read the next question",
-		}
-	},
 	get_choices = function(self, event)
 		return {
 			{
-				key = "continue",
+				key = "hpot_quiz_next",
+				no_prefix = true,
 				button = function()
 					event.start_step("hpot_buzzfeed_quiz_3")
 				end
@@ -3095,19 +2933,11 @@ HotPotato.EventStep {
 HotPotato.EventStep {
 	key = "buzzfeed_quiz_carnival",
 	hide_hand = true,
-	loc_txt = {
-		text = {
-			"You would like to enjoy the attractions",
-			"together at the local town fair, you thought."
-		},
-		choices = {
-			continue = "Read the next question",
-		}
-	},
 	get_choices = function(self, event)
 		return {
 			{
-				key = "continue",
+				key = "hpot_quiz_next",
+				no_prefix = true,
 				button = function()
 					event.start_step("hpot_buzzfeed_quiz_3")
 				end
@@ -3119,19 +2949,11 @@ HotPotato.EventStep {
 HotPotato.EventStep {
 	key = "buzzfeed_quiz_casino",
 	hide_hand = true,
-	loc_txt = {
-		text = {
-			"They are not going out with me if they can't",
-			"enjoy a little Plinko gambling, you thought."
-		},
-		choices = {
-			continue = "Read the next question",
-		}
-	},
 	get_choices = function(self, event)
 		return {
 			{
-				key = "continue",
+				key = "hpot_quiz_next",
+				no_prefix = true,
 				button = function()
 					event.start_step("hpot_buzzfeed_quiz_3")
 				end
@@ -3143,19 +2965,11 @@ HotPotato.EventStep {
 HotPotato.EventStep {
 	key = "buzzfeed_quiz_no_date",
 	hide_hand = true,
-	loc_txt = {
-		text = {
-			"Dates? Those are woke nonsense.",
-			"I'm going to be by my lonesome, you thought."
-		},
-		choices = {
-			continue = "Read the next question",
-		}
-	},
 	get_choices = function(self, event)
 		return {
 			{
-				key = "continue",
+				key = "hpot_quiz_next",
+				no_prefix = true,
 				button = function()
 					event.start_step("hpot_buzzfeed_quiz_3")
 				end
@@ -3167,46 +2981,35 @@ HotPotato.EventStep {
 HotPotato.EventStep {
 	key = "buzzfeed_quiz_3",
 	hide_hand = true,
-	loc_txt = {
-		text = {
-			"\"Your roommate owes you 500 credits.",
-			"They say they can pay you back if you just give them a",
-			"little bit more time.",
-			" ",
-			"What do you do?\""
-		},
-		choices = {
-			wait = "Wait patiently",
-			forgive = "Forgive the debt",
-			move = "Move out",
-			sell = "Sell their possessions on the Black Market",
-		}
-	},
 	get_choices = function(self, event)
 		return {
 			{
-				key = "wait",
+				key = "hpot_quiz_wait",
+				no_prefix = true,
 				button = function()
 					G.GAME.hotpot_diy.effect = 3
 					event.start_step("hpot_buzzfeed_quiz_wait")
 				end
 			},
 			{
-				key = "forgive",
+				key = "hpot_quiz_forgive",
+				no_prefix = true,
 				button = function()
 					G.GAME.hotpot_diy.effect = 6
 					event.start_step("hpot_buzzfeed_quiz_forgive")
 				end
 			},
 			{
-				key = "move",
+				key = "hpot_quiz_move",
+				no_prefix = true,
 				button = function()
 					G.GAME.hotpot_diy.effect = 1
 					event.start_step("hpot_buzzfeed_quiz_move")
 				end
 			},
 			{
-				key = "sell",
+				key = "hpot_quiz_sell",
+				no_prefix = true,
 				button = function()
 					G.GAME.hotpot_diy.effect = 5
 					event.start_step("hpot_buzzfeed_quiz_sell")
@@ -3219,20 +3022,11 @@ HotPotato.EventStep {
 HotPotato.EventStep {
 	key = "buzzfeed_quiz_wait",
 	hide_hand = true,
-	loc_txt = {
-		text = {
-			"I'm patient. I can wait for them, you thought.",
-			" ",
-			"You may be betrayed by those words some day."
-		},
-		choices = {
-			continue = "See results",
-		}
-	},
 	get_choices = function(self, event)
 		return {
 			{
-				key = "continue",
+				key = "hpot_quiz_results",
+				no_prefix = true,
 				button = function()
 					event.start_step("hpot_buzzfeed_quiz_finish")
 				end
@@ -3244,21 +3038,11 @@ HotPotato.EventStep {
 HotPotato.EventStep {
 	key = "buzzfeed_quiz_forgive",
 	hide_hand = true,
-	loc_txt = {
-		text = {
-			"No relationship should be shackled to such things as",
-			"money, you thought.",
-			" ",
-			"Maybe you're too forgiving."
-		},
-		choices = {
-			continue = "See results",
-		}
-	},
 	get_choices = function(self, event)
 		return {
 			{
-				key = "continue",
+				key = "hpot_quiz_results",
+				no_prefix = true,
 				button = function()
 					event.start_step("hpot_buzzfeed_quiz_finish")
 				end
@@ -3270,20 +3054,11 @@ HotPotato.EventStep {
 HotPotato.EventStep {
 	key = "buzzfeed_quiz_move",
 	hide_hand = true,
-	loc_txt = {
-		text = {
-			"I can't be living with a leech! You thought.",
-			" ",
-			"Are credits this important to you?"
-		},
-		choices = {
-			continue = "See results",
-		}
-	},
 	get_choices = function(self, event)
 		return {
 			{
-				key = "continue",
+				key = "hpot_quiz_results",
+				no_prefix = true,
 				button = function()
 					event.start_step("hpot_buzzfeed_quiz_finish")
 				end
@@ -3296,20 +3071,11 @@ HotPotato.EventStep {
 HotPotato.EventStep {
 	key = "buzzfeed_quiz_sell",
 	hide_hand = true,
-	loc_txt = {
-		text = {
-			"Hey, at least I can make some of it back, you thought.",
-			" ",
-			"Maybe you should stop and think about what you would do after that."
-		},
-		choices = {
-			continue = "See results",
-		}
-	},
 	get_choices = function(self, event)
 		return {
 			{
-				key = "continue",
+				key = "hpot_quiz_results",
+				no_prefix = true,
 				button = function()
 					event.start_step("hpot_buzzfeed_quiz_finish")
 				end
@@ -3321,16 +3087,6 @@ HotPotato.EventStep {
 HotPotato.EventStep {
 	key = "buzzfeed_quiz_finish",
 	hide_hand = true,
-	loc_txt = {
-		text = {
-			"{s:1.2}\"This is who you are!\"",
-			" ",
-			"A picture of yourself appears on the screen.",
-			" ",
-			"...",
-			"I thought this was about Balatro? Boring."
-		},
-	},
 	get_choices = function(self, event)
 		return {
 			moveon()
@@ -3348,12 +3104,6 @@ HotPotato.EventStep {
 
 HotPotato.EventScenario {
 	key = "dreamkeeper_1",
-	loc_txt = {
-		name = "Dreamkeeper (Part I)",
-		text = {
-			"Sweet dreams are made of this"
-		}
-	},
 	domains = { reward = true },
 	starting_step_key = "hpot_dreamkeeper_1_start",
 	hotpot_credits = {
@@ -3365,19 +3115,11 @@ HotPotato.EventScenario {
 HotPotato.EventStep {
 	key = "dreamkeeper_1_start",
 	hide_hand = true,
-	loc_txt = {
-		text = {
-			"\"Can you take care of these for a bit?",
-			"It would help out a lot!\""
-		},
-		choices = {
-			accept = "Take Dreams"
-		}
-	},
 	get_choices = function(self, event)
 		return {
 			{
-				key = "accept",
+				key = "hpot_take_dreams",
+				no_prefix = true,
 				button = function()
 					event.start_step("hpot_dreamkeeper_1_finish")
 				end,
@@ -3404,11 +3146,6 @@ HotPotato.EventStep {
 HotPotato.EventStep {
 	key = "dreamkeeper_1_finish",
 	hide_hand = true,
-	loc_txt = {
-		text = {
-			"\"Thank you so much. You're a life saver.\"",
-		},
-	},
 	get_choices = function(self, event)
 		return {
 			moveon()
@@ -3424,12 +3161,6 @@ HotPotato.EventStep {
 
 HotPotato.EventScenario {
 	key = "dreamkeeper_2",
-	loc_txt = {
-		name = "Dreamkeeper (Part II)",
-		text = {
-			"Who am I to disagree?"
-		}
-	},
 	domains = { reward = true },
 	starting_step_key = "hpot_dreamkeeper_2_start",
 	hotpot_credits = {
@@ -3444,18 +3175,11 @@ HotPotato.EventScenario {
 HotPotato.EventStep {
 	key = "dreamkeeper_2_start",
 	hide_hand = true,
-	loc_txt = {
-		text = {
-			"\"Hey, have you got my dreams?\""
-		},
-		choices = {
-			accept = "Give Dreams"
-		}
-	},
 	get_choices = function(self, event)
 		return {
 			{
-				key = "accept",
+				key = "hpot_give_dreams",
+				no_prefix = true,
 				button = function()
 					if #SMODS.find_card("c_hpot_imag_stars") >= 5 then
 						for i, card in ipairs(SMODS.find_card("c_hpot_imag_stars")) do
@@ -3489,13 +3213,6 @@ HotPotato.EventStep {
 HotPotato.EventStep {
 	key = "dreamkeeper_2_finish",
 	hide_hand = true,
-	loc_txt = {
-		text = {
-			"\"How could you do this to me!? Those are valuable...",
-			" ",
-			"I hope you're ready to pay for them.\""
-		},
-	},
 	get_choices = function(self, event)
 		return {
 			moveon()
@@ -3512,13 +3229,6 @@ HotPotato.EventStep {
 HotPotato.EventStep {
 	key = "dreamkeeper_2_give",
 	hide_hand = true,
-	loc_txt = {
-		text = {
-			"\"I don't know what I would have done without you.",
-			" ",
-			"Take this. You deserve it.\""
-		},
-	},
 	get_choices = function(self, event)
 		return {
 			moveon()
@@ -3544,13 +3254,6 @@ HotPotato.EventStep {
 
 HotPotato.EventScenario {
 	key = "interest_1",
-	loc_txt = {
-		name = "I Hope This Holds Your Interest (Part I)",
-		text = {
-			"I think it's in your best interest",
-			"to hold on to these"
-		}
-	},
 	domains = { reward = true },
 	starting_step_key = "hpot_interest_1_start",
 	hotpot_credits = {
@@ -3562,19 +3265,11 @@ HotPotato.EventScenario {
 HotPotato.EventStep {
 	key = "interest_1_start",
 	hide_hand = true,
-	loc_txt = {
-		text = {
-			"\"Hey, I'm bored of these. You can play with them if you want",
-			"but give them back, will you?\""
-		},
-		choices = {
-			accept = "Take Interests"
-		}
-	},
 	get_choices = function(self, event)
 		return {
 			{
-				key = "accept",
+				key = "hpot_take_interests",
+				no_prefix = true,
 				button = function()
 					event.start_step("hpot_interest_1_finish")
 				end,
@@ -3601,11 +3296,6 @@ HotPotato.EventStep {
 HotPotato.EventStep {
 	key = "interest_1_finish",
 	hide_hand = true,
-	loc_txt = {
-		text = {
-			"\"I'm just going back to my Switch 2.\"",
-		},
-	},
 	get_choices = function(self, event)
 		return {
 			moveon()
@@ -3621,12 +3311,6 @@ HotPotato.EventStep {
 
 HotPotato.EventScenario {
 	key = "interest_2",
-	loc_txt = {
-		name = "I Hope This Holds Your Interest (Part II)",
-		text = {
-			"Being nice doesn't make you interesting, you know?"
-		}
-	},
 	domains = { reward = true },
 	starting_step_key = "hpot_interest_2_start",
 	hotpot_credits = {
@@ -3641,19 +3325,11 @@ HotPotato.EventScenario {
 HotPotato.EventStep {
 	key = "interest_2_start",
 	hide_hand = true,
-	loc_txt = {
-		text = {
-			"\"I take it back. I want to play with them again,",
-			"can you give them back?\""
-		},
-		choices = {
-			accept = "Give Interests"
-		}
-	},
 	get_choices = function(self, event)
 		return {
 			{
-				key = "accept",
+				key = "hpot_give_interests",
+				no_prefix = true,
 				button = function()
 					if #SMODS.find_card("c_hpot_imag_duck") >= 5 then
 						for i, card in ipairs(SMODS.find_card("c_hpot_imag_duck")) do
@@ -3687,14 +3363,6 @@ HotPotato.EventStep {
 HotPotato.EventStep {
 	key = "interest_2_finish",
 	hide_hand = true,
-	loc_txt = {
-		text = {
-			"\"What? But... I didn't look like I needed them?",
-			"How dare you?",
-			" ",
-			"I hope you're ready to pay for them.\""
-		},
-	},
 	get_choices = function(self, event)
 		return {
 			moveon()
@@ -3711,13 +3379,6 @@ HotPotato.EventStep {
 HotPotato.EventStep {
 	key = "interest_2_give",
 	hide_hand = true,
-	loc_txt = {
-		text = {
-			"\"Hahaha, I don't know how I ever go bored of these.",
-			" ",
-			"Thanks, have this.\""
-		},
-	},
 	get_choices = function(self, event)
 		return {
 			moveon()
@@ -3738,12 +3399,6 @@ HotPotato.EventStep {
 
 HotPotato.EventScenario {
 	key = "cool_gal",
-	loc_txt = {
-		name = "Cool Gal",
-		text = {
-			"And everyone clapped."
-		}
-	},
 	domains = { wealth = true },
 	starting_step_key = "hpot_cool_gal_start",
 	hotpot_credits = {
@@ -3755,16 +3410,6 @@ HotPotato.EventScenario {
 HotPotato.EventStep {
 	key = "cool_gal_start",
 	hide_hand = true,
-	loc_txt = {
-		text = {
-			"A young lady riding a motocycle approaches you.",
-			"\"Hey, take this!\"",
-			" ",
-			"And then she drove away into the sunset.",
-			" ",
-			"What a cool gal."
-		},
-	},
 	get_choices = function(self, event)
 		return {
 			moveon()
@@ -3807,12 +3452,6 @@ HotPotato.EventStep {
 HotPotato.EventScenario {
 	key = "gambling",
 	hide_image_area = true,
-	loc_txt = {
-		name = "Let's Go Gambling!",
-		text = {
-			"Aw dang it."
-		}
-	},
 	domains = { wealth = true },
 	starting_step_key = "hpot_gambling_start",
 	hotpot_credits = {
@@ -3848,24 +3487,11 @@ end
 HotPotato.EventStep {
 	key = "gambling_start",
 	hide_hand = true,
-	loc_txt = {
-		text = {
-			"You encounter a slot machine.",
-			" ",
-			"How much will you bet?"
-		},
-		choices = {
-			bet5 = "Bet {C:money}$5{}",
-			bet10 = "Bet {C:money}$10{}",
-			bet20 = "Bet {C:money}$20{}",
-			bet40 = "Bet {C:money}$40{}",
-			ignore = "Ignore"
-		}
-	},
 	get_choices = function(self, event)
 		return {
 			{
-				key = "bet5",
+				key = "hpot_gambling_bet5",
+				no_prefix = true,
 				button = function()
 					hpot_event_gambling_func(5, event)
 				end,
@@ -3874,7 +3500,8 @@ HotPotato.EventStep {
 				end
 			},
 			{
-				key = "bet10",
+				key = "hpot_gambling_bet10",
+				no_prefix = true,
 				button = function()
 					hpot_event_gambling_func(10, event)
 				end,
@@ -3883,7 +3510,8 @@ HotPotato.EventStep {
 				end
 			},
 			{
-				key = "bet20",
+				key = "hpot_gambling_bet20",
+				no_prefix = true,
 				button = function()
 					hpot_event_gambling_func(20, event)
 				end,
@@ -3892,7 +3520,8 @@ HotPotato.EventStep {
 				end
 			},
 			{
-				key = "bet40",
+				key = "hpot_gambling_bet40",
+				no_prefix = true,
 				button = function()
 					hpot_event_gambling_func(40, event)
 				end,
@@ -3901,7 +3530,8 @@ HotPotato.EventStep {
 				end
 			},
 			{
-				key = "ignore",
+				key = "hpot_gambling_ignore",
+				no_prefix = true,
 				button = hpot_event_end_scenario,
 			}
 		}
@@ -3914,24 +3544,10 @@ HotPotato.EventStep {
 HotPotato.EventStep {
 	key = "gambling_success",
 	hide_hand = true,
-	loc_txt = {
-		text = {
-			"I can't stop winning!",
-			" ",
-			"How much will you bet next?"
-		},
-		choices = {
-			bet5 = "Bet {C:money}$5{}",
-			bet10 = "Bet {C:money}$10{}",
-			bet20 = "Bet {C:money}$20{}",
-			bet40 = "Bet {C:money}$40{}",
-			stop = "Stop"
-		}
-	},
 	get_choices = function(self, event)
 		return {
 			{
-				key = "bet5",
+				key = "hpot_gambling_bet5",
 				button = function()
 					hpot_event_gambling_func(5, event)
 				end,
@@ -3940,7 +3556,7 @@ HotPotato.EventStep {
 				end
 			},
 			{
-				key = "bet10",
+				key = "hpot_gambling_bet10",
 				button = function()
 					hpot_event_gambling_func(10, event)
 				end,
@@ -3949,7 +3565,7 @@ HotPotato.EventStep {
 				end
 			},
 			{
-				key = "bet20",
+				key = "hpot_gambling_bet20",
 				button = function()
 					hpot_event_gambling_func(20, event)
 				end,
@@ -3958,7 +3574,7 @@ HotPotato.EventStep {
 				end
 			},
 			{
-				key = "bet40",
+				key = "hpot_gambling_bet40",
 				button = function()
 					hpot_event_gambling_func(40, event)
 				end,
@@ -3967,7 +3583,7 @@ HotPotato.EventStep {
 				end
 			},
 			{
-				key = "stop",
+				key = "hpot_gambling_stop",
 				button = hpot_event_end_scenario,
 			}
 		}
@@ -3977,24 +3593,10 @@ HotPotato.EventStep {
 HotPotato.EventStep {
 	key = "gambling_fail",
 	hide_hand = true,
-	loc_txt = {
-		text = {
-			"Aw dang it!",
-			" ",
-			"How much will you bet next?"
-		},
-		choices = {
-			bet5 = "Bet {C:money}$5{}",
-			bet10 = "Bet {C:money}$10{}",
-			bet20 = "Bet {C:money}$20{}",
-			bet40 = "Bet {C:money}$40{}",
-			stop = "Stop"
-		}
-	},
 	get_choices = function(self, event)
 		return {
 			{
-				key = "bet5",
+				key = "hpot_gambling_bet5",
 				button = function()
 					hpot_event_gambling_func(5, event)
 				end,
@@ -4003,7 +3605,7 @@ HotPotato.EventStep {
 				end
 			},
 			{
-				key = "bet10",
+				key = "hpot_gambling_bet10",
 				button = function()
 					hpot_event_gambling_func(10, event)
 				end,
@@ -4012,7 +3614,7 @@ HotPotato.EventStep {
 				end
 			},
 			{
-				key = "bet20",
+				key = "hpot_gambling_bet20",
 				button = function()
 					hpot_event_gambling_func(20, event)
 				end,
@@ -4021,7 +3623,7 @@ HotPotato.EventStep {
 				end
 			},
 			{
-				key = "bet40",
+				key = "hpot_gambling_bet40",
 				button = function()
 					hpot_event_gambling_func(40, event)
 				end,
@@ -4030,7 +3632,7 @@ HotPotato.EventStep {
 				end
 			},
 			{
-				key = "stop",
+				key = "hpot_gambling_stop",
 				button = hpot_event_end_scenario,
 			}
 		}
@@ -4040,11 +3642,6 @@ HotPotato.EventStep {
 HotPotato.EventStep {
 	key = "gambling_finish_pos",
 	hide_hand = true,
-	loc_txt = {
-		text = {
-			"Maybe stop while you're ahead..."
-		},
-	},
 	get_choices = function(self, event)
 		return {
 			moveon()
@@ -4055,11 +3652,6 @@ HotPotato.EventStep {
 HotPotato.EventStep {
 	key = "gambling_finish_neg",
 	hide_hand = true,
-	loc_txt = {
-		text = {
-			"You want to keep going by your brain knows better..."
-		},
-	},
 	get_choices = function(self, event)
 		return {
 			moveon()
@@ -4086,12 +3678,6 @@ end
 
 HotPotato.EventScenario {
 	key = "pba10",
-	loc_txt = {
-		name = "PBA 10",
-		text = {
-			"Sometimes the hobby is to ruin the hobby"
-		}
-	},
 	domains = { wealth = true },
 	starting_step_key = "hpot_pba10_start",
 	hotpot_credits = {
@@ -4103,24 +3689,11 @@ HotPotato.EventScenario {
 HotPotato.EventStep {
 	key = "pba10_start",
 	hide_hand = true,
-	loc_txt = {
-		text = {
-			"\"Dude, you gotta check this out. This is crazy!",
-			"My Trading Card got rated a PBA 10! This is gonna sell for thousands!\"",
-			" ",
-			"\"What? Playing? Of course I'm not playing! This is an investment!\"",
-			" ",
-			"\"Here, take some of my packs. They will give you the rush.",
-			"Oh, and don't worry I already weighted them."
-		},
-		choices = {
-			accept = "Take packs"
-		}
-	},
 	get_choices = function(self, event)
 		return {
 			{
-				key = "accept",
+				key = "hpot_pba_take",
+				no_prefix = true,
 				button = hpot_event_end_scenario,
 			},
 		}
@@ -4154,12 +3727,6 @@ HotPotato.EventStep {
 
 HotPotato.EventScenario {
 	key = "small_seed",
-	loc_txt = {
-		name = "Small Seed",
-		text = {
-			"All you need to change the future"
-		}
-	},
 	domains = { escapade = true },
 	starting_step_key = "hpot_small_seed_start",
 	hotpot_credits = {
@@ -4172,27 +3739,18 @@ HotPotato.EventStep {
 	key = "small_seed_start",
 	hide_image_area = true,
 	hide_hand = true,
-	loc_txt = {
-		text = {
-			"On your way to the next blind you see a small sapling.",
-			" ",
-			"What do you do?"
-		},
-		choices = {
-			water = "Water it",
-			ignore = "Ignore it"
-		}
-	},
 	get_choices = function(self, event)
 		return {
 			{
-				key = "water",
+				key = "hpot_seed_water",
+				no_prefix = true,
 				button = function()
 					event.start_step("hpot_small_seed_water")
 				end,
 			},
 			{
-				key = "ignore",
+				key = "hpot_seed_ignore",
+				no_prefix = true,
 				button = function()
 					event.start_step("hpot_small_seed_ignore")
 				end,
@@ -4204,13 +3762,6 @@ HotPotato.EventStep {
 HotPotato.EventStep {
 	key = "small_seed_water",
 	hide_hand = true,
-	loc_txt = {
-		text = {
-			"Changing the world one nice act at the time.",
-			" ",
-			"You feel a change in your deck."
-		},
-	},
 	get_choices = function(self, event)
 		return {
 			moveon()
@@ -4229,13 +3780,6 @@ HotPotato.EventStep {
 HotPotato.EventStep {
 	key = "small_seed_ignore",
 	hide_hand = true,
-	loc_txt = {
-		text = {
-			"So that's the kind of person you are, huh?",
-			" ",
-			"You feel a change in your deck."
-		},
-	},
 	get_choices = function(self, event)
 		return {
 			moveon()
@@ -4256,12 +3800,6 @@ HotPotato.EventStep {
 
 HotPotato.EventScenario {
 	key = "cursed_womb",
-	loc_txt = {
-		name = "Cursed Womb",
-		text = {
-			"Fey not again..."
-		}
-	},
 	domains = { escapade = true },
 	starting_step_key = "hpot_cursed_womb_start",
 	hotpot_credits = {
@@ -4273,34 +3811,19 @@ HotPotato.EventScenario {
 HotPotato.EventStep {
 	key = "cursed_womb_start",
 	hide_hand = true,
-	loc_txt = {
-		text = {
-			"A grueling scent floods your nose,",
-			"you whip around looking for any hint",
-			"towards the vile stench.",
-			" ",
-			"\"IS THAT A HUMAN FINGER!? Why is it so... shrivelled?",
-			"No, it looks like it should have decomposed by now...\"",
-			" ",
-			"A sudden feeling comes over you, wait no!",
-			"You want to eat the finger... no, don't!"
-		},
-		choices = {
-			eat_finger = "Hell yeahh!",
-			ignore_finger = "Ah hell no!"
-		}
-	},
 	get_choices = function(self, event)
 		return {
 			{
-				key = "eat_finger",
+				key = "hpot_womb_eat_finger",
+				no_prefix = true,
 				button = function()
 					SMODS.add_card({ set = 'Joker', legendary = true, edition = 'e_negative' })
 					hpot_event_end_scenario()
 				end
 			},
 			{
-				key = "ignore_finger",
+				key = "hpot_womb_ignore_finger",
+				no_prefix = true,
 				button = function()
 					for i = 1, 5 do
 						SMODS.add_card({ key = 'j_four_fingers', edition = 'e_negative' })
@@ -4332,12 +3855,6 @@ HotPotato.EventStep {
 
 HotPotato.EventScenario {
 	key = "ruan_mei",
-	loc_txt = {
-		name = "Ruan Mei",
-		text = {
-			"Don't tell Herta and Screwllum about this."
-		}
-	},
 	domains = { escapade = true },
 	starting_step_key = "hpot_ruan_mei_start",
 	hotpot_credits = {
@@ -4349,29 +3866,11 @@ HotPotato.EventScenario {
 HotPotato.EventStep {
 	key = "ruan_mei_start",
 	hide_hand = true,
-	loc_txt = {
-		text = {
-			"You catch a whiff of the aroma of warm pastries.",
-			"As you lift your feet from the ground and float",
-			"towards them in a cartoonis fashion, a dark-haired lady",
-			"addresses you.",
-			" ",
-			"\"This is the simulated lab, my miniature petri dish.",
-			"I nurtured this miniature slice by myself and embedded it into the code of te game.\"",
-			" ",
-			"\"I'll give you some things,\" she says, ",
-			"good things. But they don't come for free.\""
-		},
-		choices = {
-			ruan_mei = "You are... Ruan Mei?",
-			aeons = "Worship Aeons",
-			money = "Want lots of money"
-		}
-	},
 	get_choices = function(self, event)
 		return {
 			{
-				key = "ruan_mei",
+				key = "hpot_ruan_mei",
+				no_prefix = true,
 				button = function()
 					for _, joker in ipairs(G.jokers.cards) do
 						if not joker.edition then
@@ -4386,7 +3885,8 @@ HotPotato.EventStep {
 				end
 			},
 			{
-				key = "aeons",
+				key = "hpot_aeons",
+				no_prefix = true,
 				button = function()
 					for _, joker in ipairs(G.jokers.cards) do
 						if not joker.edition then
@@ -4400,7 +3900,8 @@ HotPotato.EventStep {
 				end
 			},
 			{
-				key = "money",
+				key = "hpot_money",
+				no_prefix = true,
 				button = function()
 					ease_dollars(500)
 					hpot_event_end_scenario()
@@ -5146,13 +4647,6 @@ end
 HotPotato.EventScenario {
 	key = "the_tavern",
 	hide_image_area = true,
-	loc_txt = {
-		name = "The Tavern",
-		text = {
-			"You think you can be in this part of town",
-			"looking all cool? Yes, you can."
-		}
-	},
 	domains = { combat = true, encounter = true },
 	can_repeat = true,
 	starting_step_key = "hpot_the_tavern_start",
@@ -5165,20 +4659,6 @@ HotPotato.EventScenario {
 HotPotato.EventStep {
 	key = "the_tavern_start",
 	hide_hand = true,
-	loc_txt = {
-		text = {
-			"\"This person over here thinks they're so tough.\"",
-			" ",
-			"\"Really? Let's see you beat this.\"",
-			" ",
-			"Face {C:attention}#1#{} #2#",
-			"{C:money}Reward:{} #3#",
-			"{C:inactive}(Regular Blind rewards are also obtained){}"
-		},
-		choices = {
-			fight = "Fight!",
-		}
-	},
 	loc_vars = function(self, event)
 		if not event.ability.blind then -- very hacky. dont like it
 			event.ability.blind = event.domain == "encounter" and hpot_event_get_random_boss() or "bl_big"
@@ -5191,7 +4671,8 @@ HotPotato.EventStep {
 	get_choices = function(self, event)
 		return {
 			{
-				key = "fight",
+				key = "hpot_tavern_fight",
+				no_prefix = true,
 				button = function()
 					hpot_event_start_combat("generic", event.ability.blind, event.ability.effect)
 				end,
@@ -5209,12 +4690,6 @@ HotPotato.EventStep {
 
 HotPotato.EventScenario {
 	key = "bj",
-	loc_txt = {
-		name = "Blackjack",
-		text = {
-			"What's 9+10?"
-		}
-	},
 	domains = { adventure = true },
 	can_repeat = true,
 	starting_step_key = "hpot_bj_in",
@@ -5230,19 +4705,6 @@ HotPotato.EventScenario {
 HotPotato.EventStep {
 	key = "hpot_bj_in",
 	hide_hand = false,
-	loc_txt = {
-		text = {
-			"You see a shady figure with a set of cards",
-			"infront of him, a 'normal' 52 card deck.",
-			'',
-			"\"Up for a game of Black Jack, pal?\" He sounds",
-			"like he's straight out of the 'slammer'..."
-		},
-		choices = {
-			start = "I'm all in!",
-			stop = "On second thought, maybe not..."
-		}
-	},
 	start = function(self, event)
 		G.GAME.BJ_CARDS = { TOTAL = 0 }
 		local to = Character("j_ring_master")
@@ -5260,13 +4722,15 @@ HotPotato.EventStep {
 	get_choices = function(self, event)
 		return {
 			{
-				key = "start",
+				key = "hpot_bj_start",
+				no_prefix = true,
 				button = function()
 					event.start_step('hpot_bj_start')
 				end
 			},
 			{
-				key = "stop",
+				key = "hpot_bj_stop",
+				no_prefix = true,
 				button = function()
 					hpot_event_end_scenario()
 				end
@@ -5323,16 +4787,11 @@ HotPotato.EventStep {
 HotPotato.EventStep {
 	key = "hpot_bj_check",
 	hide_hand = false,
-	loc_txt = {
-		choices = {
-			hit = "Lady Luck gimme a kiss! (Hit)",
-			stand = "Wee hee hee! (Stand)"
-		}
-	},
 	get_choices = function(self, event)
 		return {
 			{
-				key = 'hit',
+				key = 'hpot_bj_hit',
+				no_prefix = true,
 				button = function()
 					event.start_step('hpot_bj_hit')
 				end,
@@ -5341,7 +4800,8 @@ HotPotato.EventStep {
 				end
 			},
 			{
-				key = 'stand',
+				key = 'hpot_bj_stand',
+				no_prefix = true,
 				button = function()
 					event.start_step('hpot_bj_eval')
 				end
@@ -5409,18 +4869,11 @@ HotPotato.EventStep {
 HotPotato.EventStep {
 	key = "hpot_bj_final",
 	hide_hand = false,
-	loc_txt = {
-		text = {
-			"Looks like you #1#, cash in for {C:money}$#2#{}!"
-		},
-		choices = {
-			cashin = 'Cash in!'
-		}
-	},
 	get_choices = function(self, event)
 		return {
 			{
-				key = "cashin",
+				key = "hpot_bj_cashin",
+				no_prefix = true,
 				button = function()
 					ease_dollars(G.GAME.BJ_CARDS.FINAL_MONEY)
 					G.GAME.BJ_CARDS.DEALER_CARDS[1]:remove()
@@ -5541,12 +4994,6 @@ end
 
 HotPotato.EventScenario {
 	key = "postlatro",
-	loc_txt = {
-		name = "Postlatro Express",
-		text = {
-			"Where everything is 0% off!"
-		}
-	},
 	domains = { transaction = true, respite = true },
 	can_repeat = true,
 	starting_step_key = "hpot_postlatro_start",
@@ -5558,26 +5005,11 @@ HotPotato.EventScenario {
 
 HotPotato.EventStep {
 	key = "postlatro_start",
-	loc_txt = {
-		text = {
-		},
-		choices = {
-			spark = "{C:money}$1{} > {C:blue,f:hpot_plincoin}͸5k",
-			plincoins = "{C:money}$10{} > {C:hpot_plincoin,f:hpot_plincoin}$1",
-			credits = "{C:money}$10{} > {C:purple}c.45",
-			crypto = "{C:money}$20{} > {C:hpot_advert,f:hpot_plincoin}£1",
-			from_spark = "{C:blue,f:hpot_plincoin}͸10k{} > {C:money}$1{}",
-			from_plincoins = "{C:hpot_plincoin,f:hpot_plincoin}$1{} > {C:money}$5{}",
-			from_credits = "{C:purple}c.50{} > {C:money}$5{}",
-			from_crypto = "{C:hpot_advert,f:hpot_plincoin}£1{} > {C:money}$10{}",
-			trade_dreams = "Sell Dreams for {C:hpot_plincoin,f:hpot_plincoin}$10",
-			trade_interests = "Sell Interests for {C:blue,f:hpot_plincoin}͸100k{}"
-		}
-	},
 	get_choices = function(self, event)
 		return {
 			{
-				key = "spark",
+				key = "hpot_postlatro_spark",
+				no_prefix = true,
 				button = function()
 					ease_currency("dollars", -1)
 					ease_currency("joker_exchange", 5000)
@@ -5587,7 +5019,8 @@ HotPotato.EventStep {
 				end
 			},
 			{
-				key = "plincoins",
+				key = "hpot_postlatro_plincoins",
+				no_prefix = true,
 				button = function()
 					ease_currency("dollars", -10)
 					ease_currency("plincoin", 1)
@@ -5597,7 +5030,8 @@ HotPotato.EventStep {
 				end
 			},
 			{
-				key = "credits",
+				key = "hpot_postlatro_credits",
+				no_prefix = true,
 				button = function()
 					ease_currency("dollars", -10)
 					ease_currency("credits", 45)
@@ -5607,7 +5041,8 @@ HotPotato.EventStep {
 				end
 			},
 			{
-				key = "crypto",
+				key = "hpot_postlatro_crypto",
+				no_prefix = true,
 				button = function()
 					ease_currency("dollars", -20)
 					ease_currency("crypto", 1)
@@ -5617,7 +5052,8 @@ HotPotato.EventStep {
 				end
 			},
 			{
-				key = "from_spark",
+				key = "hpot_postlatro_from_spark",
+				no_prefix = true,
 				button = function()
 					ease_currency("joker_exchange", -10000)
 					ease_currency("dollars", 1)
@@ -5627,7 +5063,8 @@ HotPotato.EventStep {
 				end
 			},
 			{
-				key = "from_plincoins",
+				key = "hpot_postlatro_from_plincoins",
+				no_prefix = true,
 				button = function()
 					ease_currency("plincoin", -1)
 					ease_currency("dollars", 5)
@@ -5637,7 +5074,8 @@ HotPotato.EventStep {
 				end
 			},
 			{
-				key = "from_credits",
+				key = "hpot_postlatro_from_credits",
+				no_prefix = true,
 				button = function()
 					ease_currency("credits", -50)
 					ease_currency("dollars", 5)
@@ -5647,7 +5085,8 @@ HotPotato.EventStep {
 				end
 			},
 			{
-				key = "from_crypto",
+				key = "hpot_postlatro_from_crypto",
+				no_prefix = true,
 				button = function()
 					ease_currency("crypto", -1)
 					ease_currency("dollars", 10)
@@ -5657,7 +5096,8 @@ HotPotato.EventStep {
 				end
 			},
 			{
-				key = "trade_dreams",
+				key = "hpot_postlatro_trade_dreams",
+				no_prefix = true,
 				func = function()
 					return next(SMODS.find_card("c_hpot_imag_stars"))
 				end,
@@ -5667,7 +5107,8 @@ HotPotato.EventStep {
 				end,
 			},
 			{
-				key = "trade_interests",
+				key = "hpot_postlatro_trade_interests",
+				no_prefix = true,
 				func = function()
 					return next(SMODS.find_card("c_hpot_imag_duck"))
 				end,
@@ -5825,12 +5266,6 @@ HotPotato.EventStep {
 
 HotPotato.EventScenario {
 	key = "black_market_alley",
-	loc_txt = {
-		name = "Black Market Dealer",
-		text = {
-			"Where you are 0% off."
-		}
-	},
 	domains = { transaction = true },
 	starting_step_key = "hpot_black_market_alley_start",
 	hotpot_credits = {
@@ -5842,26 +5277,11 @@ HotPotato.EventScenario {
 
 HotPotato.EventStep {
 	key = "black_market_alley_start",
-	loc_txt = {
-		text = {
-		},
-		choices = {
-			dollars = "{C:hpot_advert,f:hpot_plincoin}£1{} > {C:money}$20{}",
-			spark = "{C:hpot_advert,f:hpot_plincoin}£1{} > {C:blue,f:hpot_plincoin}͸100k",
-			plincoins = "{C:hpot_advert,f:hpot_plincoin}£1{} > {C:hpot_plincoin,f:hpot_plincoin}$6",
-			credits = "{C:hpot_advert,f:hpot_plincoin}£1{} > {C:purple}c.90",
-			from_dollars = "{C:money}$30{} > {C:hpot_advert,f:hpot_plincoin}£1{}",
-			from_spark = "{C:blue,f:hpot_plincoin}͸300k{} > {C:hpot_advert,f:hpot_plincoin}£1{}",
-			from_plincoins = "{C:hpot_plincoin,f:hpot_plincoin}$8{} > {C:hpot_advert,f:hpot_plincoin}£1{}",
-			from_credits = "{C:purple}c.185{} > {C:hpot_advert,f:hpot_plincoin}£1{}",
-			trade_questions = "Sell Questions for {C:hpot_advert,f:hpot_plincoin}£10{}",
-			trade_emotions = "Sell Emotions for {C:hpot_advert,f:hpot_plincoin}£10{}"
-		}
-	},
 	get_choices = function(self, event)
 		return {
 			{
-				key = "dollars",
+				key = "hpot_market_dollars",
+				no_prefix = true,
 				button = function()
 					ease_currency("crypto", -1)
 					ease_currency("dollars", 20)
@@ -5871,7 +5291,8 @@ HotPotato.EventStep {
 				end
 			},
 			{
-				key = "spark",
+				key = "hpot_market_spark",
+				no_prefix = true,
 				button = function()
 					ease_currency("crypto", -1)
 					ease_currency("joker_exchange", 100000)
@@ -5881,7 +5302,8 @@ HotPotato.EventStep {
 				end
 			},
 			{
-				key = "plincoins",
+				key = "hpot_market_plincoins",
+				no_prefix = true,
 				button = function()
 					ease_currency("crypto", -1)
 					ease_currency("plincoin", 6)
@@ -5891,7 +5313,8 @@ HotPotato.EventStep {
 				end
 			},
 			{
-				key = "credits",
+				key = "hpot_market_credits",
+				no_prefix = true,
 				button = function()
 					ease_currency("crypto", -1)
 					ease_currency("credits", 90)
@@ -5901,7 +5324,8 @@ HotPotato.EventStep {
 				end
 			},
 			{
-				key = "from_dollars",
+				key = "hpot_market_from_dollars",
+				no_prefix = true,
 				button = function()
 					ease_currency("dollars", -30)
 					ease_currency("crypto", 1)
@@ -5911,7 +5335,8 @@ HotPotato.EventStep {
 				end
 			},
 			{
-				key = "from_spark",
+				key = "hpot_market_from_spark",
+				no_prefix = true,
 				button = function()
 					ease_currency("joker_exchange", -300000)
 					ease_currency("crypto", 1)
@@ -5921,7 +5346,8 @@ HotPotato.EventStep {
 				end
 			},
 			{
-				key = "from_plincoins",
+				key = "hpot_market_from_plincoins",
+				no_prefix = true,
 				button = function()
 					ease_currency("plincoin", -8)
 					ease_currency("crypto", 1)
@@ -5931,7 +5357,8 @@ HotPotato.EventStep {
 				end
 			},
 			{
-				key = "from_credits",
+				key = "hpot_market_from_credits",
+				no_prefix = true,
 				button = function()
 					ease_currency("credits", -185)
 					ease_currency("crypto", 1)
@@ -5941,7 +5368,8 @@ HotPotato.EventStep {
 				end
 			},
 			{
-				key = "trade_questions",
+				key = "hpot_market_trade_questions",
+				no_prefix = true,
 				func = function()
 					return next(SMODS.find_card("c_hpot_imag_curi"))
 				end,
@@ -5951,7 +5379,8 @@ HotPotato.EventStep {
 				end,
 			},
 			{
-				key = "trade_emotions",
+				key = "hpot_market_trade_emotions",
+				no_prefix = true,
 				func = function()
 					return next(SMODS.find_card("c_hpot_imag_drop"))
 				end,
@@ -6130,12 +5559,6 @@ SMODS.Sound {
 
 HotPotato.EventScenario {
 	key = "man_ogg",
-	loc_txt = {
-		name = "The Room Between",
-		text = {
-			"Well, there is a man here."
-		}
-	},
 	domains = { aroombetween = true },
 	starting_step_key = "hpot_egg_room_start",
 	hotpot_credits = {
@@ -6147,26 +5570,19 @@ HotPotato.EventScenario {
 
 HotPotato.EventStep {
 	key = "egg_room_start",
-	loc_txt = {
-		text = {
-			"Well, there is a man here."
-		},
-		choices = {
-			egg = "Yes",
-			eggnt = "No"
-		}
-	},
 	get_choices = function(self, event)
 		return {
 			{
-				key = "egg",
+				key = "hpot_egg",
+				no_prefix = true,
 				button = function()
 					SMODS.add_card({ key = "j_egg", edition = 'e_negative' })
 					hpot_event_end_scenario()
 				end
 			},
 			{
-				key = "eggnt",
+				key = "hpot_eggnt",
+				no_prefix = true,
 				button = function()
 					hpot_event_end_scenario()
 				end
@@ -6257,12 +5673,6 @@ SMODS.Sound {
 
 HotPotato.EventScenario {
 	key = "swoon",
-	loc_txt = {
-		name = "Big Bonus!",
-		text = {
-			" "
-		}
-	},
 	domains = { swoon = true },
 	starting_step_key = "hpot_big_bonus_start",
 	hotpot_credits = {
@@ -6274,18 +5684,11 @@ HotPotato.EventScenario {
 
 HotPotato.EventStep {
 	key = "big_bonus_start",
-	loc_txt = {
-		text = {
-			" "
-		},
-		choices = {
-			no = "Proceed."
-		}
-	},
 	get_choices = function(self, event)
 		return {
 			{
-				key = "no",
+				key = "hpot_proceed",
+				no_prefix = true,
 				button = function()
 					hpot_event_end_scenario()
 				end
