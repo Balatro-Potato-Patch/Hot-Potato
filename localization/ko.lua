@@ -2014,7 +2014,7 @@ return {                     --5572번 라인부터 이어서 작업할 것 -네
                 name = '폭등 후 폭락',
                 text = {
                     '라운드 종료 시 {C:hpot_advert,f:hpot_plincoin}£#1#{}를 획득합니다',
-                    '{C:green}#2#/#3# chance{} 확률로',
+                    '{C:green}#2#/#3#{} 확률로',
                     '모든 {C:hpot_advert,f:hpot_plincoin}£{}을 잃게 됩니다'
                 }
             },
