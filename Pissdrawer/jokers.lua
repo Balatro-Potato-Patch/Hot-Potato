@@ -37,29 +37,29 @@ SMODS.Joker {
     end,
 }
 
-SMODS.Joker {
-    key = 'pwiz',
-    loc_txt = { name = 'Piss Wizard', text = { '{C:money}Piss{} escaped the drawer :/' } },
-    rarity = 1,
-    cost = 5,
-    atlas = "pdr_joker",
-    pos = { x = 0, y = 0 },
-    hotpot_credits = {
-        idea = { 'fey <3' },
-        art = { 'SDM_0' },
-        code = { 'fey <3' },
-        team = { 'Pissdrawer' }
-    },
-    add_to_deck = function(self, card)
-        for i, v in pairs(G.C) do
-            if (type(G.C[i][1]) == 'number') or SMODS.Gradient[i] then G.C[i] = HEX('DCBA1E') end
-        end
-    end,
-    no_collection = true,
-    in_pool = function(self, args)
-        return false
-    end
-}
+-- SMODS.Joker {
+--     key = 'pwiz',
+--     loc_txt = { name = 'Piss Wizard', text = { '{C:money}Piss{} escaped the drawer :/' } },
+--     rarity = 1,
+--     cost = 5,
+--     atlas = "pdr_joker",
+--     pos = { x = 0, y = 0 },
+--     hotpot_credits = {
+--         idea = { 'fey <3' },
+--         art = { 'SDM_0' },
+--         code = { 'fey <3' },
+--         team = { 'Pissdrawer' }
+--     },
+--     add_to_deck = function(self, card)
+--         for i, v in pairs(G.C) do
+--             if (type(G.C[i][1]) == 'number') or SMODS.Gradient[i] then G.C[i] = HEX('DCBA1E') end
+--         end
+--     end,
+--     no_collection = true,
+--     in_pool = function(self, args)
+--         return false
+--     end
+-- }
 
 SMODS.Joker {
     key = 'kindergarten',
