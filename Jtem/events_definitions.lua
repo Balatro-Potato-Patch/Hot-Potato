@@ -1671,6 +1671,14 @@ HotPotato.EventStep {
 		end
 	end,
 	finish = function(self, event)
+		for k, v in pairs(G.hand.cards) do
+			if v.ability.set == 'Joker' then
+				G.hand:remove_card(v)
+				G.jokers:emplace(v)
+				v.marked_for_trolley = nil
+				break
+			end
+		end
 		G.E_MANAGER:add_event(Event({
 			func = function()
 				G.FUNCS.draw_from_hand_to_deck()
@@ -1704,12 +1712,19 @@ HotPotato.EventStep {
 		end
 	end,
 	finish = function(self, event)
-		local joker = G.hand.cards[1]
-		G.hand:remove_card(joker)
-		G.jokers:emplace(joker)
-		joker.marked_for_trolley = nil
+		for k, v in pairs(G.hand.cards) do
+			if v.ability.set == 'Joker' then
+				G.hand:remove_card(v)
+				G.jokers:emplace(v)
+				v.marked_for_trolley = nil
+				break
+			end
+		end
 		G.E_MANAGER:add_event(Event({
 			func = function()
+				G.FUNCS.draw_from_hand_to_deck()
+				G.deck:shuffle('nr' .. G.GAME.round_resets.ante)
+
 				G.hand:change_size(G.GAME.TROLLEY_PREV_HANDSIZE - 5)
 				G.GAME.TROLLEY_PREV_HANDSIZE = nil
 				return true;
@@ -1741,7 +1756,6 @@ HotPotato.EventStep {
 				break
 			end
 		end
-
 		G.E_MANAGER:add_event(Event({
 			func = function()
 				G.FUNCS.draw_from_hand_to_deck()
