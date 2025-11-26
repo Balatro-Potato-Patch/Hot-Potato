@@ -93,7 +93,7 @@ function get_stickers(center)
             local success, should_apply = pcall(v.should_apply, v, nil, center, nil, true)
             if success then
                 if k ~= "eternal" and k ~= "rental" and k ~= "perishable" and type(v.should_apply) == 'function' and v:should_apply(nil, center, nil, true) then
-                    if pseudorandom("hpjtem_delivery_" .. k) < v.rate then
+                    if pseudorandom("hpjtem_delivery_" .. k .. center_key) < v.rate then
                         local sticker_compatible = v.default_compat
                         if sticker_compatible == nil then sticker_compatible = true end
                         if center[k.."_compat"] ~= nil then sticker_compatible = center[k.."_compat"] end
@@ -308,11 +308,11 @@ end
 local currencies = { "dollars", "joker_exchange", "plincoin", "credits", "cryptocurrency" }
 local function hpot_create_joker_from_amazon(card, center)
     -- factors are more fucked when requesting
-    local should_spawn_with_rental = pseudorandom("hpjtem_delivery_rental") < 0.3 and true
-    local should_spawn_with_eternal = center.eternal_compat and pseudorandom("hpjtem_delivery_eternal") < 0.3 and true
+    local should_spawn_with_rental = pseudorandom("hpjtem_amazon_delivery_rental") < 0.3 and true
+    local should_spawn_with_eternal = center.eternal_compat and pseudorandom("hpjtem_amazon_delivery_eternal") < 0.3 and true
     local should_spawn_with_perishable = center.perishable_compat and
-        pseudorandom("hpjtem_delivery_perishable") < 0.3 and not should_spawn_with_eternal
-    local currency = pseudorandom_element(currencies, pseudoseed("hpjtem_delivery_currency"))
+        pseudorandom("hpjtem_amazon_delivery_perishable") < 0.3 and not should_spawn_with_eternal
+    local currency = pseudorandom_element(currencies, pseudoseed("hpjtem_amazon_delivery_currency"))
     local price_factor = 0.5
     if currency == "joker_exchange" then
         price_factor = 12942
@@ -329,8 +329,8 @@ local function hpot_create_joker_from_amazon(card, center)
     stickers[#stickers + 1] = should_spawn_with_eternal and "eternal" or nil
     stickers[#stickers + 1] = should_spawn_with_perishable and "perishable" or nil
     local create_card_args = {
-        hp_jtem_silent_edition = plincoin and poll_edition("hpjtem_delivery_edition", nil, nil, true) or
-            (not jx and poll_edition("hpjtem_delivery_edition")),
+        hp_jtem_silent_edition = plincoin and poll_edition("hpjtem_amazon_delivery_edition", nil, nil, true) or
+            (not jx and poll_edition("hpjtem_amazon_delivery_edition")),
         no_edition = jx or credits,
         bypass_discovery_ui = true,
         bypass_discovery_center = true,
@@ -339,7 +339,7 @@ local function hpot_create_joker_from_amazon(card, center)
     }
     if create_card_args.hp_jtem_silent_edition == nil then create_card_args.hp_jtem_silent_edition = "e_base" end
     -- TODO: Needs tweaking. This isn't free joker simulator :V
-    local random_price_factor = pseudorandom("hpjtem_delivery_price_factor") * 0.52 + 0.84
+    local random_price_factor = pseudorandom("hpjtem_amazon_delivery_price_factor") * 0.52 + 0.84
     price_factor = price_factor * (should_spawn_with_eternal and 0.9 or 1) * (should_spawn_with_rental and 0.6 or 1) *
         (should_spawn_with_perishable and 0.6 or 1) * 1.5
     for _, v in ipairs(stickers) do
@@ -351,7 +351,7 @@ local function hpot_create_joker_from_amazon(card, center)
         hotpot_jtem_add_to_offers(center.key, {
             price = { currency = currency, value = math.ceil(center.credits / 7 * price_factor * random_price_factor) },
             rounds_total_factor = 0.4 * (should_spawn_with_perishable and 0.6 or 1) *
-                (should_spawn_with_rental and 0.6 or 1) * (should_spawn_with_rental and 0.5 or 1) *
+                (should_spawn_with_eternal and 0.6 or 1) * (should_spawn_with_rental and 0.5 or 1) *
                 (plincoin and 2 or 1) * 1.5,
             extras = {
                 rental = should_spawn_with_rental,
@@ -365,7 +365,7 @@ local function hpot_create_joker_from_amazon(card, center)
         hotpot_jtem_add_to_offers(center.key, {
             price = { currency = currency, value = math.ceil(center.cost * price_factor * random_price_factor) },
             rounds_total_factor = 0.4 * (should_spawn_with_perishable and 0.6 or 1) *
-                (should_spawn_with_rental and 0.6 or 1) * (should_spawn_with_rental and 0.5 or 1) *
+                (should_spawn_with_eternal and 0.6 or 1) * (should_spawn_with_rental and 0.5 or 1) *
                 (plincoin and 2 or 1) * 1.5,
             extras = {
                 rental = should_spawn_with_rental,
@@ -374,8 +374,8 @@ local function hpot_create_joker_from_amazon(card, center)
                 perish_tally = should_spawn_with_perishable and G.GAME.perishable_rounds,
             },
             create_card_args = {
-                hp_jtem_silent_edition = plincoin and poll_edition("hpjtem_delivery_edition", nil, nil, true) or
-                    (not jx and poll_edition("hpjtem_delivery_edition")),
+                hp_jtem_silent_edition = plincoin and poll_edition("hpjtem_amazon_delivery_edition", nil, nil, true) or
+                    (not jx and poll_edition("hpjtem_amazon_delivery_edition")),
                 no_edition = jx or credits,
                 bypass_discovery_ui = true,
                 bypass_discovery_center = true,
@@ -866,19 +866,22 @@ function hotpot_jtem_generate_special_deals(deals)
     G.GAME.hp_jtem_special_offer_count = G.GAME.hp_jtem_special_offer_count or 3
     for i = 1, to_number(deals or G.GAME.hp_jtem_special_offer_count) do
         local _pool, _pool_key = get_current_pool("Joker")
-        _pool = remove_unavailable(_pool)
-        local center_key = pseudorandom_element(_pool, pseudoseed(_pool_key))
+        -- _pool = remove_unavailable(_pool)
+	local center_key = pseudorandom_element(_pool, pseudoseed(_pool_key.."_hpjtem_delivery"))
+	while center_key == "UNAVAILABLE" do
+            center_key = pseudorandom_element(_pool, pseudoseed(_pool_key.."_hpjtem_delivery"))
+        end
         local center = G.P_CENTERS[center_key]
-        local should_spawn_with_rental = pseudorandom("hpjtem_delivery_rental") < 0.1 and true
-        local should_spawn_with_eternal = center.eternal_compat and pseudorandom("hpjtem_delivery_eternal") < 0.1 and
+        local should_spawn_with_rental = pseudorandom("hpjtem_delivery_rental"..center_key) < 0.1 and true
+        local should_spawn_with_eternal = center.eternal_compat and pseudorandom("hpjtem_delivery_eternal"..center_key) < 0.1 and
             true
         local should_spawn_with_perishable = center.perishable_compat and
-            pseudorandom("hpjtem_delivery_perishable") < 0.1 and not should_spawn_with_eternal
+            pseudorandom("hpjtem_delivery_perishable"..center_key) < 0.1 and not should_spawn_with_eternal
         local stickers = get_stickers(center)
         stickers[#stickers + 1] = should_spawn_with_rental and "rental" or nil
         stickers[#stickers + 1] = should_spawn_with_eternal and "eternal" or nil
         stickers[#stickers + 1] = should_spawn_with_perishable and "perishable" or nil
-        local currency = pseudorandom_element(currencies, pseudoseed("hpjtem_delivery_currency"))
+        local currency = pseudorandom_element(currencies, pseudoseed("hpjtem_delivery_currency"..center_key))
         local price_factor = 0.8
         if currency == "joker_exchange" then
             price_factor = 7331
@@ -894,7 +897,7 @@ function hotpot_jtem_generate_special_deals(deals)
         local jx = currency == "joker_exchange"
         local bc = currency == "cryptocurrency"
         -- add factor of 0.87 to 1.15
-        local random_price_factor = pseudorandom("hpjtem_delivery_price_factor") * 0.28 + 0.87
+        local random_price_factor = pseudorandom("hpjtem_delivery_price_factor"..center_key) * 0.28 + 0.87
         price_factor = price_factor * (should_spawn_with_eternal and 0.8 or 1) * (should_spawn_with_rental and 0.5 or 1) *
             (should_spawn_with_perishable and 0.3 or 1)
         for _, v in ipairs(stickers) do
@@ -903,8 +906,8 @@ function hotpot_jtem_generate_special_deals(deals)
             end
         end
         local create_card_args = {
-            hp_jtem_silent_edition = plincoin and poll_edition("hpjtem_delivery_edition", nil, nil, true) or
-                (not jx and poll_edition("hpjtem_delivery_edition")),
+            hp_jtem_silent_edition = plincoin and poll_edition("hpjtem_delivery_edition"..center_key, nil, nil, true) or
+                (not jx and poll_edition("hpjtem_delivery_edition"..center_key)),
             no_edition = jx or credits,
             bypass_discovery_ui = true,
             bypass_discovery_center = true,
@@ -916,7 +919,7 @@ function hotpot_jtem_generate_special_deals(deals)
             hotpot_jtem_add_to_offers(center.key, {
                 price = { currency = currency, value = math.ceil(center.credits / 7 * price_factor * random_price_factor) },
                 rounds_total_factor = 0.4 * (should_spawn_with_perishable and 0.2 or 1) *
-                    (should_spawn_with_rental and 0.3 or 1) * (should_spawn_with_rental and 0.5 or 1) *
+                    (should_spawn_with_eternal and 0.5 or 1) * (should_spawn_with_rental and 0.3 or 1) *
                     (plincoin and 2 or 1),
                 extras = {
                     rental = should_spawn_with_rental,
@@ -930,7 +933,7 @@ function hotpot_jtem_generate_special_deals(deals)
             hotpot_jtem_add_to_offers(center.key, {
                 price = { currency = currency, value = math.ceil(center.cost * price_factor * random_price_factor) },
                 rounds_total_factor = 0.4 * (should_spawn_with_perishable and 0.2 or 1) *
-                    (should_spawn_with_rental and 0.3 or 1) * (should_spawn_with_rental and 0.5 or 1) *
+                    (should_spawn_with_eternal and 0.5 or 1) * (should_spawn_with_rental and 0.3 or 1) *
                     (plincoin and 2 or 1),
                 extras = {
                     rental = should_spawn_with_rental,
