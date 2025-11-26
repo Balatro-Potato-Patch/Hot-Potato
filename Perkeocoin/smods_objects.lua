@@ -708,7 +708,7 @@ SMODS.Joker{ --Skimming
                 ref_value = "dollars",
                 scalar_value = "dollars_mod",
                 scaling_message = {
-                    localize("$")..number_format(card.ability.extra.dollars), 
+                    message = localize("$")..number_format(card.ability.extra.dollars + card.ability.extra.dollars_mod), 
                     colour = G.C.MONEY
                 }
             })
