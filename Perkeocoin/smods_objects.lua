@@ -692,7 +692,7 @@ SMODS.Joker{ --Skimming
 
     calc_dollar_bonus = function(self, card)
         local thunk = to_number(card.ability.extra.dollars)
-        if G.GAME.blind.boss then
+        if G.GAME.blind.boss and not G.GAME.hpot_combat_event then
             card.ability.extra.dollars = 0
             card_eval_status_text(card, 'jokers', nil, nil, nil, {message = localize('k_reset'), colour = G.C.FILTER})
         end
