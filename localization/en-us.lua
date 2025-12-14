@@ -4863,7 +4863,7 @@ return {
                 },
             },
 
-            hpot_pba_10_start = {
+            hpot_pba10_start = {
                 text = {
                     "\"Dude, you gotta check this out. This is crazy!",
                     "My Trading Card got rated a PBA 10! This is gonna sell for thousands!\"",
@@ -5174,7 +5174,7 @@ return {
                     "Aw dang it."
                 }
             },
-            hpot_pba_10 = {
+            hpot_pba10 = {
                 name = "PBA 10",
                 text = {
                     "Sometimes the hobby is to ruin the hobby"

@@ -22,7 +22,7 @@ SMODS.Joker {
     calculate = function(self, card, context)
         if context.joker_main then
             local my_effects = {}
-            if math.fmod(hand_chips, 2) ~= 0 then
+            if math.fmod(to_number(hand_chips), 2) ~= 0 then
                 my_effects[#my_effects + 1] = {
                     xchips = card.ability.extra.xchips
                 }

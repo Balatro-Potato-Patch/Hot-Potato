@@ -101,7 +101,7 @@ function CardArea:align_cards()
           if Wheel.b >= Wheel.t and math.ceil((card.T.r - (Wheel.b) * math.pi * 2) * 10) >= G.GAME.vval and Wheel.accel <= 0.1 then
             G.GAME.keep_rotation = card.T.r - (Wheel.b) * math.pi * 2
             if not G.GAME.fake_rotate then
-              local reward = math.floor(((2 * math.pi + card.T.r - (math.pi / 8)) % (2 * math.pi)) / (math.pi / 4))
+              local reward = math.floor(((((card.T.r / (math.pi * 2)) - 0.1875) % 1) * 8) + 1)
               grant_wheel_reward(G.wheel_rewards.cards[reward])
               G.GAME.rotating = nil
               G.E_MANAGER:add_event(Event({
@@ -222,7 +222,7 @@ function generate_wheel_rewards(_amount)
             table.insert(allcons, k)
           end
         end
-        local sett = pseudorandom_element(allcons)
+        local sett = pseudorandom_element(allcons, "hpot_arrows_consumable_set")
         if sett == "bottlecap" then
           local raritiy_table = {
             ["Bad"] = 1,
