@@ -61,21 +61,6 @@ payload = '''
 '''
 match_indent = false
 
-# fix a stupid crash caused by smods (i hope)(im begging)(please?)
-[[patches]]
-[patches.pattern]
-target = 'cardarea.lua'
-match_indent = true
-position = 'at'
-pattern = '''
-self:handle_card_limit(card.ability.card_limit, card.ability.extra_slots_used)
-'''
-payload = '''
-  if card and card.ability then
-    self:handle_card_limit(card.ability.card_limit, card.ability.extra_slots_used)
-  end
-'''
-
 # fuck everything
 [[patches]]
 [patches.pattern]
