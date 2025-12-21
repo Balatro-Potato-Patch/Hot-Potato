@@ -38,6 +38,9 @@ pattern = '''
                         card.ability[self.key][k] = copy_table(v)
                     else
                         card.ability[self.key][k] = v
+                        if k == 'card_limit' or k == 'extra_slots_used' then
+                            card.ability[k] = (card.ability[k] or 0) + v
+                        end
                     end
                 end
             end
