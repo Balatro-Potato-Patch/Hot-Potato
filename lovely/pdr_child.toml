@@ -77,7 +77,7 @@ position = "at"
 pattern = "if G.jokers.cards[i] == self then other_joker = G.jokers.cards[i+1] end"
 payload = "if G.jokers.cards[i] == (self.quantum or self) then other_joker = G.jokers.cards[i+1] end"
 match_indent = true
-times = 2
+times = 1
 
 
 # Card.update for children
@@ -109,70 +109,6 @@ payload = '''
 'no_destroy', 'prevent_trigger',
 'replace_scoring_name', 'replace_display_name', 'replace_poker_hands',
 'extra'
-'''
-
-# Blueprint uses SMODS.blueprint_effect
-[[patches]]
-[patches.pattern]
-target = 'card.lua'
-match_indent = true
-position = 'at'
-pattern = '''
-if other_joker and other_joker ~= self and not other_joker.debuff and not context.no_blueprint then
-    if (context.blueprint or 0) > #G.jokers.cards then return end
-    local old_context_blueprint = context.blueprint
-    context.blueprint = (context.blueprint and (context.blueprint + 1)) or 1
-    local old_context_blueprint_card = context.blueprint_card
-    context.blueprint_card = context.blueprint_card or self
-    local eff_card = context.blueprint_card
-    local other_joker_ret = other_joker:calculate_joker(context)
-    context.blueprint = old_context_blueprint
-    context.blueprint_card = old_context_blueprint_card
-    if other_joker_ret then 
-        other_joker_ret.card = eff_card
-        other_joker_ret.colour = G.C.BLUE
-        return other_joker_ret
-    end
-end
-'''
-payload = '''
-local ret = SMODS.blueprint_effect(self, other_joker, context)
-if ret then
-    ret.colour = G.C.BLUE
-    return ret
-end
-'''
-
-# Brainstorm uses SMODS.blueprint_effect
-[[patches]]
-[patches.pattern]
-target = 'card.lua'
-match_indent = true
-position = 'at'
-pattern = '''
-if other_joker and other_joker ~= self and not other_joker.debuff and not context.no_blueprint then
-    if (context.blueprint or 0) > #G.jokers.cards then return end
-    local old_context_blueprint = context.blueprint
-    context.blueprint = (context.blueprint and (context.blueprint + 1)) or 1
-    local old_context_blueprint_card = context.blueprint_card
-    context.blueprint_card = context.blueprint_card or self
-    local eff_card = context.blueprint_card
-    local other_joker_ret = other_joker:calculate_joker(context)
-    context.blueprint = old_context_blueprint
-    context.blueprint_card = old_context_blueprint_card
-    if other_joker_ret then 
-        other_joker_ret.card = eff_card
-        other_joker_ret.colour = G.C.RED
-        return other_joker_ret
-    end
-end
-'''
-payload = '''
-local ret = SMODS.blueprint_effect(self, other_joker, context)
-if ret then
-    ret.colour = G.C.RED
-    return ret
-end
 '''
 
 # Joker Stencil properly looks for Children with Stencil effects
