@@ -20,7 +20,6 @@ target = 'functions/UI_definitions.lua'
 position = 'after'
 pattern = '''colours = \{args\.colour\}\,float = true\,'''
 payload = '''font = args.font,'''
-match_indent = true
 
 # make the czech colour
 [[patches]]
