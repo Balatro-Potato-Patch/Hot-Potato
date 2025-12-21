@@ -25,11 +25,11 @@ times = 1
 [patches.pattern]
 target = 'functions/UI_definitions.lua'
 pattern = '''  if card.ability.consumeable then
-    if (card.area == G.pack_cards and G.pack_cards) then'''
+    if card.ability.set == "imaginary" then'''
 position = 'at'
 payload = '''
   if card.ability.consumeable and not string.find(card.config.center.key, "iris") then
-    if (card.area == G.pack_cards and G.pack_cards) then
+    if card.ability.set == "imaginary" then
 '''
 match_indent = false
 times = 1
