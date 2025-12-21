@@ -89,28 +89,6 @@ pattern = "    if not self.states.focus.is and self.children.focused_ui then"
 payload = "    if self.states and (not self.states.focus.is and self.children.focused_ui) then"
 match_indent = true
 
-# Fix order of calc keys (replicates new smods update)
-[[patches]]
-[patches.pattern]
-target = '=[SMODS _ "src/utils.lua"]'
-match_indent = true
-position = 'at'
-pattern = '''
-'level_up', 'func', 'extra',
-'numerator', 'denominator',
-'modify',
-'no_destroy', 'prevent_trigger',
-'replace_scoring_name', 'replace_display_name', 'replace_poker_hands'
-'''
-payload = '''
-'level_up', 'func',
-'numerator', 'denominator',
-'modify',
-'no_destroy', 'prevent_trigger',
-'replace_scoring_name', 'replace_display_name', 'replace_poker_hands',
-'extra'
-'''
-
 # Joker Stencil properly looks for Children with Stencil effects
 [[patches]]
 [patches.pattern]
