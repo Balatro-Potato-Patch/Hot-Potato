@@ -2371,7 +2371,7 @@ return {                     --5572번 라인부터 이어서 작업할 것 -네
                 }
             },
 			j_hpot_polymorph = {
-                name = "폴리모르핀",
+                name = "변신모르핀",
                 text = {
 						"{C:attention}블라인드 선택 시{} 이 조커의",
 						'{C:attention}왼쪽{}에 있는 카드들이',
@@ -7268,32 +7268,32 @@ return {                     --5572번 라인부터 이어서 작업할 것 -네
 			
            --hpot_tech_support_ask_tacashumi = "Ask Tacashumi",
 
-            hpot_invest_100 = "Invest {C:purple}c.100",
-            hpot_invest_500 = "Invest {C:purple}c.500",
-            hpot_invest_1000 = "Invest {C:purpe}c.1000",
+            hpot_invest_100 = "{C:purple}c.100{} 투자하기",
+            hpot_invest_500 = "{C:purple}c.500{} 투자하기",
+            hpot_invest_1000 = "{C:purple}c.1000{} 투자하기",
 
-            hpot_business_dollars = "Pay {C:money}$",
-            hpot_business_plincoins = "Pay {C:hpot_plincoin,f:hpot_plincoin}$",
-            hpot_business_crypto = "Pay {C:hpot_advert,f:hpot_plincoin}£",
-            hpot_business_spark = "Pay {C:blue,f:hpot_plincoin}͸",
+            hpot_business_dollars = "{C:money}${} 내기",
+            hpot_business_plincoins = "{C:hpot_plincoin,f:hpot_plincoin}${} 내기",
+            hpot_business_crypto = "{C:hpot_advert,f:hpot_plincoin}£{} 내기",
+            hpot_business_spark = "{C:blue,f:hpot_plincoin}͸{} 내기",
 
-            hpot_take_quiz = "Take the quiz",
-            hpot_park = "To the park",
-            hpot_carnival = "To the town fair",
-            hpot_casino = "To the casino",
-            hpot_no_date = "Nowhere, because nothing ever happens",
-            hpot_quiz_next = "Read the next question",
-            hpot_quiz_wait = "Wait patiently",
-            hpot_quiz_forgive = "Forgive the debt",
-            hpot_quiz_move = "Move out",
-            hpot_quiz_sell = "Sell their possessions on the Black Market",
-            hpot_quiz_results = "See results",
+            hpot_take_quiz = "퀴즈 풀기",
+            hpot_park = "공원에 간다",
+            hpot_carnival = "마을 축제에 간다",
+            hpot_casino = "카지노로 간다",
+            hpot_no_date = "어차피 아무것도 일어나지 않을 예정이니 그냥 가만히 있는다",
+            hpot_quiz_next = "다음 질문 읽기",
+            hpot_quiz_wait = "인내심 있게 기다려준다",
+            hpot_quiz_forgive = "빚을 눈감아준다",
+            hpot_quiz_move = "이사를 가버린다",
+            hpot_quiz_sell = "암시장에 친구의 물건을 팔아치운다",
+            hpot_quiz_results = "결과 보기",
 
-            hpot_take_dreams = "Take dreams",
-            hpot_give_dreams = "Give dreams",
+            hpot_take_dreams = "꿈 가져가기",
+            hpot_give_dreams = "꿈 돌려주기",
 
-            hpot_take_interests = "Take interests",
-            hpot_give_interests = "Give interests",
+            hpot_take_interests = "관심 가져가기",
+            hpot_give_interests = "관심 돌려주기",
 
             hpot_gambling_bet5 = "{C:money}$5{} 걸기",
             hpot_gambling_bet10 = "{C:money}$10{} 걸기",
