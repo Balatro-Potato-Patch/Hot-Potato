@@ -889,7 +889,7 @@ HotPotato.EventStep {
 					end
 				end,
 				func = function()
-					return G.GAME.spark_points > to_big(25000)
+					return G.GAME.spark_points > 25000
 				end,
 			},
 		}
