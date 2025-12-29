@@ -27,7 +27,7 @@ SMODS.Joker {
                     xchips = card.ability.extra.xchips
                 }
             end
-            if math.fmod(mult, 2) ~= 0 then
+            if math.fmod(to_number(mult), 2) ~= 0 then
                 my_effects[#my_effects + 1] = {
                     xmult = card.ability.extra.xmult
                 }
