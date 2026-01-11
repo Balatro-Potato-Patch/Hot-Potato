@@ -576,7 +576,7 @@ function HPTN.check_if_enough_credits(cost)
     return false
 else
     local credits = G.GAME.budget
-    if to_big(credits - cost) >= to_big(0) then
+    if to_big(credits) - to_big(cost) >= to_big(0) then
         return true
     end
     return false
