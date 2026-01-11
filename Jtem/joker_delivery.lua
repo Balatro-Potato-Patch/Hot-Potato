@@ -93,7 +93,7 @@ function get_stickers(center)
             local success, should_apply = pcall(v.should_apply, v, nil, center, nil, true)
             if success then
                 if k ~= "eternal" and k ~= "rental" and k ~= "perishable" and type(v.should_apply) == 'function' and v:should_apply(nil, center, nil, true) then
-                    if pseudorandom("hpjtem_delivery_" .. k .. center_key) < v.rate then
+                    if pseudorandom("hpjtem_delivery_" .. k .. center.key) < v.rate then
                         local sticker_compatible = v.default_compat
                         if sticker_compatible == nil then sticker_compatible = true end
                         if center[k.."_compat"] ~= nil then sticker_compatible = center[k.."_compat"] end
