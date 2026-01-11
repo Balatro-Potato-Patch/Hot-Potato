@@ -367,5 +367,6 @@ SMODS.Joker {
     hotpot_credits = {
         art = { 'SadCube' },
         team = { 'O!AP' }
-    }
+    },
+    hpot_unbreedable = true
 }
