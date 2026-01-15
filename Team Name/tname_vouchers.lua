@@ -57,11 +57,16 @@ SMODS.Voucher {
 SMODS.Voucher {
 	key = 'ref_dollars',
 	pos = { x = 0, y = 1 },
-		atlas = "tname_vouchers",
+	atlas = "tname_vouchers",
+	config = {
+		extra = {
+			discount_in_dollars = 2
+		}
+	},
     loc_vars = function (self, info_queue, card)
 		return {
 			vars = {
-				(G.GAME.credits_cashout or 2)
+				card.ability.extra.discount_in_dollars
 			}
 		}
 	end,
@@ -76,11 +81,16 @@ SMODS.Voucher {
 SMODS.Voucher {
 	key = 'ref_joker_exc',
 	pos = { x = 1, y = 1 },
-		atlas = "tname_vouchers",
+	atlas = "tname_vouchers",
+	config = {
+		extra = {
+			discount_in_dollars = 3
+		}
+	},
 	loc_vars = function (self, info_queue, card)
 		return {
 			vars = {
-				(G.GAME.credits_cashout2 or 2)
+				card.ability.extra.discount_in_dollars
 			}
 		}
 	end,
