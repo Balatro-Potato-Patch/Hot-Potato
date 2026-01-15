@@ -380,44 +380,23 @@ end
 --- @param starting_currency "DOLLAR"|"CREDIT"|"SPARKLE"|"PLINCOIN"|"CRYPTOCURRENCY" The currency to convert from. Valid options for currencies currently include: "DOLLAR", "CREDIT", "SPARKLE", "PLINCOIN".
 --- @param ending_currency "DOLLAR"|"CREDIT"|"SPARKLE"|"PLINCOIN"|"CRYPTOCURRENCY" The currency to convert to. Valid options for currencies currently include: "DOLLAR", "CREDIT", "SPARKLE", "PLINCOIN".
 function convert_currency(amount, starting_currency, ending_currency)
-    local money                      = amount or 0
-    starting_currency                = starting_currency or "PLINCOIN"
-    ending_currency                  = ending_currency or "PLINCOIN"
-    -- First, convert everything into plincoin, the MOST valuable of all of the currencies.
-    local dollar_to_plincoin         = 3
-    local credit_to_plincoin         = 15
-    local sparkle_to_plincoin        = 12495
-    local cryptocurrency_to_plincoin = 4
+    amount                           = amount or 0
+    starting_currency                = starting_currency or "DOLLAR"
+    ending_currency                  = ending_currency or "DOLLAR"
+    
+    local value_in_dollars = {
+        CREDIT = 5,
+        PLINCOIN = 3,
+        DOLLAR = 1,
+        CRYPTOCURRENCY = 3/4,
+        SPARKLE = 3/12495
+    }
 
-    if ending_currency == "DOLLAR" then
-        money = money * dollar_to_plincoin
-    elseif ending_currency == "CREDIT" then
-        money = money * credit_to_plincoin
-    elseif ending_currency == "SPARKLE" then
-        money = money * sparkle_to_plincoin
-    elseif ending_currency == "CRYPTOCURRENCY" then
-        money = money * cryptocurrency_to_plincoin
-    elseif starting_currency ~= "PLINCOIN" then
+    if not value_in_dollars[starting_currency] or not value_in_dollars[ending_currency] then
         return nil
     end
 
-    -- Next, convert from plincoin into the desired currency.
-    local plincoin_to_dollar         = 1 / dollar_to_plincoin
-    local plincoin_to_credit         = 1 / credit_to_plincoin
-    local plincoin_to_sparkle        = 1 / sparkle_to_plincoin
-    local plincoin_to_cryptocurrency = 1 / cryptocurrency_to_plincoin
-
-    if starting_currency == "DOLLAR" then
-        money = money * plincoin_to_dollar
-    elseif starting_currency == "CREDIT" then
-        money = money * plincoin_to_credit
-    elseif starting_currency == "SPARKLE" then
-        money = money * plincoin_to_sparkle
-    elseif ending_currency == "CRYPTOCURRENCY" then
-        money = money * plincoin_to_cryptocurrency
-    elseif starting_currency ~= "PLINCOIN" then
-        return nil
-    end
+    local money = amount * value_in_dollars[starting_currency] / value_in_dollars[ending_currency]
 
     return math.ceil(money)
 end
