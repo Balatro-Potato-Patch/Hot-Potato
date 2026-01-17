@@ -154,7 +154,7 @@ function G.FUNCS.can_reforge_with_credits(e)
     end
 
 function G.FUNCS.can_reforge_with_dollars(e)
-    if not (G.GAME.used_vouchers["v_hpot_ref_dollars"] or G.GAME.goblin_acquired) or to_big(to_big(G.GAME.dollars) - to_big(G.GAME.bankrupt_at)) < to_big(G.GAME.cost_dollars) or not G.GAME.ref_placed then
+    if to_big(to_big(G.GAME.dollars) - to_big(G.GAME.bankrupt_at)) < to_big(G.GAME.cost_dollars) or not G.GAME.ref_placed then
             e.config.colour = G.C.UI.BACKGROUND_INACTIVE
             e.config.button = nil
     else
@@ -164,7 +164,7 @@ function G.FUNCS.can_reforge_with_dollars(e)
     end
 
 function G.FUNCS.can_reforge_with_sparks(e)
-    if not (G.GAME.used_vouchers["v_hpot_ref_joker_exc"] or G.GAME.goblin_acquired) or to_big(G.GAME.spark_points) < to_big(G.GAME.cost_sparks) or not G.GAME.ref_placed then
+    if to_big(G.GAME.spark_points) < to_big(G.GAME.cost_sparks) or not G.GAME.ref_placed then
             e.config.colour = G.C.UI.BACKGROUND_INACTIVE
             e.config.button = nil
         else
@@ -174,7 +174,7 @@ function G.FUNCS.can_reforge_with_sparks(e)
     end
     
 function G.FUNCS.can_reforge_with_plincoins(e)
-    if not (G.GAME.used_vouchers["v_hpot_ref_joker_exc"] or G.GAME.goblin_acquired) or to_big(G.GAME.plincoins) < to_big(G.GAME.cost_plincoins) or not G.GAME.ref_placed then
+    if to_big(G.GAME.plincoins) < to_big(G.GAME.cost_plincoins) or not G.GAME.ref_placed then
             e.config.colour = G.C.UI.BACKGROUND_INACTIVE
             e.config.button = nil
         else
@@ -184,7 +184,7 @@ function G.FUNCS.can_reforge_with_plincoins(e)
     end
 
 function G.FUNCS.can_reforge_with_cryptocurrency(e)
-    if not (G.GAME.used_vouchers["v_hpot_ref_joker_exc"] or G.GAME.goblin_acquired) or to_big(G.GAME.cryptocurrency) < to_big(G.GAME.cost_cryptocurrency) or not G.GAME.ref_placed then
+    if to_big(G.GAME.cryptocurrency) < to_big(G.GAME.cost_cryptocurrency) or not G.GAME.ref_placed then
             e.config.colour = G.C.UI.BACKGROUND_INACTIVE
             e.config.button = nil
         else
@@ -200,6 +200,8 @@ G.FUNCS.reforge_with_credits = function ()
     update_reforge_cost()
     reforge_card(G.reforge_area.cards[1], false, "CREDIT")
     play_sound("hpot_tname_reforge")
+	set_card_reforge()
+    update_reforge_cost()
 end
 
 G.FUNCS.reforge_with_dollars = function ()
@@ -208,6 +210,8 @@ G.FUNCS.reforge_with_dollars = function ()
     update_reforge_cost()
     reforge_card(G.reforge_area.cards[1], false, "DOLLAR")
     play_sound("hpot_tname_reforge")
+	set_card_reforge()
+    update_reforge_cost()
 end
 
 G.FUNCS.reforge_with_sparks = function ()
@@ -216,6 +220,8 @@ G.FUNCS.reforge_with_sparks = function ()
     update_reforge_cost()
     reforge_card(G.reforge_area.cards[1], false, "SPARKLE")
     play_sound("hpot_tname_reforge")
+	set_card_reforge()
+    update_reforge_cost()
 end
 
 G.FUNCS.reforge_with_plincoins = function ()
@@ -224,6 +230,8 @@ G.FUNCS.reforge_with_plincoins = function ()
     update_reforge_cost()
     reforge_card(G.reforge_area.cards[1], false, "PLINCOIN")
     play_sound("hpot_tname_reforge")
+	set_card_reforge()
+    update_reforge_cost()
 end
 
 G.FUNCS.reforge_with_cryptocurrency = function ()
@@ -232,4 +240,6 @@ G.FUNCS.reforge_with_cryptocurrency = function ()
     update_reforge_cost()
     reforge_card(G.reforge_area.cards[1], false, "CRYPTOCURRENCY")
     play_sound("hpot_tname_reforge")
+	set_card_reforge()
+    update_reforge_cost()
 end

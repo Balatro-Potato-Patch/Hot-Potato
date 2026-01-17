@@ -2273,8 +2273,8 @@ return {
             j_hpot_goblin_tinkerer = {
                 name = 'Goblin Tinkerer',
                 text = {
-                    '{C:attention}Reforging{} is always available',
-                    'and refunds {C:attention}#1#%{} spent Currency'
+                    'Refunds {C:attention}#1#%{} spent Currency',
+					'when reforging'
                 }
             },
             j_hpot_smods = {
@@ -2437,16 +2437,15 @@ return {
             v_hpot_ref_dollars = {
                 name = "Golden Anvil",
                 text = {
-                    "{C:money}Money{} can",
-                    "be used to reforge"
+                    "Reforging is now",
+					"{C:money}$#1#{} cheaper"
                 }
             },
             v_hpot_ref_joker_exc = {
                 name = "Premium Anvil",
                 text = {
-                    "{C:hpot_plincoin}Plincoins{}, {C:hpot_advert}Cryptocurrency{}",
-                    "and {C:blue}Jicks{} can",
-                    "be used to reforge"
+                    "Reforging gains an additional",
+					"{C:money}$#1#{} discount"
                 }
             },
             v_hpot_bitcoin_miner = {
