@@ -62,3 +62,12 @@ G.FUNCS.check_for_buy_space = function(card)
     end
     return cfbs(card)
 end
+
+local csfb = G.FUNCS.can_select_from_booster
+G.FUNCS.can_select_from_booster = function(e)
+    csfb(e)
+    if next(SMODS.find_card('j_hpot_ouroboros')) and e.config.ref_table.ability.set == 'Joker' then
+        e.config.colour = G.C.GREEN
+        e.config.button = 'use_card'
+    end
+end
