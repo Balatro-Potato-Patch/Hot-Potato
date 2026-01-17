@@ -957,6 +957,9 @@ function hotpot_delivery_refresh_card()
         for k, v in pairs(_obj.create_card_args) do
             cct[k] = v
         end
+        if not cct.set then
+            cct.set = G.P_CENTERS[_obj.key].set
+        end
         local _c = SMODS.create_card(cct)
         _c.ability.hp_jtem_currency_bought = _obj.currency
         _c.ability.hp_jtem_currency_bought_value = _obj.price

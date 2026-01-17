@@ -15,8 +15,8 @@ SMODS.Joker {
 }
 
 local createcard_ref = create_card
-function create_card(set, ...)
-    local card = createcard_ref(set, ...)
+function create_card(...)
+    local card = createcard_ref(...)
     if G.STATE == G.STATES.SHOP and card.config.center.set == "Joker" and next(SMODS.find_card("j_hpot_notajoker")) then
         local c = HotPotato.get_random_consumable()
         card:set_ability(c)

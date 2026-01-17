@@ -13,20 +13,15 @@ SMODS.Joker {
     }
 }
 
-local gcp = get_current_pool
-function get_current_pool(_type, _rarity, _legendary, _append)
-    local _pool, _pool_key = gcp(_type, _rarity, _legendary, _append)
+local atp = SMODS.add_to_pool
+function SMODS.add_to_pool(prototype_obj, args)
+    local ret = atp(prototype_obj, args)
 
-    if _type == 'Joker' and next(SMODS.find_card('j_hpot_box_of_frogs')) and _append == 'sho' then
-        for i = 1, #_pool do
-            local key = _pool[i]
-            if key ~= G.GAME.current_forced_key and G.P_CENTERS[key] and not G.P_CENTERS[key].original_mod then
-                _pool[i] = "UNAVAILABLE"
-            end
-        end
+    if next(SMODS.find_card('j_hpot_box_of_frogs')) and G.P_CENTERS[prototype_obj] and G.P_CENTERS[prototype_obj].set == 'Joker' and not G.P_CENTERS[prototype_obj].original_mod and args.append and args.append == 'sho' then
+        ret = false
     end
 
-    return _pool, _pool_key
+    return ret
 end
 
 local cc = create_card

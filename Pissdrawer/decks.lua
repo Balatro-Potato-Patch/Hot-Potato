@@ -39,20 +39,15 @@ SMODS.ObjectType {
     },
 }
 
-local gcp = get_current_pool
-function get_current_pool(_type, _rarity, _legendary, _append)
-    local _pool, _pool_key = gcp(_type, _rarity, _legendary, _append)
+local atp = SMODS.add_to_pool
+function SMODS.add_to_pool(prototype_obj, args)
+    local ret = atp(prototype_obj, args)
 
-    if _type == 'Joker' then
-        for i = 1, #_pool do
-            local key = _pool[i]
-            if G.P_CENTERS[key] and (G.P_CENTERS[key].pools and G.P_CENTERS[key].pools.ad_cards) and (G.GAME.ad_blocker and G.GAME.ad_blocker >= 1) then
-                _pool[i] = "UNAVAILABLE"
-            end
-        end
+    if G.P_CENTERS[prototype_obj] and (G.P_CENTERS[prototype_obj].pools and G.P_CENTERS[prototype_obj].pools.ad_cards) and G.GAME.ad_blocker and G.GAME.ad_blocker >= 1 then
+        ret = false
     end
 
-    return _pool, _pool_key
+    return ret
 end
 
 local ref = create_ads

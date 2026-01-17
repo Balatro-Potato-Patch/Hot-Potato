@@ -24,8 +24,8 @@ local update_consumable = function(card)
     return card
 end
 create_card_ref = create_card
-function create_card(_type, area, legendary, _rarity, skip_materialize, soulable, forced_key, key_append)
-    local card = create_card_ref(_type, area, legendary, _rarity, skip_materialize, soulable, forced_key, key_append)
+function create_card(...)
+    local card = create_card_ref(...)
     return update_consumable(card)
 end
 function change_max_highlight(amount) --modifies the max_highlighted_mod variable and updates all existing consumables automatically
