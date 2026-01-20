@@ -37,6 +37,7 @@ SMODS.Joker {
 		            		set = sett,
                             edition = "e_negative"
 		            	})
+                        G.GAME.consumeable_buffer = 0
                         return true
                     end)
                 }))
