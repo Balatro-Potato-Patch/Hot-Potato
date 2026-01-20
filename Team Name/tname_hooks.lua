@@ -124,22 +124,6 @@ function Card:click()
     return ret
 end
 
-local ref = G.FUNCS.can_buy -- credits buyable thingy hook
-function G.FUNCS.can_buy(e)
-    if e.config.ref_table.config.center.credits and not e.config.ref_table.hpot_transaction_price then
-        if (not HPTN.check_if_enough_credits(e.config.ref_table.config.center.credits)) and
-            e.config.ref_table.config.center.credits then
-            e.config.colour = G.C.UI.BACKGROUND_INACTIVE
-            e.config.button = nil
-        else
-            e.config.colour = G.C.ORANGE
-            e.config.button = "buy_from_shop"
-        end
-    else
-        return ref(e)
-    end
-end
-
 local can_open_old = G.FUNCS.can_open -- same for boosters
 function G.FUNCS.can_open(e)
     local card = e.config.ref_table.config.center

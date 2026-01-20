@@ -4941,6 +4941,9 @@ local hpot_event_transaction_change_shop_price = function(card, from_black_marke
 	local currency_text = generate_currency_string_args(currency) -- just learned this existed thank you jtem - N'
 
 	price_table.price = hpot_event_transaction_cost_conversion(card.cost, currency, from_black_market)
+	if currency ~= "dollars" then
+		card.cost = 0
+	end
 
 	local price_dynatext = card.children.price.UIRoot.children[1].children[1].config.object
 
@@ -5002,6 +5005,54 @@ G.FUNCS.can_buy_and_use = function(e)
 			end
 			e.config.colour = G.C.ORANGE
 			e.config.button = 'buy_from_shop'
+		end
+	end
+end
+
+local g_funcs_can_redeem = G.FUNCS.can_redeem
+G.FUNCS.can_redeem = function(e)
+	g_funcs_can_redeem(e)
+	local card = e.config.ref_table
+	if card.hpot_transaction_price then
+		local total = get_currency_amount(card.hpot_transaction_price.currency)
+		if card.hpot_transaction_price.currency == "dollars" then
+			total = total - G.GAME.bankrupt_at
+		end
+		local price = card.hpot_transaction_price.price
+		if ((to_big(price) > to_big(total)) and (to_big(price) > to_big(0))) then
+			e.UIBox.states.visible = false
+			e.config.colour = G.C.UI.BACKGROUND_INACTIVE
+			e.config.button = nil
+		else
+			if e.config.ref_table.highlighted then
+				e.UIBox.states.visible = true
+			end
+			e.config.colour = G.C.ORANGE
+			e.config.button = 'use_card'
+		end
+	end
+end
+
+local g_funcs_can_open = G.FUNCS.can_open
+G.FUNCS.can_open = function(e)
+	g_funcs_can_open(e)
+	local card = e.config.ref_table
+	if card.hpot_transaction_price then
+		local total = get_currency_amount(card.hpot_transaction_price.currency)
+		if card.hpot_transaction_price.currency == "dollars" then
+			total = total - G.GAME.bankrupt_at
+		end
+		local price = card.hpot_transaction_price.price
+		if ((to_big(price) > to_big(total)) and (to_big(price) > to_big(0))) then
+			e.UIBox.states.visible = false
+			e.config.colour = G.C.UI.BACKGROUND_INACTIVE
+			e.config.button = nil
+		else
+			if e.config.ref_table.highlighted then
+				e.UIBox.states.visible = true
+			end
+			e.config.colour = G.C.ORANGE
+			e.config.button = 'use_card'
 		end
 	end
 end
