@@ -19,7 +19,7 @@ local allowed_sets = {
 function get_team_card(team, seed)
     local cards = {}
     for i, v in pairs(G.P_CENTERS) do
-        if v.set and allowed_sets[v.set] and not v.hidden and v.hotpot_credits and string.lower(v.hotpot_credits.team[1]) == string.lower(team) and v.rarity ~= 4 then
+        if v.set and allowed_sets[v.set] and not v.hidden and not G.GAME.banned_keys[v.key] and v.hotpot_credits and string.lower(v.hotpot_credits.team[1]) == string.lower(team) and v.rarity ~= 4 then
             cards[#cards+1] = v
         end
     end
@@ -67,7 +67,7 @@ SMODS.Booster {
             }
             return newCard
         end
-        return {key = "j_joker"}
+        return {key = "j_hpot_vremade_joker"}
     end,
     ease_background_colour = function(self)
         ease_background_colour{new_colour = darken(G.C.ORANGE, 0.2), special_colour = G.C.ORANGE, contrast = 5}
@@ -106,7 +106,7 @@ SMODS.Booster {
             }
             return newCard
         end
-        return {key = "j_joker"}
+        return {key = "j_hpot_vremade_joker"}
     end,
     ease_background_colour = function(self)
         ease_background_colour{new_colour = darken(G.C.ORANGE, 0.2), special_colour = G.C.ORANGE, contrast = 5}
@@ -145,7 +145,7 @@ SMODS.Booster {
             }
             return newCard
         end
-        return {key = "j_joker"}
+        return {key = "j_hpot_vremade_joker"}
     end,
     ease_background_colour = function(self)
         ease_background_colour{new_colour = darken(G.C.ORANGE, 0.2), special_colour = G.C.ORANGE, contrast = 5}
@@ -184,7 +184,7 @@ SMODS.Booster {
             }
             return newCard
         end
-        return {key = "j_joker"}
+        return {key = "j_hpot_vremade_joker"}
     end,
     ease_background_colour = function(self)
         ease_background_colour{new_colour = darken(G.C.ORANGE, 0.2), special_colour = G.C.ORANGE, contrast = 5}
