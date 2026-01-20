@@ -953,12 +953,10 @@ function hotpot_delivery_refresh_card()
     hotpot_jtem_destroy_all_card_in_an_area(G.hp_jtem_delivery_queue, true)
     for _, _obj in ipairs(G.GAME.hp_jtem_delivery_queue) do
         local temp_str = { str = (_obj.rounds_passed .. "/" .. _obj.rounds_total) }
-        local cct = { area = G.hp_jtem_delivery_queue, key = _obj.key, skip_materialize = true, no_edition = true, no_stickers = true, force_stickers = true }
+        if G.GAME.banned_keys[_obj.key] then _obj.key = 'j_hpot_vremade_joker' end
+        local cct = {set = G.P_CENTERS[_obj.key].set, area = G.hp_jtem_delivery_queue, key = _obj.key, skip_materialize = true, no_edition = true, no_stickers = true, force_stickers = true }
         for k, v in pairs(_obj.create_card_args) do
             cct[k] = v
-        end
-        if not cct.set then
-            cct.set = G.P_CENTERS[_obj.key].set
         end
         local _c = SMODS.create_card(cct)
         _c.ability.hp_jtem_currency_bought = _obj.currency

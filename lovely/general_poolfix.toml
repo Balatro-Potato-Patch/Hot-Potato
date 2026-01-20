@@ -1,0 +1,45 @@
+[manifest]
+version = "1.0.0"
+dump_lua = true
+priority = 0
+
+[[patches]]
+[patches.pattern]
+target = 'functions/common_events.lua'
+pattern = '''
+elseif _type == 'Joker' then _pool[#_pool + 1] = "j_joker"
+elseif _type == 'Demo' then _pool[#_pool + 1] = "j_joker"
+'''
+position = 'at'
+payload = '''
+elseif _type == 'Joker' then _pool[#_pool + 1] = "j_hpot_vremade_joker"
+elseif _type == 'Demo' then _pool[#_pool + 1] = "j_hpot_vremade_joker"
+'''
+match_indent = true
+
+[[patches]]
+[patches.pattern]
+target = 'functions/common_events.lua'
+pattern = '''
+else _pool[#_pool + 1] = "j_joker"
+'''
+position = 'at'
+payload = '''
+else _pool[#_pool + 1] = "j_hpot_vremade_joker"
+'''
+match_indent = true
+
+[[patches]]
+[patches.pattern]
+target = 'functions/common_events.lua'
+pattern = '''
+local center = G.P_CENTERS.b_red
+'''
+position = 'after'
+payload = '''
+forced_key = forced_key or G.GAME.current_forced_key
+if not _type and forced_key then
+    _type = G.P_CENTERS[forced_key].set    
+end
+'''
+match_indent = true
