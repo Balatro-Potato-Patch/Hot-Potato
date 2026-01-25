@@ -3562,6 +3562,7 @@ HotPotato.EventStep {
 		return {
 			{
 				key = "hpot_gambling_bet5",
+				no_prefix = true,
 				button = function()
 					hpot_event_gambling_func(5, event)
 				end,
@@ -3571,6 +3572,7 @@ HotPotato.EventStep {
 			},
 			{
 				key = "hpot_gambling_bet10",
+				no_prefix = true,
 				button = function()
 					hpot_event_gambling_func(10, event)
 				end,
@@ -3580,6 +3582,7 @@ HotPotato.EventStep {
 			},
 			{
 				key = "hpot_gambling_bet20",
+				no_prefix = true,
 				button = function()
 					hpot_event_gambling_func(20, event)
 				end,
@@ -3589,6 +3592,7 @@ HotPotato.EventStep {
 			},
 			{
 				key = "hpot_gambling_bet40",
+				no_prefix = true,
 				button = function()
 					hpot_event_gambling_func(40, event)
 				end,
@@ -3598,6 +3602,7 @@ HotPotato.EventStep {
 			},
 			{
 				key = "hpot_gambling_stop",
+				no_prefix = true,
 				button = hpot_event_end_scenario,
 			}
 		}
@@ -3611,6 +3616,7 @@ HotPotato.EventStep {
 		return {
 			{
 				key = "hpot_gambling_bet5",
+				no_prefix = true,
 				button = function()
 					hpot_event_gambling_func(5, event)
 				end,
@@ -3620,6 +3626,7 @@ HotPotato.EventStep {
 			},
 			{
 				key = "hpot_gambling_bet10",
+				no_prefix = true,
 				button = function()
 					hpot_event_gambling_func(10, event)
 				end,
@@ -3629,6 +3636,7 @@ HotPotato.EventStep {
 			},
 			{
 				key = "hpot_gambling_bet20",
+				no_prefix = true,
 				button = function()
 					hpot_event_gambling_func(20, event)
 				end,
@@ -3638,6 +3646,7 @@ HotPotato.EventStep {
 			},
 			{
 				key = "hpot_gambling_bet40",
+				no_prefix = true,
 				button = function()
 					hpot_event_gambling_func(40, event)
 				end,
@@ -3647,6 +3656,7 @@ HotPotato.EventStep {
 			},
 			{
 				key = "hpot_gambling_stop",
+				no_prefix = true,
 				button = hpot_event_end_scenario,
 			}
 		}

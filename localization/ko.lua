@@ -7300,6 +7300,7 @@ return {                     --5572번 라인부터 이어서 작업할 것 -네
             hpot_gambling_bet20 = "{C:money}$20{} 걸기",
             hpot_gambling_bet40 = "{C:money}$40{} 걸기",
             hpot_gambling_ignore = "무시하기",
+            hpot_gambling_stop = "그치다",
 
             hpot_pba_take = "팩 가져가기",
 

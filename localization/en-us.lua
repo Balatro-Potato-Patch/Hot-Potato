@@ -7158,6 +7158,7 @@ return {
             hpot_gambling_bet20 = "Bet {C:money}$20{}",
             hpot_gambling_bet40 = "Bet {C:money}$40{}",
             hpot_gambling_ignore = "Ignore",
+            hpot_gambling_stop = "Stop",
 
             hpot_pba_take = "Take packs",
 
