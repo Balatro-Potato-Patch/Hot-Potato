@@ -43,7 +43,7 @@ local atp = SMODS.add_to_pool
 function SMODS.add_to_pool(prototype_obj, args)
     local ret = atp(prototype_obj, args)
 
-    if G.P_CENTERS[prototype_obj] and (G.P_CENTERS[prototype_obj].pools and G.P_CENTERS[prototype_obj].pools.ad_cards) and G.GAME.ad_blocker and G.GAME.ad_blocker >= 1 then
+    if prototype_obj.pools and prototype_obj.pools.ad_cards and G.GAME.ad_blocker and G.GAME.ad_blocker >= 1 then
         ret = false
     end
 

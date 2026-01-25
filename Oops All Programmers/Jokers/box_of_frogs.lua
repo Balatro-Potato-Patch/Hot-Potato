@@ -17,7 +17,7 @@ local atp = SMODS.add_to_pool
 function SMODS.add_to_pool(prototype_obj, args)
     local ret = atp(prototype_obj, args)
 
-    if next(SMODS.find_card('j_hpot_box_of_frogs')) and G.P_CENTERS[prototype_obj] and G.P_CENTERS[prototype_obj].set == 'Joker' and not G.P_CENTERS[prototype_obj].original_mod and args.append and args.append == 'sho' then
+    if next(SMODS.find_card('j_hpot_box_of_frogs')) and prototype_obj.set == 'Joker' and not prototype_obj.original_mod and args.source and args.source == 'sho' then
         ret = false
     end
 
