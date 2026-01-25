@@ -12,12 +12,12 @@ SMODS.Joker {
         }
     },
     loc_vars = function(self, info_queue, card)
-        return { vars = { card.ability.extra.chips, card.ability.extra.chips * ((G.GAME.consumeable_usage_total and G.GAME.consumeable_usage_total.Hanafuda or 0) + card.ability.extra.joy_hanafuda_count) } }
+        return { vars = { card.ability.extra.chips, card.ability.extra.chips * ((G.GAME.consumeable_usage_total and G.GAME.consumeable_usage_total.hanafuda or 0) + card.ability.extra.joy_hanafuda_count) } }
     end,
     calculate = function(self, card, context)
         if context.using_consumeable and not context.blueprint and context.consumeable.ability.set == "Hanafuda" then
             return {
-                message = localize { type = 'variable', key = 'a_chips', vars = { card.ability.extra.chips * G.GAME.consumeable_usage_total.Hanafuda } },
+                message = localize { type = 'variable', key = 'a_chips', vars = { card.ability.extra.chips * G.GAME.consumeable_usage_total.hanafuda } },
                 colour = G.C.CHIPS
             }
         end
@@ -27,7 +27,7 @@ SMODS.Joker {
         if context.joker_main then
             return {
                 chips = card.ability.extra.chips *
-                    ((G.GAME.consumeable_usage_total and G.GAME.consumeable_usage_total.Hanafuda or 0) + card.ability.extra.joy_hanafuda_count)
+                    ((G.GAME.consumeable_usage_total and G.GAME.consumeable_usage_total.hanafuda or 0) + card.ability.extra.joy_hanafuda_count)
             }
         end
     end,
