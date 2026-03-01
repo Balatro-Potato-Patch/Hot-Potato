@@ -9,9 +9,9 @@
 	"priority": -100000000,
 	"badge_colour": "#f5e27a",
 	"badge_text_colour": "#ffffff",
-	"version": "1.0.12",
+	"version": "1.0.12b",
 	"dependencies": [
-		"Steamodded (>=1.0.0~BETA-1224a)",
+		"Steamodded (>=1.0.0~BETA-1501a)",
 		"Lovely (>=0.9)"
 	],
     "conflicts": [
