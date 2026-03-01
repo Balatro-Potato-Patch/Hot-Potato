@@ -73,45 +73,27 @@ end
 local oldfunc = Game.main_menu
 Game.main_menu = function(self, change_context)
     local ret = oldfunc(self, change_context)
-    G.E_MANAGER:add_event(Event({
-        trigger = "after",
-        delay = 0,
-        blockable = false,
-        blocking = false,
-        func = function()
-            local newcard = Card(
-                G.title_top.T.x,
-                G.title_top.T.y,
-                G.CARD_W,
-                G.CARD_H,
-                G.P_CARDS.empty,
-                G.P_CENTERS.j_hpot_thetruehotpotato,
-                { bypass_discovery_center = true }
-            )
-            -- recenter the title
-            G.title_top.T.w = G.title_top.T.w * 1.7675
-            G.title_top.T.x = G.title_top.T.x - 0.8
-            G.title_top:emplace(newcard)
-            -- make the card look the same way as the title screen Ace of Spades
-            newcard.T.w = newcard.T.w * 1.1 * 1.2
-            newcard.T.h = newcard.T.h * 1.1 * 1.2
-            newcard.no_ui = true
-            newcard.states.visible = false
-            if change_context == "splash" then
-                newcard.states.visible = true
-                newcard:start_materialize({ G.C.WHITE, G.C.WHITE }, true, 2.5)
-            else
-                newcard.states.visible = true
-                newcard:start_materialize({ G.C.WHITE, G.C.WHITE }, nil, 1.2)
-            end
-            return true
-        end
-    }))
     jokerOrder = {}
     for i, v in ipairs(G.P_CENTER_POOLS.Joker) do
         jokerOrder[v.key] = i
     end
     return ret
+end
+
+HotPotato.menu_cards = function()
+    return {
+        remove_original = true,
+        {key = 'j_hpot_thetruehotpotato'},
+        {key = 'j_hpot_birthdayboy'},
+        func = function()
+            for k, v in pairs(G.title_top.cards) do
+                if v.config.center_key == 'j_hpot_birthdayboy' then
+                    v.no_ui = false
+                    break
+                end
+            end
+        end
+    }
 end
 
 function HotPotato.get_blind_font(blind)
