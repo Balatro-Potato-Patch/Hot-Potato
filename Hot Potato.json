@@ -11,7 +11,8 @@
 	"badge_text_colour": "#ffffff",
 	"version": "1.0.12",
 	"dependencies": [
-		"Steamodded (>=1.0.0~BETA-1224a)"
+		"Steamodded (>=1.0.0~BETA-1224a)",
+		"Lovely (>=0.9)"
 	],
     "conflicts": [
         "SlayTheJokers"

@@ -1,0 +1,37 @@
+[manifest]
+version = "1.0.0"
+dump_lua = true
+priority = 0
+
+# haha got your patch
+[[patches]]
+[patches.pattern]
+target = 'game.lua'
+position = 'after'
+pattern = '''tag_tally = 0,'''
+payload = '''hotpot_ads = {},'''
+match_indent = true
+
+# saving ads 1/2
+[[patches]]
+[patches.pattern]
+target = 'functions/misc_functions.lua'
+position = 'before'
+pattern = '''local tags = {}'''
+payload = '''hotpotAds = {}
+for k, v in ipairs(G.GAME.hotpot_ads) do
+    if (type(v) == "table") and v.is then
+        local AdSer = save_ad(v)
+        if AdSer then hotpotAds[k] = AdSer end
+    end
+end'''
+match_indent = true
+
+# saving ads 2/2
+[[patches]]
+[patches.pattern]
+target = 'functions/misc_functions.lua'
+position = 'before'
+pattern = '''tags = tags,'''
+payload = '''hotpot_ads = hotpotAds,'''
+match_indent = true
