@@ -113,10 +113,12 @@ end
 G.FUNCS.reforge_return = function ()
     if G.reforge_area and G.reforge_area.cards then
         if #G.reforge_area.cards > 0 and G.FUNCS.check_for_buy_space(G.reforge_area.cards[1])then
+            HotPotato.adding_from_storage = true
             final_ability_values() -- save the final table (not needed pobably)
             HPTN.move_card(G.reforge_area.cards[1], G.jokers)
             G.GAME.ref_placed = nil
             reset_reforge_cost() -- reset the cost to default
+            HotPotato.adding_from_storage = nil
         end
     end
 end

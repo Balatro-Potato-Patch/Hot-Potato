@@ -18,6 +18,13 @@ Game.start_run = function(self, args)
     return ret
 end
 
+local calcreroll = calculate_reroll_cost
+calculate_reroll_cost = function(...)
+    if not HotPotato.adding_from_storage then
+        calcreroll(...)
+    end
+end
+
 SMODS.Atlas({
     key = 'pissdrawer_shop',
     path = 'Pissdrawer/shop_buttons.png',
@@ -1214,11 +1221,13 @@ end
 G.FUNCS.training_return = function ()
     if G.train_jokers and G.train_jokers.cards then
         if #G.train_jokers.cards > 0 and G.FUNCS.check_for_buy_space(G.train_jokers.cards[1]) then
+            HotPotato.adding_from_storage = true
             if G.train_jokers.cards[1].children.hpot_move_to_train then
                 G.train_jokers.cards[1].children.hpot_move_to_train:remove()
                 G.train_jokers.cards[1].children.hpot_move_to_train = nil
             end
             HPTN.move_card(G.train_jokers.cards[1], G.jokers)
+            HotPotato.adding_from_storage = nil
         end
     end
 end
@@ -1507,7 +1516,9 @@ end
 
 G.FUNCS.nursery_remove = function(e)
     if G.FUNCS.check_for_buy_space(e.config.ref_table) then
+        HotPotato.adding_from_storage = true
         HPTN.move_card(e.config.ref_table, G.jokers)
+        HotPotato.adding_from_storage = nil
     end
 end
 
@@ -1526,11 +1537,13 @@ end
 G.FUNCS.training_return = function ()
     if G.train_jokers and G.train_jokers.cards then
         if #G.train_jokers.cards > 0 and G.FUNCS.check_for_buy_space(G.train_jokers.cards[1]) then
+            HotPotato.adding_from_storage = true
             if G.train_jokers.cards[1].children.hpot_move_to_train then
                 G.train_jokers.cards[1].children.hpot_move_to_train:remove()
                 G.train_jokers.cards[1].children.hpot_move_to_train = nil
             end
             HPTN.move_card(G.train_jokers.cards[1], G.jokers)
+            HotPotato.adding_from_storage = nil
         end
     end
 end
