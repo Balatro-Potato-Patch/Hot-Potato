@@ -16,5 +16,6 @@
 	],
     "conflicts": [
         "SlayTheJokers"
-    ]
+    ],
+	"allow_redistribution": true
 }
