@@ -35,7 +35,7 @@ local path = SMODS.current_mod.path
 
 -- Annoyingly load title text lua
 assert(SMODS.load_file("content/Jtem/titletext.lua"))()
-PotatoPatchUtils.load_files(path .. 'content/Horsechicot', blacklist)
+PotatoPatchUtils.load_files(path .. 'content', blacklist)
 --#endregion
 
 -- MISC
