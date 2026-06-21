@@ -13,6 +13,7 @@ SMODS.Joker {
     rarity = 4,
     cost = 20,
     blueprint_compat = true,
+    attributes = { 'xmult' },
     loc_vars = function(self, info_queue, card)
         local save = G.PROFILES[G.SETTINGS.profile]
         return {
@@ -44,6 +45,7 @@ SMODS.Joker {
     rarity = 3,
     cost = 10,
     blueprint_compat = true,
+    attributes = { 'retrigger' },
     loc_vars = function(self, info_queue, card)
         return { vars = { card.ability.extra.retriggers } }
     end,
@@ -75,6 +77,7 @@ SMODS.Joker {
             times_scaled = 0
         },
     },
+    attributes = { 'mult', 'scaling' },
     loc_vars = function(self, info_queue, card)
         return {
             vars = {
@@ -87,7 +90,7 @@ SMODS.Joker {
     calculate = function(self, card, context)
         if context.hp_card_destroyed and not context.blueprint and not context.is_being_sold then
             local key = context.card_being_destroyed.config.center.key
-            if (G.P_CENTERS[key].pools and G.P_CENTERS[key].pools.Food) then
+            if HotPotato.key_has_attribute(key, 'food') then
                 return {
                     func = function()
                         SMODS.scale_card(card, {
@@ -119,7 +122,7 @@ SMODS.Joker {
     loc_vars = function(self, info_queue, card)
         return { vars = { card.ability.x_mult } }
     end,
-
+    attributes = { 'xmult' },
     calculate = function(self, card, from_debuff)
         local joker_keys = {}
         for _, joker in ipairs(G.jokers.cards) do
@@ -148,8 +151,8 @@ SMODS.Joker {
     blueprint_compat = true,
     loc_vars = function(self, info_queue, card)
         return { vars = { card.ability.x_mult } }
-    end,    
-
+    end,
+    attributes = { 'xmult' },
     calculate = function(self, card, from_debuff)
         local joker_keys = {}
         for _, joker in ipairs(G.jokers.cards) do
@@ -178,8 +181,8 @@ SMODS.Joker {
     blueprint_compat = true,
     loc_vars = function(self, info_queue, card)
         return { vars = { card.ability.x_mult } }
-    end,   
-
+    end,
+    attributes = { 'xmult' },
     calculate = function(self, card, from_debuff)
         local joker_keys = {}
         for _, joker in ipairs(G.jokers.cards) do
@@ -210,7 +213,7 @@ SMODS.Joker {
     loc_vars = function(self, info_queue, card)
         return { vars = { card.ability.x_mult } }
     end,
-        
+    attributes = { 'xmult' },
     calculate = function(self, card, from_debuff)
         local joker_keys = {}
         for _, joker in ipairs(G.jokers.cards) do
@@ -241,7 +244,7 @@ SMODS.Joker {
     loc_vars = function(self, info_queue, card)
         return { vars = { card.ability.x_mult } }
     end,
-        
+    attributes = { 'xmult' },
     calculate = function(self, card, from_debuff)
         local joker_keys = {}
         for _, joker in ipairs(G.jokers.cards) do
@@ -277,6 +280,7 @@ SMODS.Joker {
     blueprint_compat = true,
     perishable_compat = false,
     eternal_compat = true,
+    attributes = { 'xmult', 'plincoin', 'enhancements', 'economy' },
     calculate = function(self, card, context)
         if context.after and not context.blueprint then
             local shattered_count = 0
@@ -328,7 +332,7 @@ end
 
 local showman_ref = SMODS.showman
 function SMODS.showman(key)
-    if next(SMODS.find_card('j_hpot_greedybastard')) and (G.P_CENTERS[key].pools and G.P_CENTERS[key].pools.Food) then
+    if next(SMODS.find_card('j_hpot_greedybastard')) and HotPotato.key_has_attribute(key, 'food') then
         return true
     end
     return showman_ref(key)
@@ -356,6 +360,7 @@ SMODS.Joker {
     blueprint_compat = true,
     eternal_compat = false,
     perishable_compat = true,
+    attributes = { 'xmult', 'generation', 'joker' },
     calculate = function(self, card, context)
         if context.joker_main then
             return {
@@ -424,10 +429,10 @@ SMODS.Joker {
         { xrange = { first = 7, last = 11 }, y = 2, t = 0.1 },
     },
     config = { extra = { plincoin = 1, consumeables = 2 } },
-    pools = { Food = true },
     rarity = 2,
     cost = 4,
     blueprint_compat = true,
+    attributes = { 'plincoin', 'economy', 'food' },
     calculate = function(self, card, context)
         if context.using_consumeable and (not G.plinko_rewards or context.area ~= G.plinko_rewards) then
             card.ability.consumeables_used = (card.ability.consumeables_used or 0) + 1
@@ -455,7 +460,7 @@ SMODS.Joker {
     cost = 3,
     rarity = 1,
     pixel_size = { w = 71, h = 62 },
-    pools = { Food = true },
+    attributes = { 'food', 'ads' },
     calculate = function(self, card, context)
         if context.end_of_round and context.main_eval then
             create_ads(card.ability.extra.eggs)
@@ -479,6 +484,7 @@ SMODS.Joker {
     rarity = 3,
     blueprint_compat = true,
     cost = 5,
+    attributes = { 'generation', 'spades' },
     calculate = function(self, card, context)
         if context.end_of_round and context.main_eval then
             local cards = {}
@@ -520,6 +526,7 @@ SMODS.Joker {
     cost = 6,
     rarity = 2,
     blueprint_compat = false,
+    attributes = { 'training', 'passive' },
     calc_training_mul = function(self, card, joker, mult, stat)
         return mult * 2
     end,
@@ -539,6 +546,7 @@ SMODS.Joker {
     pos = { x = 0, y = 3 },
     rarity = 3,
     cost = 9,
+    attributes = { 'rotating_effect' },
     loc_vars = function(self, info_queue, card)
         return {
             vars = {
@@ -640,6 +648,7 @@ SMODS.Joker {
     rarity = 4,
     cost = 20,
     blueprint_compat = false,
+    attributes = { 'training' },
     calc_training_mul = function(self, card, joker, mult, stat)
         return mult * 4
     end,

@@ -62,6 +62,7 @@ SMODS.Joker {
     blueprint_compat = true,
     eternal_compat = true,
     perishable_compat = true,
+    attributes = { 'rotating_effect' },
     loc_vars = function(self, q, card)
         if card.ability.horseman == "" then return end
         local vars
