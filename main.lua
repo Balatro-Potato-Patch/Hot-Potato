@@ -21,6 +21,123 @@ SMODS.Atlas {
 	py = 32
 }
 
+--logo
+SMODS.Atlas {
+	key = "logo",
+	path = 'hotpotlogo.png',
+	px = 320,
+	py = 138
+}
+
+-- colours
+HotPotato.colours = {
+	primary = HEX('f2af5b'),
+	secondary = HEX('b7660f'),
+}
+
+--Main Menu
+HotPotato.menu_cards = function()
+	if HotPotatoConfig.menu then
+		return {
+			remove_original = true,
+			{key = 'j_hpot_thetruehotpotato'},
+			{key = 'j_hpot_birthdayboy'},
+			func = function()
+				for k, v in pairs(G.title_top.cards) do
+					if v.config.center_key == 'j_hpot_birthdayboy' then
+						v.no_ui = false
+						break
+					end
+				end
+			end
+		}
+	end
+end
+
+local gmm = Game.main_menu
+function Game:main_menu(change_context)
+    local ret = gmm(self, change_context)
+
+    if HotPotatoConfig.menu then
+        -- Creates hotpot Logo Sprite
+        local SC_scale = 1.1 * (G.debug_splash_size_toggle and 0.8 or 1)
+        G.SPLASH_HOTPOT_LOGO = Sprite(0, 0,
+            6.8 * SC_scale,
+            6.8 * SC_scale * (G.ASSET_ATLAS["hpot_logo"].py / G.ASSET_ATLAS["hpot_logo"].px),
+            G.ASSET_ATLAS["hpot_logo"], { x = 0, y = 0 }
+        )
+        G.SPLASH_HOTPOT_LOGO:set_alignment({
+            major = G.title_top,
+            type = 'cm',
+            bond = 'Strong',
+            offset = { x = 0, y = 3.25 }
+        })
+        G.SPLASH_HOTPOT_LOGO:define_draw_steps({ {
+            shader = 'dissolve',
+        } })
+
+        -- Define logo properties
+        G.SPLASH_HOTPOT_LOGO.tilt_var = { mx = 0, my = 0, dx = 0, dy = 0, amt = 0 }
+
+        G.SPLASH_HOTPOT_LOGO.dissolve_colours = { HotPotato.colours.primary, HotPotato.colours.secondary }
+        G.SPLASH_HOTPOT_LOGO.dissolve = 1
+
+        G.SPLASH_HOTPOT_LOGO.states.collide.can = true
+
+        -- Define node functions for Logo
+        function G.SPLASH_HOTPOT_LOGO:click()
+            play_sound('button', 1, 0.3)
+            SMODS.LAST_SELECTED_MOD_TAB = nil
+            G.FUNCS['openModUI_HotPotato']()
+            G.OVERLAY_MENU:get_UIE_by_ID("overlay_menu_back_button").config.button = "exit_overlay_menu_HotPotato"
+        end
+
+        G.FUNCS.exit_overlay_menu_HotPotato = function()
+            G.ACTIVE_MOD_UI = nil
+            G.FUNCS.exit_overlay_menu()
+        end
+
+        function G.SPLASH_HOTPOT_LOGO:hover()
+            G.SPLASH_HOTPOT_LOGO:juice_up(0.05, 0.03)
+            play_sound('paper1', math.random() * 0.2 + 0.9, 0.35)
+            Node.hover(self)
+        end
+
+        function G.SPLASH_HOTPOT_LOGO:stop_hover() Node.stop_hover(self) end
+
+        --Logo animation
+        G.E_MANAGER:add_event(Event({
+            trigger = 'after',
+            delay = change_context == 'splash' and 3.6 or change_context == 'game' and 4 or 1,
+            blockable = false,
+            blocking = false,
+            func = (function()
+                play_sound('magic_crumple' .. (change_context == 'splash' and 2 or 3),
+                    (change_context == 'splash' and 1 or 1.3), 0.9)
+                play_sound('whoosh1', 0.2, 0.8)
+                ease_value(G.SPLASH_HOTPOT_LOGO, 'dissolve', -1, nil, nil, nil,
+                    change_context == 'splash' and 2.3 or 0.9)
+                G.VIBRATION = G.VIBRATION + 1.5
+                return true
+            end)
+        }))
+
+        -- make the title screen use different background colors
+        G.SPLASH_BACK:define_draw_steps({ {
+            shader = 'splash',
+            send = {
+                { name = 'time',       ref_table = G.TIMERS,                ref_value = 'REAL_SHADER' },
+                { name = 'vort_speed', val = 0.4 },
+                { name = 'colour_1',   ref_table = HotPotato.colours, ref_value = 'primary' },
+                { name = 'colour_2',   ref_table = HotPotato.colours, ref_value = 'secondary' },
+            }
+        } })
+    end
+
+    return ret
+end
+
+
 --talisman
 to_big = to_big or function(x) return x end
 to_number = to_number or function(x) return x end
@@ -98,6 +215,14 @@ local hpotConfigTab = function()
 			else
 				love.window.setTitle("Balatro")
 			end
+		end,
+	})
+	hpot_nodes[#hpot_nodes + 1] = create_toggle({
+		label = localize("hotpot_custom_menu"),
+		active_colour = HEX("40c76d"),
+		ref_table = HotPotatoConfig,
+		ref_value = "menu",
+		callback = function()
 		end,
 	})
 	return {

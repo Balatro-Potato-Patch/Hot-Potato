@@ -65,22 +65,6 @@ Game.main_menu = function(self, change_context)
     return ret
 end
 
-HotPotato.menu_cards = function()
-    return {
-        remove_original = true,
-        {key = 'j_hpot_thetruehotpotato'},
-        {key = 'j_hpot_birthdayboy'},
-        func = function()
-            for k, v in pairs(G.title_top.cards) do
-                if v.config.center_key == 'j_hpot_birthdayboy' then
-                    v.no_ui = false
-                    break
-                end
-            end
-        end
-    }
-end
-
 function HotPotato.get_blind_font(blind)
     if blind and (blind.name == "bl_hpot_quartz" or (blind.config and blind.config.name == "bl_hpot_quartz")) then
         return SMODS.Fonts['hpot_plincoin']

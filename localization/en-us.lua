@@ -6861,6 +6861,7 @@ return {
             hotpot_disable_animations = "Disable Jokers Animations",
             hotpot_family_friendly = "Family Friendly",
             hotpot_window_title = "Random Window Titles",
+            hotpot_custom_menu = "Custom Main Menu",
 
             k_place_card_text = "PLACE JOKER TO REFORGE",
             k_place_button = "Place",
