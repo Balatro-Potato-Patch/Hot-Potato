@@ -11,6 +11,7 @@ SMODS.Joker {
     perishable_compat = true,
     cost = 4,
     config = { extra = { mult_per_joker = 2, chips_per_joker = 15 } },
+    attributes = { 'mult', 'chips', 'joker' },
     loc_vars = function(self, info_queue, card)
     info_queue[#info_queue + 1] = { key = 'hc_nxko_comment2', set = 'Other' }
         local valid_jokers = 0

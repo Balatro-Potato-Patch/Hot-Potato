@@ -15,7 +15,7 @@ SMODS.Joker {
     pos = {x=2,y=1},
     ppu_artist = {"RGBeet"},
     ppu_coder = {"notmario"},
-    ppu_team = {"smiley"},
+    ppu_team = {":)"},
     calculate = function(self, card, context)
         if context.individual and context.cardarea == G.play and context.other_card:get_id() == 5 then
             ease_plincoins(card.ability.extra.plincoins)

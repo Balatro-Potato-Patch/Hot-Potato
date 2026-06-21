@@ -7,6 +7,7 @@ SMODS.Joker {
     blueprint_compat = false,
     eternal_compat = true,
     perishable_compat = true,
+    attributes = { 'sell_value', 'scaling' },
     calculate = function(self, card, context)
         if context.selling_card and context.card ~= card and not context.blueprint then
             card.ability.extra_value = card.ability.extra_value + context.card.sell_cost

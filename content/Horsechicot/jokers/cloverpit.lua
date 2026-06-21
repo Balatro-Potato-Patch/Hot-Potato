@@ -10,6 +10,7 @@ SMODS.Joker{
             odds = 6
         }
     },
+    attributes = { 'chance', 'economy' },
     calculate = function(self, card, context)
         if context.after and not context.blueprint then
             if SMODS.pseudorandom_probability(card, 'hpot_cloverpit', 1, card.ability.extra.odds) then

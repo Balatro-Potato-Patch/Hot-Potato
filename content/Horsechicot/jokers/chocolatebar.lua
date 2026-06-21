@@ -8,6 +8,7 @@ SMODS.Joker {
     atlas = "hc_jokers",
     pos = { x = 0, y = 2 },
     config = { extra = { odds = 6, chips = 120 } },
+    attributes = { 'food', 'chance', 'chips' },
     loc_vars = function(self, info_queue, card)
         local numerator, denominator = SMODS.get_probability_vars(card, 1, card.ability.extra.odds, 'hpot_chocolate_bar')
         return { vars = { card.ability.extra.chips, numerator, denominator } }

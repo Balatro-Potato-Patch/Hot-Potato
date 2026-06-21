@@ -15,6 +15,7 @@ SMODS.Joker {
     blueprint_compat = true,
     eternal_compat = true,
     perishable_compat = true,
+    attributes = { 'chips' },
     calculate = function(self, card, context)
         if context.joker_main then
             return { chips = card.ability.extra.chips }

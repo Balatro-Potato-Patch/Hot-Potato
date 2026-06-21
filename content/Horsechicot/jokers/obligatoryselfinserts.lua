@@ -22,6 +22,7 @@ SMODS.Joker {
             xmult_per_self_insert = 2.5,
         }
     },
+    attributes = { 'xmult' },
     calculate = function(self, card, context)
         if context.other_joker then
             local pools = context.other_joker.config.center.pools or {}

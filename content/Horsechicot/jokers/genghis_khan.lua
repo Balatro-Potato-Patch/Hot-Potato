@@ -11,6 +11,7 @@ SMODS.Joker {
     ppu_coder = { "cg223" },
     ppu_artist = { "pangaea47" },
     ppu_team = { "Horsechicot" },
+    attributes = { 'xmult', 'scaling' },
     loc_vars = function (self, info_queue, card)
         return {vars = {card.ability.increment, card.ability.current}}
     end,

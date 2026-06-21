@@ -7,9 +7,6 @@ SMODS.Joker {
             used_positions = {}
         }
     },
-    pools = {
-        ["Food"] = true
-    },
     atlas = "hc_jokers",
     pos = {x = 5, y = 1},
     loc_vars = function(self, info_queue, card)
@@ -76,6 +73,7 @@ SMODS.Joker {
     blueprint_compat = true,
     eternal_compat = true,
     perishable_compat = true,
+    attributes = { 'food', 'mult', 'scaling', 'reset' },
     rarity = 2,
     cost = 6,
     calculate = function(self, card, context)

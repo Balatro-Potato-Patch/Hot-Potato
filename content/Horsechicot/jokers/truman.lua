@@ -14,6 +14,7 @@ SMODS.Joker {
     ppu_artist = {"pangaea47"},
     ppu_coder = {"Nxkoo"},
     ppu_team = {"Horsechicot"},
+    attributes = { 'xmult', 'joker' },
     loc_vars = function(self, info_queue, card)
         if not G.jokers or G.SETTINGS.paused then
             return self:collection_loc_vars(info_queue, card)

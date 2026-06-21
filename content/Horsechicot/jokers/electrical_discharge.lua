@@ -5,6 +5,7 @@ SMODS.Joker {
     atlas = "hc_jokers",
     pos = { x = 5, y = 2 },
     config = { extra = { stored_mult = 0, take = 0.2 } }, -- 20%
+    attributes = { 'mult', 'scaling', 'reset' },
     loc_vars = function(self, info_queue, card)
         return {vars = {
             card.ability.extra.take*100,

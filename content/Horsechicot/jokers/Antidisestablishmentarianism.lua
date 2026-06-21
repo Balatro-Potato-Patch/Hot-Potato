@@ -16,6 +16,7 @@ SMODS.Joker {
     ppu_artist = {"pangaea47"},
     ppu_coder = {"Nxkoo"},
     ppu_team = {"Horsechicot"},
+    attributes = { 'boss_blind' },
     calculate = function(self, card, context)
         if context.after and context.main_eval and not context.blueprint then
             if G.GAME.blind and G.GAME.blind.boss and not G.GAME.blind.disabled then

@@ -32,6 +32,7 @@ SMODS.Joker {
     atlas = "hc_jokers",
     pos = {x = 2, y = 0},
     config = { extra = { score = 0, gain = 1, money = 1 } },
+    attributes = { 'economy', 'scaling', 'reset' },
     loc_vars = function(self, info_queue, card)
         return {vars = {
             card.ability.extra.gain,

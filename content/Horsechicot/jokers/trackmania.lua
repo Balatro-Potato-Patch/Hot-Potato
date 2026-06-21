@@ -26,6 +26,7 @@ SMODS.Joker {
     blueprint_compat = true,
     perishable_compat = true,
     eternal_compat = true,
+    attributes = { 'xmult' },
     calculate = function(self, card, context)
         if context.joker_main then
             local t_since_ante = card.ability.elapsed

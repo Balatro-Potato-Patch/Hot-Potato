@@ -8,6 +8,7 @@ SMODS.Joker {
     eternal_compat = true,
     perishable_compat = true,
     no_prosopagnosia = true,
+    attributes = { 'face', 'joker', 'copying' },
     loc_vars = function(self, info_queue, card)
         --info_queue for every sold joker
         for key, _ in pairs(G.GAME.removed_joker_keys or {}) do

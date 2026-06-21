@@ -10,6 +10,7 @@ SMODS.Joker {
     blueprint_compat = false,
     eternal_compat = true,
     perishable_compat = true,
+    attributes = { 'rank', 'generation', 'joker' },
     calculate = function(self, card, context)
         if context.joker_main then
             local cards = context.scoring_hand

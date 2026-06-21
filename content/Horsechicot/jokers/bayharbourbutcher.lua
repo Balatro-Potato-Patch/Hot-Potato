@@ -16,6 +16,7 @@ SMODS.Joker {
     eternal_compat = true,
     perishable_compat = false,
     config = { extra = {} },
+    attributes = { 'destroy_card', 'economy', 'sell_value', 'bitcoin' },
     loc_vars = function(self, info_queue, card)
         return { vars = {} }
     end,

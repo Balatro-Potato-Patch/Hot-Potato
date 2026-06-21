@@ -46,4 +46,5 @@ SMODS.Joker {
     ppu_coder = { "cg223" },
     ppu_artist = { "pangaea47" },
     ppu_team = { "Horsechicot" },
+    attributes = { 'economy', 'bitcoin' },
 }

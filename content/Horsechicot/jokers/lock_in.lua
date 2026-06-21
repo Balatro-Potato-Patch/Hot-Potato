@@ -6,6 +6,7 @@ SMODS.Joker {
     cost = 4,
     rarity = 2,
     config = { was_clicked = false, start_time = 0, leniency = 1, can_save = false },
+    attributes = { 'prevents_death' },
     atlas = "hc_jokers",
     pos = { x = 6, y = 0 },
     blueprint_compat = false,

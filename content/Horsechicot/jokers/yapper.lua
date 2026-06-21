@@ -24,6 +24,7 @@ SMODS.Joker {
     blueprint_compat = true,
     perishable_compat = true,
     eternal_compat = true,
+    attributes = { 'mult' },
     calculate = function (self, card, context)
         if context.after then
             card.ability.current = pseudorandom_element(HPJTTT.text_only, "hc_yapper")

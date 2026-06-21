@@ -11,6 +11,7 @@ SMODS.Joker {
     blueprint_compat = true,
     eternal_compat = false,
     perishable_compat = true,
+    attributes = { 'xmult', 'chance', 'food', },
     atlas = "hc_jokers",
     pos = {x = 0, y = 0},
     soul_pos = {x = 1, y = 0},

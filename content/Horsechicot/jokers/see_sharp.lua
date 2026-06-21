@@ -8,6 +8,7 @@ SMODS.Joker {
     blueprint_compat = false,
     eternal_compat = true,
     perishable_compat = true,
+    attributes = { 'boss_blind', 'hands' },
     calculate = function(self, card, context)
         if context.before and not context.blueprint then
             card.ability.extra.left = card.ability.extra.left - 1

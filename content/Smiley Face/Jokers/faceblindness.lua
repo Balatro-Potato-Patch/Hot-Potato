@@ -17,7 +17,7 @@ SMODS.Joker {
     pos = {x=1,y=1},
     ppu_artist = {"RGBeet"},
     ppu_coder = {"PokéRen"},
-    ppu_team = {"smiley"}
+    ppu_team = {":)"}
 }
 
 -- code is actually in emoticon.lua's hook lmao

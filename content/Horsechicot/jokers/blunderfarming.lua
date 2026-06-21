@@ -6,6 +6,7 @@ SMODS.Joker {
     blueprint_compat = false,
     eternal_compat = true,
     perishable_compat = true,
+    attributes = { 'skip', 'tag', 'chance' },
     cost = 4,
     config = { extra = { odds = 2 } },
     loc_vars = function(self, info_queue, card)

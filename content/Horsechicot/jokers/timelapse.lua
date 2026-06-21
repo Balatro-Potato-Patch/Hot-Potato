@@ -7,6 +7,7 @@ SMODS.Joker {
     perishable_compat = true,
     atlas = "hc_jokers",
     pos = {x = 6, y = 1},
+    attributes = { 'copying', 'joker' },
     calculate = function(self, card, context)
         local jokers = {}
         for i, v in pairs(G.jokers.cards) do

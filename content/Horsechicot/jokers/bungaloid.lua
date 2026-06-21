@@ -11,6 +11,7 @@ SMODS.Joker {
     ppu_coder = {"Nxkoo"},
     ppu_team = {"Horsechicot"},
     config = { extra = {} },
+    attributes = { 'hand_type', 'generation', 'joker' },
     loc_vars = function(self, info_queue, card)
         return { vars = { localize('Full House', 'poker_hands') } }
     end,

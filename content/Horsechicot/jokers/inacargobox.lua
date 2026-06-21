@@ -11,6 +11,7 @@ SMODS.Joker {
     perishable_compat = true,
     cost = 8,
     config = { extra = { xmult_per_delivery = 2.5 } },
+    attributes = { 'xmult', 'delivery' },
     loc_vars = function(self, info_queue, card)
         return {
             vars = {

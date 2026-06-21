@@ -8,6 +8,7 @@ SMODS.Joker {
     perishable_compat = true,
     cost = 6,
     config = { extra = { retriggers = 1, numerator = 1, denominator = 3, denom_inc = 3 } },
+    attributes = { 'modify_card', 'retrigger' },
     loc_vars = function(self, info_queue, card)
         local numerator, denominator = SMODS.get_probability_vars(card, card.ability.extra.numerator, card.ability.extra.denominator, 'hc_cardstack')
         return {

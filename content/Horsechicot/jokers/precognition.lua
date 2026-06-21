@@ -11,6 +11,7 @@ SMODS.Joker {
     blueprint_compat = true,
     eternal_compat = true,
     perishable_compat = false,
+    attributes = { 'mult', 'chance' },
     calculate = function(self, card, context)
         if context.pseudorandom_result then
             if context.result == G.GAME.precognition_guess then

@@ -58,6 +58,7 @@ SMODS.Joker {
             cunt = 1
         }
     },
+    attributes = { 'economy', 'boss_blind', 'scaling' },
     loc_vars = function(self, info_queue, card)
         return {
             vars = {

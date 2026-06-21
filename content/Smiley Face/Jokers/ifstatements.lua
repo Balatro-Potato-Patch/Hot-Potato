@@ -15,7 +15,7 @@ SMODS.Joker {
     atlas = "smiley_jokers",
     pos = {x=2,y=0},
     ppu_coder = {"notmario"},
-    ppu_team = {"smiley"},
+    ppu_team = {":)"},
     calculate = function(self, card, context)
         if context.joker_main then
             local my_effects = {}

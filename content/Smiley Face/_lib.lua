@@ -6,6 +6,7 @@ SMODS.Font {
 }
 
 PotatoPatchUtils.Team {
-  name = 'smiley',
-  colour = HEX('ffd71f')
+  name = ':)',
+  colour = HEX('ffd71f'),
+  loc = 'PotatoPatchTeam_smiley'
 }

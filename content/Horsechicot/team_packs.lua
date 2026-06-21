@@ -29,7 +29,7 @@ end
 function get_teams()
     return {
         "Sillyposting",
-        "smiley",
+        ":)",
         "Perkeocoin",
         "Pissdrawer",
         "Team Name",

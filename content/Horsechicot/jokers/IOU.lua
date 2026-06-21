@@ -23,6 +23,7 @@ SMODS.Joker {
     ppu_artist = {"pangaea47"},
     ppu_coder = {"Nxkoo"},
     ppu_team = {"Horsechicot"},
+    attributes = { 'bitcoin', 'economy', 'on_sell' },
     calculate = function(self, card, context)
         if context.selling_self and not context.blueprint then
             return {

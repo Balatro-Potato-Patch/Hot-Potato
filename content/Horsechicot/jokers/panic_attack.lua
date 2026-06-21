@@ -17,6 +17,7 @@ SMODS.Joker {
             xmult_mod = 0.1
         }
     },
+    attributes = { 'xmult', 'reset' },
     calculate = function(self, card, context)
         if (context.end_of_round and not context.blueprint and not context.individual and G.GAME.blind_on_deck == "Boss" and not context.repetition) then
             card.ability.extra.xmult = card.ability.extra.xmult_base

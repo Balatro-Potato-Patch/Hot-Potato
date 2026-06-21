@@ -10,6 +10,7 @@ SMODS.Joker {
     ppu_coder = {"lord.ruby"},
     ppu_artist = {"pangaea47"},
     ppu_team = {"Horsechicot"},
+    attributes = { 'joker' },
 }
 
 local createcard_ref = create_card

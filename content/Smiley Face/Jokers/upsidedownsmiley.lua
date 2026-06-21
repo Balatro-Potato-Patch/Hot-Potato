@@ -14,7 +14,7 @@ SMODS.Joker {
     atlas = "smiley_jokers",
     pos = {x=0,y=0},
     ppu_coder = {"PokéRen"},
-    ppu_team = {"smiley"},
+    ppu_team = {":)"},
     calculate = function(self, card, context)
         if context.individual and context.cardarea == G.hand and not context.end_of_round and context.other_card:is_face() then
             if context.other_card.debuff then
