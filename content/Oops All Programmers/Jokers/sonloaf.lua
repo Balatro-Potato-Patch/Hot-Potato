@@ -4,12 +4,9 @@ SMODS.Joker {
     pos = { x = 3, y = 2 },
     rarity = 1,
     blueprint_compat = false,
-    hotpot_credits = {
-        art = { 'Omegaflowey18' },
-        code = { 'factwixard' },
-        idea = { 'theAstra' },
-        team = { 'O!AP' }
-    },
+    ppu_artist = { 'Omegaflowey18' },
+    ppu_coder = { 'factwixard' },
+    ppu_team = { 'OAP' },
     calculate = function(self, card, context)
         if context.joker_type_destroyed and context.card.config.center.pools and context.card.config.center.pools.Food and G.jokers.config.card_limit > #G.jokers.cards + G.GAME.joker_buffer then
             G.GAME.joker_buffer = G.GAME.joker_buffer + 1

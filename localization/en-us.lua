@@ -5358,6 +5358,11 @@ return {
                 }
             },
         },
+        PotatoPatch = {
+            PotatoPatchTeam_OAP = {
+                name = 'Oops! All Programmers'
+            }
+        }
     },
     InfoMenu = {
         hotpot_delivery = {

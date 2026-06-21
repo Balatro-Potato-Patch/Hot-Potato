@@ -26,10 +26,7 @@ SMODS.Joker {
         return to_number(uses) > 0 and (card.ability.extra.money * uses) or nil
 
     end,
-    hotpot_credits = {
-        art = { 'SadCube' },
-        code = { 'theAstra' },
-        idea = { 'theAstra' },
-        team = { 'O!AP' }
-    }
+    ppu_artist = { 'SadCube' },
+    ppu_coder = { 'theAstra' },
+    ppu_team = { 'OAP' }
 }

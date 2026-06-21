@@ -1,12 +1,9 @@
 SMODS.Enhancement {
 	key = 'oap_lead',
 	atlas = 'oap_pb',
-	hotpot_credits = {
-		idea = { "factwixard" },
-		code = { "factwixard" },
-		art = { "factwixard" },
-		team = { "O!AP" }
-	},
+	ppu_coder = { "factwixard" },
+	ppu_artist = { "factwixard" },
+	ppu_team = { "OAP" },
 	config = { extra = { xchips_gain = 0.1 } },
 	loc_vars = function(self, info_queue, card)
 		return { vars = { card.ability.extra.xchips_gain } }

@@ -31,10 +31,7 @@ SMODS.Joker {
             }
         end
     end,
-    hotpot_credits = {
-        art = { 'th30ne' },
-        code = { 'theAstra' },
-        idea = { 'theAstra' },
-        team = { 'O!AP' }
-    }
+    ppu_artist = { 'th30ne' },
+    ppu_coder = { 'theAstra' },
+    ppu_team = { 'OAP' }
 }

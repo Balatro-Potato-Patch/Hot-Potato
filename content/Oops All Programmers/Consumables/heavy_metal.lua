@@ -8,10 +8,7 @@ SMODS.Consumable {
         info_queue[#info_queue + 1] = G.P_CENTERS[card.ability.mod_conv]
         return { vars = { card.ability.max_highlighted, localize { type = 'name_text', set = 'Enhanced', key = card.ability.mod_conv } } }
     end,
-    hotpot_credits = {
-        art = { 'SadCube' },
-        code = { 'theAstra' },
-        idea = { 'wix', 'SadCube' },
-        team = { 'O!AP' }
-    }
+    ppu_artist = { 'SadCube' },
+    ppu_coder = { 'theAstra' },
+    ppu_team = { 'OAP' }
 }

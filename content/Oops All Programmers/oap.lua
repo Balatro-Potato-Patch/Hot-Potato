@@ -1,21 +1,9 @@
 OAP = {}                                     -- GET GLOBAL NOW!!!!!!!
-function OAP.credit(coders, arters, ideaers) -- stolen from horsechicot god bless
-    if type(coders) == "string" then
-        coders = { coders }
-    end
-    if type(arters) == "string" then
-        arters = { arters }
-    end
-    if type(ideaers) == "string" then
-        ideaers = { ideaers }
-    end
-    return {
-        code = coders,
-        art = arters,
-        idea = ideaers,
-        team = { 'O!AP' }
-    }
-end
+PotatoPatchUtils.Team {
+    name = 'OAP',
+    colour = HEX('80f1c3'),
+    loc = true
+}
 
 local rgg_ref = SMODS.current_mod.reset_game_globals
 function SMODS.current_mod.reset_game_globals(run_start) -- i am the worst developer of all time - trif
@@ -63,7 +51,5 @@ SMODS.Sound {
         "Music that plays in the",
         "Abnormality Choice event"
     },
-    hotpot_credits = {
-        team = { 'O!AP' }
-    }
+    ppu_team = { 'OAP' }
 }

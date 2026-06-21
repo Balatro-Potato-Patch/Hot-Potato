@@ -47,12 +47,9 @@ SMODS.Joker {
             }
         end
     end,
-    hotpot_credits = {
-        art = { 'th30ne' },
-        code = { 'theAstra' },
-        idea = { 'th30ne' },
-        team = { 'O!AP' }
-    }
+    ppu_artist = { 'th30ne' },
+    ppu_coder = { 'theAstra' },
+    ppu_team = { 'OAP' }
 }
 
 local cfbs = G.FUNCS.check_for_buy_space

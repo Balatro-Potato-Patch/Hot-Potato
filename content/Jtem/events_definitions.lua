@@ -1441,7 +1441,7 @@ HotPotato.EventScenario {
 	domains = { occurence = true },
 	starting_step_key = "hpot_job_application_1",
 	ppu_coder = { "Liafeon" },
-	ppu_team = { "O!AP" },
+	ppu_team = { "OAP" },
 	in_pool = function()
 		return G.GAME.round_resets.ante >= 5
 	end
@@ -1454,7 +1454,7 @@ HotPotato.EventScenario {
 	domains = { reward = true },
 	starting_step_key = "hpot_vsf_1",
 	ppu_coder = { "theAstra" },
-	ppu_team = { "O!AP" },
+	ppu_team = { "OAP" },
 	in_pool = function()
 		return sticker_check(G.jokers.cards) > 0
 	end
@@ -1528,7 +1528,7 @@ HotPotato.EventScenario {
 	domains = { occurence = true },
 	starting_step_key = "hpot_trolley_1",
 	ppu_coder = { "theAstra" },
-	ppu_team = { "O!AP" },
+	ppu_team = { "OAP" },
 	in_pool = function()
 		return #G.jokers.cards >= 1 and #G.playing_cards >= 5
 	end
@@ -1737,7 +1737,7 @@ HotPotato.EventScenario {
 	domains = { occurence = true },
 	starting_step_key = "hpot_mb_1",
 	ppu_coder = { "factwixard" },
-	ppu_team = { "O!AP" },
+	ppu_team = { "OAP" },
 }
 HotPotato.EventStep {
 	key = "mb_1",
@@ -1852,7 +1852,7 @@ HotPotato.EventScenario {
 	domains = { occurence = true },
 	starting_step_key = "hpot_refreshing_1",
 	ppu_coder = { "theAstra" },
-	ppu_team = { "O!AP" },
+	ppu_team = { "OAP" },
 }
 
 HotPotato.EventStep {
@@ -1946,7 +1946,7 @@ HotPotato.EventScenario {
 	domains = { occurence = true },
 	starting_step_key = "hpot_fishing_1",
 	ppu_coder = { "theAstra" },
-	ppu_team = { "O!AP" },
+	ppu_team = { "OAP" },
 }
 
 HotPotato.EventStep {
@@ -2068,7 +2068,7 @@ HotPotato.EventScenario {
 	domains = { reward = true },
 	starting_step_key = "hpot_roffle_start",
 	ppu_coder = { "trif" },
-	ppu_team = { "O!AP" },
+	ppu_team = { "OAP" },
 }
 
 HotPotato.EventStep {
@@ -2161,7 +2161,7 @@ HotPotato.EventScenario {
 	hide_image_area = true,
 	starting_step_key = "hpot_bizzare_machine_start",
 	ppu_coder = { "Mysthaps" },
-	ppu_team = { "O!AP" },
+	ppu_team = { "OAP" },
 }
 
 HotPotato.EventStep {

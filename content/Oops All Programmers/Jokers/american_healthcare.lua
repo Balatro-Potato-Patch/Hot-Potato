@@ -36,12 +36,9 @@ SMODS.Joker {
             juice_card_until(card, function() return not (card.ability.extra.this_round or G.STATE == G.STATES.BLIND_SELECT) end, true)
         end
     end,
-    hotpot_credits = {
-        art = { 'th30ne' },
-        code = { 'trif' },
-        idea = { 'trif' },
-        team = { 'O!AP' }
-    }
+    ppu_artist = { 'th30ne' },
+    ppu_coder = { 'trif' },
+    ppu_team = { 'OAP' }
 }
 
 local old = G.FUNCS.nursery_breed

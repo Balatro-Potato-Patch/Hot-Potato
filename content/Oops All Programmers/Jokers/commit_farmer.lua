@@ -22,7 +22,7 @@ SMODS.Joker {
     atlas = "oap_jokers",
     pos = { x = 4, y = 0 },
     loc_vars = function(self, info_queue, card)
-        local team = G.GAME.current_round.hpot_commit_farmer_team or "Sillyposting"
+        local ppu_team = G.GAME.current_round.hpot_commit_farmer_team or "Sillyposting"
         local commits = card.ability.extra.commits[team:lower()] or 0
         local xmult = card.ability.extra.xmult_inc * commits + card.ability.extra.xmult_base
         return { vars = { card.ability.extra.xmult_inc, team, xmult } }
@@ -36,21 +36,18 @@ SMODS.Joker {
             }
         end
     end,
-    hotpot_credits = {
-        art = { 'th30ne' },
-        code = { 'trif' },
-        idea = { 'trif' },
-        team = { 'O!AP' }
-    }
+    ppu_artist = { 'th30ne' },
+    ppu_coder = { 'trif' },
+    ppu_team = { 'OAP' }
 }
 function reset_commit_farmer()
-    G.GAME.current_round.hpot_commit_farmer_team = G.GAME.current_round.hpot_commit_farmer_team or "Sillyposting"
+    G.GAME.current_round.hpot_commit_farmer_ppu_team = G.GAME.current_round.hpot_commit_farmer_team or "Sillyposting"
     local teams = {}
     for k, v in ipairs({ "Perkeocoin", "Sillyposting", "Jtem", "Team Name", "Team :)", "Horsechicot", "Oops! All Programmers", "PissDrawer" }) do
         if v ~= G.GAME.current_round.hpot_commit_farmer_team then
             teams[#teams + 1] = v
         end
     end
-    local team = pseudorandom_element(teams, "commit_farmer_" .. G.GAME.round_resets.ante)
-    G.GAME.current_round.hpot_commit_farmer_team = team
+    local ppu_team = pseudorandom_element(teams, "commit_farmer_" .. G.GAME.round_resets.ante)
+    G.GAME.current_round.hpot_commit_farmer_ppu_team = team
 end

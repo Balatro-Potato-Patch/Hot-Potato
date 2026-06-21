@@ -5,12 +5,9 @@ SMODS.Joker {
     cost = 7,
     atlas = "oap_jokers",
     pos = { x = 9, y = 0 },
-    hotpot_credits = {
-        art = { 'th30ne' },
-        code = { 'theAstra' },
-        idea = { 'th30ne' },
-        team = { 'O!AP' }
-    }
+    ppu_artist = { 'th30ne' },
+    ppu_coder = { 'theAstra' },
+    ppu_team = { 'OAP' }
 }
 
 local atp = SMODS.add_to_pool

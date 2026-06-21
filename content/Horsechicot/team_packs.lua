@@ -33,7 +33,7 @@ function get_teams()
         "Perkeocoin",
         "Pissdrawer",
         "Team Name",
-        "O!AP",
+        "OAP",
         "Jtem",
         "Horsechicot"
     }
