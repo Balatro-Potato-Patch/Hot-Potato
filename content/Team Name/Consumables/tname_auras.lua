@@ -16,12 +16,9 @@ SMODS.Consumable({
 		x = 0,
 		y = 0
 	},
-	hotpot_credits = {
-		art = { "GoldenLeaf" },
-		idea = { "GoldenLeaf" },
-		code = { "GoldenLeaf" },
-		team = { "Team Name" },
-	},
+ppu_artist = { "GoldenLeaf" },
+ppu_coder = { "GoldenLeaf" },
+ppu_team = { "Team Name" },
 	config = {
 		extra = {
 			slots = 1,
@@ -68,12 +65,9 @@ SMODS.Consumable({
 		x = 1,
 		y = 0
 	},
-	hotpot_credits = {
-		art = { "GoldenLeaf" },
-		idea = { "GoldenLeaf" },
-		code = { "GoldenLeaf" },
-		team = { "Team Name" },
-	},
+ppu_artist = { "GoldenLeaf" },
+ppu_coder = { "GoldenLeaf" },
+ppu_team = { "Team Name" },
 	config = {
 		extra = {
 			credits = 30
@@ -137,12 +131,9 @@ SMODS.Consumable({
 		x = 2,
 		y = 0
 	},
-	hotpot_credits = {
-		art = { "GoldenLeaf" },
-		idea = { "GoldenLeaf" },
-		code = { "GoldenLeaf" },
-		team = { "Team Name" },
-	},
+ppu_artist = { "GoldenLeaf" },
+ppu_coder = { "GoldenLeaf" },
+ppu_team = { "Team Name" },
 	config = {
 		extra = {
 			leavinghands = 1,
@@ -192,12 +183,9 @@ SMODS.Consumable({
 		x = 3,
 		y = 0
 	},
-	hotpot_credits = {
-		art = { "GoldenLeaf" },
-		idea = { "GoldenLeaf" },
-		code = { "GoldenLeaf" },
-		team = { "Team Name" },
-	},
+ppu_artist = { "GoldenLeaf" },
+ppu_coder = { "GoldenLeaf" },
+ppu_team = { "Team Name" },
 	config = {
 		extra = {
 			credits = 3
@@ -232,12 +220,9 @@ SMODS.Consumable({
 		x = 0,
 		y = 1
 	},
-	hotpot_credits = {
-		art = { "GoldenLeaf" },
-		idea = { "GoldenLeaf" },
-		code = { "GoldenLeaf" },
-		team = { "Team Name" },
-	},
+ppu_artist = { "GoldenLeaf" },
+ppu_coder = { "GoldenLeaf" },
+ppu_team = { "Team Name" },
 	config = {
 		extra = {
 			slots = 1,
@@ -279,12 +264,9 @@ SMODS.Consumable({
 		x = 1,
 		y = 1
 	},
-	hotpot_credits = {
-		art = { "GoldenLeaf" },
-		idea = { "GoldenLeaf" },
-		code = { "GoldenLeaf" },
-		team = { "Team Name" },
-	},
+ppu_artist = { "GoldenLeaf" },
+ppu_coder = { "GoldenLeaf" },
+ppu_team = { "Team Name" },
 	config = {
 		extra = {
 			max = 200,
@@ -320,12 +302,9 @@ SMODS.Consumable({
 		x = 2,
 		y = 1
 	},
-	hotpot_credits = {
-		art = { "GoldenLeaf" },
-		idea = { "GoldenLeaf" },
-		code = { "GoldenLeaf" },
-		team = { "Team Name" },
-	},
+ppu_artist = { "GoldenLeaf" },
+ppu_coder = { "GoldenLeaf" },
+ppu_team = { "Team Name" },
 	config = {
 		extra = {
 			credits = 1
@@ -403,12 +382,9 @@ SMODS.Consumable({
 			key = key
 		}
 	end,
-	hotpot_credits = {
-		art = { "GoldenLeaf" },
-		idea = { "GoldenLeaf" },
-		code = { "GoldenLeaf" },
-		team = { "Team Name" },
-	},
+ppu_artist = { "GoldenLeaf" },
+ppu_coder = { "GoldenLeaf" },
+ppu_team = { "Team Name" },
 	in_pool = function (self, args)
 		if G.jokers then
 			if #G.jokers.cards > 0 and to_big(calc_amount_increased(tonumber((G.GAME.seeded and G.GAME.budget or G.PROFILES[G.SETTINGS.profile].TNameCredits)), self.config.extra.credits, self.config.extra.increment, self.config.extra.maximum)) > to_big(0) then

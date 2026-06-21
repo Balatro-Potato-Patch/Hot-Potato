@@ -13,12 +13,10 @@ SMODS.Booster({
 			skip_materialize = true,
 		})
 	end,
-	hotpot_credits = {
-		art = { "GoldenLeaf" },
-		idea = { "GoldenLeaf" },
-		code = { "Revo" },
-		team = { "Team Name" },
-	},
+	
+	ppu_artist = { "GoldenLeaf" },
+	ppu_coder = { "Revo" },
+	ppu_team = { "Team Name" },
 })
 
 SMODS.Booster({
@@ -36,12 +34,10 @@ SMODS.Booster({
 			skip_materialize = true,
 		})
 	end,
-	hotpot_credits = {
-		art = { "GoldenLeaf" },
-		idea = { "GoldenLeaf" },
-		code = { "Revo" },
-		team = { "Team Name" },
-	},
+	
+	ppu_artist = { "GoldenLeaf" },
+	ppu_coder = { "Revo" },
+	ppu_team = { "Team Name" },
 })
 
 SMODS.Booster({
@@ -59,12 +55,11 @@ SMODS.Booster({
 			skip_materialize = true,
 		})
 	end,
-	hotpot_credits = {
-		art = { "GoldenLeaf" },
+	
+	ppu_artist = { "GoldenLeaf" },
 		idea = { "GoldenLeaf" },
-		code = { "Revo" },
-		team = { "Team Name" },
-	},
+	ppu_coder = { "Revo" },
+	ppu_team = { "Team Name" },
 })
 
 SMODS.Booster({
@@ -82,12 +77,10 @@ SMODS.Booster({
 			skip_materialize = true,
 		})
 	end,
-	hotpot_credits = {
-		art = { "GoldenLeaf" },
-		idea = { "GoldenLeaf" },
-		code = { "Revo" },
-		team = { "Team Name" },
-	},
+	
+	ppu_artist = { "GoldenLeaf" },
+	ppu_coder = { "Revo" },
+	ppu_team = { "Team Name" },
 })
 
 SMODS.Booster({
@@ -106,12 +99,11 @@ SMODS.Booster({
 				skip_materialize = true,
 			})
 	end,
-	hotpot_credits = {
-		art = { "GoldenLeaf" },
+	
+	ppu_artist = { "GoldenLeaf" },
 		idea = { "Revo" },
-		code = { "Revo" },
-		team = { "Team Name" },
-	},
+	ppu_coder = { "Revo" },
+	ppu_team = { "Team Name" },
 })
 
 -- aura
@@ -131,12 +123,10 @@ SMODS.Booster({
 			skip_materialize = true,
 		})
 	end,
-	hotpot_credits = {
-		art = { "GoldenLeaf" },
-		idea = { "GoldenLeaf" },
-		code = { "Revo" },
-		team = { "Team Name" },
-	},
+	
+	ppu_artist = { "GoldenLeaf" },
+	ppu_coder = { "Revo" },
+	ppu_team = { "Team Name" },
 })
 
 SMODS.Booster({
@@ -154,12 +144,10 @@ SMODS.Booster({
 			skip_materialize = true,
 		})
 	end,
-	hotpot_credits = {
-		art = { "GoldenLeaf" },
-		idea = { "GoldenLeaf" },
-		code = { "Revo" },
-		team = { "Team Name" },
-	},
+	
+	ppu_artist = { "GoldenLeaf" },
+	ppu_coder = { "Revo" },
+	ppu_team = { "Team Name" }
 })
 
 SMODS.Booster({
@@ -177,12 +165,10 @@ SMODS.Booster({
 			skip_materialize = true,
 		})
 	end,
-	hotpot_credits = {
-		art = { "GoldenLeaf" },
-		idea = { "GoldenLeaf" },
-		code = { "Revo" },
-		team = { "Team Name" },
-	},
+	
+	ppu_artist = { "GoldenLeaf" },
+	ppu_coder = { "Revo" },
+	ppu_team = { "Team Name" },
 })
 
 SMODS.Booster({
@@ -200,12 +186,10 @@ SMODS.Booster({
 			skip_materialize = true,
 		})
 	end,
-	hotpot_credits = {
-		art = { "GoldenLeaf" },
-		idea = { "GoldenLeaf" },
-		code = { "Revo" },
-		team = { "Team Name" },
-	},
+	
+	ppu_artist = { "GoldenLeaf" },
+	ppu_coder = { "Revo" },
+	ppu_team = { "Team Name" },
 })
 
 SMODS.Booster({
@@ -225,15 +209,11 @@ SMODS.Booster({
 				skip_materialize = true,
 			})
 	end,
-	hotpot_credits = {
-		art = { "GoldenLeaf" },
-		idea = { "Revo" },
-		code = { "Revo" },
-		team = { "Team Name" },
-	},
+	
+	ppu_artist = { "GoldenLeaf" },
+	ppu_coder = { "Revo" },
+	ppu_team = { "Team Name" },
 })
-
--- Vanilla ultra packs
 
 SMODS.Booster({
 	key = "ultra_arcana",
@@ -255,16 +235,14 @@ SMODS.Booster({
 			},
 		}
 	end,
-	hotpot_credits = {
-		art = { "GoldenLeaf" },
-		idea = { "Revo" },
-		code = { "Violet" }, -- <- this is the one to blame for the awful code
-		team = { "Team Name" },
-	},
+	
+	ppu_artist = { "GoldenLeaf" },
+	ppu_coder = { "Violet" }, -- <- this is the one to blame for the awful code
+	ppu_team = { "Team Name" },
 })
+
 SMODS.Booster({
 	key = "ultra_celestial",
-	weight = 0.025,
 	kind = "Celestial",
     name = "Ultra Celestial Pack",
 	cost = 0,
@@ -281,18 +259,17 @@ SMODS.Booster({
 			},
 		}
 	end,
-	hotpot_credits = {
-		art = { "GoldenLeaf" },
-		idea = { "Revo" },
-		code = { "Violet" }, -- <- this is the one to blame for the awful code
-		team = { "Team Name" },
-	},
+	
+	ppu_artist = { "GoldenLeaf" },
+	ppu_coder = { "Violet" }, -- <- this is the one to blame for the awful code
+	ppu_team = { "Team Name" },
 })
+
 SMODS.Booster({
 	key = "ultra_standard",
 	weight = 0.025,
-	kind = "Standard",
-    name = "Ultra Standard Pack",
+	kind = 'Standard',
+	name = "Ultra Standard Pack",
 	cost = 0,
 	credits = 100,
 	atlas = "tname_boosters",
@@ -307,12 +284,10 @@ SMODS.Booster({
 			},
 		}
 	end,
-	hotpot_credits = {
-		art = { "GoldenLeaf" },
-		idea = { "Revo" },
-		code = { "Violet" }, -- <- this is the one to blame for the awful code
-		team = { "Team Name" },
-	},
+	
+	ppu_artist = { "GoldenLeaf" },
+	ppu_coder = { "Violet" }, -- <- this is the one to blame for the awful code
+	ppu_team = { "Team Name" },
 })
 
 SMODS.Booster({
@@ -335,12 +310,10 @@ SMODS.Booster({
 			},
 		}
 	end,
-	hotpot_credits = {
-		art = { "GoldenLeaf" },
-		idea = { "Revo" },
-		code = { "Violet" }, -- <- this is the one to blame for the awful code
-		team = { "Team Name" },
-	},
+	
+	ppu_artist = { "GoldenLeaf" },
+	ppu_coder = { "Violet" }, -- <- this is the one to blame for the awful code
+	ppu_team = { "Team Name" },
 })
 
 SMODS.Booster({
@@ -362,10 +335,8 @@ SMODS.Booster({
 			},
 		}
 	end,
-	hotpot_credits = {
-		art = { "GoldenLeaf" },
-		idea = { "Revo" },
-		code = { "Violet" }, -- <- this is the one to blame for the awful code
-		team = { "Team Name" },
-	},
+	
+	ppu_artist = { "GoldenLeaf" },
+	ppu_coder = { "Violet" }, -- <- this is the one to blame for the awful code
+	ppu_team = { "Team Name" },
 })

@@ -11,8 +11,8 @@ SMODS.Sound {
     "Music that plays while",
     "reforging a Joker"
   },
-  hotpot_credits = {
-    team = { "Team Name" }
+  
+    ppu_team = { "Team Name" }
   }
 }
 

@@ -158,12 +158,10 @@ SMODS.Joker {
             card.children.center:set_sprite_pos { x = target_pos, y = 0 }
         end
     end,
-	hotpot_credits = {
-		art = { 'GhostSalt' },
-		code = { "Goldenleaf" },
-		idea = { 'Team Name (Collectively)' },
-		team = { 'Team Name' }
-	}
+	
+	ppu_artist = { 'GhostSalt' },
+	ppu_coder = { "Goldenleaf" },
+	ppu_team = { 'Team Name' }
 }
 
 SMODS.Joker({
@@ -200,12 +198,10 @@ SMODS.Joker({
 			}
 		end
 	end,
-    hotpot_credits = {
-        art = {"GoldenLeaf"},
-        idea = {"GoldenLeaf"},
-        code = {"GoldenLeaf"},
-        team = {"Team Name"}
-    }
+    
+    ppu_artist = {"GoldenLeaf"},
+    ppu_coder = {"GoldenLeaf"},
+    ppu_team = {"Team Name"}
 })
 -- this is really stupid
 local function g(x)
@@ -260,12 +256,10 @@ SMODS.Joker({
 			card.ability.extra.availability = true
 		end
 	end,
-    hotpot_credits = {
-        art = {"GoldenLeaf"},
-        idea = {"Revo"},
-        code = {"GoldenLeaf"},
-        team = {"Team Name"}
-    }
+    
+    ppu_artist = {"GoldenLeaf"},
+    ppu_coder = {"GoldenLeaf"},
+    ppu_team = {"Team Name"}
 })
 
 SMODS.Joker({
@@ -304,10 +298,8 @@ SMODS.Joker({
 			}
 		end
 	end,
-    hotpot_credits = {
-        art = {"GoldenLeaf"},
-        idea = {"GoldenLeaf"},
-        code = {"GoldenLeaf"},
-        team = {"Team Name"}
-    }
+    
+    ppu_artist = {"GoldenLeaf"},
+    ppu_coder = {"GoldenLeaf"},
+    ppu_team = {"Team Name"}
 })

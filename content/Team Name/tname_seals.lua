@@ -24,10 +24,9 @@ SMODS.Seal {
         end
     end,
 
-    hotpot_credits = {
-        art = { 'Revo' },
-        code = { 'Revo' },
+    
+        ppu_artist = { 'Revo' },
+        ppu_coder = { 'Revo' },
         idea = { 'Revo' },
-        team = { 'Team Name' }
-    },
+	ppu_team = { "Team Name" },
 }

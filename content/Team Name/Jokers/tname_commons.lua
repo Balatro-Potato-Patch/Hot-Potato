@@ -15,10 +15,8 @@ SMODS.Joker({
 		HPTN.nxkoofactor = HPTN.cheapkoofactor
 		HPTN.cheapkoofactor = a
 	end,
-    hotpot_credits = {
-        art = {"GoldenLeaf"},
-        idea = {"GoldenLeaf"},
-        code = {"GoldenLeaf"},
-        team = {"Team Name"}
-    }
+    
+    ppu_artist = {"GoldenLeaf"},
+    ppu_coder = {"GoldenLeaf"},
+    ppu_team = {"Team Name"}
 })

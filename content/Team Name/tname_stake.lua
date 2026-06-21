@@ -24,12 +24,11 @@ SMODS.Stake{
     modifiers = function()
         G.GAME.tnamestickers = true
     end,
-    hotpot_credits = {
-		art = { "GoldenLeaf" },
+    
+	ppu_artist = { "GoldenLeaf" },
 		idea = { "Corobo" },
-		code = { "Revo" },
-		team = { "Team Name" },
-	},
+	ppu_coder = { "Revo" },
+	ppu_team = { "Team Name" },
 }
 SMODS.Stake{
     key = "wooden",
@@ -52,10 +51,9 @@ SMODS.Stake{
     modifiers = function()
         G.GAME.modifiers.YOU_LOSE = true
     end,
-    hotpot_credits = {
-		art = { "GoldenLeaf" },
+    
+	ppu_artist = { "GoldenLeaf" },
 		idea = { "Corobo" },
-		code = { "Revo" },
-		team = { "Team Name" },
-	},
+	ppu_coder = { "Revo" },
+	ppu_team = { "Team Name" },
 }

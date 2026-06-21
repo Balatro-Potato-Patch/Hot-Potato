@@ -41,12 +41,10 @@ SMODS.Joker:take_ownership("j_joker", {
 			}
 		end
 	end,
-	hotpot_credits = {
-		art = { "Mortis Ghost" },
-		idea = { "GoldenLeaf" },
-		code = { "GoldenLeaf" },
-		team = { "Team Name" },
-	},
+	
+	ppu_artist = { "Mortis Ghost" },
+	ppu_coder = { "GoldenLeaf" },
+	ppu_team = { "Team Name" },
 }, false)
 
 SMODS.Joker({
@@ -80,12 +78,10 @@ SMODS.Joker({
 			G.jokers.config.card_limit = G.jokers.config.card_limit - card.ability.extra.slots
 		end
 	end,
-	hotpot_credits = {
-		art = { "GoldenLeaf" },
-		idea = { "GoldenLeaf" },
-		code = { "GoldenLeaf" },
-		team = { "Team Name" },
-	},
+	
+	ppu_artist = { "GoldenLeaf" },
+	ppu_coder = { "GoldenLeaf" },
+	ppu_team = { "Team Name" },
 })
 
 SMODS.Joker({
@@ -119,12 +115,10 @@ SMODS.Joker({
 			G.consumeables.config.card_limit = G.consumeables.config.card_limit - card.ability.extra.slots
 		end
 	end,
-	hotpot_credits = {
-		art = { "GoldenLeaf" },
-		idea = { "GoldenLeaf" },
-		code = { "GoldenLeaf" },
-		team = { "Team Name" },
-	},
+	
+	ppu_artist = { "GoldenLeaf" },
+	ppu_coder = { "GoldenLeaf" },
+	ppu_team = { "Team Name" },
 })
 
 SMODS.Joker({
@@ -160,12 +154,10 @@ SMODS.Joker({
 	end,
 	cost = 0,
 	credits = 600,
-	hotpot_credits = {
-		art = { "GoldenLeaf" },
-		idea = { "GoldenLeaf" },
-		code = { "GoldenLeaf" },
-		team = { "Team Name" },
-	},
+	
+	ppu_artist = { "GoldenLeaf" },
+	ppu_coder = { "GoldenLeaf" },
+	ppu_team = { "Team Name" },
 })
 
 SMODS.Joker({
@@ -202,12 +194,10 @@ SMODS.Joker({
 			return nil, true
 		end
 	end,
-	hotpot_credits = {
-		art = { "GoldenLeaf" },
-		idea = { "GoldenLeaf" },
-		code = { "GoldenLeaf" },
-		team = { "Team Name" },
-	},
+	
+	ppu_artist = { "GoldenLeaf" },
+	ppu_coder = { "GoldenLeaf" },
+	ppu_team = { "Team Name" },
 })
 
 SMODS.Joker({
@@ -238,12 +228,10 @@ SMODS.Joker({
 			}
 		end
 	end,
-	hotpot_credits = {
-		art = { "GoldenLeaf" },
-		idea = { "GoldenLeaf" },
-		code = { "GoldenLeaf" },
-		team = { "Team Name" },
-	},
+	
+	ppu_artist = { "GoldenLeaf" },
+	ppu_coder = { "GoldenLeaf" },
+	ppu_team = { "Team Name" },
 })
 
 SMODS.Joker({
@@ -292,12 +280,10 @@ SMODS.Joker({
 			HPTN.is_shitfuck = false
 		end
 	end,
-	hotpot_credits = {
-		art = { "GoldenLeaf" },
-		idea = { "GoldenLeaf" },
-		code = { "GoldenLeaf" },
-		team = { "Team Name" },
-	},
+	
+	ppu_artist = { "GoldenLeaf" },
+	ppu_coder = { "GoldenLeaf" },
+	ppu_team = { "Team Name" },
 })
 
 SMODS.Joker({
@@ -320,10 +306,8 @@ SMODS.Joker({
 	add_to_deck = function(self, card, from_debuff)
 		SMODS.Stickers["eternal"]:apply(card, true)
 	end,
-	hotpot_credits = {
-		art = { "Mortis Ghost" },
-		idea = { "GoldenLeaf" },
-		code = { "GoldenLeaf" },
-		team = { "Team Name" },
-	},
+	
+	ppu_artist = { "Mortis Ghost" },
+	ppu_coder = { "GoldenLeaf" },
+	ppu_team = { "Team Name" },
 })

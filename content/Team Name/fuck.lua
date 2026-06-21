@@ -30,9 +30,8 @@ SMODS.Sound {
     "Music that plays while having",
     "a creditable Joker"
 	},
-  hotpot_credits = {
-    team = { "Team Name" }
-  }
+  
+  ppu_team = { "Team Name" }
 }
 SMODS.Sound {
   key = "music_hanafuda",
@@ -47,9 +46,8 @@ SMODS.Sound {
     "Music that plays while selecting",
     "a hanafuda card in a Hanafuda Pack"
   },
-  hotpot_credits = {
-    team = { "Team Name" }
-  }
+  
+  ppu_team = { "Team Name" }
 }
 SMODS.Sound {
   key = "music_exchange",
@@ -64,9 +62,8 @@ SMODS.Sound {
     "Music that plays while inside",
     "currency exchange screen"
   },
-  hotpot_credits = {
-    team = { "Team Name" }
-  }
+  
+  ppu_team = { "Team Name" }
 }
 SMODS.Sound {
   key = "music_aura",
@@ -81,9 +78,8 @@ SMODS.Sound {
     "Music that plays while selecting",
     "an aura in an Aura Pack"
   },
-  hotpot_credits = {
-    team = { "Team Name" }
-  }
+  
+  ppu_team = { "Team Name" }
 }
 SMODS.Sound {
   key = "music_windows95",
@@ -103,9 +99,8 @@ SMODS.Sound {
     "Music that plays during",
     "the Bluescreen boss blind"
 	},
-  hotpot_credits = {
-    team = { "Team Name" }
-  }
+  
+  ppu_team = { "Team Name" }
 }
 
 SMODS.Sound {
@@ -123,9 +118,8 @@ SMODS.Sound {
         "Music that plays in",
         "the Nursery"
     },
-    hotpot_credits = {
-        team = 'Team Name'
-    }
+    
+  ppu_team = 'Team Name'
 }
 
 SMODS.Sound {
@@ -141,9 +135,8 @@ SMODS.Sound {
     "Music that plays while",
     "playing the Wheel"
   },
-  hotpot_credits = {
-    team = { "Team Name" }
-  }
+  
+  ppu_team = { "Team Name" }
 }
 
 SMODS.ObjectType({

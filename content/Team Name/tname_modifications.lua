@@ -244,12 +244,11 @@ HPTN.Modification({
 			card.trigger_modif = nil
 		end
 	end,
-	hotpot_credits = {
-		art = { "Revo" },
+	
+	ppu_artist = { "Revo" },
 		idea = { "Corobo" },
-		code = { "Revo" },
-		team = { "Team Name" },
-	},
+	ppu_coder = { "Revo" },
+	ppu_team = { "Team Name" },
 })
 
 HPTN.Modification({
@@ -264,12 +263,11 @@ HPTN.Modification({
 
 		end
 	end,
-	hotpot_credits = {
-		art = { "Revo" },
+	
+	ppu_artist = { "Revo" },
 		idea = { "Corobo" },
-		code = { "Revo" },
-		team = { "Team Name" },
-	},
+	ppu_coder = { "Revo" },
+	ppu_team = { "Team Name" },
 })
 
 HPTN.Modification({
@@ -287,13 +285,12 @@ HPTN.Modification({
 			card.trigger_modif = nil
 		end
 	end,
-	hotpot_credits = {
-		art = { "Revo" },
+	
+	ppu_artist = { "Revo" },
 		idea = { "Corobo" },
-		code = { "Revo" },
-		team = { "Team Name" },
-	},
-})
+	ppu_coder = { "Revo" },
+	ppu_team = { "Team Name" },
+	ppu_team = { "Team Name" },
 
 HPTN.Modification({
 	atlas = "tname_modifs",
@@ -309,14 +306,12 @@ HPTN.Modification({
 			end
 		end
 	end,
-	hotpot_credits = {
-		art = { "Revo" },
+	
+	ppu_artist = { "Revo" },
 		idea = { "Corobo" },
-		code = { "Revo" },
-		team = { "Team Name" },
-	},
-})
-
+	ppu_coder = { "Revo" },
+	ppu_team = { "Team Name" },
+	ppu_team = { "Team Name" },
 --[[HPTN.Modification({  %150 Mult Chip output
 	    atlas = "tname_modifs",
     pos = { x = 0, y = 0 },
@@ -332,15 +327,13 @@ HPTN.Modification({
 				print(k, v)
 			end
 		end
-	end,hotpot_credits = {
-		art = { "Revo" },
+	end,
+	ppu_artist = { "Revo" },
 		idea = { "Corobo" },
-		code = { "Revo" },
-		team = { "Team Name" },
-	},
-})]]
-
-HPTN.Modification({
+	ppu_coder = { "Revo" },
+	ppu_team = { "Team Name" },
+	ppu_team = { "Team Name" },]
+	ppu_team = { "Team Name" },N.Modification({
 	atlas = "tname_modifs",
 	pos = { x = 2, y = 0 },
 	pos2 = { x = 2, y = 1 },
@@ -360,16 +353,13 @@ HPTN.Modification({
 			end
 		end
 	end,
-	hotpot_credits = {
-		art = { "Revo" },
+	
+	ppu_artist = { "Revo" },
 		idea = { "Corobo" },
-		code = { "Revo" },
-		team = { "Team Name" },
-	},
-})
-
---[[HPTN.Modification({  %60 Mult Chip output
-	    atlas = "tname_modifs",
+	ppu_coder = { "Revo" },
+	ppu_team = { "Team Name" },
+	ppu_team = { "Team Name" },
+	ppu_team = { "Team Name" },  atlas = "tname_modifs",
     pos = { x = 0, y = 0 },
     hpot_anim = {
         { xrange = { first = 0, last = 8 }, y = 2, t = 0.1 }
@@ -379,17 +369,14 @@ HPTN.Modification({
 	badge_colour = G.C.DARK_EDITION,
 	calculate = function(self, card, context)
         --brrr
-	end,hotpot_credits = {
-		art = { "Revo" },
+	end,
+	ppu_artist = { "Revo" },
 		idea = { "Corobo" },
-		code = { "Revo" },
-		team = { "Team Name" },
-	},
-})]]
-
-HPTN.Modification({
-	atlas = "tname_modifs",
-	pos = { x = 0, y = 0 },
+	ppu_coder = { "Revo" },
+	ppu_team = { "Team Name" },
+	ppu_team = { "Team Name" },]
+	ppu_team = { "Team Name" },N.Modification({
+	ppu_team = { "Team Name" },s = { x = 0, y = 0 },
 	key = "supported",
 	morality = "GOOD",
 	badge_colour = HEX("4bc292"),
@@ -402,18 +389,15 @@ HPTN.Modification({
 			card.trigger_modif = nil
 		end
 	end,
-	hotpot_credits = {
-		art = { "Revo" },
+	
+	ppu_artist = { "Revo" },
 		idea = { "Corobo" },
-		code = { "Revo" },
-		team = { "Team Name" },
-	},
+	ppu_coder = { "Revo" },
+	ppu_team = { "Team Name" },
 })
 
-HPTN.Modification({
-	atlas = "tname_modifs",
-	pos = { x = 2, y = 0 },
-	pos2 = { x = 2, y = 1 },
+	ppu_team = { "Team Name" },las = "tname_modifs",
+	ppu_team = { "Team Name" },s2 = { x = 2, y = 1 },
 	key = "dozing",
 	morality = "BAD",
 	badge_colour = G.C.DARK_EDITION,
@@ -438,19 +422,16 @@ HPTN.Modification({
 			SMODS.calculate_effect({ message = localize("k_hotpot_trigger_enabled") }, card)
 		end
 	end,
-	hotpot_credits = {
-		art = { "Revo" },
+	
+	ppu_artist = { "Revo" },
 		idea = { "Corobo" },
-		code = { "Revo" },
-		team = { "Team Name" },
-	},
-})
+	ppu_coder = { "Revo" },
+	ppu_team = { "Team Name" },
+	ppu_team = { "Team Name" },
 
 reset_hyper = function()
-    for k, v in pairs(G.jokers.cards) do
-		if not v.ability.hpot_blunder then
-        if v.ability["modif_hpot_hyper"] then
-            if v.prevent_trigger then
+	ppu_team = { "Team Name" },f not v.ability.hpot_blunder then
+	ppu_team = { "Team Name" },         if v.prevent_trigger then
                 v.prevent_trigger = nil
 				card_eval_status_text(v, "extra", nil, nil, nil, { message = localize("k_hotpot_trigger_enabled") })
             else
@@ -508,20 +489,16 @@ HPTN.Modification({
 			}
 		end
 	end,
-	hotpot_credits = {
-		art = { "Revo" },
+	
+	ppu_artist = { "Revo" },
 		idea = { "Corobo" },
-		code = { "Revo" },
-		team = { "Team Name" },
-	},
-})
-
+	ppu_coder = { "Revo" },
+	ppu_team = { "Team Name" },
+	ppu_team = { "Team Name" },
 HPTN.Modification({
 	atlas = "tname_modifs",
-	pos = { x = 2, y = 0 },
-	pos2 = { x = 2, y = 1 },
-	key = "smudged",
-	morality = "BAD",
+	ppu_team = { "Team Name" },s2 = { x = 2, y = 1 },
+	ppu_team = { "Team Name" },rality = "BAD",
 	badge_colour = G.C.DARK_EDITION,
 	calculate = function(self, card, context)
 		if context.post_trigger and context.other_card == card and HPTN.during_scoring then
@@ -532,21 +509,17 @@ HPTN.Modification({
 			card.trigger_modif = nil
 		end
 	end,
-	hotpot_credits = {
-		art = { "Revo" },
+	
+	ppu_artist = { "Revo" },
 		idea = { "Corobo" },
-		code = { "Revo" },
-		team = { "Team Name" },
-	},
-})
-
-HPTN.Modification({
+	ppu_coder = { "Revo" },
+	ppu_team = { "Team Name" },
+	ppu_team = { "Team Name" },
+	ppu_team = { "Team Name" },N.Modification({
 	atlas = "tname_modifs",
 	pos = { x = 2, y = 0 },
-	pos2 = { x = 2, y = 1 },
-	key = "depreciating",
-	morality = "BAD",
-	badge_colour = G.C.DARK_EDITION,
+	ppu_team = { "Team Name" },y = "depreciating",
+	ppu_team = { "Team Name" },dge_colour = G.C.DARK_EDITION,
 	calculate = function(self, card, context)
 		if context.end_of_round and not context.individual and not context.repetition then
 			if card.set_cost then
@@ -555,22 +528,17 @@ HPTN.Modification({
 			end
 		end
 	end,
-	hotpot_credits = {
-		art = { "Revo" },
+	
+	ppu_artist = { "Revo" },
 		idea = { "Corobo" },
-		code = { "Revo" },
-		team = { "Team Name" },
-	},
-})
-
-
-
+	ppu_coder = { "Revo" },
+	ppu_team = { "Team Name" },
+	ppu_team = { "Team Name" },
+	ppu_team = { "Team Name" },
 HPTN.Modification({
 	atlas = "tname_modifs",
-	pos = { x = 0, y = 0 },
-	key = "sharpened",
-	morality = "GOOD",
-	badge_colour = HEX("4bc292"),
+	ppu_team = { "Team Name" },y = "sharpened",
+	ppu_team = { "Team Name" },dge_colour = HEX("4bc292"),
 	calculate = function(self, card, context)
 		if context.post_trigger and context.other_card == card and HPTN.during_scoring then
 			card.trigger_modif = true
@@ -579,10 +547,10 @@ HPTN.Modification({
 			SMODS.calculate_effect({ mult = 10}, card)
 		end
 	end,
-	hotpot_credits = {
+	
 		idea = { "lord.ruby" },
-		code = { "lord.ruby" },
-		team = { "Horsechicot" },
+	ppu_coder = { "lord.ruby" },
+	ppu_team = { "Horsechicot" },
 	},
 })
 
@@ -601,10 +569,10 @@ HPTN.Modification({
 			card.trigger_modif = nil
 		end
 	end,
-	hotpot_credits = {
+	
 		idea = { "lord.ruby" },
-		code = { "lord.ruby" },
-		team = { "Horsechicot" },
+	ppu_coder = { "lord.ruby" },
+	ppu_team = { "Horsechicot" },
 	},
 })
 
@@ -623,10 +591,10 @@ HPTN.Modification({
 			card.trigger_modif = nil
 		end
 	end,
-	hotpot_credits = {
+	
 		idea = { "lord.ruby" },
-		code = { "lord.ruby" },
-		team = { "Horsechicot" },
+	ppu_coder = { "lord.ruby" },
+	ppu_team = { "Horsechicot" },
 	},
 })
 
@@ -645,10 +613,10 @@ HPTN.Modification({
 			card.trigger_modif = nil
 		end
 	end,
-	hotpot_credits = {
+	
 		idea = { "lord.ruby" },
-		code = { "lord.ruby" },
-		team = { "Horsechicot" },
+	ppu_coder = { "lord.ruby" },
+	ppu_team = { "Horsechicot" },
 	},
 })
 
@@ -668,10 +636,10 @@ HPTN.Modification({
 			card.trigger_modif = nil
 		end
 	end,
-	hotpot_credits = {
+	
 		idea = { "lord.ruby" },
-		code = { "lord.ruby" },
-		team = { "Horsechicot" },
+	ppu_coder = { "lord.ruby" },
+	ppu_team = { "Horsechicot" },
 	},
 })
 
@@ -691,10 +659,10 @@ HPTN.Modification({
 			card.trigger_modif = nil
 		end
 	end,
-	hotpot_credits = {
+	
 		idea = { "lord.ruby" },
-		code = { "lord.ruby" },
-		team = { "Horsechicot" },
+	ppu_coder = { "lord.ruby" },
+	ppu_team = { "Horsechicot" },
 	},
 })
 
@@ -714,10 +682,10 @@ HPTN.Modification({
 			card.trigger_modif = nil
 		end
 	end,
-	hotpot_credits = {
+	
 		idea = { "lord.ruby" },
-		code = { "lord.ruby" },
-		team = { "Horsechicot" },
+	ppu_coder = { "lord.ruby" },
+	ppu_team = { "Horsechicot" },
 	},
 })
 

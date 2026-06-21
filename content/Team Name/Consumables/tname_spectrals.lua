@@ -77,11 +77,8 @@ SMODS.Consumable {
         end
     end,
 
-    hotpot_credits = {
-        idea = { "GoldenLeaf" },
-        art = { 'GoldenLeaf' },
-        code = { 'Goldenleaf' },
-        team = { 'Team Name' }
-    },
+    ppu_artist = { 'GoldenLeaf' },
+    ppu_coder = { 'Goldenleaf' },
+    ppu_team = { 'Team Name' }
 
 }

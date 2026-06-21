@@ -39,12 +39,10 @@ SMODS.Joker({
 		end
 		return false
 	end,
-    hotpot_credits = {
-        art = {"GoldenLeaf"},
-        idea = {"Revo"},
-        code = {"Revo"},
-        team = {"Team Name"}
-    }
+    
+    ppu_artist = {"GoldenLeaf"},
+    ppu_coder = {"Revo"},
+    ppu_team = {"Team Name"}
 })
 
 SMODS.Joker({
@@ -70,7 +68,7 @@ SMODS.Joker({
             r_mults[#r_mults + 1] = jank..math.abs(i)
         end
         local loc_mult = {string = ' ', colour = G.GAME.seeded and G.C.ORANGE or G.C.PURPLE}
-        local main_start = {
+        local main_stppu_artist = {
             { n = G.UIT.O, config = { object = DynaText({ string = r_mults, colours = { G.GAME.seeded and G.C.ORANGE or G.C.PURPLE }, pop_in_rate = 9999999, silent = true, random_element = true, pop_delay = 0.5, scale = 0.32, min_cycle_time = 0 }) } },
             {
                 n = G.UIT.O,
@@ -91,7 +89,7 @@ SMODS.Joker({
                 }
             },
         }
-        return { main_start = main_start }
+        return { main_stppu_artist = main_start }
     end,
 	calculate = function(self, card, context)
 		local fuck = pseudorandom("fuck", card.ability.extra.min, card.ability.extra.max)
@@ -104,12 +102,10 @@ SMODS.Joker({
 			}
 		end
 	end,
-    hotpot_credits = {
-        art = {"GoldenLeaf"},
-        idea = {"GoldenLeaf"},
-        code = {"GoldenLeaf"},
-        team = {"Team Name"}
-    }
+    
+    ppu_artist = {"GoldenLeaf"},
+    ppu_coder = {"GoldenLeaf"},
+    ppu_team = {"Team Name"}
 })
 -- fixed this btw
 SMODS.Joker({
@@ -151,12 +147,10 @@ SMODS.Joker({
 		return false
 	end,
 
-    hotpot_credits = {
-        art = {"GhostSalt"},
-        idea = {"Corobo"},
-        code = {"Revo"},
-        team = {"Team Name"}
-    }
+    
+    ppu_artist = {"GhostSalt"},
+    ppu_coder = {"Revo"},
+    ppu_team = {"Team Name"}
 })
 
 SMODS.Joker({
@@ -208,12 +202,10 @@ SMODS.Joker({
 			}
 		end
 	end,
-    hotpot_credits = {
-        art = {"GoldenLeaf"},
-        idea = {"Revo"},
-        code = {"Revo"},
-        team = {"Team Name"}
-    }
+    
+    ppu_artist = {"GoldenLeaf"},
+    ppu_coder = {"Revo"},
+    ppu_team = {"Team Name"}
 })
 
 SMODS.Joker({
@@ -262,12 +254,10 @@ SMODS.Joker({
 			}
 		end
 	end,
-    hotpot_credits = {
-        art = {"GoldenLeaf"},
-        idea = {"GoldenLeaf"},
-        code = {"GoldenLeaf"},
-        team = {"Team Name"}
-    }
+    
+    ppu_artist = {"GoldenLeaf"},
+    ppu_coder = {"GoldenLeaf"},
+    ppu_team = {"Team Name"}
 })
 -- i havent tested this HELP
 SMODS.Joker({
@@ -321,12 +311,10 @@ SMODS.Joker({
 			}
 		end
 	end,
-    hotpot_credits = {
-        art = {"GoldenLeaf"},
-        idea = {"GoldenLeaf"},
-        code = {"GoldenLeaf"},
-        team = {"Team Name"}
-    }
+    
+    ppu_artist = {"GoldenLeaf"},
+    ppu_coder = {"GoldenLeaf"},
+    ppu_team = {"Team Name"}
 })
 
 SMODS.Joker({
@@ -358,10 +346,8 @@ SMODS.Joker({
             end
 		end
 	end,
-    hotpot_credits = {
-        art = {"GoldenLeaf"},
-        idea = {"GoldenLeaf"},
-        code = {"GoldenLeaf"},
-        team = {"Team Name"}
-    }
+    
+    ppu_artist = {"GoldenLeaf"},
+    ppu_coder = {"GoldenLeaf"},
+    ppu_team = {"Team Name"}
 })

@@ -17,12 +17,10 @@ SMODS.Voucher {
 	redeem = function(self, voucher)
 		G.GAME.modifiers.interest_to_credits = true
 	end,
-	hotpot_credits = {
-        art = {'GhostSalt'},
-        code = {'Revo'},
-        idea = {'GoldenLeaf'},
-        team = {'Team Name'}
-    }
+	
+    ppu_artist = {'GhostSalt'},
+    ppu_coder = {'Revo'},
+    ppu_team = {'Team Name'}
 }
 
 SMODS.Voucher {
@@ -46,12 +44,10 @@ SMODS.Voucher {
 	requires = {
 		'v_hpot_digital_payment'
 	},
-	hotpot_credits = {
-        art = {'GhostSalt'},
-        code = {'Revo'},
-        idea = {'GoldenLeaf'},
-        team = {'Team Name'}
-    }
+	
+    ppu_artist = {'GhostSalt'},
+    ppu_coder = {'Revo'},
+    ppu_team = {'Team Name'}
 }
 
 SMODS.Voucher {
@@ -70,12 +66,10 @@ SMODS.Voucher {
 			}
 		}
 	end,
-	hotpot_credits = {
-        art = {'GhostSalt'},
-        code = {'Revo'},
-        idea = {'Revo'},
-        team = {'Team Name'}
-    }
+	
+    ppu_artist = {'GhostSalt'},
+    ppu_coder = {'Revo'},
+    ppu_team = {'Team Name'}
 }
 
 SMODS.Voucher {
@@ -97,12 +91,10 @@ SMODS.Voucher {
 	requires = {
 		'v_hpot_ref_dollars'
 	},
-	hotpot_credits = {
-        art = {'GhostSalt'},
-        code = {'Revo'},
-        idea = {'Revo'},
-        team = {'Team Name'}
-    }
+	
+    ppu_artist = {'GhostSalt'},
+    ppu_coder = {'Revo'},
+    ppu_team = {'Team Name'}
 }
 
 
@@ -124,11 +116,11 @@ SMODS.Voucher {
 			}
 		}
 	end,
-	hotpot_credits = {
-        art = {'No Art'},
-        code = {'Revo'},
+	
+        ppu_artist = {'No Art'},
+        ppu_coder = {'Revo'},
         idea = {'Corobo'},
-        team = {'Team Name'}
+        ppu_team = {'Team Name'}
     }
 }
 
@@ -138,11 +130,11 @@ SMODS.Voucher {
 	requires = {
 		'v_hpot_costcutting'
 	},
-	hotpot_credits = {
-        art = {'No Art'},
-        code = {'Revo'},
+	
+        ppu_artist = {'No Art'},
+        ppu_coder = {'Revo'},
         idea = {'Corobo'},
-        team = {'Team Name'}
+        ppu_team = {'Team Name'}
     }
 }]]
 
@@ -157,11 +149,11 @@ SMODS.Voucher {
 			}
 		}
 	end,
-	hotpot_credits = {
-        art = {'No Art'},
-        code = {'Revo'},
+	
+        ppu_artist = {'No Art'},
+        ppu_coder = {'Revo'},
         idea = {'Corobo'},
-        team = {'Team Name'}
+        ppu_team = {'Team Name'}
     }
 }
 
@@ -171,10 +163,10 @@ SMODS.Voucher {
 	requires = {
 		'v_hpot_costcutting'
 	},
-	hotpot_credits = {
-        art = {'No Art'},
-        code = {'Revo'},
+	
+        ppu_artist = {'No Art'},
+        ppu_coder = {'Revo'},
         idea = {'Corobo'},
-        team = {'Team Name'}
+        ppu_team = {'Team Name'}
     }
 }]]

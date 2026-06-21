@@ -85,12 +85,11 @@ SMODS.Sticker({
 		x = 1,
 		y = 1,
 	},
-	hotpot_credits = {
-		art = { "GoldenLeaf" },
+	
+	ppu_artist = { "GoldenLeaf" },
 		idea = { "Corobo" },
-		code = { "Revo"},
-		team = { "Team Name" }
-	},
+	ppu_coder = { "Revo"},
+	ppu_team = { "Team Name" },
 	should_apply = function(self, card, center, area, bypass_roll)
 		return SMODS.Sticker.should_apply(self, card, center, area, bypass_roll) and G.GAME.tnamestickers
 	end
@@ -133,12 +132,11 @@ SMODS.Sticker({
 		x = 0,
 		y = 0,
 	},
-	hotpot_credits = {
-		art = { "GoldenLeaf" },
+	
+	ppu_artist = { "GoldenLeaf" },
 		idea = { "GoldenLeaf" },
-		code = { "Revo"},
-		team = { "Team Name" }
-	},
+	ppu_coder = { "Revo"},
+	ppu_team = { "Team Name" },
 	should_apply = function(self, card, center, area, bypass_roll)
 		return SMODS.Sticker.should_apply(self, card, center, area, bypass_roll) and G.GAME.tnamestickers
 	end
@@ -172,12 +170,11 @@ SMODS.Sticker({
 		x = 2,
 		y = 0,
 	},
-	hotpot_credits = {
-		art = { "GoldenLeaf" },
+	
+	ppu_artist = { "GoldenLeaf" },
 		idea = { "GoldenLeaf" },
-		code = { "Revo"},
-		team = { "Team Name" }
-	},
+	ppu_coder = { "Revo"},
+	ppu_team = { "Team Name" },
 	should_apply = function(self, card, center, area, bypass_roll)
                return SMODS.Sticker.should_apply(self, card, center, area, bypass_roll) and G.GAME.tnamestickers
 	end
@@ -220,12 +217,11 @@ SMODS.Sticker({
 		x = 1,
 		y = 0,
 	},
-	hotpot_credits = {
-		art = { "GoldenLeaf" },
+	
+	ppu_artist = { "GoldenLeaf" },
 		idea = { "GoldenLeaf" },
-		code = { "Revo"},
-		team = { "Team Name" }
-	},
+	ppu_coder = { "Revo"},
+	ppu_team = { "Team Name" },
 	should_apply = function(self, card, center, area, bypass_roll)
                return SMODS.Sticker.should_apply(self, card, center, area, bypass_roll) and G.GAME.tnamestickers
 	end
@@ -299,12 +295,11 @@ SMODS.Sticker({
 		x = 0,
 		y = 1,
 	},
-	hotpot_credits = {
-		art = { "GoldenLeaf" },
+	
+	ppu_artist = { "GoldenLeaf" },
 		idea = { "Corobo" },
-		code = { "Revo"},
-		team = { "Team Name" }
-	},
+	ppu_coder = { "Revo"},
+	ppu_team = { "Team Name" },
 	should_apply = function(self, card, center, area, bypass_roll)
                return SMODS.Sticker.should_apply(self, card, center, area, bypass_roll) and G.GAME.tnamestickers
 	end
@@ -331,12 +326,11 @@ SMODS.Sticker({
 		x = 2,
 		y = 1,
 	},
-	hotpot_credits = {
-		art = { "GoldenLeaf" },
+	
+	ppu_artist = { "GoldenLeaf" },
 		idea = { "Revo" },
-		code = { "Revo"},
-		team = { "Team Name" }
-	},
+	ppu_coder = { "Revo"},
+	ppu_team = { "Team Name" },
 	should_apply = function(self, card, center, area, bypass_roll)
                return SMODS.Sticker.should_apply(self, card, center, area, bypass_roll) and G.GAME.tnamestickers
 	end
@@ -382,12 +376,11 @@ SMODS.Sticker({
 		x = 3,
 		y = 1,
 	},
-	hotpot_credits = {
-		art = { "GoldenLeaf" },
+	
+	ppu_artist = { "GoldenLeaf" },
 		idea = { "GoldenLeaf" },
-		code = { "Revo"},
-		team = { "Team Name" }
-	},
+	ppu_coder = { "Revo"},
+	ppu_team = { "Team Name" },
 	should_apply = function(self, card, center, area, bypass_roll)
                return SMODS.Sticker.should_apply(self, card, center, area, bypass_roll) and G.GAME.tnamestickers
 	end
@@ -430,12 +423,11 @@ SMODS.Sticker({
 		x = 3,
 		y = 0,
 	},
-	hotpot_credits = {
-		art = { "GoldenLeaf" },
+	
+	ppu_artist = { "GoldenLeaf" },
 		idea = { "GoldenLeaf" },
-		code = { "Revo"},
-		team = { "Team Name" }
-	},
+	ppu_coder = { "Revo"},
+	ppu_team = { "Team Name" },
 	should_apply = function(self, card, center, area, bypass_roll)
                return SMODS.Sticker.should_apply(self, card, center, area, bypass_roll) and G.GAME.tnamestickers
 	end
@@ -474,12 +466,11 @@ SMODS.Sticker({
 		x = 1,
 		y = 2,
 	},
-	hotpot_credits = {
-		art = { "GhostSalt" },
+	
+	ppu_artist = { "GhostSalt" },
 		idea = { "Corobo" },
-		code = { "Revo"},
-		team = { "Team Name" }
-	},
+	ppu_coder = { "Revo"},
+	ppu_team = { "Team Name" },
 	should_apply = function(self, card, center, area, bypass_roll)
                return SMODS.Sticker.should_apply(self, card, center, area, bypass_roll) and G.GAME.tnamestickers
 	end
@@ -530,12 +521,11 @@ SMODS.Sticker({
 		x = 2,
 		y = 2,
 	},
-	hotpot_credits = {
-		art = { "GhostSalt" },
+	
+	ppu_artist = { "GhostSalt" },
 		idea = { "Corobo" },
-		code = { "Revo"},
-		team = { "Team Name" }
-	},
+	ppu_coder = { "Revo"},
+	ppu_team = { "Team Name" },
 	should_apply = function(self, card, center, area, bypass_roll)
                return SMODS.Sticker.should_apply(self, card, center, area, bypass_roll) and G.GAME.tnamestickers
 	end
@@ -552,12 +542,11 @@ SMODS.Sticker({
 		x = 0,
 		y = 2,
 	},
-	hotpot_credits = {
-		art = { "GhostSalt" },
+	
+	ppu_artist = { "GhostSalt" },
 		idea = { "Corobo" },
-		code = { "Revo"},
-		team = { "Team Name" }
-	},
+	ppu_coder = { "Revo"},
+	ppu_team = { "Team Name" },
 	should_apply = function(self, card, center, area, bypass_roll)
                return SMODS.Sticker.should_apply(self, card, center, area, bypass_roll) and G.GAME.tnamestickers
 	end
@@ -583,12 +572,11 @@ SMODS.Sticker({
 		x = 3,
 		y = 2,
 	},
-	hotpot_credits = {
-		art = { "GhostSalt" },
+	
+	ppu_artist = { "GhostSalt" },
 		idea = { "Corobo" },
-		code = { "Revo"},
-		team = { "Team Name" }
-	},
+	ppu_coder = { "Revo"},
+	ppu_team = { "Team Name" },
 	should_apply = function(self, card, center, area, bypass_roll)
                return SMODS.Sticker.should_apply(self, card, center, area, bypass_roll) and G.GAME.tnamestickers
 	end
@@ -610,12 +598,11 @@ SMODS.Sticker({
 		x = 0,
 		y = 3,
 	},
-	hotpot_credits = {
-		art = { "Revo" },
+	
+	ppu_artist = { "Revo" },
 		idea = { "Violet" },
-		code = { "Revo"},
-		team = { "Team Name" }
-	},
+	ppu_coder = { "Revo"},
+	ppu_team = { "Team Name" },
 	should_apply = function(self, card, center, area, bypass_roll)
     	return SMODS.Sticker.should_apply(self, card, center, area, bypass_roll) and G.GAME.tnamestickers
 	end
@@ -649,12 +636,11 @@ SMODS.Sticker({
 		x = 1,
 		y = 3,
 	},
-	hotpot_credits = {
-		art = { "Revo" },
+	
+	ppu_artist = { "Revo" },
 		idea = { "Revo" },
-		code = { "Revo"},
-		team = { "Team Name" }
-	},
+	ppu_coder = { "Revo"},
+	ppu_team = { "Team Name" },
 	should_apply = function(self, card, center, area, bypass_roll)
                return SMODS.Sticker.should_apply(self, card, center, area, bypass_roll) and G.GAME.tnamestickers
 	end
@@ -690,12 +676,11 @@ SMODS.Sticker({
 		x = 2,
 		y = 3,
 	},
-	hotpot_credits = {
-		art = { "Revo" },
+	
+	ppu_artist = { "Revo" },
 		idea = { "Revo" },
-		code = { "Revo"},
-		team = { "Team Name" }
-	},
+	ppu_coder = { "Revo"},
+	ppu_team = { "Team Name" },
 	should_apply = function(self, card, center, area, bypass_roll)
                return SMODS.Sticker.should_apply(self, card, center, area, bypass_roll) and G.GAME.tnamestickers
 	end

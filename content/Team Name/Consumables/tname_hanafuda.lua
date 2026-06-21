@@ -74,12 +74,9 @@ SMODS.Consumable({
 	atlas = "tname_hanafuda",
 	pos = { x = 0, y = 0 },
 	set = "Hanafuda",
-	hotpot_credits = {
-		art = { "GhostSalt" },
-		idea = { "Corobo" },
-		code = { "Revo" },
-		team = { "Team Name" },
-	},
+	ppu_artist = { "GhostSalt" },
+	ppu_coder = { "Revo" },
+	ppu_team = { "Team Name" },
 	config = {
 		extra = {
 			high = 3,
@@ -121,12 +118,10 @@ SMODS.Consumable({
 	atlas = "tname_hanafuda",
 	pos = { x = 0, y = 1 },
 	set = "Hanafuda",
-	hotpot_credits = {
-		art = { "GhostSalt" },
-		idea = { "Corobo" },
-		code = { "Revo" },
-		team = { "Team Name" },
-	},
+	
+	ppu_artist = { "GhostSalt" },
+	ppu_coder = { "Revo" },
+	ppu_team = { "Team Name" },
 
 	config = {
 		extra = {
@@ -169,12 +164,10 @@ SMODS.Consumable({
 	atlas = "tname_hanafuda",
 	pos = { x = 0, y = 2 },
 	set = "Hanafuda",
-	hotpot_credits = {
-		art = { "GhostSalt" },
-		idea = { "Corobo" },
-		code = { "Revo" },
-		team = { "Team Name" },
-	},
+	
+	ppu_artist = { "GhostSalt" },
+	ppu_coder = { "Revo" },
+	ppu_team = { "Team Name" },
 
 	config = {
 		extra = {
@@ -218,12 +211,10 @@ SMODS.Consumable({
 	atlas = "tname_hanafuda",
 	pos = { x = 0, y = 3 },
 	set = "Hanafuda",
-	hotpot_credits = {
-		art = { "GhostSalt" },
-		idea = { "Corobo" },
-		code = { "Revo" },
-		team = { "Team Name" },
-	},
+	
+	ppu_artist = { "GhostSalt" },
+	ppu_coder = { "Revo" },
+	ppu_team = { "Team Name" },
 
 	config = {
 		extra = {
@@ -269,12 +260,10 @@ SMODS.Consumable({
 	pos = {x = 10, y = 0},
 	atlas = "tname_hanafuda",
 	set = "Hanafuda",
-	hotpot_credits = {
-		art = { "GhostSalt" },
-		idea = { "Corobo" },
-		code = { "Revo" },
-		team = { "Team Name" },
-	},
+	
+	ppu_artist = { "GhostSalt" },
+	ppu_coder = { "Revo" },
+	ppu_team = { "Team Name" },
 
 	config = {
 		extra = {
@@ -316,12 +305,10 @@ SMODS.Consumable({
 		pos = {x = 10, y = 1},
 	atlas = "tname_hanafuda",
 	set = "Hanafuda",
-	hotpot_credits = {
-		art = { "GhostSalt" },
-		idea = { "Corobo" },
-		code = { "Revo" },
-		team = { "Team Name" },
-	},
+	
+	ppu_artist = { "GhostSalt" },
+	ppu_coder = { "Revo" },
+	ppu_team = { "Team Name" },
 
 	config = {
 		extra = {
@@ -363,12 +350,10 @@ SMODS.Consumable({
 		pos = {x = 10, y = 2},
 	atlas = "tname_hanafuda",
 	set = "Hanafuda",
-	hotpot_credits = {
-		art = { "GhostSalt" },
-		idea = { "Corobo" },
-		code = { "Revo" },
-		team = { "Team Name" },
-	},
+	
+	ppu_artist = { "GhostSalt" },
+	ppu_coder = { "Revo" },
+	ppu_team = { "Team Name" },
 
 	config = {
 		extra = {
@@ -410,12 +395,10 @@ SMODS.Consumable({
 	atlas = "tname_hanafuda",
 	key = "willow_4",
 	set = "Hanafuda",
-	hotpot_credits = {
-		art = { "GhostSalt" },
-		idea = { "Corobo" },
-		code = { "Revo" },
-		team = { "Team Name" },
-	},
+	
+	ppu_artist = { "GhostSalt" },
+	ppu_coder = { "Revo" },
+	ppu_team = { "Team Name" },
 
 	config = {
 		extra = {
@@ -459,12 +442,10 @@ SMODS.Consumable({
 	set = "Hanafuda",
 		pos = {x = 2, y = 0},
 	atlas = "tname_hanafuda",
-	hotpot_credits = {
-		art = { "GhostSalt" },
-		idea = { "Corobo" },
-		code = { "Revo" },
-		team = { "Team Name" },
-	},
+	
+	ppu_artist = { "GhostSalt" },
+	ppu_coder = { "Revo" },
+	ppu_team = { "Team Name" },
 
 	config = {
 		extra = {
@@ -508,12 +489,10 @@ SMODS.Consumable({
 			pos = {x = 2, y = 1},
 	atlas = "tname_hanafuda",
 	set = "Hanafuda",
-	hotpot_credits = {
-		art = { "GhostSalt" },
-		idea = { "Corobo" },
-		code = { "Revo" },
-		team = { "Team Name" },
-	},
+	
+	ppu_artist = { "GhostSalt" },
+	ppu_coder = { "Revo" },
+	ppu_team = { "Team Name" },
 
 	config = {
 		extra = {
@@ -557,12 +536,10 @@ SMODS.Consumable({
 			pos = {x = 2, y = 2},
 	atlas = "tname_hanafuda",
 	set = "Hanafuda",
-	hotpot_credits = {
-		art = { "GhostSalt" },
-		idea = { "Corobo" },
-		code = { "Revo" },
-		team = { "Team Name" },
-	},
+	
+	ppu_artist = { "GhostSalt" },
+	ppu_coder = { "Revo" },
+	ppu_team = { "Team Name" },
 
 	config = {
 		extra = {
@@ -604,12 +581,10 @@ SMODS.Consumable({
 			pos = {x = 2, y = 3},
 	atlas = "tname_hanafuda",
 	set = "Hanafuda",
-	hotpot_credits = {
-		art = { "GhostSalt" },
-		idea = { "Corobo" },
-		code = { "Revo" },
-		team = { "Team Name" },
-	},
+	
+	ppu_artist = { "GhostSalt" },
+	ppu_coder = { "Revo" },
+	ppu_team = { "Team Name" },
 
 	config = {
 		extra = {
@@ -654,12 +629,10 @@ SMODS.Consumable({
 	atlas = "tname_hanafuda",
 	set = "Hanafuda",
 	
-	hotpot_credits = {
-		art = { "GhostSalt" },
-		idea = { "Corobo" },
-		code = { "Revo" },
-		team = { "Team Name" },
-	},
+	
+	ppu_artist = { "GhostSalt" },
+	ppu_coder = { "Revo" },
+	ppu_team = { "Team Name" },
 
 	config = {
 		extra = {
@@ -705,12 +678,10 @@ SMODS.Consumable({
 	pos = {x = 11, y = 1},
 	atlas = "tname_hanafuda",
 	set = "Hanafuda",
-	hotpot_credits = {
-		art = { "GhostSalt" },
-		idea = { "Corobo" },
-		code = { "Revo" },
-		team = { "Team Name" },
-	},
+	
+	ppu_artist = { "GhostSalt" },
+	ppu_coder = { "Revo" },
+	ppu_team = { "Team Name" },
 
 	config = {
 		extra = {
@@ -756,12 +727,10 @@ SMODS.Consumable({
 	pos = {x = 11, y = 2},
 	atlas = "tname_hanafuda",
 	set = "Hanafuda",
-	hotpot_credits = {
-		art = { "GhostSalt" },
-		idea = { "Corobo" },
-		code = { "Revo" },
-		team = { "Team Name" },
-	},
+	
+	ppu_artist = { "GhostSalt" },
+	ppu_coder = { "Revo" },
+	ppu_team = { "Team Name" },
 
 	config = {
 		extra = {
@@ -803,12 +772,10 @@ SMODS.Consumable({
 	pos = {x = 11, y = 3},
 	atlas = "tname_hanafuda",
 	set = "Hanafuda",
-	hotpot_credits = {
-		art = { "GhostSalt" },
-		idea = { "Corobo" },
-		code = { "Revo" },
-		team = { "Team Name" },
-	},
+	
+	ppu_artist = { "GhostSalt" },
+	ppu_coder = { "Revo" },
+	ppu_team = { "Team Name" },
 
 	config = {
 		extra = {
@@ -852,12 +819,10 @@ SMODS.Consumable({
 	set = "Hanafuda",
 	pos = {x = 5, y = 0},
 	atlas = "tname_hanafuda",
-	hotpot_credits = {
-		art = { "GhostSalt" },
-		idea = { "Corobo" },
-		code = { "Revo" },
-		team = { "Team Name" },
-	},
+	
+	ppu_artist = { "GhostSalt" },
+	ppu_coder = { "Revo" },
+	ppu_team = { "Team Name" },
 
 	config = {
 		extra = {
@@ -899,12 +864,10 @@ SMODS.Consumable({
 	set = "Hanafuda",
 	pos = {x = 5, y = 1},
 	atlas = "tname_hanafuda",
-	hotpot_credits = {
-		art = { "GhostSalt" },
-		idea = { "Corobo" },
-		code = { "Revo" },
-		team = { "Team Name" },
-	},
+	
+	ppu_artist = { "GhostSalt" },
+	ppu_coder = { "Revo" },
+	ppu_team = { "Team Name" },
 
 	config = {
 		extra = {
@@ -946,12 +909,10 @@ SMODS.Consumable({
 	pos = {x = 5, y = 2},
 	atlas = "tname_hanafuda",
 	set = "Hanafuda",
-	hotpot_credits = {
-		art = { "GhostSalt" },
-		idea = { "Corobo" },
-		code = { "Revo" },
-		team = { "Team Name" },
-	},
+	
+	ppu_artist = { "GhostSalt" },
+	ppu_coder = { "Revo" },
+	ppu_team = { "Team Name" },
 
 	config = {
 		extra = {
@@ -993,12 +954,10 @@ SMODS.Consumable({
 	pos = {x = 5, y = 3},
 	atlas = "tname_hanafuda",
 	set = "Hanafuda",
-	hotpot_credits = {
-		art = { "GhostSalt" },
-		idea = { "Corobo" },
-		code = { "Revo" },
-		team = { "Team Name" },
-	},
+	
+	ppu_artist = { "GhostSalt" },
+	ppu_coder = { "Revo" },
+	ppu_team = { "Team Name" },
 
 	config = {
 		extra = {
@@ -1042,12 +1001,10 @@ SMODS.Consumable({
 	pos = {x = 9, y = 0},
 	atlas = "tname_hanafuda",
 	set = "Hanafuda",
-	hotpot_credits = {
-		art = { "GhostSalt" },
-		idea = { "Corobo" },
-		code = { "Revo" },
-		team = { "Team Name" },
-	},
+	
+	ppu_artist = { "GhostSalt" },
+	ppu_coder = { "Revo" },
+	ppu_team = { "Team Name" },
 
 	config = {
 		extra = {
@@ -1081,12 +1038,10 @@ SMODS.Consumable({
 	pos = {x = 9, y = 1},
 	atlas = "tname_hanafuda",
 	set = "Hanafuda",
-	hotpot_credits = {
-		art = { "GhostSalt" },
-		idea = { "Corobo" },
-		code = { "Revo" },
-		team = { "Team Name" },
-	},
+	
+	ppu_artist = { "GhostSalt" },
+	ppu_coder = { "Revo" },
+	ppu_team = { "Team Name" },
 
 	config = {
 		extra = {
@@ -1120,12 +1075,10 @@ SMODS.Consumable({
 	pos = {x = 9, y = 2},
 	atlas = "tname_hanafuda",
 	set = "Hanafuda",
-	hotpot_credits = {
-		art = { "GhostSalt" },
-		idea = { "Corobo" },
-		code = { "Revo" },
-		team = { "Team Name" },
-	},
+	
+	ppu_artist = { "GhostSalt" },
+	ppu_coder = { "Revo" },
+	ppu_team = { "Team Name" },
 
 	config = {
 		extra = {
@@ -1159,12 +1112,10 @@ SMODS.Consumable({
 	pos = {x = 9, y = 3},
 	atlas = "tname_hanafuda",
 	set = "Hanafuda",
-	hotpot_credits = {
-		art = { "GhostSalt" },
-		idea = { "Corobo" },
-		code = { "Revo" },
-		team = { "Team Name" },
-	},
+	
+	ppu_artist = { "GhostSalt" },
+	ppu_coder = { "Revo" },
+	ppu_team = { "Team Name" },
 
 	config = {
 		extra = {
@@ -1200,12 +1151,10 @@ SMODS.Consumable({
 	pos = {x = 8, y = 0},
 	atlas = "tname_hanafuda",
 	set = "Hanafuda",
-	hotpot_credits = {
-		art = { "GhostSalt" },
-		idea = { "Corobo" },
-		code = { "Revo" },
-		team = { "Team Name" },
-	},
+	
+	ppu_artist = { "GhostSalt" },
+	ppu_coder = { "Revo" },
+	ppu_team = { "Team Name" },
 
 	config = {
 		extra = {
@@ -1245,12 +1194,10 @@ SMODS.Consumable({
 	pos = {x = 8, y = 1},
 	atlas = "tname_hanafuda",
 	set = "Hanafuda",
-	hotpot_credits = {
-		art = { "GhostSalt" },
-		idea = { "Corobo" },
-		code = { "Revo" },
-		team = { "Team Name" },
-	},
+	
+	ppu_artist = { "GhostSalt" },
+	ppu_coder = { "Revo" },
+	ppu_team = { "Team Name" },
 
 	config = {
 		extra = {
@@ -1290,13 +1237,11 @@ SMODS.Consumable({
 	pos = {x = 8, y = 2},
 	atlas = "tname_hanafuda",
 	set = "Hanafuda",
-	hotpot_credits = {
-		art = { "GhostSalt" },
-		idea = { "Corobo" },
-		code = { "Revo" },
-		team = { "Team Name" },
-	},
-
+	
+	ppu_artist = { "GhostSalt" },
+	ppu_coder = { "Revo" },
+	ppu_team = { "Team Name" },
+	
 	config = {
 		extra = {
 			high = 1,
@@ -1335,12 +1280,10 @@ SMODS.Consumable({
 	pos = {x = 8, y = 3},
 	atlas = "tname_hanafuda",
 	set = "Hanafuda",
-	hotpot_credits = {
-		art = { "GhostSalt" },
-		idea = { "Corobo" },
-		code = { "Revo" },
-		team = { "Team Name" },
-	},
+	
+	ppu_artist = { "GhostSalt" },
+	ppu_coder = { "Revo" },
+	ppu_team = { "Team Name" },
 
 	config = {
 		extra = {
@@ -1382,12 +1325,10 @@ SMODS.Consumable({
 	pos = {x = 7, y = 0},
 	atlas = "tname_hanafuda",
 	set = "Hanafuda",
-	hotpot_credits = {
-		art = { "GhostSalt" },
-		idea = { "Corobo" },
-		code = { "Revo" },
-		team = { "Team Name" },
-	},
+	
+	ppu_artist = { "GhostSalt" },
+	ppu_coder = { "Revo" },
+	ppu_team = { "Team Name" },
 
 	config = {
 		extra = {
@@ -1429,12 +1370,10 @@ SMODS.Consumable({
 	pos = {x = 7, y = 1},
 	atlas = "tname_hanafuda",
 	set = "Hanafuda",
-	hotpot_credits = {
-		art = { "GhostSalt" },
-		idea = { "Corobo" },
-		code = { "Revo" },
-		team = { "Team Name" },
-	},
+	
+	ppu_artist = { "GhostSalt" },
+	ppu_coder = { "Revo" },
+	ppu_team = { "Team Name" },
 
 	config = {
 		extra = {
@@ -1476,12 +1415,10 @@ SMODS.Consumable({
 	pos = {x = 7, y = 2},
 	atlas = "tname_hanafuda",
 	set = "Hanafuda",
-	hotpot_credits = {
-		art = { "GhostSalt" },
-		idea = { "Corobo" },
-		code = { "Revo" },
-		team = { "Team Name" },
-	},
+	
+	ppu_artist = { "GhostSalt" },
+	ppu_coder = { "Revo" },
+	ppu_team = { "Team Name" },
 
 	config = {
 		extra = {
@@ -1523,12 +1460,10 @@ SMODS.Consumable({
 	pos = {x = 7, y = 3},
 	atlas = "tname_hanafuda",
 	set = "Hanafuda",
-	hotpot_credits = {
-		art = { "GhostSalt" },
-		idea = { "Corobo" },
-		code = { "Revo" },
-		team = { "Team Name" },
-	},
+	
+	ppu_artist = { "GhostSalt" },
+	ppu_coder = { "Revo" },
+	ppu_team = { "Team Name" },
 
 	config = {
 		extra = {
@@ -1572,12 +1507,10 @@ SMODS.Consumable({
 	pos = {x = 4, y = 0},
 	atlas = "tname_hanafuda",
 	set = "Hanafuda",
-	hotpot_credits = {
-		art = { "GhostSalt" },
-		idea = { "Corobo" },
-		code = { "Revo" },
-		team = { "Team Name" },
-	},
+	
+	ppu_artist = { "GhostSalt" },
+	ppu_coder = { "Revo" },
+	ppu_team = { "Team Name" },
 
 	config = {
 		extra = {
@@ -1610,12 +1543,10 @@ SMODS.Consumable({
 	pos = {x = 4, y = 1},
 	atlas = "tname_hanafuda",
 	set = "Hanafuda",
-	hotpot_credits = {
-		art = { "GhostSalt" },
-		idea = { "Corobo" },
-		code = { "Revo" },
-		team = { "Team Name" },
-	},
+	
+	ppu_artist = { "GhostSalt" },
+	ppu_coder = { "Revo" },
+	ppu_team = { "Team Name" },
 
 	config = {
 		extra = {
@@ -1648,12 +1579,10 @@ SMODS.Consumable({
 	pos = {x = 4, y = 2},
 	atlas = "tname_hanafuda",
 	set = "Hanafuda",
-	hotpot_credits = {
-		art = { "GhostSalt" },
-		idea = { "Corobo" },
-		code = { "Revo" },
-		team = { "Team Name" },
-	},
+	
+	ppu_artist = { "GhostSalt" },
+	ppu_coder = { "Revo" },
+	ppu_team = { "Team Name" },
 
 	config = {
 		extra = {
@@ -1686,12 +1615,10 @@ SMODS.Consumable({
 	pos = {x = 4, y = 3},
 	atlas = "tname_hanafuda",
 	set = "Hanafuda",
-	hotpot_credits = {
-		art = { "GhostSalt" },
-		idea = { "Corobo" },
-		code = { "Revo" },
-		team = { "Team Name" },
-	},
+	
+	ppu_artist = { "GhostSalt" },
+	ppu_coder = { "Revo" },
+	ppu_team = { "Team Name" },
 
 	config = {
 		extra = {
@@ -1726,12 +1653,10 @@ SMODS.Consumable({
 	pos = {x = 3, y = 0},
 	atlas = "tname_hanafuda",
 	set = "Hanafuda",
-	hotpot_credits = {
-		art = { "GhostSalt" },
-		idea = { "Corobo" },
-		code = { "Revo" },
-		team = { "Team Name" },
-	},
+	
+	ppu_artist = { "GhostSalt" },
+	ppu_coder = { "Revo" },
+	ppu_team = { "Team Name" },
 
 	config = {
 		extra = {
@@ -1773,12 +1698,10 @@ SMODS.Consumable({
 	pos = {x = 3, y = 1},
 	atlas = "tname_hanafuda",
 	set = "Hanafuda",
-	hotpot_credits = {
-		art = { "GhostSalt" },
-		idea = { "Corobo" },
-		code = { "Revo" },
-		team = { "Team Name" },
-	},
+	
+	ppu_artist = { "GhostSalt" },
+	ppu_coder = { "Revo" },
+	ppu_team = { "Team Name" },
 
 	config = {
 		extra = {
@@ -1820,12 +1743,10 @@ SMODS.Consumable({
 	pos = {x = 3, y = 2},
 	atlas = "tname_hanafuda",
 	set = "Hanafuda",
-	hotpot_credits = {
-		art = { "GhostSalt" },
-		idea = { "Corobo" },
-		code = { "Revo" },
-		team = { "Team Name" },
-	},
+	
+	ppu_artist = { "GhostSalt" },
+	ppu_coder = { "Revo" },
+	ppu_team = { "Team Name" },
 
 	config = {
 		extra = {
@@ -1867,12 +1788,10 @@ SMODS.Consumable({
 	pos = {x = 3, y = 3},
 	atlas = "tname_hanafuda",
 	set = "Hanafuda",
-	hotpot_credits = {
-		art = { "GhostSalt" },
-		idea = { "Corobo" },
-		code = { "Revo" },
-		team = { "Team Name" },
-	},
+	
+	ppu_artist = { "GhostSalt" },
+	ppu_coder = { "Revo" },
+	ppu_team = { "Team Name" },
 
 	config = {
 		extra = {
@@ -1916,12 +1835,10 @@ SMODS.Consumable({
 	pos = {x = 6, y = 0},
 	atlas = "tname_hanafuda",
 	set = "Hanafuda",
-	hotpot_credits = {
-		art = { "GhostSalt" },
-		idea = { "Corobo" },
-		code = { "Revo" },
-		team = { "Team Name" },
-	},
+	
+	ppu_artist = { "GhostSalt" },
+	ppu_coder = { "Revo" },
+	ppu_team = { "Team Name" },
 
 	config = {
 		extra = {
@@ -1962,12 +1879,10 @@ SMODS.Consumable({
 	pos = {x = 6, y = 1},
 	atlas = "tname_hanafuda",
 	set = "Hanafuda",
-	hotpot_credits = {
-		art = { "GhostSalt" },
-		idea = { "Corobo" },
-		code = { "Revo" },
-		team = { "Team Name" },
-	},
+	
+	ppu_artist = { "GhostSalt" },
+	ppu_coder = { "Revo" },
+	ppu_team = { "Team Name" },
 
 	config = {
 		extra = {
@@ -2008,12 +1923,10 @@ SMODS.Consumable({
 	pos = {x = 6, y = 2},
 	atlas = "tname_hanafuda",
 	set = "Hanafuda",
-	hotpot_credits = {
-		art = { "GhostSalt" },
-		idea = { "Corobo" },
-		code = { "Revo" },
-		team = { "Team Name" },
-	},
+	
+	ppu_artist = { "GhostSalt" },
+	ppu_coder = { "Revo" },
+	ppu_team = { "Team Name" },
 
 	config = {
 		extra = {
@@ -2054,12 +1967,10 @@ SMODS.Consumable({
 	pos = {x = 6, y = 3},
 	atlas = "tname_hanafuda",
 	set = "Hanafuda",
-	hotpot_credits = {
-		art = { "GhostSalt" },
-		idea = { "Corobo" },
-		code = { "Revo" },
-		team = { "Team Name" },
-	},
+	
+	ppu_artist = { "GhostSalt" },
+	ppu_coder = { "Revo" },
+	ppu_team = { "Team Name" },
 
 	config = {
 		extra = {

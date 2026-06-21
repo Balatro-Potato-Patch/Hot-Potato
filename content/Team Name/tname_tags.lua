@@ -19,12 +19,11 @@ SMODS.Tag({
 			tag.triggered = true
 		end
 	end,
-	hotpot_credits = {
-		art = { "Revo" },
+	
+	ppu_artist = { "Revo" },
 		idea = { "Revo" },
-		code = { "Revo" },
-		team = { "Team Name" },
-	},
+	ppu_coder = { "Revo" },
+	ppu_team = { "Team Name" },
 })
 
 SMODS.Tag({
@@ -58,12 +57,11 @@ SMODS.Tag({
 			return true
 		end
 	end,
-	hotpot_credits = {
-		art = { "GoldenLeaf" },
+	
+	ppu_artist = { "GoldenLeaf" },
 		idea = { "GoldenLeaf" },
-		code = { "Jogla" },
-		team = { "Team Name" },
-	},
+	ppu_coder = { "Jogla" },
+	ppu_team = { "Team Name" },
 })
 
 SMODS.Tag({
@@ -98,12 +96,11 @@ SMODS.Tag({
 			return true
 		end
 	end,
-	hotpot_credits = {
-		art = { "GoldenLeaf" },
+	
+	ppu_artist = { "GoldenLeaf" },
 		idea = { "GoldenLeaf" },
-		code = { "Jogla" },
-		team = { "Team Name" },
-	},
+	ppu_coder = { "Jogla" },
+	ppu_team = { "Team Name" },
 })
 
 SMODS.Tag({
@@ -133,12 +130,11 @@ SMODS.Tag({
 			tag.triggered = true
 		end
 	end,
-	hotpot_credits = {
-		art = { "GoldeLeaf" },
+	
+	ppu_artist = { "GoldeLeaf" },
 		idea = { "GoldenLeaf" },
-		code = { "Revo" },
-		team = { "Team Name" },
-	},
+	ppu_coder = { "Revo" },
+	ppu_team = { "Team Name" },
 })
 
 
@@ -169,10 +165,9 @@ SMODS.Tag {
 			end
 		end
 	end,
-	hotpot_credits = {
-		art = { "GoldeLeaf" },
+	
+	ppu_artist = { "GoldeLeaf" },
 		idea = { "Revo" },
-		code = { "Revo" },
-		team = { "Team Name" },
-	},
+	ppu_coder = { "Revo" },
+	ppu_team = { "Team Name" },
 }

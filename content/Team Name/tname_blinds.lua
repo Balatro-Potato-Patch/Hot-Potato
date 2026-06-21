@@ -16,12 +16,10 @@ SMODS.Blind {
         end
         return card.area == G.jokers
     end,
-    hotpot_credits = {
-        art = {"GoldenLeaf"},
-        code = {"GoldenLeaf"},
-        idea = {"GoldenLeaf"},
-        team = {"Team Name"}
-    },
+    
+    ppu_artist = {"GoldenLeaf"},
+    ppu_coder = {"GoldenLeaf"},
+    ppu_team = {"Team Name"},
     in_pool = function(self, blind)
         return G.GAME.tnamestickers
     end
@@ -57,12 +55,10 @@ SMODS.Blind {
         return false
     end,
     boss_colour = HEX("0049ff"),
-    hotpot_credits = {
-        art = {"GoldenLeaf"},
-        code = {"GoldenLeaf"},
-        idea = {"GoldenLeaf"},
-        team = {"Team Name"}
-    }
+    
+    ppu_artist = {"GoldenLeaf"},
+    ppu_coder = {"GoldenLeaf"},
+    ppu_team = {"Team Name"}
 }
 
 SMODS.Blind {
@@ -90,10 +86,8 @@ SMODS.Blind {
         return false
     end,
     boss_colour = HEX("b7a2fd"),
-    hotpot_credits = {
-        art = {"GoldenLeaf"},
-        code = {"GoldenLeaf"},
-        idea = {"Revo"},
-        team = {"Team Name"}
-    }
+    
+    ppu_artist = {"GoldenLeaf"},
+    ppu_coder = {"GoldenLeaf"},
+    ppu_team = {"Team Name"}
 }
