@@ -164,12 +164,9 @@ SMODS.Joker {
     cost = 6,
     atlas = "pdr_joker",
     pos = { x = 1, y = 0 },
-    hotpot_credits = {
-        art = { 'Tacashumi' },
-        code = { "N'" },
-        idea = { "N'" },
-        team = { 'Pissdrawer' }
-    }
+    ppu_artist = { 'Tacashumi' },
+    ppu_coder = { "N'" },
+    ppu_team = { 'Pissdrawer' }
 }
 
 -- Ruan Mei
@@ -179,12 +176,9 @@ SMODS.Joker {
     cost = 8,
     atlas = "pdr_joker",
     pos = { x = 3, y = 1 },
-    hotpot_credits = {
-        art = { 'BepisFever' },
-        code = { "N'" },
-        idea = { "N'" },
-        team = { 'Pissdrawer' }
-    }
+    ppu_artist = { 'BepisFever' },
+    ppu_coder = { "N'" },
+    ppu_team = { 'Pissdrawer' }
 }
 
 -- Domain Extrapolation
@@ -192,12 +186,9 @@ SMODS.Voucher {
     key = 'domain_extrapolation',
     pos = { x = 0, y = 0 },
     atlas = 'pdr_vouchers',
-    hotpot_credits = {
-        art = { 'SDM_0' },
-        code = { "N'" },
-        idea = { "N'" },
-        team = { 'Pissdrawer' }
-    },
+    ppu_artist = { 'SDM_0' },
+    ppu_coder = { "N'" },
+    ppu_team = { 'Pissdrawer' },
     redeem = function(self, voucher)
         G.GAME.hpot_event_enable_big_blind = true
     end
@@ -209,12 +200,9 @@ SMODS.Voucher {
     requires = { "v_hpot_domain_extrapolation" },
     pos = { x = 0, y = 1 },
     atlas = 'pdr_vouchers',
-    hotpot_credits = {
-        art = { 'SDM_0' },
-        code = { "N'" },
-        idea = { "N'" },
-        team = { 'Pissdrawer' }
-    },
+    ppu_artist = { 'SDM_0' },
+    ppu_coder = { "N'" },
+    ppu_team = { 'Pissdrawer' },
     redeem = function(self, voucher)
         G.GAME.hpot_event_enable_all_blinds = true
     end

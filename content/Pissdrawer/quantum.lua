@@ -174,11 +174,8 @@ end
 SMODS.Joker {
     key = 'child',
     rarity = 'hpot_child',
-    hotpot_credits = {
-        idea = { "fey <3" },
-        code = { "fey <3" },
-        team = { "Pissdrawer" }
-    },
+    ppu_coder = { "fey <3" },
+    ppu_team = { "Pissdrawer" },
     no_collection = true,
     generate_ui = function(self, info_queue, card, desc_nodes, specific_vars, full_UI_table)
         if card then

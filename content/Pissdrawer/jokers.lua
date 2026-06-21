@@ -5,12 +5,9 @@ SMODS.Joker {
     cost = 5,
     atlas = "pdr_joker",
     pos = { x = 5, y = 1 },
-    hotpot_credits = {
-        idea = { 'SDM_0' },
-        art = { 'Tacashumi' },
-        code = { 'SDM_0' },
-        team = { 'Pissdrawer' }
-    },
+    ppu_artist = { 'Tacashumi' },
+    ppu_coder = { 'SDM_0' },
+    ppu_team = { 'Pissdrawer' },
     calculate = function(self, card, context)
         if context.using_consumeable and context.consumeable and G.plinko_rewards and context.area == G.plinko_rewards then
             if context.consumeable.ability.set == 'bottlecap' and context.consumeable.ability.extra.chosen == 'Bad' then
@@ -44,11 +41,11 @@ SMODS.Joker {
 --     cost = 5,
 --     atlas = "pdr_joker",
 --     pos = { x = 0, y = 0 },
---     hotpot_credits = {
+--     
 --         idea = { 'fey <3' },
---         art = { 'SDM_0' },
---         code = { 'fey <3' },
---         team = { 'Pissdrawer' }
+--         ppu_artist = { 'SDM_0' },
+--         ppu_coder = { 'fey <3' },
+--         ppu_team = { 'Pissdrawer' }
 --     },
 --     add_to_deck = function(self, card)
 --         for i, v in pairs(G.C) do
@@ -72,12 +69,9 @@ SMODS.Joker {
     loc_vars = function(self, info_queue, card)
         return { vars = { card.ability.extra.xmult } }
     end,
-    hotpot_credits = {
-        idea = { 'SDM_0' },
-        art = { 'deadbeet' },
-        code = { 'SDM_0' },
-        team = { 'Pissdrawer' }
-    },
+    ppu_artist = { 'deadbeet' },
+    ppu_coder = { 'SDM_0' },
+    ppu_team = { 'Pissdrawer' },
     calculate = function(self, card, context)
         if context.other_joker and context.other_joker.ability.is_nursery_smalled then
             return {
@@ -189,12 +183,9 @@ SMODS.Joker {
             has_been_added = false
         }
     },
-    hotpot_credits = {
-        idea = { 'deadbeet' },
-        art = { 'deadbeet' },
-        code = { 'deadbeet' },
-        team = { 'Pissdrawer' }
-    },
+    ppu_artist = { 'deadbeet' },
+    ppu_coder = { 'deadbeet' },
+    ppu_team = { 'Pissdrawer' },
     unlocked = true,
     discovered = false,
     rarity = 1,
@@ -276,12 +267,9 @@ SMODS.Joker {
 
 SMODS.Joker {
     key = 'togore',
-    hotpot_credits = {
-        idea = { 'Tacashumi' },
-        art = { 'Tacashumi' },
-        code = { 'fey <3' },
-        team = { 'Pissdrawer' }
-    },
+    ppu_artist = { 'Tacashumi' },
+    ppu_coder = { 'fey <3' },
+    ppu_team = { 'Pissdrawer' },
     config = { extra = { chips = 3 } },
     loc_vars = function(self, info_queue, card)
         return {
@@ -315,12 +303,9 @@ SMODS.Joker {
     loc_vars = function(self, info_queue, card)
         return { vars = { math.floor(card.ability.extra * 100) } }
     end,
-    hotpot_credits = {
-        idea = { 'SDM_0' },
-        art = { 'SDM_0' },
-        code = { 'SDM_0' },
-        team = { 'Pissdrawer' }
-    },
+    ppu_artist = { 'SDM_0' },
+    ppu_coder = { 'SDM_0' },
+    ppu_team = { 'Pissdrawer' },
     add_to_deck = function(self, card, from_debuff)
         G.GAME.goblin_acquired = true
     end,
@@ -356,12 +341,9 @@ SMODS.Joker {
         name = "Birthday Boy",
         text = { { "Happy Birthday, N'!" }, { 'Where would Jujutsu', 'Jokers be without you...' } }
     },
-    hotpot_credits = {
-        idea = { "deadbeet, BepisFever" },
-        art = { "deadbeet" },
-        code = { "deadbeet" },
-        team = { "Pissdrawer" }
-    },
+    ppu_artist = { "deadbeet" },
+    ppu_coder = { "deadbeet" },
+    ppu_team = { "Pissdrawer" },
     atlas = "pdr_joker",
     pos = { x = 6, y = 0 },
     soul_pos = { x = 7, y = 0 },
@@ -376,12 +358,9 @@ SMODS.Joker {
 
 SMODS.Joker {
     key = "vremade_joker",
-    hotpot_credits = {
-        idea = { "N'" },
-        art = { "LocalThunk" },
-        code = { "N'" },
-        team = { "Pissdrawer" }
-    },
+    ppu_artist = { "LocalThunk" },
+    ppu_coder = { "N'" },
+    ppu_team = { "Pissdrawer" },
     rarity = 1,
     blueprint_compat = true,
     cost = 2,
@@ -433,12 +412,9 @@ end
 
 SMODS.Joker {
     key = "smods",
-    hotpot_credits = {
-        idea = { "Eremel" },
-        art = { "SDM_0" },
-        code = { "SDM_0" },
-        team = { "Pissdrawer" }
-    },
+    ppu_artist = { "SDM_0" },
+    ppu_coder = { "SDM_0" },
+    ppu_team = { "Pissdrawer" },
     config = { extra = { queue_rounds = 0, order_quips = { 1, 2, 3, 4, 5, 6 } } },
     atlas = "pdr_joker",
     pos = { x = 1, y = 1 },
@@ -453,12 +429,9 @@ SMODS.Joker {
 
 SMODS.Joker {
     key = "red_deck_joker",
-    hotpot_credits = {
-        idea = { "Tacashumi" },
-        art = { "SDM_0" },
-        code = { "SDM_0" },
-        team = { "Pissdrawer" }
-    },
+    ppu_artist = { "SDM_0" },
+    ppu_coder = { "SDM_0" },
+    ppu_team = { "Pissdrawer" },
     config = { extra = { discards = 1, cards_req = 20 } },
     loc_vars = function(self, info_queue, card)
         local discards = card.ability.extra.discards *
@@ -491,12 +464,9 @@ SMODS.Joker {
 
 SMODS.Joker {
     key = "blue_deck_joker",
-    hotpot_credits = {
-        idea = { "Tacashumi" },
-        art = { "SDM_0" },
-        code = { "SDM_0" },
-        team = { "Pissdrawer" }
-    },
+    ppu_artist = { "SDM_0" },
+    ppu_coder = { "SDM_0" },
+    ppu_team = { "Pissdrawer" },
     config = { extra = { hands = 1, cards_req = 20 } },
     loc_vars = function(self, info_queue, card)
         local hands = card.ability.extra.hands *
@@ -529,12 +499,9 @@ SMODS.Joker {
 
 SMODS.Joker {
     key = "yellow_deck_joker",
-    hotpot_credits = {
-        idea = { "Tacashumi" },
-        art = { "SDM_0" },
-        code = { "SDM_0" },
-        team = { "Pissdrawer" }
-    },
+    ppu_artist = { "SDM_0" },
+    ppu_coder = { "SDM_0" },
+    ppu_team = { "Pissdrawer" },
     config = { extra = { dollars = 3, cards_req = 20 } },
     loc_vars = function(self, info_queue, card)
         local dollars = card.ability.extra.dollars *
@@ -580,12 +547,9 @@ SMODS.Joker {
             '{C:attention}collection order'
         }
     },
-    hotpot_credits = {
-        idea = { "Tacashumi" },
-        art = { "Tacashumi" },
-        code = { "fey <3" },
-        team = { "Pissdrawer" }
-    },
+    ppu_artist = { "Tacashumi" },
+    ppu_coder = { "fey <3" },
+    ppu_team = { "Pissdrawer" },
     atlas = "pdr_polymorphine",
     rarity = 3,
     blueprint_compat = false,

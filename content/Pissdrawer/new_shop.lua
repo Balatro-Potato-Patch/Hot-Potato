@@ -11,7 +11,7 @@ G.FUNCS.go_to_menu = function(e)
     return ret
 end
 
-local runstart = Game.start_run
+local runstppu_artist = Game.start_run
 Game.start_run = function(self, args)
     local ret = runstart(self, args)
     PissDrawer.Shop.active_tab = nil

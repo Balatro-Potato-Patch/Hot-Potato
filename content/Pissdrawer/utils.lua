@@ -1,3 +1,8 @@
+PotatoPatchUtils.Team {
+    name = 'Pissdrawer',
+    colour = HEX('b8860b')
+}
+
 G.FUNCS.your_collection_teams = function(e)
     G.SETTINGS.paused = true
     G.FUNCS.overlay_menu {
