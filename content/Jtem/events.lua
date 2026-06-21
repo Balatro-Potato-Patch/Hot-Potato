@@ -96,7 +96,7 @@ HotPotato.EventStep = SMODS.GameObject:extend({
 		}
 	end,
 
-	start = function(self, scenario, previous_step, is_load) end,
+	stppu_artist = function(self, scenario, previous_step, is_load) end,
 	finish = function(self, scenario, next_step) end,
 
 	loc_vars = function(self)
@@ -170,11 +170,8 @@ HotPotato.EventScenario = SMODS.GameObject:extend({
 
 	-- Events basically added by me so..
 	-- Haya my goat <3
-	hotpot_credits = {
-		idea = { "SleepyG11" },
-		code = { "SleepyG11", "Haya" },
-		team = { "Jtem" },
-	}
+	ppu_coder = { "SleepyG11", "Haya" },
+	ppu_team = { "Jtem" },
 })
 
 local your_collection_tabs = HotPotato.custom_collection_tabs
@@ -770,7 +767,7 @@ function hpot_event_start_scenario()
 		finish_scenario = hpot_event_end_scenario,
 	}
 
-	SMODS.calculate_context({ hpot_event_scenario_start = true, event = G.hpot_event })
+	SMODS.calculate_context({ hpot_event_scenario_stppu_artist = true, event = G.hpot_event })
 
 	G.E_MANAGER:add_event(Event({
 		func = function()
@@ -862,7 +859,7 @@ function hpot_event_start_step(key)
 								hpot_event_prepare_text_lines()
 								G.hpot_event.current_step:start(G.hpot_event)
 								SMODS.calculate_context({
-									hpot_event_step_start = true,
+									hpot_event_step_stppu_artist = true,
 									event = G.hpot_event,
 								})
 								G.E_MANAGER:add_event(Event({
@@ -1539,7 +1536,7 @@ end
 
 -- Scenario start
 -- {
---     hpot_event_scenario_start = true,
+--     hpot_event_scenario_stppu_artist = true,
 --     event = event
 -- }
 
@@ -1551,7 +1548,7 @@ end
 
 -- Step start
 -- {
---     hpot_event_step_start = true,
+--     hpot_event_step_stppu_artist = true,
 --     event = event
 -- }
 

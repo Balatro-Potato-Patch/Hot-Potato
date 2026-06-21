@@ -16,12 +16,9 @@ SMODS.Tag {
             tag.triggered = true
         end
     end,
-    hotpot_credits = {
-        art = { 'MissingNumber' },
-        idea = { 'MissingNumber' },
-        code = { 'Haya' },
-        team = { 'Jtem' }
-    },
+    ppu_artist = { 'MissingNumber' },
+    ppu_coder = { 'Haya' },
+    ppu_team = { 'Jtem' }
 }
 
 
@@ -59,10 +56,7 @@ SMODS.Tag {
             return true
         end
     end,
-    hotpot_credits = {
-        art = { 'MissingNumber' },
-        idea = { 'Aikoyori' },
-        code = { 'Aikoyori' },
-        team = { 'Jtem' }
-    },
+    ppu_artist = { 'MissingNumber' },
+    ppu_coder = { 'Aikoyori' },
+    ppu_team = { 'Jtem' }
 }

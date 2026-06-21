@@ -18,9 +18,7 @@ SMODS.Sound {
 		"Music that plays when a plasmid",
     "orb is selected in Plinko"
 	},
-  hotpot_credits = {
-    team = { "Jtem" }
-  }
+  ppu_team = { "Jtem" }
 }
 
 SMODS.Atlas {
@@ -43,9 +41,7 @@ SMODS.Sound {
 		"Music that plays when a finity",
     "orb is selected in Plinko"
 	},
-  hotpot_credits = {
-    team = { "Jtem" }
-  }
+  ppu_team = { "Jtem" }
 }
 
 SMODS.Sound {
@@ -60,9 +56,7 @@ SMODS.Sound {
     "Music that plays while",
     "killing Nxkoo"
   },
-  hotpot_credits = {
-    team = { "Jtem" }
-  }
+  ppu_team = { "Jtem" }
 }
 SMODS.Sound {
   key = "music_training",
@@ -77,9 +71,7 @@ SMODS.Sound {
     "the Training Tab"
   },
   pitch = 1,
-  hotpot_credits = {
-    team = { "Jtem" }
-  }
+  ppu_team = { "Jtem" }
 }
 
 SMODS.Sound {
@@ -94,9 +86,7 @@ SMODS.Sound {
     "Music that plays in",
     "the Delivery tab"
   },
-  hotpot_credits = {
-    team = { "Jtem" }
-  }
+  ppu_team = { "Jtem" }
 }
 
 SMODS.Sound {

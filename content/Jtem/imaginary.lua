@@ -22,12 +22,10 @@ SMODS.Consumable {
     set = "imaginary",
     atlas = "jtem_imagine",
     pos = { x = 1, y = 0 },
-    hotpot_credits = {
-        art = { 'Squidguset' },
-        code = { 'Squidguset' },
-        idea = { 'Squidguset' },
-        team = { 'Jtem' }
-    }
+
+    ppu_artist = { 'Squidguset' },
+    ppu_coder = { 'Squidguset' },
+    ppu_team = { 'Jtem' }
 }
 
 SMODS.Consumable {
@@ -35,12 +33,10 @@ SMODS.Consumable {
     set = "imaginary",
     atlas = "jtem_imagine",
     pos = { x = 2, y = 0 },
-    hotpot_credits = {
-        art = { 'Squidguset' },
-        code = { 'Squidguset' },
-        idea = { 'Squidguset' },
-        team = { 'Jtem' }
-    }
+    
+    ppu_artist = { 'Squidguset' },
+    ppu_coder = { 'Squidguset' },
+    ppu_team = { 'Jtem' }
 }
 
 SMODS.Consumable {
@@ -48,12 +44,10 @@ SMODS.Consumable {
     set = "imaginary",
     atlas = "jtem_imagine",
     pos = { x = 3, y = 0 },
-    hotpot_credits = {
-        art = { 'Squidguset' },
-        code = { 'Squidguset' },
-        idea = { 'Squidguset' },
-        team = { 'Jtem' }
-    }
+    
+    ppu_artist = { 'Squidguset' },
+    ppu_coder = { 'Squidguset' },
+    ppu_team = { 'Jtem' }
 }
 
 SMODS.Consumable {
@@ -61,10 +55,8 @@ SMODS.Consumable {
     set = "imaginary",
     atlas = "jtem_imagine",
     pos = { x = 4, y = 0 },
-    hotpot_credits = {
-        art = { 'Squidguset' },
-        code = { 'Squidguset' },
-        idea = { 'Squidguset' },
-        team = { 'Jtem' }
-    }
+    
+    ppu_artist = { 'Squidguset' },
+    ppu_coder = { 'Squidguset' },
+    ppu_team = { 'Jtem' }
 }

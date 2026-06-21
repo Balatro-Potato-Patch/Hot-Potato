@@ -13,12 +13,9 @@ SMODS.Voucher {
 		G.GAME.hp_jtem_should_allow_buying_jx_from_credits = true
 		G.GAME.hp_jtem_should_allow_buying_jx_from_crypto = true
 	end,
-	hotpot_credits = {
-        art = {'MissingNumber'},
-        code = {'Haya'},
-        idea = {'Aikoyori'},
-        team = {'Jtem'}
-    }
+    ppu_artist = {'MissingNumber'},
+    ppu_coder = {'Haya'},
+    ppu_team = {'Jtem'}
 }
 
 SMODS.Voucher {
@@ -31,12 +28,9 @@ SMODS.Voucher {
 	redeem = function(self, voucher)
 		G.GAME.hp_jtem_should_allow_custom_order = true
 	end,
-	hotpot_credits = {
-        art = {'MissingNumber'},
-        code = {'Haya'},
-        idea = {'Aikoyori'},
-        team = {'Jtem'}
-    }
+    ppu_artist = {'MissingNumber'},
+    ppu_coder = {'Haya'},
+    ppu_team = {'Jtem'}
 }
 
 SMODS.Voucher {
@@ -66,12 +60,9 @@ SMODS.Voucher {
 			}
 		}
 	end,
-	hotpot_credits = {
-        art = {'Aikoyori'},
-        code = {'Aikoyori'},
-        idea = {'Aikoyori'},
-        team = {'Jtem'}
-    }
+    ppu_artist = {'Aikoyori'},
+    ppu_coder = {'Aikoyori'},
+    ppu_team = {'Jtem'}
 }
 
 SMODS.Voucher {
@@ -97,10 +88,7 @@ SMODS.Voucher {
 	requires = {
 		'v_hpot_cargo_size_upgrade'
 	},
-	hotpot_credits = {
-        art = {'Aikoyori'},
-        code = {'Aikoyori'},
-        idea = {'Aikoyori'},
-        team = {'Jtem'}
-    }
+    ppu_artist = {'Aikoyori'},
+    ppu_coder = {'Aikoyori'},
+    ppu_team = {'Jtem'}
 }

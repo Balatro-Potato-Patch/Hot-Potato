@@ -31,11 +31,9 @@ SMODS.Joker {
             }
         end
     end,
-    hotpot_credits = {
-        art = { 'MissingNumber' },
-        code = { 'Squidguset' },
-        team = { 'Jtem' }
-    },
+    ppu_artist = { 'MissingNumber' },
+    ppu_coder = { 'Squidguset' },
+    ppu_team = { 'Jtem' }
 }
 
 SMODS.Joker {
@@ -57,12 +55,9 @@ SMODS.Joker {
             }
         end
     end,
-    hotpot_credits = {
-        art = { 'MissingNumber' },
-        code = { 'Haya' },
-        idea = { 'MissingNumber' }, -- No one adds this for some reason. For future mods please do :pray:
-        team = { 'Jtem' }
-    }
+    ppu_artist = { 'MissingNumber' },
+    ppu_coder = { 'Haya' },
+    ppu_team = { 'Jtem' }
 }
 
 
@@ -108,12 +103,9 @@ SMODS.Joker {
             end
         end
     end,
-    hotpot_credits = {
-        art = { 'MissingNumber' },
-        code = { 'Squidguset' },
-        idea = { 'MissingNumber' }, -- No one adds this for some reason. For future mods please do :pray:
-        team = { 'Jtem' }
-    }
+    ppu_artist = { 'MissingNumber' },
+    ppu_coder = { 'Squidguset' },
+    ppu_team = { 'Jtem' }
 }
 
 -- if future teams dont like the long joker feel free to remove
@@ -144,11 +136,8 @@ SMODS.Joker {
             check_for_unlock({type = 'jokexodia'})
         end
     end,
-    hotpot_credits = {
-        art = { 'LocalThunk' },
-        code = { 'Squidguset' },
-        team = { 'Jtem' }
-    },
+    ppu_coder = { 'Squidguset' },
+    ppu_team = { 'Jtem' }
 }
 
 SMODS.Joker {
@@ -177,12 +166,8 @@ SMODS.Joker {
             check_for_unlock({type = 'jokexodia'})
         end
     end,
-
-    hotpot_credits = {
-        art = { 'LocalThunk' },
-        code = { 'Squidguset' },
-        team = { 'Jtem' }
-    },
+    ppu_coder = { 'Squidguset' },
+    ppu_team = { 'Jtem' }
 }
 
 SMODS.Joker {
@@ -211,12 +196,8 @@ SMODS.Joker {
             check_for_unlock({type = 'jokexodia'})
         end
     end,
-
-    hotpot_credits = {
-        art = { 'LocalThunk' },
-        code = { 'Squidguset' },
-        team = { 'Jtem' }
-    },
+    ppu_coder = { 'Squidguset' },
+    ppu_team = { 'Jtem' }
 }
 
 
@@ -246,12 +227,8 @@ SMODS.Joker {
             check_for_unlock({type = 'jokexodia'})
         end
     end,
-
-    hotpot_credits = {
-        art = { 'LocalThunk' },
-        code = { 'Squidguset' },
-        team = { 'Jtem' }
-    },
+    ppu_coder = { 'Squidguset' },
+    ppu_team = { 'Jtem' }
 }
 
 
@@ -282,12 +259,8 @@ SMODS.Joker {
             check_for_unlock({type = 'jokexodia'})
         end
     end,
-
-    hotpot_credits = {
-        art = { 'LocalThunk' },
-        code = { 'Squidguset' },
-        team = { 'Jtem' }
-    },
+    ppu_coder = { 'Squidguset' },
+    ppu_team = { 'Jtem' }
 }
 
 function hpot_jtem_scale_card(card, key)
@@ -342,12 +315,9 @@ SMODS.Joker {
     loc_vars = function(self, info_queue, card)
         return { vars = { card.ability.extra.xmult_mod, card.ability.extra.xmult, card.ability.extra.cion } }
     end,
-    hotpot_credits = {
-        art = { 'Haya' },
-        code = { 'Haya' },
-        idea = { '???' },
-        team = { 'Jtem' }
-    }
+    ppu_artist = { 'Haya' },
+    ppu_coder = { 'Haya' },
+    ppu_team = { 'Jtem' }
 }
 
 local sellcardhook = G.FUNCS.sell_card
@@ -436,12 +406,9 @@ SMODS.Joker {
             }
         end
     end,
-    hotpot_credits = {
-        art = { 'Aikoyori' },
-        code = { 'Aikoyori' },
-        idea = { 'Aikoyori' },
-        team = { 'Jtem' }
-    }
+    ppu_artist = { 'Aikoyori' },
+    ppu_coder = { 'Aikoyori' },
+    ppu_team = { 'Jtem' }
 }
 
 SMODS.Joker {
@@ -475,12 +442,9 @@ SMODS.Joker {
     loc_vars = function(self, info_queue, card)
         return { vars = { card.ability.extra.plincoin, card.ability.extra.consumeables } }
     end,
-    hotpot_credits = {
-        art = { 'MissingNumber' },
-        code = { 'Haya, SleepyG11' },
-        idea = { 'MissingNumber' },
-        team = { 'Jtem' }
-    }
+    ppu_artist = { 'MissingNumber' },
+    ppu_coder = { 'Haya, SleepyG11' },
+    ppu_team = { 'Jtem' }
 }
 
 SMODS.Joker {
@@ -503,12 +467,9 @@ SMODS.Joker {
     loc_vars = function(self, info_queue, card)
         return { vars = { card.ability.extra.eggs } }
     end,
-    hotpot_credits = {
-        art = { 'MissingNumber' },
-        code = { 'Haya' },
-        idea = { 'MissingNumber' },
-        team = { 'Jtem' }
-    }
+    ppu_artist = { 'MissingNumber' },
+    ppu_coder = { 'Haya' },
+    ppu_team = { 'Jtem' }
 }
 
 SMODS.Joker {
@@ -545,12 +506,9 @@ SMODS.Joker {
             }))
         end
     end,
-    hotpot_credits = {
-        art = { 'Squidguset' },
-        code = { 'Squidguset' },
-        idea = { 'Ornabug' },
-        team = { 'Jtem' }
-    }
+    ppu_artist = { 'Squidguset' },
+    ppu_coder = { 'Squidguset' },
+    ppu_team = { 'Jtem' }
 }
 
 -- If the art for this isn't done by then someone else do it lmao
@@ -568,13 +526,10 @@ SMODS.Joker {
     in_pool = function(self, args)
         return G.GAME.hpot_training_has_ever_been_done
     end,
-    hotpot_credits = {
-        -- ps I made this in 15 minutes - Aiko
-        art = { 'Aikoyori' },
-        code = { 'Haya' },
-        idea = { 'Haya' },
-        team = { 'Jtem' }
-    },
+    -- ps I made this in 15 minutes - Aiko
+    ppu_artist = { 'Aikoyori' },
+    ppu_coder = { 'Haya' },
+    ppu_team = { 'Jtem' }
 }
 
 
@@ -653,12 +608,9 @@ SMODS.Joker {
             }
         end
     end,
-    hotpot_credits = {
-        art = { 'MissingNumber' },
-        code = { 'Aikoyori' },
-        idea = { 'MissingNumber', 'Aikoyori' },
-        team = { 'Jtem' }
-    }
+    ppu_artist = { 'MissingNumber' },
+    ppu_coder = { 'Aikoyori' },
+    ppu_team = { 'Jtem' }
 }
 
 SMODS.Joker:take_ownership("j_diet_cola", {
@@ -694,10 +646,7 @@ SMODS.Joker {
     in_pool = function(self, args)
         return G.GAME.hpot_training_has_ever_been_done
     end,
-    hotpot_credits = {
-        art = { 'Aikoyori' },
-        code = { 'Aikoyori' },
-        idea = { 'Haya' },
-        team = { 'Jtem' }
-    },
+    ppu_artist = { 'Aikoyori' },
+    ppu_coder = { 'Aikoyori' },
+    ppu_team = { 'Jtem' }
 }

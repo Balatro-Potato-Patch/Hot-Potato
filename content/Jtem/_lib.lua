@@ -9,6 +9,11 @@ function init_jtem(game)
 	G.hpot_training_consumable_highlighted = nil
 end
 
+PotatoPatchUtils.Team {
+	name = 'Jtem',
+	colour = HEX('ebc8dd')
+}
+
 -- I needed these earlier than Perkeocoins files were loaded so theyre here now
 SMODS.Gradient {
     key = 'plincoin',

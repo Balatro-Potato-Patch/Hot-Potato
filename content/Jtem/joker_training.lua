@@ -668,12 +668,10 @@ SMODS.Sticker {
 	end,
     should_apply = function() return false end,
 	badge_colour = HEX('ffcc11'),
-	hotpot_credits = {
-		art = { "Aikoyori" },
-		idea = { "Haya", "Aikoyori" },
-		code = { "Haya", "Aikoyori", "SleepyG11", "BepisFever" },
-		team = { "Jtem" }
-	}
+	
+	ppu_artist = { "Aikoyori" },
+	ppu_coder = { "Haya", "Aikoyori", "SleepyG11", "BepisFever" },
+	ppu_team = { "Jtem" }
 }
 
 --- Gets the default training cost.
@@ -939,10 +937,10 @@ local hpot_training_pool_check = function(self, args)
 end
 
 local training_tarot_credits = {
-	art = { 'Aikoyori' },
-	code = { 'Haya' },
+	ppu_artist = { 'Aikoyori' },
+	ppu_coder = { 'Haya' },
 	idea = { 'Aikoyori', 'Haya' },
-	team = { 'Jtem' }
+	ppu_team = { 'Jtem' }
 }
 
 -- All of these consumables below are for training specific stats.
@@ -1059,12 +1057,10 @@ SMODS.Consumable {
 	can_use = hpot_training_tarot_can_use,
 	use = hpot_training_tarot_use,
 	loc_vars = hpot_training_tarot_loc_vars,
-	hotpot_credits = {
-		art = { 'Aikoyori' },
-		code = { 'Aikoyori' },
-		idea = { 'Haya' },
-		team = { 'Jtem' }
-	},
+	
+	ppu_artist = { 'Aikoyori' },
+	ppu_coder = { 'Aikoyori' },
+	ppu_team = { 'Jtem' },
 	in_pool = hpot_training_pool_check,
 }
 
@@ -1108,12 +1104,10 @@ SMODS.Booster {
 		})
 	end,
 	in_pool = hpot_training_pool_check,
-	hotpot_credits = {
-		art = { 'Aikoyori' },
-		code = { 'Aikoyori' },
-		idea = { 'Aikoyori', 'Haya' },
-		team = { 'Jtem' }
-	}
+	
+	ppu_artist = { 'Aikoyori' },
+	ppu_coder = { 'Aikoyori' },
+	ppu_team = { 'Jtem' }
 }
 
 --#endregion

@@ -1,7 +1,7 @@
 Horsechicot = {}
 PotatoPatchUtils.Team {
     name = 'Horsechicot',
-    colour = HEX('5dc797')
+    colour = HEX('fd5f55')
 }
 
 SMODS.Atlas { key = "hc_jokers", path = "Horsechicot/hc_jokers.png", px = 71, py = 95 }
