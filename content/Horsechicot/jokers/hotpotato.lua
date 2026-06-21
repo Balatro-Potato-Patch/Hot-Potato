@@ -120,5 +120,5 @@ SMODS.Joker {
     end,
     ppu_coder = { "Nxkoo" },
     ppu_artist = { "pangaea47" },
-    ppu_team = { "Horsechicor" },
+    ppu_team = { "Horsechicot" },
 }
