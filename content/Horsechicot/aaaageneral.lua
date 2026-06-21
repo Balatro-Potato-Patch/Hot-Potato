@@ -39,9 +39,7 @@ SMODS.Sound {
         "Music that plays in",
         "the Black Market"
     },
-    hotpot_credits = {
-        team = 'Team Name'
-    }
+    ppu_team = {'Team Name'}
 }
 
 

@@ -109,7 +109,7 @@ function JTJukebox.read_music_tags(path, music_name)
 	-- find first 'vorbis' string. determines if its actually a vorbis file
 	local idx = string.find(str, 'vorbis')
 	---@type Jtem.MusicTag
-	local info = { key = music_name, order = #JTJukebox.MusicTags + 1, mod = SMODS.Sounds[music_name].mod, hotpot_credits = SMODS.Sounds[music_name].hotpot_credits }
+	local info = { key = music_name, order = #JTJukebox.MusicTags + 1, mod = SMODS.Sounds[music_name].mod, ppu_team = SMODS.Sounds[music_name].ppu_team[1] }
 	-- POST: Check if we defined this in the SMODS.Sound definition instead
 	if SMODS.Sounds[info.key] then
 		info.title = SMODS.Sounds[info.key].hpot_title or nil

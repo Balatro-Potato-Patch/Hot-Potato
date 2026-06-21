@@ -1,3 +1,9 @@
+PotatoPatchUtils.Team {
+	name = 'Team Name',
+	colour = HEX('fdd48e'),
+	short_credit = true
+}
+
 SMODS.Sound {
   key = "music_reforge",
   path = "music_reforge_menu.ogg",
@@ -12,8 +18,7 @@ SMODS.Sound {
     "reforging a Joker"
   },
   
-    ppu_team = { "Team Name" }
-  }
+	ppu_team = { "Team Name" }
 }
 
 SMODS.Sound {
