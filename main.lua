@@ -29,7 +29,8 @@ to_number = to_number or function(x) return x end
 -- FILE LOADING
 --#region File Loading
 local blacklist = {
-	['titletext.lua'] = true
+	['titletext.lua'] = true,
+	['base64.lua'] = true
 }
 local path = SMODS.current_mod.path
 

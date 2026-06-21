@@ -16,7 +16,7 @@
 -- There will be a default one shown if it doesn't have one, or if its regarded as invalid.
 
 require 'bit'
-base64 = SMODS.load_file("Jtem/base64.lua")()
+base64 = assert(SMODS.load_file("content/Jtem/base64.lua"))()
 
 ---@class Jtem.MusicTag
 ---@field title string? Title of the music provided. Can be empty.

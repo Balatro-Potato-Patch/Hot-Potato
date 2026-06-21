@@ -119,7 +119,7 @@ SMODS.Sound {
         "the Nursery"
     },
     
-  ppu_team = 'Team Name'
+  ppu_team = {'Team Name'}
 }
 
 SMODS.Sound {

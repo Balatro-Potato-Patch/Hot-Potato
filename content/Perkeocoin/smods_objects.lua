@@ -1,4 +1,4 @@
-SMODS.Team {
+PotatoPatchUtils.Team {
     name = 'Perkeocoin',
     colour = HEX('17b117')
 }
