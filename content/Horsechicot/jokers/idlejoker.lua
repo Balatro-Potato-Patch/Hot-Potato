@@ -50,5 +50,5 @@ SMODS.Joker {
     end,
     ppu_coder = { "Lily Felli" },
     ppu_artist = { "pangaea47" },
-    ppu_team = { "lord.ruby" }
+    ppu_team = { "Horsechicot" }
 }

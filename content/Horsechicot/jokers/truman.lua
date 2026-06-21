@@ -21,7 +21,7 @@ SMODS.Joker {
         local teams = {}
         if not G.jokers then return end
         for i, jkr in pairs(G.jokers.cards) do
-            local ppu_team = jkr.config.center.hotpot_credits and jkr.config.center.hotpot_credits.team
+            local team = jkr.config.center.ppu_team and jkr.config.center.ppu_team[1]
             if team then
                 for _, real_team in pairs(team) do
                     teams[real_team] = (teams[real_team] or 0) + 1
@@ -59,7 +59,7 @@ SMODS.Joker {
         if context.joker_main then
             local teams = {}
             for i, jkr in pairs(G.jokers.cards) do
-                local ppu_team = jkr.config.center.hotpot_credits and jkr.config.center.hotpot_credits.team
+                local team = jkr.config.center.ppu_team and jkr.config.center.ppu_team[1]
                 if team then
                     for _, real_team in pairs(team) do
                         teams[real_team] = (teams[real_team] or 0) + 1
