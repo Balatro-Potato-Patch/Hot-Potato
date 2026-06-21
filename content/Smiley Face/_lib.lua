@@ -4,3 +4,8 @@ SMODS.Font {
   key = "emoji",
   path = "NotoEmoji-Bold.ttf"
 }
+
+PotatoPatchUtils.Team {
+  name = 'smiley',
+  colour = HEX('ffd71f')
+}

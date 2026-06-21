@@ -15,12 +15,9 @@ SMODS.Joker {
     cost = 3,
     atlas = "smiley_jokers",
     pos = {x=1,y=1},
-    hotpot_credits = {
-        art = {"RGBeet"},
-        idea = {"PokéRen"},
-        code = {"PokéRen"},
-        team = {":)"}
-    }
+    ppu_artist = {"RGBeet"},
+    ppu_coder = {"PokéRen"},
+    ppu_team = {"smiley"}
 }
 
 -- code is actually in emoticon.lua's hook lmao

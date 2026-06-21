@@ -19,7 +19,7 @@ local allowed_sets = {
 function get_team_card(team, seed)
     local cards = {}
     for i, v in pairs(G.P_CENTERS) do
-        if v.set and allowed_sets[v.set] and not v.hidden and not G.GAME.banned_keys[v.key] and v.hotpot_credits and string.lower(v.hotpot_credits.team[1]) == string.lower(team) and v.rarity ~= 4 then
+        if v.set and allowed_sets[v.set] and not v.hidden and not G.GAME.banned_keys[v.key] and v.ppu_team and string.lower(v.ppu_team[1]) == string.lower(team) and v.rarity ~= 4 then
             cards[#cards+1] = v
         end
     end
@@ -29,7 +29,7 @@ end
 function get_teams()
     return {
         "Sillyposting",
-        ":)",
+        "smiley",
         "Perkeocoin",
         "Pissdrawer",
         "Team Name",

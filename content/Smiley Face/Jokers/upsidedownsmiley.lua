@@ -13,11 +13,8 @@ SMODS.Joker {
     cost = 5,
     atlas = "smiley_jokers",
     pos = {x=0,y=0},
-    hotpot_credits = {
-        idea = {"RGBeet"},
-        code = {"PokéRen"},
-        team = {":)"}
-    },
+    ppu_coder = {"PokéRen"},
+    ppu_team = {"smiley"},
     calculate = function(self, card, context)
         if context.individual and context.cardarea == G.hand and not context.end_of_round and context.other_card:is_face() then
             if context.other_card.debuff then

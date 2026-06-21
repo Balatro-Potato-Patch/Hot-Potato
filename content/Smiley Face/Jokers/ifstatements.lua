@@ -14,11 +14,8 @@ SMODS.Joker {
     cost = 7,
     atlas = "smiley_jokers",
     pos = {x=2,y=0},
-    hotpot_credits = {
-        idea = {"notmario"},
-        code = {"notmario"},
-        team = {":)"}
-    },
+    ppu_coder = {"notmario"},
+    ppu_team = {"smiley"},
     calculate = function(self, card, context)
         if context.joker_main then
             local my_effects = {}

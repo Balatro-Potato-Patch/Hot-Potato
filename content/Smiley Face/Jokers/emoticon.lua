@@ -13,12 +13,9 @@ SMODS.Joker {
     cost = 6,
     atlas = "smiley_jokers",
     pos = {x=1,y=0},
-    hotpot_credits = {
-        art = {"RGBeet"},
-        idea = {"PokéRen"},
-        code = {"PokéRen"},
-        team = {":)"}
-    },
+    ppu_artist = {"RGBeet"},
+    ppu_coder = {"PokéRen"},
+    ppu_team = {"smiley"},
     calculate = function(self, card, context)
         if context.individual and context.cardarea == G.play and context.other_card:is_face(false,{ignore_emoticon = true}) then
             if context.other_card.debuff then

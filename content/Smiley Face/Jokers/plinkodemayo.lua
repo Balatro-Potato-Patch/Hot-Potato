@@ -13,12 +13,9 @@ SMODS.Joker {
     cost = 5,
     atlas = "smiley_jokers",
     pos = {x=2,y=1},
-    hotpot_credits = {
-        art = {"RGBeet"},
-        idea = {"RGBeet"},
-        code = {"notmario"},
-        team = {":)"}
-    },
+    ppu_artist = {"RGBeet"},
+    ppu_coder = {"notmario"},
+    ppu_team = {"smiley"},
     calculate = function(self, card, context)
         if context.individual and context.cardarea == G.play and context.other_card:get_id() == 5 then
             ease_plincoins(card.ability.extra.plincoins)

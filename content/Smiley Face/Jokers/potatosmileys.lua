@@ -16,12 +16,9 @@ SMODS.Joker {
     cost = 4,
     atlas = "smiley_jokers",
     pos = {x=0,y=1},
-    hotpot_credits = {
-        art = {"RGBeet"},
-        idea = {"PokéRen"},
-        code = {"notmario"},
-        team = {":)"}
-    },
+    ppu_artist = {"RGBeet"},
+    ppu_coder = {"notmario"},
+    ppu_team = {"smiley"},
     calculate = function(self, card, context)
         if context.individual and context.cardarea == G.play and context.other_card:is_face() then
             return {

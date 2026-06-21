@@ -5361,6 +5361,9 @@ return {
         PotatoPatch = {
             PotatoPatchTeam_OAP = {
                 name = 'Oops! All Programmers'
+            },
+            PotatoPatchTeam_smiley = {
+                name = ':)'
             }
         }
     },
