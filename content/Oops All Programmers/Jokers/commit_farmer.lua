@@ -22,7 +22,7 @@ SMODS.Joker {
     atlas = "oap_jokers",
     pos = { x = 4, y = 0 },
     loc_vars = function(self, info_queue, card)
-        local ppu_team = G.GAME.current_round.hpot_commit_farmer_team or "Sillyposting"
+        local team = G.GAME.current_round.hpot_commit_farmer_team or "Sillyposting"
         local commits = card.ability.extra.commits[team:lower()] or 0
         local xmult = card.ability.extra.xmult_inc * commits + card.ability.extra.xmult_base
         return { vars = { card.ability.extra.xmult_inc, team, xmult } }
@@ -48,6 +48,6 @@ function reset_commit_farmer()
             teams[#teams + 1] = v
         end
     end
-    local ppu_team = pseudorandom_element(teams, "commit_farmer_" .. G.GAME.round_resets.ante)
+    local team = pseudorandom_element(teams, "commit_farmer_" .. G.GAME.round_resets.ante)
     G.GAME.current_round.hpot_commit_farmer_ppu_team = team
 end

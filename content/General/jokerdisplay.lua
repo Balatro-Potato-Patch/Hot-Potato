@@ -618,7 +618,7 @@ jd_def["j_hpot_truman"] = { -- Truman
     calc_function = function(card)
         local teams = {}
         for i, jkr in pairs(G.jokers.cards) do
-            local ppu_team = jkr.config.center.hotpot_credits and jkr.config.center.hotpot_credits.team
+            local team = jkr.config.center.hotpot_credits and jkr.config.center.hotpot_credits.team
             if team then
                 for _, real_team in pairs(team) do
                     teams[real_team] = (teams[real_team] or 0) + 1
