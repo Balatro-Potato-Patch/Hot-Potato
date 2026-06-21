@@ -5587,7 +5587,7 @@ HotPotato.jokersthatcanspellkrisorliterallyarekris = {
 	"j_invisible",
 	"j_hpot_balatro_free_smods_download_2025",
 	"j_hpot_notajoker",
-	"j_hpot_nxkoodead",
+	"j_hpot_krisdead",
 	"j_hpot_retriggered",
 	"j_hpot_labubu",
 	"j_hpot_jtem_special_week",

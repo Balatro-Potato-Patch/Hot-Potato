@@ -1102,13 +1102,13 @@ return {                     --5572번 라인부터 이어서 작업할 것 -네
                     "{X:mult,C:white}X#1#{} 배수"
                 }
             },
-            j_hpot_nxkoodead = {
-                name = "Nxkoo 숨진 채 발견",
+            j_hpot_krisdead = {
+                name = "Kris 숨진 채 발견",
                 text = {
-                    "{C:attention}#1#{} Nxkoo 살해 횟수만큼",
+                    "{C:attention}#1#{} Kris 살해 횟수만큼",
                     "{X:mult,C:white}X#2#{} 배수를 얻습니다",
                     "{C:inactive}(최대 {X:mult,C:white}X15{C:inactive} 배수)",
-					"{C:inactive}(Nxkoo 살해 버튼은 Hot Potato 모드 설정창에서 접근 가능합니다)",
+					"{C:inactive}(Kris 살해 버튼은 Hot Potato 모드 설정창에서 접근 가능합니다)",
                     "{C:inactive}(현재 {X:mult,C:white}X#3#{C:inactive} 배수)"
                 }
             },
@@ -1467,12 +1467,12 @@ return {                     --5572번 라인부터 이어서 작업할 것 -네
                     "{C:inactive}(라운드마다 한 번씩만 발동 가능합니다, 현재 #2#)"
                 }
             },
-            j_hpot_nxkoo_joker = {
+            j_hpot_kris_joker = {
                 name = "광륜",
                 text = {
                     --"Change the base of",
                     
-                    "{C:chips}Nxkoo 되살리기{} 시",
+                    "{C:chips}Kris 되살리기{} 시",
 					"요구되는 스케일링 기준이",
                     "{X:dark_edition,C:white}15{}에서 {X:dark_edition,C:white}10{}으로 감소합니다",
                 }
@@ -6052,7 +6052,7 @@ return {                     --5572번 라인부터 이어서 작업할 것 -네
                                 "and some music tracks"
                             },
                             {
-                                "Creator of the {C:attention}Nxkoo dies",
+                                "Creator of the {C:attention}Kris dies",
                                 "tab in mod info and {C:attention}title text",
                             },
                             {

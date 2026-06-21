@@ -1106,10 +1106,10 @@ return {
                     "{X:mult,C:white}X#1#{} Mult"
                 }
             },
-            j_hpot_nxkoodead = {
-                name = "Nxkoo found dead",
+            j_hpot_krisdead = {
+                name = "Kris found dead",
                 text = {
-                    "For every {C:attention}#1#{} Nxkoos killed",
+                    "For every {C:attention}#1#{} Krises killed",
                     "this Joker gains {X:mult,C:white}X#2#{} Mult",
                     "{C:inactive}(Max of {X:mult,C:white}X15{C:inactive} Mult)",
                     "{C:inactive}(Currently {X:mult,C:white}X#3#{C:inactive} Mult)"
@@ -1466,12 +1466,12 @@ return {
                     "{C:inactive}(Only works once per round, currently #2#)"
                 }
             },
-            j_hpot_nxkoo_joker = {
+            j_hpot_kris_joker = {
                 name = "Halo",
                 text = {
                     "Changes the base of",
                     "the requirement scaling for",
-                    "{C:chips}Nxkoo unkills{}",
+                    "{C:chips}Kris unkills{}",
                     "from {X:dark_edition,C:white}15{} to {X:dark_edition,C:white}10{}",
                 }
             },
@@ -5921,7 +5921,7 @@ return {
                                 "and some music tracks"
                             },
                             {
-                                "Creator of the {C:attention}Nxkoo dies",
+                                "Creator of the {C:attention}Kris dies",
                                 "tab in mod info and {C:attention}title text",
                             },
                             {

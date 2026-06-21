@@ -49,10 +49,10 @@ HotPotato.optional_features = {
 }
 HotPotato.extra_tabs = function()
 	return {
-		--nxclicker
+		--clickris
 		{
-			label = "Kill Nxkoo",
-			tab_definition_function = G.UIDEF.nxclicker
+			label = "Kill Kris",
+			tab_definition_function = G.UIDEF.clickris
 		},
 		-- Jukebox
 		{

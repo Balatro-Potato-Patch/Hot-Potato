@@ -54,7 +54,7 @@ SMODS.Sound {
   end,
   hpot_purpose = {
     "Music that plays while",
-    "killing Nxkoo"
+    "killing Kris"
   },
   ppu_team = { "Jtem" }
 }

@@ -41,7 +41,6 @@ HPJTTT = {
         "You should play Balatro!",
         "You should play PokerJokers!",
         "You should play Entropy!",
-        "Nxkoo found dead in Miami",
         "Too many decks!",
         "Isn't this splash text from Potassium?",
         "Entropy did it!",

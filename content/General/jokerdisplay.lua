@@ -658,7 +658,7 @@ jd_def["j_hpot_nxkoodead"] = { -- Nxkoo found dead
     calc_function = function(card)
         local save = G.PROFILES[G.SETTINGS.profile]
         card.joker_display_values.xmult = math.min(
-            (math.floor((save.JtemNXkilled or 0) / card.ability.extra.per) * card.ability.extra.gain) + 1, 15)
+            (math.floor((save.JtemKriskilled or 0) / card.ability.extra.per) * card.ability.extra.gain) + 1, 15)
     end
 }
 

@@ -5,7 +5,7 @@ SMODS.Atlas {
 }
 
 SMODS.Joker {
-    key = "nxkoodead",
+    key = "krisdead",
     atlas = "jtem_jokers",
     pos = { x = 0, y = 1 },
     config = { extra = { gain = 0.1, per = 100, } },
@@ -18,7 +18,7 @@ SMODS.Joker {
         return {
             vars = {
                 card.ability.extra.per, card.ability.extra.gain, math.min(
-                (math.floor((save.JtemNXkilled or 0) / card.ability.extra.per) * card.ability.extra.gain) + 1, 15)
+                (math.floor((save.JtemKriskilled or 0) / card.ability.extra.per) * card.ability.extra.gain) + 1, 15)
             }
         }
     end,
@@ -27,7 +27,7 @@ SMODS.Joker {
         if context.joker_main then
             return {
                 xmult = math.min(
-                    (math.floor((save.JtemNXkilled or 0) / card.ability.extra.per) * card.ability.extra.gain) + 1, 15)
+                    (math.floor((save.JtemKriskilled or 0) / card.ability.extra.per) * card.ability.extra.gain) + 1, 15)
             }
         end
     end,
