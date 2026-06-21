@@ -1,3 +1,8 @@
+SMODS.Team {
+    name = 'Perkeocoin',
+    colour = HEX('17b117')
+}
+
 SMODS.Atlas({key = "chequeatlas", path = "PerkeoCards/checks.png", px = 71, py = 95, atlas_table = "ASSET_ATLAS"}):register()
 -- Jokers
 -- Bottlecaps
@@ -25,9 +30,7 @@ SMODS.Sound {
     "Music that plays while selecting",
     "a cheque in a Cheque Pack"
   },
-  hotpot_credits = {
-    team = { "Perkeocoin" }
-  }
+  ppu_team = { "Perkeocoin" }
 }
 
 -- SPEEN
@@ -66,11 +69,9 @@ SMODS.Joker{ --19 plincoin fortnite card
     discovered = true,
     atlas = 'perkeocoinjokers',
 
-    hotpot_credits = {
-        art = {'dottykitty'},
-        code = {'CampfireCollective'},
-        team = {'Perkeocoin'}
-    },
+    ppu_artist = {'dottykitty'},
+    ppu_coder = {'CampfireCollective'},
+    ppu_team = {'Perkeocoin'},
 
     loc_vars = function(self, info_queue, card)
         return {vars = {card.ability.extra.fortnite, card.ability.extra.bosses}}
@@ -134,11 +135,9 @@ SMODS.Joker{ --Plink
     discovered = true,
     atlas = 'perkeocoinjokers',
 
-    hotpot_credits = {
-        art = {'dottykitty'},
-        code = {'CampfireCollective'},
-        team = {'Perkeocoin'}
-    },
+    ppu_artist = {'dottykitty'},
+    ppu_coder = {'CampfireCollective'},
+    ppu_team = {'Perkeocoin'},
 
     loc_vars = function(self, info_queue, card)
         return {vars = {card.ability.extra.mult, card.ability.extra.mult * (G.GAME.balls_dropped or 0)}}
@@ -174,12 +173,10 @@ SMODS.Joker{ --Metal Detector
     unlocked = true,
     discovered = true,
     atlas = 'perkeocoinjokers',
-
-    hotpot_credits = {
-        art = {'dottykitty'},
-        code = {'CampfireCollective'},
-        team = {'Perkeocoin'}
-    },
+    
+    ppu_artist = {'dottykitty'},
+    ppu_coder = {'CampfireCollective'},
+    ppu_team = {'Perkeocoin'},
 
     loc_vars = function(self, info_queue, card)
         return {vars = {card.ability.extra.skipped, card.ability.extra.needs}}
@@ -235,12 +232,10 @@ SMODS.Joker{ --Tribcoin
     unlocked = true,
     discovered = true,
     atlas = 'perkeocoinjokers',
-
-    hotpot_credits = {
-        art = {'Omegaflowey18'}, 
-        code = {'CampfireCollective'},
-        team = {'Perkeocoin'}
-    },
+    
+    ppu_artist = {'Omegaflowey18'}, 
+    ppu_coder = {'CampfireCollective'},
+    ppu_team = {'Perkeocoin'},
 
     loc_vars = function(self, info_queue, card)
         return {vars = {card.ability.extra.Xmult,G.GAME.plincoins and (1 + math.max(0, G.GAME.plincoins * card.ability.extra.Xmult)) or 1}}
@@ -275,12 +270,10 @@ SMODS.Joker{ --Adspace
     unlocked = true,
     discovered = true,
     atlas = 'perkeocoinjokers',
-
-    hotpot_credits = {
-        art = {'dottykitty'},
-        code = {'CampfireCollective'},
-        team = {'Perkeocoin'}
-    },
+    
+    ppu_artist = {'dottykitty'},
+    ppu_coder = {'CampfireCollective'},
+    ppu_team = {'Perkeocoin'},
 
     loc_vars = function(self, info_queue, card)
         return {vars = {card.ability.extra.chips, #G.GAME.hotpot_ads * card.ability.extra.chips}}
@@ -311,11 +304,9 @@ SMODS.Joker{ -- Kitchen Gun
     unlocked = true,
     discovered = true,
 
-    hotpot_credits = {
-        art = {'dottykitty'},
-        code = {'Opal'},
-        team = {'Perkeocoin'}
-    },
+    ppu_artist = {'dottykitty'},
+    ppu_coder = {'Opal'},
+    ppu_team = {'Perkeocoin'},
 
     loc_vars = function(self, info_queue, card)
         local n, d = SMODS.get_probability_vars(card, 1, card.ability.extra.odds, 'hpot_kitchen_gun')
@@ -405,12 +396,10 @@ SMODS.Joker{ --TV Dinner
     unlocked = true,
     discovered = true,
     atlas = "TeamNameAnims1",
-
-    hotpot_credits = {
-        art = {'Omegaflowey18'},
-        code = {'CampfireCollective'},
-        team = {'Perkeocoin'}
-    },
+    
+    ppu_artist = {'Omegaflowey18'},
+    ppu_coder = {'CampfireCollective'},
+    ppu_team = {'Perkeocoin'},
 
     loc_vars = function(self, info_queue, card)
         return {vars = {card.ability.extra.mult, card.ability.extra.mult_mod}}
@@ -466,12 +455,10 @@ SMODS.Joker{ --Free To Use
     unlocked = true,
     discovered = true,
     atlas = 'perkeocoinjokers',
-
-    hotpot_credits = {
-        art = {'Omegaflowey18'},
-        code = {'CampfireCollective'},
-        team = {'Perkeocoin'}
-    },
+    
+    ppu_artist = {'Omegaflowey18'},
+    ppu_coder = {'CampfireCollective'},
+    ppu_team = {'Perkeocoin'},
 
     loc_vars = function(self, info_queue, card)
         local new_numerator, new_denominator = SMODS.get_probability_vars(card, card.ability.extra.num, card.ability.extra.den, 'free_to_use')
@@ -512,11 +499,9 @@ SMODS.Joker{ --Direct Deposit
     discovered = true,
     atlas = 'perkeocoinjokers',
 
-    hotpot_credits = {
-        art = {'dottykitty'},
-        code = {'CampfireCollective'},
-        team = {'Perkeocoin'}
-    },
+    ppu_artist = {'dottykitty'},
+    ppu_coder = {'CampfireCollective'},
+    ppu_team = {'Perkeocoin'},
 
     loc_vars = function(self, info_queue, card)
         return {vars = {card.ability.extra.dollars, card.ability.extra.plincoins, card.ability.extra.so_far}}
@@ -568,11 +553,9 @@ SMODS.Joker{ --Bank Teller
     discovered = true,
     atlas = 'perkeocoinjokers',
 
-    hotpot_credits = {
-        art = {'dottykitty'},
-        code = {'CampfireCollective'},
-        team = {'Perkeocoin'}
-    },
+    ppu_artist = {'dottykitty'},
+    ppu_coder = {'CampfireCollective'},
+    ppu_team = {'Perkeocoin'},
 
     loc_vars = function(self, info_queue, card)
         return {vars = {card.ability.extra.compare, card.ability.extra.cards, localize('k_czech')..(to_number(card.ability.extra.cards) > 1 and "s" or "")}}
@@ -621,11 +604,9 @@ SMODS.Joker{ --Balatro **PREMIUM**
     discovered = true,
     atlas = 'perkeocoinjokers',
 
-    hotpot_credits = {
-        art = {'Omegaflowey18'},
-        code = {'CampfireCollective'},
-        team = {'Perkeocoin'}
-    },
+    ppu_artist = {'Omegaflowey18'},
+    ppu_coder = {'CampfireCollective'},
+    ppu_team = {'Perkeocoin'},
 
     loc_vars = function(self, info_queue, card)
         return {vars = {card.ability.extra.dollars}}
@@ -680,11 +661,9 @@ SMODS.Joker{ --Skimming
     discovered = true,
     atlas = 'perkeocoinjokers',
 
-    hotpot_credits = {
-        art = {'dottykitty'},
-        code = {'CampfireCollective'},
-        team = {'Perkeocoin'}
-    },
+    ppu_artist = {'dottykitty'},
+    ppu_coder = {'CampfireCollective'},
+    ppu_team = {'Perkeocoin'},
 
     loc_vars = function(self, info_queue, card)
         return {vars = {card.ability.extra.dollars, card.ability.extra.dollars_mod}}
@@ -735,11 +714,9 @@ SMODS.Joker{ --Recycling
     discovered = true,
     atlas = 'perkeocoinjokers',
 
-    hotpot_credits = {
-        art = {'dottykitty'},
-        code = {'CampfireCollective'},
-        team = {'Perkeocoin'}
-    },
+    ppu_artist = {'dottykitty'},
+    ppu_coder = {'CampfireCollective'},
+    ppu_team = {'Perkeocoin'},
 
     loc_vars = function(self, info_queue, card)
         return {vars = {card.ability.extra.dollars}}
@@ -774,11 +751,9 @@ SMODS.Joker{ --Don't Touch That Dial!
     discovered = true,
     atlas = 'perkeocoinjokers',
 
-    hotpot_credits = {
-        art = {'Omegaflowey18'},
-        code = {'CampfireCollective'},
-        team = {'Perkeocoin'}
-    },
+    ppu_artist = {'Omegaflowey18'},
+    ppu_coder = {'CampfireCollective'},
+    ppu_team = {'Perkeocoin'},
 
     loc_vars = function(self, info_queue, card)
         return {vars = {card.ability.extra.dial}}
@@ -817,11 +792,9 @@ SMODS.Joker{ --Tipping Point
     discovered = true,
     atlas = 'perkeocoinjokers',
 
-    hotpot_credits = {
-        art = {'Omegaflowey18'},
-        code = {'stupid'},
-        team = {'Perkeocoin'}
-    },
+    ppu_artist = {'Omegaflowey18'},
+    ppu_coder = {'stupid'},
+    ppu_team = {'Perkeocoin'},
 
     loc_vars = function(self, info_queue, card)
         return {vars = {card.ability.extra.tipping}}
@@ -862,11 +835,11 @@ SMODS.Consumable { --Cash Exchange
     pools = {
         ['Czech'] = true
     },
-    hotpot_credits = {
-        art = {'dottykitty'},
-        code = {'CampfireCollective'},
-        team = {'Perkeocoin'}
-    },
+
+    ppu_artist = {'dottykitty'},
+    ppu_coder = {'CampfireCollective'},
+    ppu_team = {'Perkeocoin'},
+
     loc_vars = function(self, info_queue, card)
         return {vars = {card.ability.extra.dollars, card.ability.extra.plincoins}}
     end,
@@ -914,11 +887,9 @@ SMODS.Consumable { --Sacrifice
     pools = {
         ['Czech'] = true
     },
-    hotpot_credits = {
-        art = {'dottykitty'},
-        code = {'CampfireCollective'},
-        team = {'Perkeocoin'}
-    },
+    ppu_artist = {'dottykitty'},
+    ppu_coder = {'CampfireCollective'},
+    ppu_team = {'Perkeocoin'},
     loc_vars = function(self, info_queue, card)
         return {vars = {sac_czech()}}
     end,
@@ -963,11 +934,9 @@ SMODS.Consumable { --Wheel of Plinko
     pools = {
         ['Czech'] = true
     },
-    hotpot_credits = {
-        art = {'Omegaflowey18'},
-        code = {'CampfireCollective'},
-        team = {'Perkeocoin'}
-    },
+    ppu_artist = {'Omegaflowey18'},
+    ppu_coder = {'CampfireCollective'},
+    ppu_team = {'Perkeocoin'},
     loc_vars = function(self, info_queue, card)
         local new_numerator, new_denominator = SMODS.get_probability_vars(card, card.ability.extra.num, card.ability.extra.den, 'wheel_of_plinko')
         return {vars = {card.ability.extra.plincoinsdown, card.ability.extra.plincoinsup, new_numerator, new_denominator}}
@@ -1019,11 +988,9 @@ SMODS.Consumable { --Charity
     pools = {
         ['Czech'] = true
     },
-    hotpot_credits = {
-        art = {'Omegaflowey18'},
-        code = {'CampfireCollective'},
-        team = {'Perkeocoin'}
-    },
+    ppu_artist = {'Omegaflowey18'},
+    ppu_coder = {'CampfireCollective'},
+    ppu_team = {'Perkeocoin'},
     loc_vars = function(self, info_queue, card)
         return {vars = {card.ability.extra.plincoins}}
     end,
@@ -1054,11 +1021,9 @@ SMODS.Consumable { --Collateral
     pools = {
         ['Czech'] = true
     },
-    hotpot_credits = {
-        art = {'Kitty & Omega'},
-        code = {'CampfireCollective'},
-        team = {'Perkeocoin'}
-    },
+    ppu_artist = {'Kitty & Omega'},
+    ppu_coder = {'CampfireCollective'},
+    ppu_team = {'Perkeocoin'},
     loc_vars = function(self, info_queue, card)
         return {vars = {card.ability.extra.plincoins}}
     end,
@@ -1105,11 +1070,9 @@ SMODS.Consumable { --CoD Account
     pools = {
         ['Czech'] = true
     },
-    hotpot_credits = {
-        art = {'Kitty & Omega'},
-        code = {'CampfireCollective'},
-        team = {'Perkeocoin'}
-    },
+    ppu_artist = {'Kitty & Omega'},
+    ppu_coder = {'CampfireCollective'},
+    ppu_team = {'Perkeocoin'},
     loc_vars = function(self, info_queue, card)
         return {vars = {card.ability.extra.plincoins}}
     end,
@@ -1156,11 +1119,9 @@ SMODS.Consumable { --Subscription
     pools = {
         ['Czech'] = true
     },
-    hotpot_credits = {
-        art = {'Kitty & Omega'},
-        code = {'CampfireCollective'},
-        team = {'Perkeocoin'}
-    },
+    ppu_artist = {'Kitty & Omega'},
+    ppu_coder = {'CampfireCollective'},
+    ppu_team = {'Perkeocoin'},
     loc_vars = function(self, info_queue, card)
         return {vars = {card.ability.extra.plincoins}}
     end,
@@ -1211,11 +1172,10 @@ SMODS.Consumable { --Handful
     loc_vars = function(self, info_queue, card)
         return {vars = {card.ability.extra.plincoins, card.ability.extra.h_size}}
     end,
-    hotpot_credits = {
-        art = {'Omegaflowey18'},
-        code = {'CampfireCollective'},
-        team = {'Perkeocoin'}
-    },
+    
+    ppu_artist = {'Omegaflowey18'},
+    ppu_coder = {'CampfireCollective'},
+    ppu_team = {'Perkeocoin'},
 
     can_use = function(self, card)
         return true
@@ -1240,11 +1200,9 @@ SMODS.Consumable { --Czech Republic
     pools = {
         ['Czech'] = true
     },
-    hotpot_credits = {
-        art = {'Omegaflowey18'},
-        code = {'Opal'},
-        team = {'Perkeocoin'}
-    },
+    ppu_artist = {'Omegaflowey18'},
+    ppu_coder = {'Opal'},
+    ppu_team = {'Perkeocoin'},
     loc_vars = function(self, info_queue, card)
         return {vars = {card.ability.extra.cards}}
     end,
@@ -1299,11 +1257,9 @@ SMODS.Consumable { --Meteor
     pools = {
         ['Czech'] = true
     },
-    hotpot_credits = {
-        art = {'dottykitty'},
-        code = {'CampfireCollective'},
-        team = {'Perkeocoin'}
-    },
+    ppu_artist = {'dottykitty'},
+    ppu_coder = {'CampfireCollective'},
+    ppu_team = {'Perkeocoin'},
     loc_vars = function(self, info_queue, card)
         return {vars = {card.ability.extra.plincoins, card.ability.extra.levels, mostplayedhand()}}
     end,
@@ -1340,11 +1296,9 @@ SMODS.Consumable { --Yard Sale
     pools = {
         ['Czech'] = true
     },
-    hotpot_credits = {
-        art = {'Omegaflowey18'},
-        code = {'CampfireCollective'},
-        team = {'Perkeocoin'}
-    },
+    ppu_artist = {'Omegaflowey18'},
+    ppu_coder = {'CampfireCollective'},
+    ppu_team = {'Perkeocoin'},
     loc_vars = function(self, info_queue, card)
         return {vars = {card.ability.extra.plincoins, card.ability.extra.cards}}
     end,
@@ -1393,11 +1347,9 @@ SMODS.Consumable { --Mystery Box
     pools = {
         ['Czech'] = true
     },
-    hotpot_credits = {
-        art = {'Omegaflowey18'},
-        code = {'CampfireCollective'},
-        team = {'Perkeocoin'}
-    },
+    ppu_artist = {'Omegaflowey18'},
+    ppu_coder = {'CampfireCollective'},
+    ppu_team = {'Perkeocoin'},
     loc_vars = function(self, info_queue, card)
         return {vars = {card.ability.extra.plincoins, card.ability.extra.facedowns}}
     end,
@@ -1462,12 +1414,9 @@ SMODS.Booster {
     weight = 0.4,
     kind = 'hpot_czech',
     group_key = 'k_hpot_czech_pack',
-    hotpot_credits = {
-        art = {'Omegaflowey18'},
-        code = {'Opal'},
-        team = {'Perkeocoin'}
-    },
-
+    ppu_artist = {'Omegaflowey18'},
+    ppu_coder = {'Opal'},
+    ppu_team = {'Perkeocoin'},
     loc_vars = function(self, info_queue, card)
         return{vars={card.ability.choose, card.ability.extra}, key = self.key:sub(1, -3)}
     end,
@@ -1490,11 +1439,10 @@ SMODS.Booster {
     weight = 0.4,
     kind = 'hpot_czech',
     group_key = 'k_hpot_czech_pack',
-    hotpot_credits = {
-        art = {'Omegaflowey18'},
-        code = {'Opal'},
-        team = {'Perkeocoin'}
-    },
+    
+    ppu_artist = {'Omegaflowey18'},
+    ppu_coder = {'Opal'},
+    ppu_team = {'Perkeocoin'},
 
     loc_vars = function(self, info_queue, card)
         return{vars={card.ability.choose, card.ability.extra}, key = self.key:sub(1, -3)}
@@ -1518,11 +1466,10 @@ SMODS.Booster {
     weight = 0.4,
     kind = 'hpot_czech',
     group_key = 'k_hpot_czech_pack',
-    hotpot_credits = {
-        art = {'Omegaflowey18'},
-        code = {'Opal'},
-        team = {'Perkeocoin'}
-    },
+    
+    ppu_artist = {'Omegaflowey18'},
+    ppu_coder = {'Opal'},
+    ppu_team = {'Perkeocoin'},
 
     loc_vars = function(self, info_queue, card)
         return{vars={card.ability.choose, card.ability.extra}}
@@ -1546,11 +1493,10 @@ SMODS.Booster {
     weight = 0.1,
     kind = 'hpot_czech',
     group_key = 'k_hpot_czech_pack',
-    hotpot_credits = {
-        art = {'Omegaflowey18'},
-        code = {'Opal'},
-        team = {'Perkeocoin'}
-    },
+    
+    ppu_artist = {'Omegaflowey18'},
+    ppu_coder = {'Opal'},
+    ppu_team = {'Perkeocoin'},
 
     loc_vars = function(self, info_queue, card)
         return{vars={card.ability.choose, card.ability.extra}}
@@ -1578,11 +1524,9 @@ SMODS.Booster {
     weight = 0.4,
     kind = 'hpot_czech',
     group_key = 'k_hpot_czech_pack',
-    hotpot_credits = {
-        art = {'GoldenLeaf'},
-        code = {'Revo'},
-        team = {"Team Name"}
-    },
+    ppu_artist = {'GoldenLeaf'},
+    ppu_coder = {'Revo'},
+    ppu_team = {"Team Name"},
     create_card = function(self, card)
         return SMODS.create_card{
 			set = "Czech",
@@ -1606,11 +1550,9 @@ SMODS.Voucher {
     loc_vars = function(self, info_queue, card)
         return{vars={card.ability.dollar_cost}}
     end,
-    hotpot_credits = {
-        art = {'Omegaflowey18'},
-        code = {'stupid'},
-        team = {'Perkeocoin'}
-    },
+    ppu_artist = {'Omegaflowey18'},
+    ppu_coder = {'stupid'},
+    ppu_team = {'Perkeocoin'},
     redeem = function (self, card)
         G.GAME.plinko_dollars_cost = card.ability.dollar_cost
 
@@ -1632,11 +1574,9 @@ SMODS.Voucher {
         return{vars={}}
     end,
     unlocked = true,
-    hotpot_credits = {
-        art = {'dottykitty'},
-        code = {'stupid'},
-        team = {'Perkeocoin'}
-    },
+    ppu_artist = {'dottykitty'},
+    ppu_coder = {'stupid'},
+    ppu_team = {'Perkeocoin'},
     requires = {'v_hpot_currency_exchange'},
     redeem = function (self, card)
         if G.plinko then

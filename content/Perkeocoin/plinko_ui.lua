@@ -103,9 +103,7 @@ SMODS.Sound {
     "Music that plays while",
     "playing Plinko"
   },
-  hotpot_credits = {
-    team = { "Perkeocoin" }
-  }
+  ppu_team = { "Perkeocoin" }
 }
 
 SMODS.Sound {
@@ -122,9 +120,7 @@ SMODS.Sound {
 		"Music that plays when a stupid",
     "orb is selected in Plinko"
 	},
-  hotpot_credits = {
-    team = { "Perkeocoin" }
-  }
+  ppu_team = { "Perkeocoin" }
 }
 
 
