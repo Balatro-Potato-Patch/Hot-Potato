@@ -21,6 +21,7 @@ SMODS.Joker {
     },
     atlas = "oap_jokers",
     pos = { x = 4, y = 0 },
+    attributes = { 'xmult' },
     loc_vars = function(self, info_queue, card)
         local team = G.GAME.current_round.hpot_commit_farmer_team or "Sillyposting"
         local commits = card.ability.extra.commits[team:lower()] or 0

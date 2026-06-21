@@ -19,7 +19,7 @@ SMODS.Joker {
     blueprint_compat = true,
     perishable_compat = true,
     eternal_compat = false,
-    pools = { Food = true },
+    attributes = { 'food', 'hand_type', 'level_up' },
     calculate = function(self, card, context)
         if context.before
             and G.GAME.current_round.hands_left == 0

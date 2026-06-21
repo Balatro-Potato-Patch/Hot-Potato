@@ -22,6 +22,7 @@ SMODS.Joker {
             }
         }
     },
+    attributes = { 'xmult', 'rotating_effect' },
     loc_vars = function(self, info_queue, card)
         local nodes = {}
         for k, v in pairs(card.ability.extra.effects) do

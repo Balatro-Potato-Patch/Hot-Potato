@@ -5,6 +5,7 @@ SMODS.Joker {
     cost = 6,
     atlas = "oap_jokers",
     pos = { x = 2, y = 0 },
+    attributes = { 'generation', 'czechs' },
     calculate = function(self, card, context)
         if context.end_of_round and context.cardarea == G.jokers and not context.game_over and #G.consumeables.cards + G.GAME.consumeable_buffer < G.consumeables.config.card_limit then
             G.GAME.consumeable_buffer = G.GAME.consumeable_buffer + 1

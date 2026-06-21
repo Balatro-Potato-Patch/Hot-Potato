@@ -10,6 +10,7 @@ SMODS.Joker {
             money = 1
         }
     },
+    attributes = { 'economy', 'czechs' },
     loc_vars = function(self, info_queue, card)
         return { vars = { card.ability.extra.money, card.ability.extra.money * (G.GAME.consumeable_usage_total and G.GAME.consumeable_usage_total.czech or 0) } }
     end,

@@ -39,3 +39,23 @@ SMODS.Attribute {
 SMODS.Attribute {
     key = 'rotating_effect'
 }
+
+SMODS.Attribute {
+    key = 'bottlecaps'
+}
+
+SMODS.Attribute {
+    key = 'breeding'
+}
+
+SMODS.Attribute {
+    key = 'czechs'
+}
+
+SMODS.Attribute {
+    key = 'level_up'
+}
+
+SMODS.Attribute {
+    key = 'hanafuda'
+}

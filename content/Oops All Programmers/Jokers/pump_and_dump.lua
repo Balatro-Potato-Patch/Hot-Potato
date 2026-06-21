@@ -11,6 +11,7 @@ SMODS.Joker {
     atlas = "oap_jokers",
     pos = { x = 7, y = 0 },
     blueprint_compat = false,
+    attributes = { 'bitcoin', 'economy', },
     loc_vars = function(self, info_queue, card)
         local new_numerator, new_denominator = SMODS.get_probability_vars(card, 1, card.ability.extra.odds,
             'hpot_pump_and_dump')

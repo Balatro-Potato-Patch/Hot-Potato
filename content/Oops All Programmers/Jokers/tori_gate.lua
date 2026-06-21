@@ -11,6 +11,7 @@ SMODS.Joker {
             joy_hanafuda_count = 0
         }
     },
+    attributes = { 'chips', 'hanafuda' },
     loc_vars = function(self, info_queue, card)
         return { vars = { card.ability.extra.chips, card.ability.extra.chips * ((G.GAME.consumeable_usage_total and G.GAME.consumeable_usage_total.hanafuda or 0) + card.ability.extra.joy_hanafuda_count) } }
     end,

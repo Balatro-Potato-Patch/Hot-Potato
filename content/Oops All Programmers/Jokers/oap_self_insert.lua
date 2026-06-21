@@ -32,6 +32,7 @@ SMODS.Joker {
             xmult = 3
         },
     },
+    attributes = { 'rotating_effect' },
     set_ability = function(self, card, initial, delay_sprites)
         local chosen_index = pseudorandom('oap', 1, 7)
         card.ability.extra.effect = choices[chosen_index]

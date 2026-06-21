@@ -7,7 +7,8 @@ SMODS.Joker {
     pos = { x = 9, y = 0 },
     ppu_artist = { 'th30ne' },
     ppu_coder = { 'theAstra' },
-    ppu_team = { 'OAP' }
+    ppu_team = { 'OAP' },
+    attributes = { 'passive', 'joker' },
 }
 
 local atp = SMODS.add_to_pool

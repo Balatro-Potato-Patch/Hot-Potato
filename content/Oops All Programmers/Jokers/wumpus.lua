@@ -12,6 +12,7 @@ SMODS.Joker {
             money = 5,
         }
     },
+    attributes = { 'economy', 'destroy_card' },
     loc_vars = function(self, info_queue, card)
         return { vars = {  card.ability.extra.money } }
     end,

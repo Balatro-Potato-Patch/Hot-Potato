@@ -13,6 +13,7 @@ SMODS.Joker {
     },
     atlas = "oap_jokers",
     pos = { x = 3, y = 0 },
+    attributes = { 'xmult', 'destroy_card' },
     loc_vars = function(self, info_queue, card)
         return { vars = { card.ability.extra.gain, card.ability.extra.Xmult } }
     end,

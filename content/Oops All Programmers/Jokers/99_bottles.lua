@@ -10,6 +10,7 @@ SMODS.Joker {
             mult = 3
         }
     },
+    attributes = { 'mult', 'bottlecaps' },
     loc_vars = function(self, info_queue, card)
         return { vars = { card.ability.extra.mult, card.ability.extra.mult * (G.GAME.consumeable_usage_total and G.GAME.consumeable_usage_total.bottlecap or 0) } }
     end,

@@ -16,6 +16,7 @@ SMODS.Joker {
             gain = 1,
         }
     },
+    attributes = { 'xmult', 'scaling' },
     loc_vars = function(self, info_queue, card)
         return { vars = { card.ability.extra.Xmult, card.ability.extra.gain } }
     end,

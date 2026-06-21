@@ -6,6 +6,7 @@ SMODS.Joker {
     atlas = "oap_jokers",
     pos = { x = 5, y = 1 },
     config = { extra = { xmult = 1.75 } },
+    attributes = { 'xmult' },
     loc_vars = function(self, info_queue, card)
         if not card.ability.eternal then
             info_queue[#info_queue+1] = { key = "eternal", set = "Other" }
