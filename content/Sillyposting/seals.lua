@@ -31,9 +31,7 @@ SMODS.Seal {
         end
     end,
 
-    hotpot_credits = {
-        art = {'Supernova'},
-        code = {'Jaydchw'},
-        team = {'Sillyposting'}
-    },
+    ppu_artist = {'Supernova'},
+    ppu_coder = {'Jaydchw'},
+    ppu_team = {'Sillyposting'}
 }

@@ -67,11 +67,10 @@ SMODS.Joker { --Recycling
     discovered = true,
     atlas = 'SillypostingJokers',
 
-    hotpot_credits = {
-        art = { 'Jaydchw' },
-        code = { 'Victin' },
-        team = { 'Sillyposting' }
-    },
+    
+    ppu_artist = { 'Jaydchw' },
+    ppu_coder = { 'Victin' },
+    ppu_team = { 'Sillyposting' },
 
     loc_vars = function(self, info_queue, card)
         return {

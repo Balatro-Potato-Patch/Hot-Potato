@@ -22,9 +22,7 @@ SMODS.Edition { --doesnt have unique sound yet!
             }
         end
     end,
-    hotpot_credits = {
-        art = {"Supernova"},
-        code = {"Eris"},
-        team = {"Sillyposting"}
-    }
+    ppu_artist = {"Supernova"},
+    ppu_coder = {"Eris"},
+    ppu_team = {"Sillyposting"}
 }

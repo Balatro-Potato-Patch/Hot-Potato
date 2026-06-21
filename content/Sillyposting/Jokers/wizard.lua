@@ -20,9 +20,7 @@ SMODS.Joker {
     remove_from_deck = function (self, card, from_debuff)
         change_max_highlight(-card.ability.extra.bonus_highlight)
     end,
-    hotpot_credits = {
-        art = {"Jaydchw"},
-        code = {"Eris, UnusedParadox"},
-        team = {"Sillyposting"}
-    }
+    ppu_artist = {"Jaydchw"},
+    ppu_coder = {"Eris, UnusedParadox"},
+    ppu_team = {"Sillyposting"}
 }

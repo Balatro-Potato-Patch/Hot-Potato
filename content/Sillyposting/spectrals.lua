@@ -45,10 +45,7 @@ SMODS.Consumable {
         }))
     end,
 
-     hotpot_credits = {
-        art = {'Jaydchw', 'Supernova'},
-        code = {'Jaydchw'},
-        team = {'Sillyposting'}
-    },
-    
+    ppu_artist = {'Jaydchw', 'Supernova'},
+    ppu_coder = {'Jaydchw'},
+    ppu_team = {'Sillyposting'}
 }

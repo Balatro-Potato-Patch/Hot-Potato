@@ -1,3 +1,8 @@
+PotatoPatchUtils.Team {
+    name = 'Sillyposting',
+    colour = HEX('77269b')
+}
+
 -- There wasn't a better spot for me to put this - Astra
 SMODS.Atlas({ key = "SillypostingCredits", path = "Sillyposting/SillypostingCreditsCards.png", px = 71, py = 95, atlas_table = "ASSET_ATLAS" }):register()
 

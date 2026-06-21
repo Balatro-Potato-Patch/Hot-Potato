@@ -94,10 +94,8 @@ SMODS.Joker {
         end
     end,
 
-    hotpot_credits = {
-        art = {"Jaydchw"},
-        code = {"Jaydchw"},
-        team = {"Sillyposting"}
-    },
+    ppu_artist = {"Jaydchw"},
+    ppu_coder = {"Jaydchw"},
+    ppu_team = {"Sillyposting"},
 
 }

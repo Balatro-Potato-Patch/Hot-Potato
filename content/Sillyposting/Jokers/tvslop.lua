@@ -66,9 +66,7 @@ SMODS.Joker {
     in_pool = function (self, args)
         return G.GAME.pool_flags.tv_dinner_eaten
     end,
-    hotpot_credits = {
-        art = { 'UnusedParadox, Jaydchw' },
-        code = { 'Eris' },
-        team = { 'Sillyposting' }
-    },
+    ppu_artist = { 'UnusedParadox, Jaydchw' },
+    ppu_coder = { 'Eris' },
+    ppu_team = { 'Sillyposting' },
 }

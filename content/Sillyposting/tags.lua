@@ -28,11 +28,9 @@ SMODS.Tag {
             return true
         end
     end,
-    hotpot_credits = {
-        art = {'Jaydchw'},
-        code = {'UnusedParadox'},
-        team = {'Sillyposting'}
-    },
+    ppu_artist = {'Jaydchw'},
+    ppu_coder = {'UnusedParadox'},
+    ppu_team = {'Sillyposting'}
 }
 SMODS.Tag {
     key = "plincoin",
@@ -58,9 +56,7 @@ SMODS.Tag {
             end
         end
     end,
-    hotpot_credits = {
-        art = {'Supernova'},
-        code = {'UnusedParadox'},
-        team = {'Sillyposting'}
-    },
+    ppu_artist = {'Supernova'},
+    ppu_coder = {'UnusedParadox'},
+    ppu_team = {'Sillyposting'}
 }

@@ -25,9 +25,8 @@ SMODS.Joker {
     calc_plincoin_bonus = function(self, card)
         return card.ability.extra.coins
     end,
-    hotpot_credits = {
-        art = {"Jaydchw"},
-        code = {"UnusedParadox"},
-        team = {"Sillyposting"}
-    }
+    
+    ppu_artist = {"Jaydchw"},
+    ppu_coder = {"UnusedParadox"},
+    ppu_team = {"Sillyposting"}
 }
