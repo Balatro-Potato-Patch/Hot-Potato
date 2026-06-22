@@ -375,9 +375,9 @@ function HotPotato.localize(args, misc_cat)
             local final_name_assembled_string = ''
             if args.type == 'name' and loc_target.name_parsed then
                 for _, part in ipairs(lines) do
-                    local assembled_string_pppu_artist = ''
+                    local assembled_string_part = ''
                     for _, subpart in ipairs(part.strings) do
-                        assembled_string_pppu_artist = assembled_string_part..(type(subpart) == 'string' and subpart or format_ui_value(format_ui_value(args.vars[tonumber(subpart[1])])) or 'ERROR')
+                        assembled_string_part = assembled_string_part..(type(subpart) == 'string' and subpart or format_ui_value(format_ui_value(args.vars[tonumber(subpart[1])])) or 'ERROR')
                     end
                     final_name_assembled_string = final_name_assembled_string..assembled_string_part
                 end

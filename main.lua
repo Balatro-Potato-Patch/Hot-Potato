@@ -390,7 +390,7 @@ HotPotato.generate_credit_UIBox = function(team)
 						end
 					})
 					card.cantclicklmao = true
-					G.FUNCS.nxkclick()
+					G.FUNCS.krisclick()
 				end
 				Moveable.click(self)
 			end
