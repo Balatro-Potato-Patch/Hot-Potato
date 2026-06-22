@@ -5,6 +5,7 @@ SMODS.Joker:take_ownership("j_joker", {
 	rarity = "hpot_creditable",
 	blueprint_compat = true,
 	cost = 0,
+    attributes = { 'generation' },
 	loc_vars = function(self, info_queue, card)
 		if JoyousSpring and not JoyousSpring.config.disable_tooltips and not card.fake_card and not card.debuff then
 			info_queue[#info_queue + 1] = { set = "Other", key = "joy_tooltip_revive" }
@@ -65,6 +66,7 @@ SMODS.Joker({
 	pools = {
 		CreditablePool = true,
 	},
+    attributes = { 'joker_slot' },
 	loc_vars = function(self, info_queue, card)
 		return { vars = { card.ability.extra.slots } }
 	end,
@@ -132,6 +134,7 @@ SMODS.Joker({
 	pools = {
 		CreditablePool = true,
 	},
+    attributes = { 'modify_card' },
 	add_to_deck = function(self, card, from_debuff)
 		G.E_MANAGER:add_event(Event({
 			func = function()
@@ -173,6 +176,7 @@ SMODS.Joker({
 	},
 	cost = 0,
 	credits = 600,
+    attributes = { 'copying' },
 	calculate = function(self, card, context)
 		local ret = SMODS.blueprint_effect(card, G.jokers.cards[1], context)
 		local ret2 = SMODS.blueprint_effect(card, G.jokers.cards[#G.jokers.cards], context)
@@ -218,6 +222,7 @@ SMODS.Joker({
 	pools = {
 		CreditablePool = true,
 	},
+    attributes = { 'xmult' },
 	loc_vars = function(self, info_queue, card)
 		return { vars = { card.ability.extra.xmult } }
 	end,

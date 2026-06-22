@@ -67,3 +67,7 @@ SMODS.Attribute {
 SMODS.Attribute {
     key = 'reforge'
 }
+
+SMODS.Attribute {
+    key = 'stickers'
+}

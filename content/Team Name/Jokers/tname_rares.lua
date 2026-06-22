@@ -112,6 +112,7 @@ SMODS.Joker {
 	rarity = 3,
 	cost = 0,
 	credits = 300,
+    attributes = { 'rotating_effect' },
 	config = {
 		extra = {
 			functions = { -- values for your stuff, like card.ability.extra[whatever]
@@ -178,6 +179,7 @@ SMODS.Joker({
     cost = 6,
 	pos = {x=9,y=0},
 	atlas = "tname_jokers2",
+    attributes = { 'stickers', 'xmult' },
 	loc_vars = function(self, info_queue, card)
 		local hpt = card.ability.extra
 			return {
@@ -231,6 +233,7 @@ SMODS.Joker({
 	end,
 	pos = {x=11,y=0},
 	atlas = "tname_jokers2",
+    attributes = { 'suit', 'hanafuda' },
 	calculate = function(self, card, context)
 		local bool = false
 		if context.joker_main then
@@ -278,6 +281,7 @@ SMODS.Joker({
     perishable_compat = false,
 	pos = {x=1,y=1},
 	atlas = "tname_jokers2",
+    attributes = { 'xmult', 'scaling' },
 	loc_vars = function(self, info_queue, card)
 		local hpt = card.ability.extra
 			return {

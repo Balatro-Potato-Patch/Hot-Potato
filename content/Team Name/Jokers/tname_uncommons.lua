@@ -13,6 +13,7 @@ SMODS.Joker({
 		x = 0,
 		y = 0
 	},
+    attributes = { 'stickers', 'mult' },
 	loc_vars = function(self, info_queue, card)
 		local hpt = card.ability.extra
 		if G.jokers and G.jokers.cards then
@@ -56,6 +57,7 @@ SMODS.Joker({
 	},
     cost = 7,
     config = { extra = { max = 45, min = -20 } },
+    attributes = { 'credits', 'economy' },
     loc_vars = function(self, info_queue, card)
         local r_mults = {}
 		local jank = ""
@@ -68,7 +70,7 @@ SMODS.Joker({
             r_mults[#r_mults + 1] = jank..math.abs(i)
         end
         local loc_mult = {string = ' ', colour = G.GAME.seeded and G.C.ORANGE or G.C.PURPLE}
-        local main_stppu_artist = {
+        local main_start = {
             { n = G.UIT.O, config = { object = DynaText({ string = r_mults, colours = { G.GAME.seeded and G.C.ORANGE or G.C.PURPLE }, pop_in_rate = 9999999, silent = true, random_element = true, pop_delay = 0.5, scale = 0.32, min_cycle_time = 0 }) } },
             {
                 n = G.UIT.O,
@@ -89,7 +91,7 @@ SMODS.Joker({
                 }
             },
         }
-        return { main_stppu_artist = main_start }
+        return { main_start = main_start }
     end,
 	calculate = function(self, card, context)
 		local fuck = pseudorandom("fuck", card.ability.extra.min, card.ability.extra.max)
@@ -121,6 +123,7 @@ SMODS.Joker({
 	},
 	pos = {x=6,y=0},
 	atlas = "tname_jokers2",
+    attributes = { 'economy', 'stickers', 'joker' },
 	loc_vars = function(self, info_queue, card)
 		local hpt = card.ability.extra
 		if G.jokers and G.jokers.cards then
@@ -168,6 +171,7 @@ SMODS.Joker({
     cost = 5,
 	pos = {x=7,y=0},
 	atlas = "tname_jokers2",
+    attributes = { 'xmult', 'stickers' },
 	loc_vars = function(self, info_queue, card)
 		local hpt = card.ability.extra
 			return {
@@ -223,6 +227,7 @@ SMODS.Joker({
     cost = 6,
 	pos = {x=8,y=0},
 	atlas = "tname_jokers2",
+    attributes = { 'credits', 'xmult', 'hands' },
 	loc_vars = function(self, info_queue, card)
 		local key
 		local fucking = G.GAME.seeded and "_budget" or ""
@@ -282,6 +287,7 @@ SMODS.Joker({
 	end,
 	pos = {x=2,y=1},
 	atlas = "tname_jokers2",
+    attributes = { 'xmult', 'scaling', 'hands' },
 	calculate = function(self, card, context)
 		local hpt = card.ability.extra
 		if context.joker_type_destroyed then
@@ -329,6 +335,7 @@ SMODS.Joker({
 	end,
 	pos = {x=10,y=0},
 	atlas = "tname_jokers2",
+    attributes = { 'modify_card' },
 	calculate = function(self, card, context)
 		if context.ending_shop and G.consumeables.cards[1] and not context.blueprint then
             local cards_to_replace = {}
