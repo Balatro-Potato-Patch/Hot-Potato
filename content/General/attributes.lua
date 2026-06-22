@@ -59,3 +59,7 @@ SMODS.Attribute {
 SMODS.Attribute {
     key = 'hanafuda'
 }
+
+SMODS.Attribute {
+    key = 'plinko'
+}

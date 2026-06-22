@@ -68,6 +68,7 @@ SMODS.Joker{ --19 plincoin fortnite card
     unlocked = true,
     discovered = true,
     atlas = 'perkeocoinjokers',
+    attributes = { 'plincoin', 'boss_blind' },
 
     ppu_artist = {'dottykitty'},
     ppu_coder = {'CampfireCollective'},
@@ -134,6 +135,7 @@ SMODS.Joker{ --Plink
     unlocked = true,
     discovered = true,
     atlas = 'perkeocoinjokers',
+    attributes = { 'mult', 'plinko' },
 
     ppu_artist = {'dottykitty'},
     ppu_coder = {'CampfireCollective'},
@@ -173,6 +175,7 @@ SMODS.Joker{ --Metal Detector
     unlocked = true,
     discovered = true,
     atlas = 'perkeocoinjokers',
+    attributes = { 'bottlecaps', 'generation' },
     
     ppu_artist = {'dottykitty'},
     ppu_coder = {'CampfireCollective'},
@@ -232,6 +235,7 @@ SMODS.Joker{ --Tribcoin
     unlocked = true,
     discovered = true,
     atlas = 'perkeocoinjokers',
+    attributes = { 'xmult', 'plincoin' },
     
     ppu_artist = {'Omegaflowey18'}, 
     ppu_coder = {'CampfireCollective'},
@@ -270,6 +274,7 @@ SMODS.Joker{ --Adspace
     unlocked = true,
     discovered = true,
     atlas = 'perkeocoinjokers',
+    attributes = { 'chips', 'ads' },
     
     ppu_artist = {'dottykitty'},
     ppu_coder = {'CampfireCollective'},
@@ -303,6 +308,7 @@ SMODS.Joker{ -- Kitchen Gun
     perishable_compat = false,
     unlocked = true,
     discovered = true,
+    attributes = { 'ads', 'chance', 'xmult' },
 
     ppu_artist = {'dottykitty'},
     ppu_coder = {'Opal'},
@@ -389,13 +395,13 @@ SMODS.Joker{ --TV Dinner
     },
     cost = 6,
     rarity = 1,
-    pools = { Food = true },
     blueprint_compat = true,
     eternal_compat = false,
     perishable_compat = true,
     unlocked = true,
     discovered = true,
     atlas = "TeamNameAnims1",
+    attributes = { 'food', 'mult', 'ads' },
     
     ppu_artist = {'Omegaflowey18'},
     ppu_coder = {'CampfireCollective'},
@@ -455,6 +461,7 @@ SMODS.Joker{ --Free To Use
     unlocked = true,
     discovered = true,
     atlas = 'perkeocoinjokers',
+    attributes = { 'retrigger', 'ads', 'chance' },
     
     ppu_artist = {'Omegaflowey18'},
     ppu_coder = {'CampfireCollective'},
@@ -498,6 +505,7 @@ SMODS.Joker{ --Direct Deposit
     unlocked = true,
     discovered = true,
     atlas = 'perkeocoinjokers',
+    attributes = { 'economy', 'plincoin' },
 
     ppu_artist = {'dottykitty'},
     ppu_coder = {'CampfireCollective'},
@@ -552,6 +560,7 @@ SMODS.Joker{ --Bank Teller
     unlocked = true,
     discovered = true,
     atlas = 'perkeocoinjokers',
+    attributes = { 'generation', 'czechs' },
 
     ppu_artist = {'dottykitty'},
     ppu_coder = {'CampfireCollective'},
@@ -603,6 +612,7 @@ SMODS.Joker{ --Balatro **PREMIUM**
     unlocked = true,
     discovered = true,
     atlas = 'perkeocoinjokers',
+    attributes = { 'passive', 'ads' },
 
     ppu_artist = {'Omegaflowey18'},
     ppu_coder = {'CampfireCollective'},
@@ -660,6 +670,7 @@ SMODS.Joker{ --Skimming
     unlocked = true,
     discovered = true,
     atlas = 'perkeocoinjokers',
+    attributes = { 'economy', 'ads' },
 
     ppu_artist = {'dottykitty'},
     ppu_coder = {'CampfireCollective'},
@@ -713,6 +724,7 @@ SMODS.Joker{ --Recycling
     unlocked = true,
     discovered = true,
     atlas = 'perkeocoinjokers',
+    attributes = { 'economy', 'bottlecaps' },
 
     ppu_artist = {'dottykitty'},
     ppu_coder = {'CampfireCollective'},
@@ -750,6 +762,7 @@ SMODS.Joker{ --Don't Touch That Dial!
     unlocked = true,
     discovered = true,
     atlas = 'perkeocoinjokers',
+    attributes = { 'plincoin', 'ads', 'discards' },
 
     ppu_artist = {'Omegaflowey18'},
     ppu_coder = {'CampfireCollective'},
@@ -791,6 +804,7 @@ SMODS.Joker{ --Tipping Point
     unlocked = true,
     discovered = true,
     atlas = 'perkeocoinjokers',
+    attributes = { 'plinko', 'passive' },
 
     ppu_artist = {'Omegaflowey18'},
     ppu_coder = {'stupid'},
