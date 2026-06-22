@@ -18,13 +18,13 @@ SMODS.Joker {
     hpot_anim_extra = {
         { xrange = { first = 4, last = 11 }, y = 1, t = 0.15 }
     },
-    pools = { Food = true },
     blueprint_compat = false,
     eternal_compat = false,
     perishable_compat = true,
     unlocked = true,
     discovered = true,
     atlas = 'TeamNameAnims1',
+    attributes = { 'food', 'modify_card' },
     calculate = function (self, card, context)
         if context.using_consumeable and context.consumeable.ability.max_highlighted and not context.blueprint then
             if to_number(card.ability.extra.uses_left - 1) <= 0 then 

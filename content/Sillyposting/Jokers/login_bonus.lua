@@ -27,6 +27,7 @@ SMODS.Joker {
     unlocked = true,
     discovered = true,
     atlas = 'SillypostingJokers',
+    attributes = { 'plincoins', 'economy' },
     calc_plincoin_bonus = function(self, card)
         local cycle = card.ability.extra.current_cycle
         if to_number(card.ability.extra.rewards[cycle].plincoins) > 0 then return card.ability.extra.rewards[cycle].plincoins else return nil end

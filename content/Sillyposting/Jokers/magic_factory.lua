@@ -7,6 +7,7 @@ SMODS.Joker {
     atlas = "SillypostingJokers",
     pos = { x = 6, y = 0 },
     config = { extra = { bonus_highlight = -1, consumable_req = 2 } },
+    attributes = { 'generation', 'modify_card' },
     loc_vars = function (self, info_queue, card)
         return { vars = { card.ability.extra.consumable_req, math.abs(card.ability.extra.bonus_highlight) } }
     end,

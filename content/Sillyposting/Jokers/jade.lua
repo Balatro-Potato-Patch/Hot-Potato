@@ -22,6 +22,7 @@ SMODS.Joker {
             add_round_eval_plincoins({ name='plincoins', plincoins = card.ability.extra.coins })
         end
     end,]]--
+    attributes = { 'economy', 'plincoin' },
     calc_plincoin_bonus = function(self, card)
         return card.ability.extra.coins
     end,

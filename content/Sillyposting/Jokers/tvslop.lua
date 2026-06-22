@@ -27,11 +27,11 @@ SMODS.Joker {
     },
     rarity = 1,
     cost = 4,
-    pools = { Food = true },
     discovered = true,
     blueprint_compat = true,
     eternal_compat = false,
     perishable_compat = true,
+    attributes = { 'xmult', 'food', 'ads' },
     calculate = function(self, card, context)
         if context.joker_main then
             return {

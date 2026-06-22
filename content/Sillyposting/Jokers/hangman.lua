@@ -66,7 +66,7 @@ SMODS.Joker { --Recycling
     unlocked = true,
     discovered = true,
     atlas = 'SillypostingJokers',
-
+    attributes = { 'rank', 'economy' },
     
     ppu_artist = { 'Jaydchw' },
     ppu_coder = { 'Victin' },

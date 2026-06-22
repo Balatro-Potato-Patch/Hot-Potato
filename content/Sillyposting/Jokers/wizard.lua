@@ -9,6 +9,7 @@ SMODS.Joker {
     atlas = "SillypostingJokers",
     pos = { x = 0, y = 0 },
     config = { extra = { bonus_highlight = 1 } },
+    attributes = { 'modify_card' },
     loc_vars = function (self, info_queue, card)
         local key = self.key
         local append = (card.ability.extra.bonus_highlight == math.floor(card.ability.extra.bonus_highlight)) and "" or "_rounded"

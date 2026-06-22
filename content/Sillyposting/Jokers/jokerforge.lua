@@ -8,6 +8,7 @@ SMODS.Joker {
     atlas = "SillypostingJokers",
     pos = { x = 1, y = 0 },
     discovered = true,
+    attributes = { 'generation', 'joker' },
 
     --society if create_card had an options field
     -- there is probably a better way to do this but i just copied the joker code for expansion pack joker from more fluff
