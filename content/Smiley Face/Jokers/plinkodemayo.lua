@@ -13,6 +13,7 @@ SMODS.Joker {
     cost = 5,
     atlas = "smiley_jokers",
     pos = {x=2,y=1},
+    attributes = { 'economy', 'plincoins', 'rank', 'five' },
     ppu_artist = {"RGBeet"},
     ppu_coder = {"notmario"},
     ppu_team = {":)"},

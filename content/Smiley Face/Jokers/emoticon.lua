@@ -16,6 +16,7 @@ SMODS.Joker {
     ppu_artist = {"RGBeet"},
     ppu_coder = {"PokéRen"},
     ppu_team = {":)"},
+    attributes = { 'xmult', 'face' },
     calculate = function(self, card, context)
         if context.individual and context.cardarea == G.play and context.other_card:is_face(false,{ignore_emoticon = true}) then
             if context.other_card.debuff then

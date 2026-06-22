@@ -16,6 +16,7 @@ SMODS.Joker {
     cost = 4,
     atlas = "smiley_jokers",
     pos = {x=0,y=1},
+    attributes = { 'food', 'mult', 'face' },
     ppu_artist = {"RGBeet"},
     ppu_coder = {"notmario"},
     ppu_team = {":)"},

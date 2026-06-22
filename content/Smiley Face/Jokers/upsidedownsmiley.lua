@@ -13,6 +13,7 @@ SMODS.Joker {
     cost = 5,
     atlas = "smiley_jokers",
     pos = {x=0,y=0},
+    attributes = { 'mult', 'face' },
     ppu_coder = {"PokéRen"},
     ppu_team = {":)"},
     calculate = function(self, card, context)
