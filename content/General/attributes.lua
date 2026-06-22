@@ -63,3 +63,7 @@ SMODS.Attribute {
 SMODS.Attribute {
     key = 'plinko'
 }
+
+SMODS.Attribute {
+    key = 'reforge'
+}

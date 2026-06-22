@@ -8,6 +8,7 @@ SMODS.Joker {
     ppu_artist = { 'Tacashumi' },
     ppu_coder = { 'SDM_0' },
     ppu_team = { 'Pissdrawer' },
+    attributes = { 'plinko', 'bottlecaps', 'czechs' },
     calculate = function(self, card, context)
         if context.using_consumeable and context.consumeable and G.plinko_rewards and context.area == G.plinko_rewards then
             if context.consumeable.ability.set == 'bottlecap' and context.consumeable.ability.extra.chosen == 'Bad' then
@@ -72,6 +73,7 @@ SMODS.Joker {
     ppu_artist = { 'deadbeet' },
     ppu_coder = { 'SDM_0' },
     ppu_team = { 'Pissdrawer' },
+    attributes = { 'joker', 'xmult' },
     calculate = function(self, card, context)
         if context.other_joker and context.other_joker.ability.is_nursery_smalled then
             return {
@@ -193,6 +195,7 @@ SMODS.Joker {
     blueprint_compat = false,
     eternal_compat = false,
     perishable_compat = true,
+    attributes = { 'credits', 'economy', 'rotating_effect' },
     loc_vars = function(self, info_queue, card)
         local key
         local fucking = G.GAME.seeded and "_budget" or ""
@@ -282,6 +285,7 @@ SMODS.Joker {
     blueprint_compat = true,
     atlas = 'pdr_joker',
     pos = { x = 5, y = 0 },
+    attributes = { 'modify_card', 'chips' },
     calculate = function(self, card, context)
         if context.individual and context.cardarea == G.hand and not context.end_of_round then
             context.other_card.ability.perma_bonus = context.other_card.ability.perma_bonus + card.ability.extra.chips
@@ -306,6 +310,7 @@ SMODS.Joker {
     ppu_artist = { 'SDM_0' },
     ppu_coder = { 'SDM_0' },
     ppu_team = { 'Pissdrawer' },
+    attributes = { 'reforge', 'passive' },
     add_to_deck = function(self, card, from_debuff)
         G.GAME.goblin_acquired = true
     end,
@@ -358,13 +363,13 @@ SMODS.Joker {
 
 SMODS.Joker {
     key = "vremade_joker",
-    ppu_artist = { "LocalThunk" },
     ppu_coder = { "N'" },
     ppu_team = { "Pissdrawer" },
     rarity = 1,
     blueprint_compat = true,
     cost = 2,
     config = { extra = { mult = 4 }, },
+    attributes = { 'mult' },
     loc_vars = function(self, info_queue, card)
         return { vars = { card.ability.extra.mult } }
     end,
@@ -422,6 +427,7 @@ SMODS.Joker {
     rarity = 4,
     cost = 0,
     discovered = true,
+    attributes = { 'xmult', 'delivery' },
     in_pool = function(self, args)
         return false
     end
@@ -442,6 +448,7 @@ SMODS.Joker {
     pos = { x = 4, y = 1 },
     rarity = 2,
     blueprint_compat = true,
+    attributes = { 'discards', 'full_deck' },
     calculate = function(self, card, context)
         if context.setting_blind then
             G.E_MANAGER:add_event(Event({
@@ -477,6 +484,7 @@ SMODS.Joker {
     pos = { x = 6, y = 1 },
     rarity = 2,
     blueprint_compat = true,
+    attributes = { 'hands', 'full_deck' },
     calculate = function(self, card, context)
         if context.setting_blind then
             G.E_MANAGER:add_event(Event({
@@ -512,6 +520,7 @@ SMODS.Joker {
     pos = { x = 7, y = 1 },
     rarity = 2,
     blueprint_compat = true,
+    attributes = { 'economy', 'full_deck' },
     calculate = function(self, card, context)
         if context.setting_blind then
             G.E_MANAGER:add_event(Event({
@@ -554,6 +563,7 @@ SMODS.Joker {
     rarity = 3,
     blueprint_compat = false,
     cost = 8,
+    attributes = { 'modify_card', 'joker' },
     calculate = function(self, card, context)
         if context.setting_blind and not context.blueprint then
             local area = card.area or G.jokers
