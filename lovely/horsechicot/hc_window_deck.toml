@@ -37,10 +37,10 @@ match_indent = true
 target = '''=[SMODS _ "src/utils.lua"]'''
 position = 'at'
 pattern = '''
-if operator and (type(G.GAME.current_scoring_calculation.colour) == 'function' or type(G.GAME.current_scoring_calculation.text) == 'function') then operator.UIBox:recalculate() end
+if operator and (first or (type(G.GAME.current_scoring_calculation.colour) == 'function' or type(G.GAME.current_scoring_calculation.text) == 'function')) then operator.UIBox:recalculate() end
 '''
 payload = '''
-if operator and (type(G.GAME.current_scoring_calculation.colour) == 'function' or type(G.GAME.current_scoring_calculation.text) == 'function') or G.bypass_scoring_ui then operator.UIBox:recalculate() end
+if operator and (first or (type(G.GAME.current_scoring_calculation.colour) == 'function' or type(G.GAME.current_scoring_calculation.text) == 'function')) or G.bypass_scoring_ui then operator.UIBox:recalculate() end
 G.bypass_scoring_ui = nil
 '''
 match_indent = true

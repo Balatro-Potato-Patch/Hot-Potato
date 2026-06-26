@@ -10,7 +10,7 @@ priority = 0
 target = "functions/common_events.lua"
 position = "at"
 pattern = """
-table.insert(left_text, {n=G.UIT.O, config={object = DynaText({string = localize{type = 'name_text', set = config.card.config.center.set, key = config.card.config.center.key}, colours = {G.C.FILTER}, shadow = true, pop_in = 0, scale = 0.6*scale, silent = true})}})
+table.insert(left_text, {n=G.UIT.O, config={object = DynaText({string = loc_opts.text or localize{type = 'name_text', set = loc_opts.set or config.card.config.center.set, key = loc_opts.key or config.card.config.center.key, vars = vars}, colours = {loc_opts.text_colour or G.C.FILTER}, shadow = true, pop_in = 0, scale = (loc_opts.scale or 0.6)*scale, silent = true})}})
 """
 payload = '''
 table.insert(left_text, {
@@ -20,16 +20,17 @@ table.insert(left_text, {
             string = (
                 config.card.config.center.key == 'j_hpot_child'
                 and config.card.ability.name
+                or loc_opts.text
                 or localize{
                     type = 'name_text',
-                    set = config.card.config.center.set,
-                    key = config.card.config.center.key
+                    set = loc_opts.set or config.card.config.center.set,
+                    key = loc_opts.key or config.card.config.center.key
                 }
             ),
-            colours = {G.C.FILTER},
+            colours = {loc_opts.text_colour or G.C.FILTER},
             shadow = true,
             pop_in = 0,
-            scale = 0.6 * scale,
+            scale = (loc_opts.scale or 0.6) * scale,
             silent = true
         })
     }

@@ -39,6 +39,6 @@ match_indent = true
 [patches.pattern]
 target = '=[SMODS _ "src/utils.lua"]'
 position = 'after'
-pattern = '''    if t.edition then _card:set_edition(t.edition) end'''
+pattern = '''if t.edition then _card:set_edition(t.edition, nil, t.silent.edition) end'''
 payload = '''if t.hp_jtem_silent_edition then _card:set_edition(t.hp_jtem_silent_edition, true, true) end'''
 match_indent = true

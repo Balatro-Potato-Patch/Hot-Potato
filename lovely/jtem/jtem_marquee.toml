@@ -100,14 +100,6 @@ match_indent = true
 
 [[patches]]
 [patches.pattern]
-target = 'game.lua'
-pattern = '''    love.graphics.setCanvas{self.CANVAS}'''
-position = "at"
-payload = '''love.graphics.setCanvas{self.CANVAS, stencil = true}'''
-match_indent = true
-
-[[patches]]
-[patches.pattern]
 target = 'engine/text.lua'
 pattern = '''    if self.config.spacing then love.graphics.translate(self.config.spacing*self.font.FONTSCALE/G.TILESIZE, 0) end'''
 position = "before"

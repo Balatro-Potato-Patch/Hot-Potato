@@ -6,12 +6,14 @@ priority = 0
 [[patches]]
 [patches.pattern]
 target = 'functions/state_events.lua'
-position = 'after'
+position = 'at'
 pattern = '''
-else
     draw_card(G.deck,G.hand, i*100/hand_space,'up', true, cards_to_draw[i])
+end
 '''
 payload = '''
+    draw_card(G.deck,G.hand, i*100/hand_space,'up', true, cards_to_draw[i])
     SMODS.calculate_context({post_draw_individual = true, card = cards_to_draw[i]})
+end
 '''
 match_indent = true

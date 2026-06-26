@@ -55,7 +55,7 @@ match_indent = true
 [patches.pattern]
 target = 'card.lua'
 position = 'after'
-pattern = '''G.STATE = G.STATES.BUFFOON_PACK'''
+pattern = '''G.STATE = G.STATES.SMODS_BOOSTER_OPENED'''
 payload = '''   G.GAME.pack_size = self.ability.extra
 elseif card.kind == 'hpot_czech' then
     G.STATE = G.STATES.CZECH_PACK'''

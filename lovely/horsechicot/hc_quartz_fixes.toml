@@ -66,11 +66,11 @@ match_indent = true
 target = '''=[SMODS _ "src/overrides.lua"]'''
 position = 'at'
 pattern = '''
-local node_def = {n = G.UIT.R, config = {align = "cm", minh = 0.3, maxw = 4.2}, nodes = {
+node_def = {n = G.UIT.R, config = {align = "cm", minh = 0.3, maxw = 4.2}, nodes = {
 				{n = G.UIT.T, config = {ref_table = G.GAME.blind.loc_debuff_lines, ref_value = i, scale = scale * 0.9, colour = G.C.UI.TEXT_LIGHT}}}}
 '''
 payload = '''
-local node_def = {n = G.UIT.R, config = {align = "cm", minh = 0.3, maxw = 4.2}, nodes = {
+node_def = {n = G.UIT.R, config = {align = "cm", minh = 0.3, maxw = 4.2}, nodes = {
 				{n = G.UIT.T, config = {ref_table = G.GAME.blind.loc_debuff_lines, ref_value = i, font = HotPotato.get_blind_font(G.GAME.blind), scale = scale * 0.9, colour = G.C.UI.TEXT_LIGHT}}}}
 '''
 match_indent = true
