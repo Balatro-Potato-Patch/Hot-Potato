@@ -66,7 +66,9 @@ SMODS.Voucher {
 			}
 		}
 	end,
-	
+	redeem = function(self, card)
+		G.GAME.reforge_discount = G.GAME.reforge_discount + card.ability.extra.discount_in_dollars
+	end,
     ppu_artist = {'GhostSalt'},
     ppu_coder = {'Revo'},
     ppu_team = {'Team Name'}
@@ -91,7 +93,9 @@ SMODS.Voucher {
 	requires = {
 		'v_hpot_ref_dollars'
 	},
-	
+	redeem = function(self, card)
+		G.GAME.reforge_discount = G.GAME.reforge_discount + card.ability.extra.discount_in_dollars
+	end,
     ppu_artist = {'GhostSalt'},
     ppu_coder = {'Revo'},
     ppu_team = {'Team Name'}

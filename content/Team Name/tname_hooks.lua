@@ -58,6 +58,8 @@ Game.init_game_object = function(self)
     ret.cost_plincoin_default = 3
     ret.cost_cryptocurrency_default = 2
 
+    ret.reforge_discount = 0
+
     -- ret.sticker_timer = 0
 
     ret.current_team_name_member = 1

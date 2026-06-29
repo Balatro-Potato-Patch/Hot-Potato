@@ -282,8 +282,7 @@ function reforge_cost(card)
 		end
 	end
 
-    local discount = reforge_discounts()
-    local cost_final = cost_after_quality_check - discount
+    local cost_final = cost_after_quality_check - G.GAME.reforge_discount
 
     return math.max(minimum_cost, cost_final)
 end
@@ -358,25 +357,6 @@ function final_ability_values(card) -- save the card's final values ( so it scal
     card.ability.reforge_cryptocurrency = G.GAME.cost_cryptocurrency - G.GAME.cost_cryptocurrency_default
 
     card.saved_last_reforge = true
-end
-
---- Totals up all of the flat-rate discounts available for reforging. Feel free to list more here when needed.
-function reforge_discounts()
-    local total = 0
-
-    if G.GAME.used_vouchers["v_hpot_costcutting"] then -- discarded voucher feel free to add it
-        total = total + 2
-    end
-	
-	if G.GAME.used_vouchers["v_hpot_ref_dollars"] then
-		total = total + 2
-	end
-	
-	if G.GAME.used_vouchers["v_hpot_ref_joker_exc"] then
-		total = total + 3
-	end
-	
-    return total
 end
 
 --- Converts currency from one type into another type.
