@@ -120,7 +120,9 @@ end
 
 function PlinkoLogic.f.won_reward(reward_num)
   assert(type(reward_num) == "number", "won_reward must be called with a number")
-  
+
+  PlinkoLogic.STATE = PlinkoLogic.STATES.REWARD
+
   G.E_MANAGER:add_event(Event({
       trigger = 'after', delay = 0.5,
       func = function()

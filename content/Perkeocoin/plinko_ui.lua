@@ -387,6 +387,41 @@ G.FUNCS.can_plinko_dollars = function(e)
   end
 end
 
+G.FUNCS.reset_plinko = function(e)
+    G.E_MANAGER:add_event(Event({
+      trigger = 'after',
+      func = function()
+        PlinkoGame.f.remove_balls()
+          return true
+        end
+    }))
+    G.E_MANAGER:add_event(Event({
+        func = function()
+        PlinkoLogic.f.reset_plinko()
+          return true;
+        end
+    }))
+end
+
+-- Reset button - inactive when game isn't in progress
+G.FUNCS.can_reset_plinko = function(e)
+  if PlinkoLogic.STATE == PlinkoLogic.STATES.IN_PROGRESS then
+      e.config.colour = G.C.RED
+      e.config.button = 'reset_plinko'
+      e.config.hover = true
+      for _, child in ipairs(e.children[1].children) do
+        child.children[1].config.object.colours = {G.C.UI.TEXT_LIGHT}
+      end
+  else
+      e.config.colour = G.C.UI.BACKGROUND_INACTIVE
+      e.config.button = nil
+      e.config.hover = nil
+      for _, child in ipairs(e.children[1].children) do
+        child.children[1].config.object.colours = {G.C.UI.TEXT_INACTIVE}
+      end
+  end
+end
+
 -- Shop button logic - inactive when game isn't idle
 G.FUNCS.can_hide_plinko = function(e)
   if PlinkoLogic.STATE ~= PlinkoLogic.STATES.IDLE then

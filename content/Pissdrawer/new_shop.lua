@@ -1658,7 +1658,22 @@ function PissDrawer.Shop.plinko()
                                                         {n=G.UIT.R, config = {minw=0.5}}
                                                     }}
                                                 }},
-                                            }},
+                                                {n=G.UIT.C, config = {align = 'cm', padding = 0.1, r=0.1, colour = G.C.L_BLACK}, nodes = {
+                                                    {n=G.UIT.C, config = {hover = true, button = 'reset_plinko', button_dist = 0.1, func = 'can_reset_plinko', align = 'cm', minw = 1.4, maxw = 1.4, colour = SMODS.Gradients.hpot_plincoin, emboss=-0.03, r=0.2, padding = 0.1}, nodes = {
+                                                        {n=G.UIT.R, config = {align = 'cm', padding = 0.1}, nodes = {
+                                                            {n=G.UIT.R, config = {align = 'cm'}, nodes = {
+                                                                {n=G.UIT.O, config={object = DynaText({string = {{string = 'Reset'}},
+                                                                colours = {G.C.WHITE}, maxw = 1.6, shadow = true, spacing = 2, scale = 0.5})}},
+                                                            }},
+                                                            {n=G.UIT.R, config = {align = 'cm'}, nodes = {
+                                                                {n=G.UIT.O, config={object = DynaText({string = {{string = 'Plinko'}},
+                                                                colours = {G.C.WHITE}, maxw = 1.6, shadow = true, spacing = 2, scale = 0.5})}}
+                                                            }}
+                                                        }},
+                                                        
+                                                    }},
+                                                }},
+                                            }}
                                         }}
                                     }},
                                     {n=G.UIT.R, config = {minh = 0.15}},
@@ -1667,7 +1682,7 @@ function PissDrawer.Shop.plinko()
                                     }},
                                     {n=G.UIT.R, config = {align = 'cm'}, nodes = {
                                         {n=G.UIT.T, config={text = '3 plays', scale = 0.35, colour = G.C.L_BLACK}},
-                                    }}
+                                    }},
                                 }},
                             }},
                         }},
