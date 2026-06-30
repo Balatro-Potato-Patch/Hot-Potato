@@ -25,9 +25,8 @@ SMODS.DrawStep {
             self.hpot_extra:draw_shader('voucher', nil, self.ARGS.send_to_shader, nil, self.children.center)
           end
         end
-
-        local center = self.config.center
-        if center.draw_extra and type(center.draw_extra) == 'function' then
+        
+        if self.hpot_extra.draw_extra and type(self.hpot_extra.draw_extra) == 'function' then
           self.hpot_extra:draw_extra(self, layer)
         end
 
