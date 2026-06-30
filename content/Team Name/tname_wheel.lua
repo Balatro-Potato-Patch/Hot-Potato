@@ -268,7 +268,7 @@ end
 -- granting the wheel (from plinko as well)
 function grant_wheel_reward(card)
 
-  local stppu_artist = G.TIMERS.REAL
+  local start = G.TIMERS.REAL
   local first_time = true
 
   draw_card(G.wheel_rewards, G.play, 1, 'up', true, card, nil, nil)

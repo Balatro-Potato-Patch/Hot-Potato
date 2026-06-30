@@ -86,7 +86,7 @@ HotPotato.EventStep({
 			},
 		}
 	end,
-	stppu_artist = function(self, event)
+	start = function(self, event)
 		event.display_lines(2, true)
 		delay(1)
 		local x, y = event.get_image_center()
@@ -127,7 +127,7 @@ HotPotato.EventStep({
 			},
 		}
 	end,
-	stppu_artist = function()
+	start = function()
 		if #G.hand.cards > 0 then
 			SMODS.destroy_cards(G.hand.cards)
 		end
@@ -244,7 +244,7 @@ HotPotato.EventStep {
 			moveon()
 		}
 	end,
-	stppu_artist = function(self, event)
+	start = function(self, event)
 		Character("c_hpot_imag_stars")
 	end,
 	finish = function(self, event)
@@ -259,7 +259,7 @@ HotPotato.EventStep {
 			moveon()
 		}
 	end,
-	stppu_artist = function(self, event)
+	start = function(self, event)
 		Character("c_hpot_imag_duck")
 	end,
 	finish = function(self, event)
@@ -293,7 +293,7 @@ HotPotato.EventStep({
 			},
 		}
 	end,
-	stppu_artist = function(self, event)
+	start = function(self, event)
 		local pirate_card = Character("j_swashbuckler")
 		pirate_card.children.particles.colours = { G.C.RED, G.C.RED, G.C.RED }
 		pirate_card.states.collide.can = false
@@ -342,7 +342,7 @@ HotPotato.EventStep({
 	loc_vars = function(self)
 		return { self.config.extra.remove }
 	end,
-	stppu_artist = function(self, event)
+	start = function(self, event)
 	end,
 	finish = function(self, event)
 		Remove()
@@ -359,7 +359,7 @@ HotPotato.EventStep({
 			},
 		}
 	end,
-	stppu_artist = function(self, event)
+	start = function(self, event)
 		if not G.hp_jtem_delivery_queue then
 			hotpot_jtem_init_extra_shops_area()
 			hotpot_delivery_refresh_card()
@@ -411,7 +411,7 @@ HotPotato.EventStep({
 			},
 		}
 	end,
-	stppu_artist = function(self, event)
+	start = function(self, event)
 		-- make sure the queue exists first
 		if not G.hp_jtem_delivery_queue then
 			hotpot_jtem_init_extra_shops_area()
@@ -463,7 +463,7 @@ HotPotato.EventStep({
 			moveon()
 		}
 	end,
-	stppu_artist = function(self, event) end,
+	start = function(self, event) end,
 	finish = function(self) end,
 })
 
@@ -521,7 +521,7 @@ HotPotato.EventStep {
 
 		}
 	end,
-	stppu_artist = function(self, scenario, previous_step)
+	start = function(self, scenario, previous_step)
 		Character("j_hpot_bank_teller")
 	end,
 }
@@ -563,7 +563,7 @@ HotPotato.EventStep({
 			},
 		}
 	end,
-	stppu_artist = function(self, event)
+	start = function(self, event)
 		local pirate_card = Character("j_shortcut")
 		pirate_card.children.particles.colours = { G.C.RED, G.C.RED, G.C.RED }
 		pirate_card.states.collide.can = false
@@ -644,7 +644,7 @@ HotPotato.EventStep({
 	loc_vars = function(self, event)
 		return { localize { type = 'name_text', key = event.ability.voucher, set = "Voucher", vars = {} } }
 	end,
-	stppu_artist = function(self, event)
+	start = function(self, event)
 		local pirate_card = Character(event.ability.voucher)
 		pirate_card.children.particles.colours = { G.C.VOUCHER, G.C.SET.Voucher, G.C.SECONDARY_SET.Voucher }
 		pirate_card.states.collide.can = false
@@ -691,7 +691,7 @@ HotPotato.EventStep({
 			},
 		}
 	end,
-	stppu_artist = function(self, event)
+	start = function(self, event)
 	end,
 	finish = function(self, event)
 		create_ads(pseudorandom('spam_spam_lovely_spam!_' .. G.GAME.round_resets.ante, 10, 25))
@@ -766,7 +766,7 @@ HotPotato.EventStep({
 		}
 	end,
 
-	stppu_artist = function()
+	start = function()
 		local card = Character("j_to_the_moon")
 		card.children.particles.colours = { G.C.MONEY, G.C.MONEY, G.C.MONEY }
 	end,
@@ -788,7 +788,7 @@ HotPotato.EventScenario({
 HotPotato.EventStep {
 	key = "nigerian_prince_start",
 	hide_hand = true,
-	stppu_artist = function(self, event)
+	start = function(self, event)
 		local prince_man = Character("j_baron")
 		prince_man.children.particles.colours = { G.C.RED, G.C.RED, G.C.RED }
 		prince_man.states.collide.can = false
@@ -944,7 +944,7 @@ HotPotato.EventStep({
 			}
 		}
 	end,
-	stppu_artist = function(self, event)
+	start = function(self, event)
 		local glut = Character("j_gluttenous_joker", "glut", -G.CARD_W / 2, -G.CARD_H / 8)
 		glut.children.particles.colours = { { 0, 0, 0, 0 } }
 		event.display_lines(2, true)
@@ -965,7 +965,7 @@ HotPotato.EventStep({
 			}
 		}
 	end,
-	stppu_artist = function(self, event)
+	start = function(self, event)
 		local greedyb = Character("j_hpot_greedybastard", "greedyb", 0, G.CARD_H / 8)
 		greedyb.children.particles.colours = { { 0, 0, 0, 0 } }
 		event.display_lines(2, true)
@@ -985,7 +985,7 @@ HotPotato.EventStep({
 			}
 		}
 	end,
-	stppu_artist = function(self, event)
+	start = function(self, event)
 		local vagabond = Character("j_vagabond", "vagabond", G.CARD_W / 2, -G.CARD_H / 8)
 		vagabond.children.particles.colours = { { 0, 0, 0, 0 } }
 		event.display_lines(2, true)
@@ -1142,7 +1142,7 @@ HotPotato.EventStep({
 			},
 		}
 	end,
-	stppu_artist = function(self, event)
+	start = function(self, event)
 		event.display_lines(2, true)
 		delay(1)
 		local x, y = event.get_image_center()
@@ -1164,7 +1164,7 @@ HotPotato.EventStep({
 			},
 		}
 	end,
-	stppu_artist = function(self, event)
+	start = function(self, event)
 		event.display_lines(1, true)
 	end,
 	finish = function(self, event)
@@ -1237,7 +1237,7 @@ HotPotato.EventStep({
 			},
 		}
 	end,
-	stppu_artist = function(self, event)
+	start = function(self, event)
 		event.display_lines(1, true)
 		delay(2)
 		local x, y = event.get_image_center()
@@ -1260,7 +1260,7 @@ HotPotato.EventStep({
 			},
 		}
 	end,
-	stppu_artist = function(self, event)
+	start = function(self, event)
 		event.display_lines(1, true)
 	end,
 	finish = function(self, event)
@@ -1321,7 +1321,7 @@ HotPotato.EventStep({
 			},
 		}
 	end,
-	stppu_artist = function(self, event)
+	start = function(self, event)
 		event.display_lines(1, true)
 		delay(1)
 		event.display_lines(2, true)
@@ -1368,7 +1368,7 @@ HotPotato.EventStep({
 			},
 		}
 	end,
-	stppu_artist = function(self, event)
+	start = function(self, event)
 		local application = Character("j_business")
 		application.children.particles.colours = { G.C.BLUE, G.C.BLUE, G.C.BLUE }
 		application.states.collide.can = false
@@ -1479,7 +1479,7 @@ HotPotato.EventStep {
 			}
 		}
 	end,
-	stppu_artist = function(self, event)
+	start = function(self, event)
 		local dan = Character("j_hpot_melvin")
 		dan.children.particles.colours = { G.C.RED, G.C.RED, G.C.RED }
 		dan.states.collide.can = false
@@ -1509,7 +1509,7 @@ HotPotato.EventStep {
 			},
 		}
 	end,
-	stppu_artist = function(self, event)
+	start = function(self, event)
 		play_sound('hpot_forgiveness')
 		for _, joker in pairs(G.jokers.cards) do
 			joker:juice_up(0.8, 0.8)
@@ -1576,7 +1576,7 @@ HotPotato.EventStep {
 			},
 		}
 	end,
-	stppu_artist = function(self, event)
+	start = function(self, event)
 		local to = Character("j_hpot_trolley_operator")
 		to.states.collide.can = false
 		G.E_MANAGER:add_event(Event({
@@ -1622,7 +1622,7 @@ HotPotato.EventStep {
 			},
 		}
 	end,
-	stppu_artist = function(self, event)
+	start = function(self, event)
 		for _, v in pairs(G.hand.cards) do
 			if v.ability.set == 'Joker' then
 				v:start_dissolve()
@@ -1664,7 +1664,7 @@ HotPotato.EventStep {
 			},
 		}
 	end,
-	stppu_artist = function(self, event)
+	start = function(self, event)
 		for _, v in pairs(G.hand.cards) do
 			if v.ability.set ~= 'Joker' then
 				v:start_dissolve()
@@ -1705,7 +1705,7 @@ HotPotato.EventStep {
 			},
 		}
 	end,
-	stppu_artist = function(self, event)
+	start = function(self, event)
 	end,
 	finish = function(self, event)
 		for _, v in pairs(G.hand.cards) do
@@ -1769,7 +1769,7 @@ HotPotato.EventStep {
 			},
 		}
 	end,
-	stppu_artist = function(self, event)
+	start = function(self, event)
 		local tn = Character("j_hpot_tname_postcard")
 		tn.states.collide.can = false
 		G.E_MANAGER:add_event(Event({
@@ -1798,7 +1798,7 @@ HotPotato.EventStep {
 			},
 		}
 	end,
-	stppu_artist = function(self, event)
+	start = function(self, event)
 		for _, joker in pairs(G.jokers.cards) do
 			joker:juice_up(0.8, 1)
 		end
@@ -1823,7 +1823,7 @@ HotPotato.EventStep {
 			},
 		}
 	end,
-	stppu_artist = function(self, event)
+	start = function(self, event)
 	end,
 	finish = function(self, event)
 	end
@@ -1839,7 +1839,7 @@ HotPotato.EventStep {
 			},
 		}
 	end,
-	stppu_artist = function(self, event)
+	start = function(self, event)
 	end,
 	finish = function(self, event)
 	end
@@ -1879,7 +1879,7 @@ HotPotato.EventStep {
 			},
 		}
 	end,
-	stppu_artist = function(self, event)
+	start = function(self, event)
 		local cola = Character("j_diet_cola")
 		cola.children.particles.colours = { G.C.RED, G.C.RED, G.C.RED }
 		cola.states.collide.can = false
@@ -1921,7 +1921,7 @@ HotPotato.EventStep {
 			},
 		}
 	end,
-	stppu_artist = function(self, event)
+	start = function(self, event)
 		play_sound('hpot_bottlecap')
 		G.E_MANAGER:add_event(Event({
 			trigger = 'after',
@@ -1971,7 +1971,7 @@ HotPotato.EventStep {
 			},
 		}
 	end,
-	stppu_artist = function(self, event)
+	start = function(self, event)
 	end,
 	finish = function(self, event)
 	end
@@ -2001,7 +2001,7 @@ HotPotato.EventStep {
 			},
 		}
 	end,
-	stppu_artist = function(self, event)
+	start = function(self, event)
 	end,
 	finish = function(self, event)
 	end
@@ -2031,7 +2031,7 @@ HotPotato.EventStep {
 			},
 		}
 	end,
-	stppu_artist = function(self, event)
+	start = function(self, event)
 	end,
 	finish = function(self, event)
 	end
@@ -2049,7 +2049,7 @@ HotPotato.EventStep {
 			},
 		}
 	end,
-	stppu_artist = function(self, event)
+	start = function(self, event)
 		local c_type = pseudorandom_element(SMODS.ConsumableType.visible_buffer)
 
 		SMODS.add_card {
@@ -2092,7 +2092,7 @@ HotPotato.EventStep {
 			}
 		}
 	end,
-	stppu_artist = function(self, event)
+	start = function(self, event)
 		local roff = Character("j_card_sharp")
 		roff.states.collide.can = false
 		G.E_MANAGER:add_event(Event({
@@ -2190,7 +2190,7 @@ HotPotato.EventStep {
 			}
 		}
 	end,
-	stppu_artist = function(self, event)
+	start = function(self, event)
 		G.GAME.abno_choice_music = true
 	end,
 }
@@ -2207,7 +2207,7 @@ HotPotato.EventStep {
 			},
 		}
 	end,
-	stppu_artist = function(self, event)
+	start = function(self, event)
 		ease_plincoins(1)
 	end,
 	finish = function(self, event)
@@ -2227,7 +2227,7 @@ HotPotato.EventStep {
 			},
 		}
 	end,
-	stppu_artist = function(self, event)
+	start = function(self, event)
 		local card = SMODS.add_card({
 			set = "Joker",
 			rarity = "Legendary",
@@ -2251,7 +2251,7 @@ HotPotato.EventStep {
 			},
 		}
 	end,
-	stppu_artist = function(self, event)
+	start = function(self, event)
 		ease_plincoins(0.5)
 	end,
 	finish = function(self, event)
@@ -2333,7 +2333,7 @@ HotPotato.EventStep {
 			},
 		}
 	end,
-	stppu_artist = function(self, event)
+	start = function(self, event)
 		local yap = Character("j_hpot_yapper")
 		yap.states.collide.can = false
 		G.E_MANAGER:add_event(Event({
@@ -2356,7 +2356,7 @@ HotPotato.EventStep {
 			moveon()
 		}
 	end,
-	stppu_artist = function(self, event)
+	start = function(self, event)
 		local _pool, _pool_key = get_current_pool("Joker")
 		local _t2 = {}
 		for _, v in ipairs(_pool) do
@@ -2398,7 +2398,7 @@ HotPotato.EventStep {
 			moveon()
 		}
 	end,
-	stppu_artist = function(self, event)
+	start = function(self, event)
 		local amount = event.ability.from_bepis and 2 or 1
 		for i = 1, amount do
 			local delivery_table = {
@@ -2429,7 +2429,7 @@ HotPotato.EventStep {
 			moveon()
 		}
 	end,
-	stppu_artist = function(self, event)
+	start = function(self, event)
 		ease_plincoins(2)
 	end,
 	finish = function(self, event)
@@ -2444,7 +2444,7 @@ HotPotato.EventStep {
 			moveon()
 		}
 	end,
-	stppu_artist = function(self, event)
+	start = function(self, event)
 		local win = pseudorandom(pseudoseed('sdm_event'), 0, 1)
 		ease_plincoins(-G.GAME.plincoins)
 	end,
@@ -2467,7 +2467,7 @@ HotPotato.EventStep {
 			},
 		}
 	end,
-	stppu_artist = function(self, event)
+	start = function(self, event)
 	end,
 	finish = function(self, event)
 	end
@@ -2488,7 +2488,7 @@ HotPotato.EventStep {
 			},
 		}
 	end,
-	stppu_artist = function(self, event)
+	start = function(self, event)
 	end,
 	finish = function(self, event)
 	end
@@ -2502,7 +2502,7 @@ HotPotato.EventStep {
 			moveon()
 		}
 	end,
-	stppu_artist = function(self, event)
+	start = function(self, event)
 		ease_dollars(-G.GAME.dollars)
 		HPTN.ease_credits(G.GAME.seeded and G.GAME.budget or -G.PROFILES[G.SETTINGS.profile].TNameCredits)
 		ease_spark_points(-G.GAME.spark_points)
@@ -2521,7 +2521,7 @@ HotPotato.EventStep {
 			moveon()
 		}
 	end,
-	stppu_artist = function(self, event)
+	start = function(self, event)
 		local pool = {}
 		for i, v in pairs(G.P_CENTERS) do
 			if v.hotpot_credits and type(v.hotpot_credits.code) == "table" and v.hotpot_credits.code[1] == 'fey <3' then
@@ -2545,7 +2545,7 @@ HotPotato.EventStep {
 			moveon()
 		}
 	end,
-	stppu_artist = function(self, event)
+	start = function(self, event)
 		if G.jokers.config.card_count < G.jokers.config.card_limit then
 			SMODS.add_card({ set = "Joker" })
 		end
@@ -2621,7 +2621,7 @@ HotPotato.EventStep {
 			moveon()
 		}
 	end,
-	stppu_artist = function(self, event)
+	start = function(self, event)
 		local chara = Character("j_triboulet")
 		chara.children.particles.colours = { { 0, 0, 0, 0 } }
 		chara.states.collide.can = false
@@ -2667,7 +2667,7 @@ HotPotato.EventStep {
 			moveon()
 		}
 	end,
-	stppu_artist = function(self, event)
+	start = function(self, event)
 		local chara = Character("j_triboulet")
 		chara.children.particles.colours = { { 0, 0, 0, 0 } }
 		chara.states.collide.can = false
@@ -2748,7 +2748,7 @@ HotPotato.EventStep {
 			moveon()
 		}
 	end,
-	stppu_artist = function(self, event)
+	start = function(self, event)
 		local chara = Character("j_triboulet")
 		chara.children.particles.colours = { { 0, 0, 0, 0 } }
 		chara.states.collide.can = false
@@ -2807,7 +2807,7 @@ HotPotato.EventStep {
 			moveon()
 		}
 	end,
-	stppu_artist = function(self, event)
+	start = function(self, event)
 		local chara = Character("c_hpot_imag_curi")
 		chara.children.particles.colours = { { 0, 0, 0, 0 } }
 		chara.states.collide.can = false
@@ -3042,7 +3042,7 @@ HotPotato.EventStep {
 			moveon()
 		}
 	end,
-	stppu_artist = function(self, event)
+	start = function(self, event)
 		if #G.jokers.cards + G.GAME.joker_buffer < G.jokers.config.card_limit then
 			SMODS.add_card { key = "j_hpot_diy" }
 		end
@@ -3075,7 +3075,7 @@ HotPotato.EventStep {
 			moveon()
 		}
 	end,
-	stppu_artist = function(self, event)
+	start = function(self, event)
 		local chara = Character("c_hpot_imag_stars")
 		chara.children.particles.colours = { { 0, 0, 0, 0 } }
 		chara.states.collide.can = false
@@ -3099,7 +3099,7 @@ HotPotato.EventStep {
 			moveon()
 		}
 	end,
-	stppu_artist = function(self, event)
+	start = function(self, event)
 		G.GAME.hpot_event_dreamkeeper = true
 		for i = 1, 5 do
 			SMODS.add_card { key = "c_hpot_imag_stars" }
@@ -3140,7 +3140,7 @@ HotPotato.EventStep {
 			},
 		}
 	end,
-	stppu_artist = function(self, event)
+	start = function(self, event)
 		local chara = Character("c_hpot_imag_stars")
 		chara.children.particles.colours = { { 0, 0, 0, 0 } }
 		chara.states.collide.can = false
@@ -3221,7 +3221,7 @@ HotPotato.EventStep {
 			moveon()
 		}
 	end,
-	stppu_artist = function(self, event)
+	start = function(self, event)
 		local chara = Character("c_hpot_imag_duck")
 		chara.children.particles.colours = { { 0, 0, 0, 0 } }
 		chara.states.collide.can = false
@@ -3245,7 +3245,7 @@ HotPotato.EventStep {
 			moveon()
 		}
 	end,
-	stppu_artist = function(self, event)
+	start = function(self, event)
 		G.GAME.hpot_event_interest = true
 		for i = 1, 5 do
 			SMODS.add_card { key = "c_hpot_imag_duck" }
@@ -3286,7 +3286,7 @@ HotPotato.EventStep {
 			},
 		}
 	end,
-	stppu_artist = function(self, event)
+	start = function(self, event)
 		local chara = Character("c_hpot_imag_duck")
 		chara.children.particles.colours = { { 0, 0, 0, 0 } }
 		chara.states.collide.can = false
@@ -3355,7 +3355,7 @@ HotPotato.EventStep {
 			moveon()
 		}
 	end,
-	stppu_artist = function(self, event)
+	start = function(self, event)
 		local chara = Character("j_hit_the_road")
 		chara.children.particles.colours = { { 0, 0, 0, 0 } }
 		chara.states.collide.can = false
@@ -3474,7 +3474,7 @@ HotPotato.EventStep {
 			}
 		}
 	end,
-	stppu_artist = function(self, event)
+	start = function(self, event)
 		event.ability.initial_money = G.GAME.dollars
 	end
 }
@@ -3644,7 +3644,7 @@ HotPotato.EventStep {
 			},
 		}
 	end,
-	stppu_artist = function(self, event)
+	start = function(self, event)
 		local chara = Character("j_trading")
 		chara.children.particles.colours = { { 0, 0, 0, 0 } }
 		chara.states.collide.can = false
@@ -3711,7 +3711,7 @@ HotPotato.EventStep {
 			moveon()
 		}
 	end,
-	stppu_artist = function(self, event)
+	start = function(self, event)
 		local editionless_cards = SMODS.Edition:get_edition_cards(G.deck, true)
 
 		local choice = pseudorandom_element(editionless_cards, "hpot_event_small_seed")
@@ -3729,7 +3729,7 @@ HotPotato.EventStep {
 			moveon()
 		}
 	end,
-	stppu_artist = function(self, event)
+	start = function(self, event)
 		for _, pcard in ipairs(G.playing_cards) do
 			if pcard.ability.set == "Default" then
 				pcard:set_ability("m_glass")
@@ -3775,7 +3775,7 @@ HotPotato.EventStep {
 			}
 		}
 	end,
-	stppu_artist = function(self, event)
+	start = function(self, event)
 		local chara = Character("j_four_fingers")
 		chara.children.particles.colours = { { 0, 0, 0, 0 } }
 		chara.states.collide.can = false
@@ -3849,7 +3849,7 @@ HotPotato.EventStep {
 			},
 		}
 	end,
-	stppu_artist = function(self, event)
+	start = function(self, event)
 		local chara = Character("j_hpot_ruan_mei")
 		chara.children.particles.colours = { { 0, 0, 0, 0 } }
 		chara.states.collide.can = false
@@ -4641,7 +4641,7 @@ HotPotato.EventScenario {
 HotPotato.EventStep {
 	key = "hpot_bj_in",
 	hide_hand = false,
-	stppu_artist = function(self, event)
+	start = function(self, event)
 		G.GAME.BJ_CARDS = { TOTAL = 0 }
 		local to = Character("j_ring_master")
 		to.states.collide.can = false
@@ -4678,7 +4678,7 @@ HotPotato.EventStep {
 HotPotato.EventStep {
 	key = "hpot_bj_start",
 	hide_hand = false,
-	stppu_artist = function(self, event)
+	start = function(self, event)
 		G.GAME.BJ_CARDS.MONEY = G.GAME.dollars
 		ease_dollars(-G.GAME.dollars)
 		G.GAME.BJ_CARDS.HANDSIZE = G.hand.config.card_limit
@@ -4714,7 +4714,7 @@ HotPotato.EventStep {
 HotPotato.EventStep {
 	key = "hpot_bj_hit",
 	hide_hand = false,
-	stppu_artist = function(self, event)
+	start = function(self, event)
 		draw_card(G.deck, G.hand, 1, 'up', true)
 		event.start_step('hpot_bj_check')
 	end
@@ -4744,7 +4744,7 @@ HotPotato.EventStep {
 			}
 		}
 	end,
-	stppu_artist = function(self, event)
+	start = function(self, event)
 		local count = 0
 		local aces = 0
 		for i, v in ipairs(G.hand.cards) do
@@ -4769,7 +4769,7 @@ HotPotato.EventStep {
 HotPotato.EventStep {
 	key = "hpot_bj_eval",
 	hide_hand = false,
-	stppu_artist = function(self, event)
+	start = function(self, event)
 		event.ability.won = nil
 		event.ability.final_money = 0
 		G.GAME.BJ_CARDS.DEALER_CARDS[2]:flip()
@@ -5105,7 +5105,7 @@ HotPotato.EventStep {
 			moveon()
 		}
 	end,
-	stppu_artist = function(self, event)
+	start = function(self, event)
 		local chara = Character("j_hpot_jtem_flash", nil, nil, -1)
 		chara.children.particles.colours = { { 0, 0, 0, 0 } }
 		chara.states.collide.can = false
@@ -5375,7 +5375,7 @@ HotPotato.EventStep {
 			moveon()
 		}
 	end,
-	stppu_artist = function(self, event)
+	start = function(self, event)
 		local chara = Character("j_hpot_shady", nil, nil, -1)
 		chara.children.particles.colours = { { 0, 0, 0, 0 } }
 		chara.states.collide.can = false
@@ -5568,7 +5568,7 @@ HotPotato.EventStep {
 			},
 		}
 	end,
-	stppu_artist = function(self, event)
+	start = function(self, event)
 		ease_background_colour {
 			new_colour = darken(HEX("DE2041"), 0.2),
 			special_colour = G.C.BLACK,
@@ -5671,7 +5671,7 @@ HotPotato.EventStep {
 			},
 		}
 	end,
-	stppu_artist = function(self, event)
+	start = function(self, event)
 		ease_background_colour {
 			new_colour = darken(G.C.BLACK, 0.2),
 			special_colour = G.C.BLACK,

@@ -135,7 +135,7 @@ function PlinkoLogic.f.won_reward(reward_num)
 
   draw_card(G.plinko_rewards, G.play, 1, 'up', true, reward, nil, nil)
 
-  local stppu_artist = G.TIMERS.REAL
+  local start = G.TIMERS.REAL
   local first_time = true
 
   G.E_MANAGER:add_event(Event{delay = 0.5, blocking = false, func = function ()
