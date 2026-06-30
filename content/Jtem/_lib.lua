@@ -210,6 +210,7 @@ local MisprintizeForbidden = {
 	["config"] = true, -- Here for quantum jokers.... You shouldn't modify this!
     ["cards_req"] = true, -- Blue, Red and Yellow Deck Jokers
 	["card_limit"] = true, -- Guts can increase this which doesn't make sense
+	["slots"] = true, -- Same as card_limit reason!
 	--["x_mult"] = true,
 }
 
