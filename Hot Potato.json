@@ -18,5 +18,6 @@
     "conflicts": [
         "SlayTheJokers"
     ],
-	"allow_redistribution": true
+	"allow_redistribution": true,
+	"icon_path": "modicon.png"
 }

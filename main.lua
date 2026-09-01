@@ -12,15 +12,6 @@ HotPotato = SMODS.current_mod
 -- Nested check
 assert(HotPotato.lovely, "Lovely not initalized.\n\nMake sure your Hot Potato folder is not nested (there should be a bunch of files in the Hot Potato folder and not just another folder).\n\n")
 
-
---modicon
-SMODS.Atlas {
-	key = "modicon",
-	path = "modicon.png",
-	px = 32,
-	py = 32
-}
-
 --logo
 SMODS.Atlas {
 	key = "logo",
