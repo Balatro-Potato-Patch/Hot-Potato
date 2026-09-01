@@ -6964,6 +6964,11 @@ return {
 
             hotpot_feature_info_button = "Feature Info",
 
+            run_select_hpot_budgets = 'Set Budgets',
+            budgets_explain_1 = 'Budgets are Credits in Seeded Runs.',
+            budgets_explain_2 = 'You may choose the amount of Budgets you start with',
+            budgets_explain_3 = 'since Credits do not carry over to seeded runs.',
+            budgets_explain_4 = 'This value is only used on seeded runs!',
         },
         v_dictionary = {
             k_hpot_creditable = "Creditable",

@@ -253,6 +253,41 @@ HotPotato.set_window_title = function()
 end
 HotPotato.set_window_title()
 
+local seed_input_ref = SMODS.RunSelect.Functions.update_seed_input
+function SMODS.RunSelect.Functions.update_seed_input(value)
+	seed_input_ref(value)
+	if value then
+		HotPotato.budget_input_colour = G.C.ORANGE
+	else
+		HotPotato.budget_input_colour = G.C.UI.BACKGROUND_INACTIVE
+	end
+	local args = G.OVERLAY_MENU:get_UIE_by_ID('hpot_budget_input').children[1].children[1].config.ref_table
+    args.colour = HotPotato.budget_input_colour
+    args.hooked_colour = darken(HotPotato.budget_input_colour, 0.3)
+end
+
+SMODS.RunSelectPage({
+    key = 'budgets',
+    start_run = function(self, choice)
+        if G.GAME.seeded then
+			G.GAME.budget = tonumber(HotPotatoConfig.budgets) or 0
+		end
+    end,
+    settings = function(self)
+        HotPotatoConfig.budgets = ''
+		HotPotato.budget_input_colour = SMODS.RunSelect.Setup.choices.enable_seed and G.C.ORANGE or G.C.UI.BACKGROUND_INACTIVE
+        return {
+            {n=G.UIT.C, nodes = {
+                {n=G.UIT.R, config = {align = 'cm'}, nodes = {{n=G.UIT.T, config = {text = localize('budgets_explain_1'), scale = 0.37, colour = G.C.WHITE}}}},
+                {n=G.UIT.R, config = {align = 'cm'}, nodes = {{n=G.UIT.T, config = {text = localize('budgets_explain_2'), scale = 0.37, colour = G.C.WHITE}}}},
+                {n=G.UIT.R, config = {align = 'cm'}, nodes = {{n=G.UIT.T, config = {text = localize('budgets_explain_3'), scale = 0.37, colour = G.C.WHITE}}}},
+                {n=G.UIT.R, config = {align = 'cm'}, nodes = {{n=G.UIT.T, config = {text = localize('budgets_explain_4'), scale = 0.37, colour = G.C.RED}}}},
+            }},
+            create_text_input({id = 'hpot_budget_input', prompt_text = localize('run_select_hpot_budgets'), w = 3, all_caps = true, ref_table = HotPotatoConfig, ref_value = 'budgets', colour = HotPotato.budget_input_colour, hooked_colour = darken(HotPotato.budget_input_colour, 0.3)}),
+        }
+    end
+})
+
 --#region Credits
 
 -- credits button on mod page
