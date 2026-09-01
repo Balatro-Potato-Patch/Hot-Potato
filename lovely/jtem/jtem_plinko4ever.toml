@@ -133,11 +133,13 @@ match_indent = true
 [patches.pattern]
 target = 'game.lua'
 position = 'at'
-pattern = '''G.shop.alignment.offset.y = -5.3
-                    G.shop.alignment.offset.x = 0'''
+pattern = '''
+G.shop.alignment.offset.y = -5.9
+G.shop.alignment.offset.x = 0
+'''
 payload = '''
 if G.shop then
-	G.shop.alignment.offset.y = -4.3
+	G.shop.alignment.offset.y = -5.9
 	G.shop.alignment.offset.x = 0
 end
 '''

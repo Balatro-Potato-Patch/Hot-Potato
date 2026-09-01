@@ -1,0 +1,55 @@
+[manifest]
+version = "1.0.0"
+dump_lua = true
+priority = 1
+
+# Logo logo menu draw stuff
+
+[[patches]]
+[patches.pattern]
+target = "game.lua"
+pattern = '''
+if self.SPLASH_LOGO then self.SPLASH_LOGO:remove(); self.SPLASH_LOGO = nil end
+'''
+position = "after"
+payload = '''
+if self.SPLASH_HOTPOT_LOGO then self.SPLASH_HOTPOT_LOGO:remove(); self.SPLASH_HOTPOT_LOGO = nil end
+'''
+match_indent = true
+times = 1
+
+[[patches]]
+[patches.pattern]
+target = "game.lua"
+pattern = '''
+if G.SPLASH_LOGO then
+    love.graphics.push()
+    G.SPLASH_LOGO:translate_container()
+    G.SPLASH_LOGO:draw()
+    love.graphics.pop()
+end
+'''
+position = "after"
+payload = '''
+
+if G.SPLASH_HOTPOT_LOGO then
+    love.graphics.push()
+    G.SPLASH_HOTPOT_LOGO:translate_container()
+
+    local rotate_mod = 0.05*math.sin(1.219*G.TIMERS.REAL) + 0.00*math.sin((G.TIMERS.REAL)*math.pi*5)*(1 - (G.TIMERS.REAL - math.floor(G.TIMERS.REAL)))^2
+    G.SPLASH_HOTPOT_LOGO.T.r = rotate_mod
+
+    if not G.SPLASH_HOTPOT_LOGO.states.drag.is then
+        local scale_mod = 0.07 + 0.02*math.sin(1.8*G.TIMERS.REAL) + 0.00*math.sin((G.TIMERS.REAL - math.floor(G.TIMERS.REAL))*math.pi*14)*(1 - (G.TIMERS.REAL - math.floor(G.TIMERS.REAL)))^3
+
+        G.SPLASH_HOTPOT_LOGO:draw_shader('dissolve', 0, nil, nil, G.SPLASH_HOTPOT_LOGO,scale_mod, nil, nil, 0.1 + 0.03*math.sin(1.8*G.TIMERS.REAL), nil, 0.6)
+        G.SPLASH_HOTPOT_LOGO:draw_shader('dissolve', nil, nil, nil, G.SPLASH_HOTPOT_LOGO, scale_mod, mil)
+    end
+
+    add_to_drawhash(G.SPLASH_HOTPOT_LOGO)
+
+    love.graphics.pop()
+end
+'''
+match_indent = true
+times = 1

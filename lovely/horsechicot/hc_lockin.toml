@@ -8,9 +8,9 @@ priority = 0
 target = 'cardarea.lua'
 position = 'at'
 pattern = '''        for k, card in ipairs(self.cards) do
-            if not card.states.drag.is then '''
+            if not card.states.drag.is and not card.disable_align then '''
 payload = '''        for k, card in ipairs(self.cards) do
-            if (not card.states.drag.is) or card == G.lock_in_card then '''
+            if (not card.states.drag.is and not card.disable_align) or card == G.lock_in_card then '''
 match_indent = true
 
 [[patches]]

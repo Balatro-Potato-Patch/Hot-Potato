@@ -1106,10 +1106,10 @@ return {
                     "{X:mult,C:white}X#1#{} Mult"
                 }
             },
-            j_hpot_nxkoodead = {
-                name = "Nxkoo found dead",
+            j_hpot_krisdead = {
+                name = "Kris found dead",
                 text = {
-                    "For every {C:attention}#1#{} Nxkoos killed",
+                    "For every {C:attention}#1#{} Krises killed",
                     "this Joker gains {X:mult,C:white}X#2#{} Mult",
                     "{C:inactive}(Max of {X:mult,C:white}X15{C:inactive} Mult)",
                     "{C:inactive}(Currently {X:mult,C:white}X#3#{C:inactive} Mult)"
@@ -1466,12 +1466,12 @@ return {
                     "{C:inactive}(Only works once per round, currently #2#)"
                 }
             },
-            j_hpot_nxkoo_joker = {
+            j_hpot_kris_joker = {
                 name = "Halo",
                 text = {
                     "Changes the base of",
                     "the requirement scaling for",
-                    "{C:chips}Nxkoo unkills{}",
+                    "{C:chips}Kris unkills{}",
                     "from {X:dark_edition,C:white}15{} to {X:dark_edition,C:white}10{}",
                 }
             },
@@ -5358,6 +5358,14 @@ return {
                 }
             },
         },
+        PotatoPatch = {
+            PotatoPatchTeam_OAP = {
+                name = 'Oops! All Programmers'
+            },
+            PotatoPatchTeam_smiley = {
+                name = ':)'
+            }
+        }
     },
     InfoMenu = {
         hotpot_delivery = {
@@ -5913,7 +5921,7 @@ return {
                                 "and some music tracks"
                             },
                             {
-                                "Creator of the {C:attention}Nxkoo dies",
+                                "Creator of the {C:attention}Kris dies",
                                 "tab in mod info and {C:attention}title text",
                             },
                             {
@@ -6853,6 +6861,7 @@ return {
             hotpot_disable_animations = "Disable Jokers Animations",
             hotpot_family_friendly = "Family Friendly",
             hotpot_window_title = "Random Window Titles",
+            hotpot_custom_menu = "Custom Main Menu",
 
             k_place_card_text = "PLACE JOKER TO REFORGE",
             k_place_button = "Place",
@@ -6955,6 +6964,11 @@ return {
 
             hotpot_feature_info_button = "Feature Info",
 
+            run_select_hpot_budgets = 'Set Budgets',
+            budgets_explain_1 = 'Budgets are Credits in Seeded Runs.',
+            budgets_explain_2 = 'You may choose the amount of Budgets you start with',
+            budgets_explain_3 = 'since Credits do not carry over to seeded runs.',
+            budgets_explain_4 = 'This value is only used on seeded runs!',
         },
         v_dictionary = {
             k_hpot_creditable = "Creditable",

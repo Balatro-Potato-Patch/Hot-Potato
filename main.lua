@@ -12,14 +12,122 @@ HotPotato = SMODS.current_mod
 -- Nested check
 assert(HotPotato.lovely, "Lovely not initalized.\n\nMake sure your Hot Potato folder is not nested (there should be a bunch of files in the Hot Potato folder and not just another folder).\n\n")
 
-
---modicon
+--logo
 SMODS.Atlas {
-	key = "modicon",
-	path = "modicon.png",
-	px = 32,
-	py = 32
+	key = "logo",
+	path = 'hotpotlogo.png',
+	px = 320,
+	py = 138
 }
+
+-- colours
+HotPotato.colours = {
+	primary = HEX('f2af5b'),
+	secondary = HEX('b7660f'),
+}
+
+--Main Menu
+HotPotato.menu_cards = function()
+	if HotPotatoConfig.menu then
+		return {
+			remove_original = true,
+			{key = 'j_hpot_thetruehotpotato'},
+			{key = 'j_hpot_birthdayboy'},
+			func = function()
+				for k, v in pairs(G.title_top.cards) do
+					if v.config.center_key == 'j_hpot_birthdayboy' then
+						v.no_ui = false
+						break
+					end
+				end
+			end
+		}
+	end
+end
+
+local gmm = Game.main_menu
+function Game:main_menu(change_context)
+    local ret = gmm(self, change_context)
+
+    if HotPotatoConfig.menu then
+        -- Creates hotpot Logo Sprite
+        local SC_scale = 1.1 * (G.debug_splash_size_toggle and 0.8 or 1)
+        G.SPLASH_HOTPOT_LOGO = Sprite(0, 0,
+            6.8 * SC_scale,
+            6.8 * SC_scale * (G.ASSET_ATLAS["hpot_logo"].py / G.ASSET_ATLAS["hpot_logo"].px),
+            G.ASSET_ATLAS["hpot_logo"], { x = 0, y = 0 }
+        )
+        G.SPLASH_HOTPOT_LOGO:set_alignment({
+            major = G.title_top,
+            type = 'cm',
+            bond = 'Strong',
+            offset = { x = 0, y = 3.25 }
+        })
+        G.SPLASH_HOTPOT_LOGO:define_draw_steps({ {
+            shader = 'dissolve',
+        } })
+
+        -- Define logo properties
+        G.SPLASH_HOTPOT_LOGO.tilt_var = { mx = 0, my = 0, dx = 0, dy = 0, amt = 0 }
+
+        G.SPLASH_HOTPOT_LOGO.dissolve_colours = { HotPotato.colours.primary, HotPotato.colours.secondary }
+        G.SPLASH_HOTPOT_LOGO.dissolve = 1
+
+        G.SPLASH_HOTPOT_LOGO.states.collide.can = true
+
+        -- Define node functions for Logo
+        function G.SPLASH_HOTPOT_LOGO:click()
+            play_sound('button', 1, 0.3)
+            SMODS.LAST_SELECTED_MOD_TAB = nil
+            G.FUNCS['openModUI_HotPotato']()
+            G.OVERLAY_MENU:get_UIE_by_ID("overlay_menu_back_button").config.button = "exit_overlay_menu_HotPotato"
+        end
+
+        G.FUNCS.exit_overlay_menu_HotPotato = function()
+            G.ACTIVE_MOD_UI = nil
+            G.FUNCS.exit_overlay_menu()
+        end
+
+        function G.SPLASH_HOTPOT_LOGO:hover()
+            G.SPLASH_HOTPOT_LOGO:juice_up(0.05, 0.03)
+            play_sound('paper1', math.random() * 0.2 + 0.9, 0.35)
+            Node.hover(self)
+        end
+
+        function G.SPLASH_HOTPOT_LOGO:stop_hover() Node.stop_hover(self) end
+
+        --Logo animation
+        G.E_MANAGER:add_event(Event({
+            trigger = 'after',
+            delay = change_context == 'splash' and 3.6 or change_context == 'game' and 4 or 1,
+            blockable = false,
+            blocking = false,
+            func = (function()
+                play_sound('magic_crumple' .. (change_context == 'splash' and 2 or 3),
+                    (change_context == 'splash' and 1 or 1.3), 0.9)
+                play_sound('whoosh1', 0.2, 0.8)
+                ease_value(G.SPLASH_HOTPOT_LOGO, 'dissolve', -1, nil, nil, nil,
+                    change_context == 'splash' and 2.3 or 0.9)
+                G.VIBRATION = G.VIBRATION + 1.5
+                return true
+            end)
+        }))
+
+        -- make the title screen use different background colors
+        G.SPLASH_BACK:define_draw_steps({ {
+            shader = 'splash',
+            send = {
+                { name = 'time',       ref_table = G.TIMERS,                ref_value = 'REAL_SHADER' },
+                { name = 'vort_speed', val = 0.4 },
+                { name = 'colour_1',   ref_table = HotPotato.colours, ref_value = 'primary' },
+                { name = 'colour_2',   ref_table = HotPotato.colours, ref_value = 'secondary' },
+            }
+        } })
+    end
+
+    return ret
+end
+
 
 --talisman
 to_big = to_big or function(x) return x end
@@ -28,157 +136,15 @@ to_number = to_number or function(x) return x end
 
 -- FILE LOADING
 --#region File Loading
-local nativefs = NFS
-
-local path_len = string.len(SMODS.current_mod.path) + 1
-
-local function load_file_native(path)
-	if not path or path == "" then
-		error("No path was provided to load.")
-	end
-	local file_path = path
-	local file_content, err = NFS.read(file_path)
-	if not file_content then
-		return nil,
-			"Error reading file '" .. path .. "' for mod with ID '" .. SMODS.current_mod.id .. "': " .. err
-	end
-	local short_path = string.sub(path, path_len, path:len())
-	local chunk, err = load(file_content, "=[SMODS " .. SMODS.current_mod.id .. ' "' .. short_path .. '"]')
-	if not chunk then
-		return nil,
-			"Error processing file '" .. path .. "' for mod with ID '" .. SMODS.current_mod.id .. "': " .. err
-	end
-	return chunk
-end
 local blacklist = {
-	assets = true,
-	lovely = true,
-	[".github"] = true,
-	[".git"] = true,
-	["localization"] = true
+	['titletext.lua'] = true,
+	['base64.lua'] = true
 }
-local function load_files(path, dirs_only)
-	local info = nativefs.getDirectoryItemsInfo(path)
-	table.sort(info, function(a, b)
-		return a.name < b.name
-	end)
-	for _, v in ipairs(info) do
-		if v.type == "directory" and not blacklist[v.name] then
-			load_files(path .. "/" .. v.name)
-		elseif not dirs_only then
-			if string.find(v.name, ".lua") then -- no X.lua.txt files or whatever unless they are also lua files
-				local f, err = load_file_native(path .. "/" .. v.name)
-				if f then
-					f()
-				else
-					error("error in file " .. v.name .. ": " .. err)
-				end
-			end
-		end
-	end
-end
 local path = SMODS.current_mod.path
 
 -- Annoyingly load title text lua
-local f, err = load_file_native(path .. "/Jtem/titletext.lua")
-if f then f() end
-load_files(path, true)
---#endregion
-
--- CREDITS SYSTEM
---#region Card Credits System
-local smcmb = SMODS.create_mod_badges
-function SMODS.create_mod_badges(obj, badges)
-	smcmb(obj, badges)
-	if not SMODS.config.no_mod_badges and obj and obj.hotpot_credits then
-		local function calc_scale_fac(text)
-			local size = 0.9
-			local font = G.LANG.font
-			local max_text_width = 2 - 2 * 0.05 - 4 * 0.03 * size - 2 * 0.03
-			local calced_text_width = 0
-			-- Math reproduced from DynaText:update_text
-			for _, c in utf8.chars(text) do
-				local tx = font.FONT:getWidth(c) * (0.33 * size) * G.TILESCALE * font.FONTSCALE
-					+ 2.7 * 1 * G.TILESCALE * font.FONTSCALE
-				calced_text_width = calced_text_width + tx / (G.TILESIZE * G.TILESCALE)
-			end
-			local scale_fac = calced_text_width > max_text_width and max_text_width / calced_text_width or 1
-			return scale_fac
-		end
-		if obj.hotpot_credits.art or obj.hotpot_credits.code or obj.hotpot_credits.idea or obj.hotpot_credits.team or obj.hotpot_credits.custom then
-			local scale_fac = {}
-			local min_scale_fac = 1
-			local strings = { HotPotato.display_name }
-			for _, v in ipairs({ "idea", "art", "code", "team" }) do
-				if obj.hotpot_credits[v] then
-					if type(obj.hotpot_credits[v]) == "string" then obj.hotpot_credits[v] = { obj.hotpot_credits[v] } end
-					for i = 1, #obj.hotpot_credits[v] do
-						strings[#strings + 1] =
-							localize({ type = "variable", key = "hotpot_" .. v, vars = { obj.hotpot_credits[v][i] } })
-							[1]
-					end
-				end
-			end
-			if obj.hotpot_credits.custom then
-				strings[#strings + 1] = localize({ type = "variable", key = obj.hotpot_credits.custom.key, vars = { obj.hotpot_credits.custom.text } })
-			end
-			for i = 1, #strings do
-				scale_fac[i] = calc_scale_fac(strings[i])
-				min_scale_fac = math.min(min_scale_fac, scale_fac[i])
-			end
-			local ct = {}
-			for i = 1, #strings do
-				ct[i] = {
-					string = strings[i],
-				}
-			end
-			for i = 1, #badges do
-				if badges[i].nodes[1].nodes[2].config.object.string == HotPotato.display_name then --this was meant to be a hex code but it just doesnt work for like no reason so its hardcoded
-					badges[i].nodes[1].nodes[2].config.object:remove()
-					badges[i] = {
-                        n = G.UIT.R,
-                        config = { align = "cm" },
-                        nodes = {
-                            {
-                                n = G.UIT.R,
-                                config = {
-                                    align = "cm",
-                                    colour = HotPotato.badge_colour,
-                                    r = 0.1,
-                                    minw = 2 / min_scale_fac,
-                                    minh = 0.36,
-                                    emboss = 0.05,
-                                    padding = 0.03 * 0.9,
-                                },
-                                nodes = {
-                                    { n = G.UIT.B, config = { h = 0.1, w = 0.03 } },
-                                    {
-                                        n = G.UIT.O,
-                                        config = {
-                                            object = DynaText({
-                                                string = ct or "ERROR",
-                                                colours = { obj.hotpot_credits and obj.hotpot_credits.text_colour or G.C.WHITE },
-                                                silent = true,
-                                                float = true,
-                                                shadow = true,
-                                                offset_y = -0.03,
-                                                spacing = 1,
-                                                scale = 0.33 * 0.9,
-                                            }),
-                                        },
-                                    },
-                                    { n = G.UIT.B, config = { h = 0.1, w = 0.03 } },
-                                },
-                            },
-                        },
-                    }
-					break
-				end
-			end
-		end
-	end
-end
-
+assert(SMODS.load_file("content/Jtem/titletext.lua"))()
+PotatoPatchUtils.load_files(path .. 'content', blacklist)
 --#endregion
 
 -- MISC
@@ -191,10 +157,10 @@ HotPotato.optional_features = {
 }
 HotPotato.extra_tabs = function()
 	return {
-		--nxclicker
+		--clickris
 		{
-			label = "Kill Nxkoo",
-			tab_definition_function = G.UIDEF.nxclicker
+			label = "Kill Kris",
+			tab_definition_function = G.UIDEF.clickris
 		},
 		-- Jukebox
 		{
@@ -242,6 +208,14 @@ local hpotConfigTab = function()
 			end
 		end,
 	})
+	hpot_nodes[#hpot_nodes + 1] = create_toggle({
+		label = localize("hotpot_custom_menu"),
+		active_colour = HEX("40c76d"),
+		ref_table = HotPotatoConfig,
+		ref_value = "menu",
+		callback = function()
+		end,
+	})
 	return {
 		n = G.UIT.ROOT,
 		config = {
@@ -278,6 +252,41 @@ HotPotato.set_window_title = function()
 	end
 end
 HotPotato.set_window_title()
+
+local seed_input_ref = SMODS.RunSelect.Functions.update_seed_input
+function SMODS.RunSelect.Functions.update_seed_input(value)
+	seed_input_ref(value)
+	if value then
+		HotPotato.budget_input_colour = G.C.ORANGE
+	else
+		HotPotato.budget_input_colour = G.C.UI.BACKGROUND_INACTIVE
+	end
+	local args = G.OVERLAY_MENU:get_UIE_by_ID('hpot_budget_input').children[1].children[1].config.ref_table
+    args.colour = HotPotato.budget_input_colour
+    args.hooked_colour = darken(HotPotato.budget_input_colour, 0.3)
+end
+
+SMODS.RunSelectPage({
+    key = 'budgets',
+    start_run = function(self, choice)
+        if G.GAME.seeded then
+			G.GAME.budget = tonumber(HotPotatoConfig.budgets) or 0
+		end
+    end,
+    settings = function(self)
+        HotPotatoConfig.budgets = ''
+		HotPotato.budget_input_colour = SMODS.RunSelect.Setup.choices.enable_seed and G.C.ORANGE or G.C.UI.BACKGROUND_INACTIVE
+        return {
+            {n=G.UIT.C, nodes = {
+                {n=G.UIT.R, config = {align = 'cm'}, nodes = {{n=G.UIT.T, config = {text = localize('budgets_explain_1'), scale = 0.37, colour = G.C.WHITE}}}},
+                {n=G.UIT.R, config = {align = 'cm'}, nodes = {{n=G.UIT.T, config = {text = localize('budgets_explain_2'), scale = 0.37, colour = G.C.WHITE}}}},
+                {n=G.UIT.R, config = {align = 'cm'}, nodes = {{n=G.UIT.T, config = {text = localize('budgets_explain_3'), scale = 0.37, colour = G.C.WHITE}}}},
+                {n=G.UIT.R, config = {align = 'cm'}, nodes = {{n=G.UIT.T, config = {text = localize('budgets_explain_4'), scale = 0.37, colour = G.C.RED}}}},
+            }},
+            create_text_input({id = 'hpot_budget_input', prompt_text = localize('run_select_hpot_budgets'), w = 3, all_caps = true, ref_table = HotPotatoConfig, ref_value = 'budgets', colour = HotPotato.budget_input_colour, hooked_colour = darken(HotPotato.budget_input_colour, 0.3)}),
+        }
+    end
+})
 
 --#region Credits
 
@@ -407,7 +416,7 @@ HotPotato.generate_credit_UIBox = function(team)
 						end
 					})
 					card.cantclicklmao = true
-					G.FUNCS.nxkclick()
+					G.FUNCS.krisclick()
 				end
 				Moveable.click(self)
 			end

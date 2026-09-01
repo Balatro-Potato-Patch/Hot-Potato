@@ -6,16 +6,18 @@
 	"description": "Mod Developer Chaos",
 	"prefix": "hpot",
 	"main_file": "main.lua",
-	"priority": -100000000,
+	"priority": 0,
 	"badge_colour": "#f5e27a",
 	"badge_text_colour": "#ffffff",
-	"version": "1.0.13",
+	"version": "1.1.0",
 	"dependencies": [
-		"Steamodded (>=1.0.0~BETA-1501a)",
-		"Lovely (>=0.9)"
+		"Steamodded (>=26.829.0)",
+		"Lovely (>=0.9)",
+		"PotatoPatchUtils (>=1.0.16)"
 	],
     "conflicts": [
         "SlayTheJokers"
     ],
-	"allow_redistribution": true
+	"allow_redistribution": true,
+	"icon_path": "modicon.png"
 }
