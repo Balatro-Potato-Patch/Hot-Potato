@@ -26,34 +26,6 @@ match_indent = true
 target = 'functions/UI_definitions.lua'
 position = 'at'
 pattern = '''
-ability_text[#ability_text + 1] = {n=G.UIT.R, config={align = "cm"}, nodes={{n=G.UIT.T, config={text = v, scale = 0.35, shadow = true, colour = G.C.WHITE}}}}
-'''
-payload = '''
-ability_text[#ability_text + 1] = {n=G.UIT.R, config={align = "cm"}, nodes={{n=G.UIT.T, config={text = v, font = HotPotato.get_blind_font(blind), scale = 0.35, shadow = true, colour = G.C.WHITE}}}}
-'''
-match_indent = true
-
-[[patches]]
-[patches.pattern]
-target = 'functions/UI_definitions.lua'
-position = 'at'
-pattern = '''
-blind_desc_nodes[#blind_desc_nodes+1] = {n=G.UIT.R, config={align = "cm", maxw = 2.8}, nodes={
-      {n=G.UIT.T, config={text = v or '-', scale = 0.32, colour = disabled and G.C.UI.TEXT_INACTIVE or G.C.WHITE, shadow = not disabled}}
-}}
-'''
-payload = '''
-blind_desc_nodes[#blind_desc_nodes+1] = {n=G.UIT.R, config={align = "cm", maxw = 2.8}, nodes={
-      {n=G.UIT.T, config={text = v or '-', font = HotPotato.get_blind_font(blind_choice), scale = 0.32, colour = disabled and G.C.UI.TEXT_INACTIVE or G.C.WHITE, shadow = not disabled}}
-}}
-'''
-match_indent = true
-
-[[patches]]
-[patches.pattern]
-target = 'functions/UI_definitions.lua'
-position = 'at'
-pattern = '''
 {n=G.UIT.R, config={align = "cm", id = 'HUD_blind_debuff', func = 'HUD_blind_debuff'}, nodes={}},
 '''
 payload = '''
