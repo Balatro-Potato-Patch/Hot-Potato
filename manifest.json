@@ -2,7 +2,7 @@
 	"name": "Hot_Potato",
 	"description": "Mod Developer Chaos",
     "website_url": "https://github.com/Balatro-Potato-Patch/Hot-Potato",
-	"version_number": "1.1.0",
+	"version_number": "1.1.1",
 	"dependencies": [
 		"Steamodded-Steamodded-26.829.0",
 		"ThePotatoPatch-Potato_Patch_Utils-1.0.16"
