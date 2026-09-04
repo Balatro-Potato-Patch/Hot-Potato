@@ -1414,9 +1414,6 @@ SMODS.Consumable { --Mystery Box
     end
 }
 
-
-G.STATES.CZECH_PACK = 5734985
-
 -- Czech Boosters
 SMODS.Booster {
     name = 'Czech Pack',
@@ -1439,7 +1436,8 @@ SMODS.Booster {
         return newCard
     end,
     ease_background_colour = function(self)
-        ease_background_colour_blind(G.STATES.CZECH_PACK)
+        ease_colour(G.C.DYN_UI.MAIN, mix_colours(HEX("D2B48C"), G.C.BLACK, 0.9))
+        ease_background_colour{new_colour = darken(G.C.GREEN, 0.2), special_colour = G.C.GREEN, contrast = 5}
     end,
 }
 
@@ -1466,7 +1464,8 @@ SMODS.Booster {
         return newCard
     end,
     ease_background_colour = function(self)
-        ease_background_colour_blind(G.STATES.CZECH_PACK)
+        ease_colour(G.C.DYN_UI.MAIN, mix_colours(HEX("D2B48C"), G.C.BLACK, 0.9))
+        ease_background_colour{new_colour = darken(G.C.GREEN, 0.2), special_colour = G.C.GREEN, contrast = 5}
     end,
 }
 
@@ -1493,7 +1492,8 @@ SMODS.Booster {
         return newCard
     end,
     ease_background_colour = function(self)
-        ease_background_colour_blind(G.STATES.CZECH_PACK)
+        ease_colour(G.C.DYN_UI.MAIN, mix_colours(HEX("D2B48C"), G.C.BLACK, 0.9))
+        ease_background_colour{new_colour = darken(G.C.GREEN, 0.2), special_colour = G.C.GREEN, contrast = 5}
     end,
 }
 
@@ -1520,7 +1520,8 @@ SMODS.Booster {
         return newCard
     end,
     ease_background_colour = function(self)
-        ease_background_colour_blind(G.STATES.CZECH_PACK)
+        ease_colour(G.C.DYN_UI.MAIN, mix_colours(HEX("D2B48C"), G.C.BLACK, 0.9))
+        ease_background_colour{new_colour = darken(G.C.GREEN, 0.2), special_colour = G.C.GREEN, contrast = 5}
     end,
 }
 
@@ -1548,7 +1549,8 @@ SMODS.Booster {
 		}
     end,
     ease_background_colour = function(self)
-        ease_background_colour_blind(G.STATES.CZECH_PACK)
+        ease_colour(G.C.DYN_UI.MAIN, mix_colours(HEX("D2B48C"), G.C.BLACK, 0.9))
+        ease_background_colour{new_colour = darken(G.C.GREEN, 0.2), special_colour = G.C.GREEN, contrast = 5}
     end,
 }
 

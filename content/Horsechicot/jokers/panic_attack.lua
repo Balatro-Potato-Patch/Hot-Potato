@@ -57,7 +57,7 @@ SMODS.Joker {
 local this_dt_is_updated_every_fucking_frame = 0
 local update_ref = Game.update
 function Game:update(dt)
-    update_ref(self, dt)
+    local ret = update_ref(self, dt)
     if G.jokers and G.GAME.scoring then
         this_dt_is_updated_every_fucking_frame = this_dt_is_updated_every_fucking_frame + dt
         if this_dt_is_updated_every_fucking_frame > 1 then
@@ -69,4 +69,5 @@ function Game:update(dt)
             this_dt_is_updated_every_fucking_frame = 0
         end
     end
+    return ret
 end

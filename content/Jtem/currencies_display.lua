@@ -145,6 +145,7 @@ end
 
 local old_update = Game.update
 function Game:update(...)
-	old_update(self, ...)
+	local ret = old_update(self, ...)
 	update_displayed_currencies()
+	return ret
 end

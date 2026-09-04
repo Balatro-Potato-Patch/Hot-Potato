@@ -1,0 +1,16 @@
+[manifest]
+version = "1.0.0"
+dump_lua = true
+priority = 0
+
+[[patches]]
+[patches.pattern]
+target = '''game.lua'''
+pattern = '''
+if G.STATE == G.STATES.SMODS_BOOSTER_OPENED then
+'''
+position = "at"
+payload = '''
+if G.STATE == G.STATES.SMODS_BOOSTER_OPENED and SMODS.OPENED_BOOSTER then
+'''
+match_indent = true

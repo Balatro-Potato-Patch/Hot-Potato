@@ -5629,7 +5629,7 @@ end
 
 local upd = Game.update
 function Game:update(dt)
-	upd(self, dt)
+	local ret = upd(self, dt)
 
 	-- tick based events
 	if HotPotato.ticks == nil then HotPotato.ticks = 0 end
@@ -5642,6 +5642,7 @@ function Game:update(dt)
 		HotPotato.dtcounter = HotPotato.dtcounter - 0.010
 		if G.swoon and G.swoon > 0 then G.swoon = G.swoon - 1 end
 	end
+	return ret
 end
 
 SMODS.Sound {

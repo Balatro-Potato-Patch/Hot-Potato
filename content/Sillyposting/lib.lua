@@ -47,10 +47,11 @@ function change_max_highlight(amount) --modifies the max_highlighted_mod variabl
 end
 local update_ref = Game.update
 function Game:update(dt)
-    update_ref(self, dt)
+    local ret = update_ref(self, dt)
     for _, card in pairs(G.I.CARD) do
         if G.GAME and G.GAME.max_highlighted_mod and type(card) == "table" and type(card.area) == "table" and type(card.area.config) == "table" and card.area.config.collection then update_consumable(card) end
     end
+    return ret
 end
 function init_sillyposting(game)
   game.max_highlighted_mod = game.max_highlighted_mod or 0
