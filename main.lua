@@ -261,18 +261,27 @@ function SMODS.RunSelect.Functions.update_seed_input(value)
 	else
 		HotPotato.budget_input_colour = G.C.UI.BACKGROUND_INACTIVE
 	end
-	local args = G.OVERLAY_MENU:get_UIE_by_ID('hpot_budget_input').children[1].children[1].config.ref_table
-    args.colour = HotPotato.budget_input_colour
-    args.hooked_colour = darken(HotPotato.budget_input_colour, 0.3)
+	local budget_input = G.OVERLAY_MENU:get_UIE_by_ID('hpot_budget_input')
+	if budget_input then
+		local args = budget_input.children[1].children[1].config.ref_table
+		args.colour = HotPotato.budget_input_colour
+		args.hooked_colour = darken(HotPotato.budget_input_colour, 0.3)
+	end
 end
 
 SMODS.RunSelectPage({
     key = 'budgets',
     start_run = function(self, choice)
         if G.GAME.seeded then
-			G.GAME.budget = tonumber(HotPotatoConfig.budgets) or 0
+			G.GAME.budget = tonumber(HotPotatoConfig.budgets) or 100
 		end
     end,
+	optional = function()
+		return SMODS.RunSelect.Setup.choices.enable_seed
+	end,
+	can_continue = function()
+		return SMODS.RunSelect.Setup.choices.enable_seed and tonumber(HotPotatoConfig.budgets)
+	end,
     settings = function(self)
         HotPotatoConfig.budgets = ''
 		HotPotato.budget_input_colour = SMODS.RunSelect.Setup.choices.enable_seed and G.C.ORANGE or G.C.UI.BACKGROUND_INACTIVE
