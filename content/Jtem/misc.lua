@@ -239,10 +239,10 @@ SMODS.Atlas {
 }
 
 SMODS.Atlas {
-  key = "jtemrally",
-  path = "Ads/Rally.png",
-  px = 240,py = 320,
-  frames = 40, atlas_table = 'ANIMATION_ATLAS'
+  key = "jtem_again",
+  path = "Ads/buckyAd.png",
+  px = 125,py = 105,
+  frames = 10, atlas_table = 'ANIMATION_ATLAS'
 }
 
 SMODS.Atlas {
