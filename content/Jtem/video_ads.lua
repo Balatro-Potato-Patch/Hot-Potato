@@ -2,7 +2,7 @@ SMODS.Videos = {}
 
 -- if someone has better idea please change this
 local function load_video_from_NFS(file_path, file_name)
-    local data = NFS.read('data', file_path)
+    local data = SMODS.NFS.read('data', file_path)
     love.filesystem.createDirectory( "video_cache" )
     local temp_file_path = "video_cache/"..file_name
     love.filesystem.write(temp_file_path, data)

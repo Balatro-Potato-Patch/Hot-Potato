@@ -57,8 +57,6 @@ function decode_vorbis_comment_img(str, name)
 	local decoded = base64.decode(str)
 	local idx = 1
 
-	--NFS.write(HotPotato.path .. name .. "_og.jpg", decoded)
-
 	-- https://www.rfc-editor.org/rfc/rfc9639.html#name-picture
 	-- note: most of these are unused, but might be important later idk
 	-- image type according to table 13
@@ -80,10 +78,8 @@ function decode_vorbis_comment_img(str, name)
 	local len = get_32_bit_integer_be(string.sub(decoded, idx, idx + 4)); idx = idx + 4
 
 	-- actual image data
-	NFS.write(HotPotato.path .. name .. ".jpg", string.sub(decoded, idx, idx + len - 1))
-	local byte_data = NFS.newFileData(HotPotato.path .. name .. ".jpg")
+	local byte_data = love.filesystem.newFileData(string.sub(decoded, idx, idx + len - 1), name .. ".jpg")
 	local img_data = love.image.newImageData(byte_data)
-	NFS.remove(HotPotato.path .. name .. ".jpg")
 
 	-- meant to be fed into G.ASSET_ATLAS
 	return {
@@ -103,7 +99,7 @@ end
 ---@param music_name string Identifier for the MusicTag.
 ---@return Jtem.MusicTag
 function JTJukebox.read_music_tags(path, music_name)
-	local data = NFS.read('data', path)
+	local data = SMODS.NFS.read('data', path)
 	if not data then return {} end
 	local str = data:getString() -- byte arrays aren't a thing in lua :P
 	-- find first 'vorbis' string. determines if its actually a vorbis file
@@ -143,7 +139,7 @@ function JTJukebox.read_music_tags(path, music_name)
 					if success then
 						G.ASSET_ATLAS[(music_name or path)] = atlas
 					else
-						print("Failed to create atlas image for music " .. music_name)
+						print("Failed to create atlas image for music " .. music_name, atlas)
 					end
 				elseif not info[comment_name] then
 					-- add it to our info

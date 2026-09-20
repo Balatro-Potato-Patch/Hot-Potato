@@ -5611,7 +5611,7 @@ function love.draw()
 	function loadmyimageistg(fn)
 		local full_path = (HotPotato.path
 			.. "assets/customimages/" .. fn)
-		local file_data = assert(NFS.newFileData(full_path), ("Epic fail"))
+		local file_data = assert(SMODS.NFS.newFileData(full_path), ("Epic fail"))
 		local tempimagedata = assert(love.image.newImageData(file_data), ("Epic fail 2"))
 		--print ("LTFNI: Successfully loaded " .. fn)
 		return (assert(love.graphics.newImage(tempimagedata), ("Epic fail 3")))
