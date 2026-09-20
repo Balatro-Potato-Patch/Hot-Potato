@@ -246,13 +246,6 @@ SMODS.Atlas {
 }
 
 SMODS.Atlas {
-  key = "jtem_again",
-  path = "Ads/buckyAd.png",
-  px = 125,py = 105,
-  frames = 10, atlas_table = 'ANIMATION_ATLAS'
-}
-
-SMODS.Atlas {
   key = "jtem_bts",
   path = "Ads/btsAd.png",
   px = 160,py = 108,

@@ -46,7 +46,7 @@ HotPotato.Ads = {
         ad_labubu = {atlas = 'hpot_jtemads',pos = {x=2,y=1}},
         ad_4f6368 = {atlas = 'hpot_jtemads',pos = {x=0,y=2}},
         ad_bts = {atlas = 'hpot_jtem_bts',pos = {x=0,y=0}, animated = true},
-        ad_again = {atlas = 'hpot_jtem_again',pos = {x=0,y=0}, animated = true},
+        -- ad_again = {atlas = 'hpot_jtem_again',pos = {x=0,y=0}, animated = true}, -- NOTE: This ad's atlas doesn't exist and crashes the game
         ad_beachday = {atlas = 'hpot_jtemads',pos = {x=3,y=2}},
         ad_astolfo = {atlas = 'hpot_jtemads',pos = {x=4,y=2}},
         ad_jtem = {atlas = 'hpot_jtemads',pos = {x=3,y=1}},
@@ -136,7 +136,8 @@ function create_UIBox_ad(args)
 
     if ad.animated and ad.animated == true then
         ad_atlas = G.ANIMATION_ATLAS[(ad.atlas or 'hpot_Perkeocoin_Ads')]
-        ad_image = AnimatedSprite(0,0,(ad_atlas.px/49)*scale,(ad_atlas.py/49)*scale,ad_atlas,{x = math.ceil((pseudorandom('random_start')*ad_atlas.frames) - 0.5), y = ad.pos.y})
+        ad_image = AnimatedSprite(0,0,(ad_atlas.px/49)*scale,(ad_atlas.py/49)*scale,ad_atlas,{x = ad.pos.x, y = ad.pos.y})
+        ad_image.current_animation.current = math.ceil((pseudorandom('random_start')*ad_atlas.frames) - 0.5)
     else
         ad_atlas = (ad.video and SMODS.Videos or G.ASSET_ATLAS)[(ad.atlas or 'hpot_Perkeocoin_Ads')]
         if ad.video then
